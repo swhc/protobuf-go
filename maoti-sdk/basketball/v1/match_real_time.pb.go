@@ -168,27 +168,28 @@ type MatchRealTimeInfo struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Id                int64     `protobuf:"varint,1,opt,name=id,proto3" json:"id,omitempty"`                               //当前记录ID 赛事iD用于收藏传递
-	ComName           string    `protobuf:"bytes,3,opt,name=comName,proto3" json:"comName,omitempty"`                      //联赛名称
-	ComIcon           string    `protobuf:"bytes,4,opt,name=comIcon,proto3" json:"comIcon,omitempty"`                      //联赛图标
-	ComId             int64     `protobuf:"varint,5,opt,name=comId,proto3" json:"comId,omitempty"`                         //联赛id
-	TeamMainId        int64     `protobuf:"varint,6,opt,name=teamMainId,proto3" json:"teamMainId,omitempty"`               //主队ID
-	TeamCustId        int64     `protobuf:"varint,7,opt,name=teamCustId,proto3" json:"teamCustId,omitempty"`               //客队ID
-	TeamMainScore     int64     `protobuf:"varint,9,opt,name=teamMainScore,proto3" json:"teamMainScore,omitempty"`         //主队进球总分
-	TeamCustScore     int64     `protobuf:"varint,10,opt,name=teamCustScore,proto3" json:"teamCustScore,omitempty"`        //客队进球总分
-	MainCustScore     string    `protobuf:"bytes,15,opt,name=mainCustScore,proto3" json:"mainCustScore,omitempty"`         //主客总比分
-	Result            string    `protobuf:"bytes,16,opt,name=result,proto3" json:"result,omitempty"`                       //结果
-	StartTime         int64     `protobuf:"varint,17,opt,name=startTime,proto3" json:"startTime,omitempty"`                //当前比赛开始时间戳
-	EndTime           int64     `protobuf:"varint,8,opt,name=endTime,proto3" json:"endTime,omitempty"`                     //结束时间
-	CurrentTime       int64     `protobuf:"varint,11,opt,name=currentTime,proto3" json:"currentTime,omitempty"`            //当前时间戳
-	Elapsed           int64     `protobuf:"varint,12,opt,name=elapsed,proto3" json:"elapsed,omitempty"`                    //比赛时长
-	EventStatusId     int64     `protobuf:"varint,13,opt,name=eventStatusId,proto3" json:"eventStatusId,omitempty"`        //数据中心的比赛状态，具体的对应关系请参照详情页面
-	EventStatusResult int64     `protobuf:"varint,2,opt,name=eventStatusResult,proto3" json:"eventStatusResult,omitempty"` //当前比赛状态 1：未开始，2为开始，3为结束 4特殊状况临时中断比赛  5、延迟  6、取消
-	Reason            string    `protobuf:"bytes,18,opt,name=reason,proto3" json:"reason,omitempty"`                       //中断或者临时暂停原因
-	MainTeam          *TeamInfo `protobuf:"bytes,19,opt,name=mainTeam,proto3" json:"mainTeam,omitempty"`
-	AwayTeam          *TeamInfo `protobuf:"bytes,20,opt,name=awayTeam,proto3" json:"awayTeam,omitempty"`
-	LiveMatches       []*Live   `protobuf:"bytes,21,rep,name=live_matches,json=liveMatches,proto3" json:"live_matches,omitempty"`
-	Odds              []*Odds   `protobuf:"bytes,22,rep,name=odds,proto3" json:"odds,omitempty"` //实时指数
+	Id                 int64     `protobuf:"varint,1,opt,name=id,proto3" json:"id,omitempty"`                               //当前记录ID 赛事iD用于收藏传递
+	ComName            string    `protobuf:"bytes,3,opt,name=comName,proto3" json:"comName,omitempty"`                      //联赛名称
+	ComIcon            string    `protobuf:"bytes,4,opt,name=comIcon,proto3" json:"comIcon,omitempty"`                      //联赛图标
+	ComId              int64     `protobuf:"varint,5,opt,name=comId,proto3" json:"comId,omitempty"`                         //联赛id
+	TeamMainId         int64     `protobuf:"varint,6,opt,name=teamMainId,proto3" json:"teamMainId,omitempty"`               //主队ID
+	TeamCustId         int64     `protobuf:"varint,7,opt,name=teamCustId,proto3" json:"teamCustId,omitempty"`               //客队ID
+	TeamMainScore      int64     `protobuf:"varint,9,opt,name=teamMainScore,proto3" json:"teamMainScore,omitempty"`         //主队进球总分
+	TeamCustScore      int64     `protobuf:"varint,10,opt,name=teamCustScore,proto3" json:"teamCustScore,omitempty"`        //客队进球总分
+	MainCustScore      string    `protobuf:"bytes,15,opt,name=mainCustScore,proto3" json:"mainCustScore,omitempty"`         //主客总比分
+	Result             string    `protobuf:"bytes,16,opt,name=result,proto3" json:"result,omitempty"`                       //结果
+	StartTime          int64     `protobuf:"varint,17,opt,name=startTime,proto3" json:"startTime,omitempty"`                //当前比赛开始时间戳
+	EndTime            int64     `protobuf:"varint,8,opt,name=endTime,proto3" json:"endTime,omitempty"`                     //结束时间
+	CurrentTime        int64     `protobuf:"varint,11,opt,name=currentTime,proto3" json:"currentTime,omitempty"`            //当前时间戳
+	Elapsed            int64     `protobuf:"varint,12,opt,name=elapsed,proto3" json:"elapsed,omitempty"`                    //比赛时长
+	EventStatusId      int64     `protobuf:"varint,13,opt,name=eventStatusId,proto3" json:"eventStatusId,omitempty"`        //数据中心的比赛状态，具体的对应关系请参照详情页面
+	EventStatusResult  int64     `protobuf:"varint,2,opt,name=eventStatusResult,proto3" json:"eventStatusResult,omitempty"` //当前比赛状态 1：未开始，2为开始，3为结束 4特殊状况临时中断比赛  5、延迟  6、取消
+	Reason             string    `protobuf:"bytes,18,opt,name=reason,proto3" json:"reason,omitempty"`                       //中断或者临时暂停原因
+	MainTeam           *TeamInfo `protobuf:"bytes,19,opt,name=mainTeam,proto3" json:"mainTeam,omitempty"`
+	AwayTeam           *TeamInfo `protobuf:"bytes,20,opt,name=awayTeam,proto3" json:"awayTeam,omitempty"`
+	LiveMatches        []*Live   `protobuf:"bytes,21,rep,name=live_matches,json=liveMatches,proto3" json:"live_matches,omitempty"`
+	Odds               []*Odds   `protobuf:"bytes,22,rep,name=odds,proto3" json:"odds,omitempty"`                             //实时指数
+	LotteryCompetition string    `protobuf:"bytes,23,opt,name=lotteryCompetition,proto3" json:"lotteryCompetition,omitempty"` //竞彩赛事编号例：周二110
 }
 
 func (x *MatchRealTimeInfo) Reset() {
@@ -368,6 +369,13 @@ func (x *MatchRealTimeInfo) GetOdds() []*Odds {
 		return x.Odds
 	}
 	return nil
+}
+
+func (x *MatchRealTimeInfo) GetLotteryCompetition() string {
+	if x != nil {
+		return x.LotteryCompetition
+	}
+	return ""
 }
 
 type TeamInfo struct {
@@ -642,7 +650,7 @@ var file_match_real_time_proto_rawDesc = []byte{
 	0x14, 0x0a, 0x05, 0x43, 0x6f, 0x75, 0x6e, 0x74, 0x18, 0x01, 0x20, 0x01, 0x28, 0x03, 0x52, 0x05,
 	0x43, 0x6f, 0x75, 0x6e, 0x74, 0x12, 0x26, 0x0a, 0x04, 0x6c, 0x69, 0x73, 0x74, 0x18, 0x02, 0x20,
 	0x03, 0x28, 0x0b, 0x32, 0x12, 0x2e, 0x4d, 0x61, 0x74, 0x63, 0x68, 0x52, 0x65, 0x61, 0x6c, 0x54,
-	0x69, 0x6d, 0x65, 0x49, 0x6e, 0x66, 0x6f, 0x52, 0x04, 0x6c, 0x69, 0x73, 0x74, 0x22, 0xaa, 0x05,
+	0x69, 0x6d, 0x65, 0x49, 0x6e, 0x66, 0x6f, 0x52, 0x04, 0x6c, 0x69, 0x73, 0x74, 0x22, 0xda, 0x05,
 	0x0a, 0x11, 0x4d, 0x61, 0x74, 0x63, 0x68, 0x52, 0x65, 0x61, 0x6c, 0x54, 0x69, 0x6d, 0x65, 0x49,
 	0x6e, 0x66, 0x6f, 0x12, 0x0e, 0x0a, 0x02, 0x69, 0x64, 0x18, 0x01, 0x20, 0x01, 0x28, 0x03, 0x52,
 	0x02, 0x69, 0x64, 0x12, 0x18, 0x0a, 0x07, 0x63, 0x6f, 0x6d, 0x4e, 0x61, 0x6d, 0x65, 0x18, 0x03,
@@ -685,7 +693,10 @@ var file_match_real_time_proto_rawDesc = []byte{
 	0x74, 0x63, 0x68, 0x65, 0x73, 0x18, 0x15, 0x20, 0x03, 0x28, 0x0b, 0x32, 0x05, 0x2e, 0x6c, 0x69,
 	0x76, 0x65, 0x52, 0x0b, 0x6c, 0x69, 0x76, 0x65, 0x4d, 0x61, 0x74, 0x63, 0x68, 0x65, 0x73, 0x12,
 	0x19, 0x0a, 0x04, 0x6f, 0x64, 0x64, 0x73, 0x18, 0x16, 0x20, 0x03, 0x28, 0x0b, 0x32, 0x05, 0x2e,
-	0x6f, 0x64, 0x64, 0x73, 0x52, 0x04, 0x6f, 0x64, 0x64, 0x73, 0x22, 0x74, 0x0a, 0x08, 0x74, 0x65,
+	0x6f, 0x64, 0x64, 0x73, 0x52, 0x04, 0x6f, 0x64, 0x64, 0x73, 0x12, 0x2e, 0x0a, 0x12, 0x6c, 0x6f,
+	0x74, 0x74, 0x65, 0x72, 0x79, 0x43, 0x6f, 0x6d, 0x70, 0x65, 0x74, 0x69, 0x74, 0x69, 0x6f, 0x6e,
+	0x18, 0x17, 0x20, 0x01, 0x28, 0x09, 0x52, 0x12, 0x6c, 0x6f, 0x74, 0x74, 0x65, 0x72, 0x79, 0x43,
+	0x6f, 0x6d, 0x70, 0x65, 0x74, 0x69, 0x74, 0x69, 0x6f, 0x6e, 0x22, 0x74, 0x0a, 0x08, 0x74, 0x65,
 	0x61, 0x6d, 0x49, 0x6e, 0x66, 0x6f, 0x12, 0x12, 0x0a, 0x04, 0x6e, 0x61, 0x6d, 0x65, 0x18, 0x01,
 	0x20, 0x01, 0x28, 0x09, 0x52, 0x04, 0x6e, 0x61, 0x6d, 0x65, 0x12, 0x16, 0x0a, 0x06, 0x74, 0x65,
 	0x61, 0x6d, 0x49, 0x64, 0x18, 0x03, 0x20, 0x01, 0x28, 0x03, 0x52, 0x06, 0x74, 0x65, 0x61, 0x6d,
