@@ -128,26 +128,26 @@ type DataCenterLiveScoreRequest struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	SportId          int64             `protobuf:"varint,1,opt,name=SportId,proto3" json:"SportId,omitempty"`
-	MatchId          int64             `protobuf:"varint,2,opt,name=MatchId,proto3" json:"MatchId,omitempty"`
-	HomeId           int64             `protobuf:"varint,3,opt,name=HomeId,proto3" json:"HomeId,omitempty"`
-	HomeName         string            `protobuf:"bytes,4,opt,name=HomeName,proto3" json:"HomeName,omitempty"`
-	AwayId           int64             `protobuf:"varint,5,opt,name=AwayId,proto3" json:"AwayId,omitempty"`
-	AwayName         string            `protobuf:"bytes,6,opt,name=AwayName,proto3" json:"AwayName,omitempty"`
-	MatchTime        int64             `protobuf:"varint,7,opt,name=MatchTime,proto3" json:"MatchTime,omitempty"`
-	StartTime        int64             `protobuf:"varint,8,opt,name=StartTime,proto3" json:"StartTime,omitempty"`
-	HomeScore        string            `protobuf:"bytes,9,opt,name=HomeScore,proto3" json:"HomeScore,omitempty"`
-	AwayScore        string            `protobuf:"bytes,10,opt,name=AwayScore,proto3" json:"AwayScore,omitempty"`
-	HomeHalfScore    string            `protobuf:"bytes,11,opt,name=HomeHalfScore,proto3" json:"HomeHalfScore,omitempty"`
-	AwayHalfScore    string            `protobuf:"bytes,12,opt,name=AwayHalfScore,proto3" json:"AwayHalfScore,omitempty"`
-	MatchStatus      int64             `protobuf:"varint,13,opt,name=MatchStatus,proto3" json:"MatchStatus,omitempty"`
-	MatchChildStatus int64             `protobuf:"varint,14,opt,name=MatchChildStatus,proto3" json:"MatchChildStatus,omitempty"`
-	TimePlayed       int64             `protobuf:"varint,15,opt,name=TimePlayed,proto3" json:"TimePlayed,omitempty"`
-	TimeRemaining    int64             `protobuf:"varint,16,opt,name=TimeRemaining,proto3" json:"TimeRemaining,omitempty"`
-	TimeRunning      int64             `protobuf:"varint,17,opt,name=TimeRunning,proto3" json:"TimeRunning,omitempty"`
-	TimeUpdate       int64             `protobuf:"varint,18,opt,name=TimeUpdate,proto3" json:"TimeUpdate,omitempty"`
-	MatchIncident    []*MatchIncident  `protobuf:"bytes,19,rep,name=MatchIncident,proto3" json:"MatchIncident,omitempty"`
-	MatchTeamCount   []*MatchTeamCount `protobuf:"bytes,20,rep,name=MatchTeamCount,proto3" json:"MatchTeamCount,omitempty"`
+	SportId          int64            `protobuf:"varint,1,opt,name=SportId,proto3" json:"SportId,omitempty"`
+	MatchId          int64            `protobuf:"varint,2,opt,name=MatchId,proto3" json:"MatchId,omitempty"`
+	HomeId           int64            `protobuf:"varint,3,opt,name=HomeId,proto3" json:"HomeId,omitempty"`
+	HomeName         string           `protobuf:"bytes,4,opt,name=HomeName,proto3" json:"HomeName,omitempty"`
+	AwayId           int64            `protobuf:"varint,5,opt,name=AwayId,proto3" json:"AwayId,omitempty"`
+	AwayName         string           `protobuf:"bytes,6,opt,name=AwayName,proto3" json:"AwayName,omitempty"`
+	MatchTime        int64            `protobuf:"varint,7,opt,name=MatchTime,proto3" json:"MatchTime,omitempty"`
+	StartTime        int64            `protobuf:"varint,8,opt,name=StartTime,proto3" json:"StartTime,omitempty"`
+	HomeScore        string           `protobuf:"bytes,9,opt,name=HomeScore,proto3" json:"HomeScore,omitempty"`
+	AwayScore        string           `protobuf:"bytes,10,opt,name=AwayScore,proto3" json:"AwayScore,omitempty"`
+	HomeHalfScore    string           `protobuf:"bytes,11,opt,name=HomeHalfScore,proto3" json:"HomeHalfScore,omitempty"`
+	AwayHalfScore    string           `protobuf:"bytes,12,opt,name=AwayHalfScore,proto3" json:"AwayHalfScore,omitempty"`
+	MatchStatus      int64            `protobuf:"varint,13,opt,name=MatchStatus,proto3" json:"MatchStatus,omitempty"`
+	MatchChildStatus int64            `protobuf:"varint,14,opt,name=MatchChildStatus,proto3" json:"MatchChildStatus,omitempty"`
+	TimePlayed       int64            `protobuf:"varint,15,opt,name=TimePlayed,proto3" json:"TimePlayed,omitempty"`
+	TimeRemaining    int64            `protobuf:"varint,16,opt,name=TimeRemaining,proto3" json:"TimeRemaining,omitempty"`
+	TimeRunning      int64            `protobuf:"varint,17,opt,name=TimeRunning,proto3" json:"TimeRunning,omitempty"`
+	TimeUpdate       int64            `protobuf:"varint,18,opt,name=TimeUpdate,proto3" json:"TimeUpdate,omitempty"`
+	MatchIncident    []*MatchIncident `protobuf:"bytes,19,rep,name=MatchIncident,proto3" json:"MatchIncident,omitempty"`
+	MatchTeamCount   *MatchTeamCount  `protobuf:"bytes,20,opt,name=MatchTeamCount,proto3" json:"MatchTeamCount,omitempty"`
 }
 
 func (x *DataCenterLiveScoreRequest) Reset() {
@@ -315,7 +315,7 @@ func (x *DataCenterLiveScoreRequest) GetMatchIncident() []*MatchIncident {
 	return nil
 }
 
-func (x *DataCenterLiveScoreRequest) GetMatchTeamCount() []*MatchTeamCount {
+func (x *DataCenterLiveScoreRequest) GetMatchTeamCount() *MatchTeamCount {
 	if x != nil {
 		return x.MatchTeamCount
 	}
@@ -716,7 +716,7 @@ var file_data_center_proto_rawDesc = []byte{
 	0x32, 0x0e, 0x2e, 0x4d, 0x61, 0x74, 0x63, 0x68, 0x49, 0x6e, 0x63, 0x69, 0x64, 0x65, 0x6e, 0x74,
 	0x52, 0x0d, 0x4d, 0x61, 0x74, 0x63, 0x68, 0x49, 0x6e, 0x63, 0x69, 0x64, 0x65, 0x6e, 0x74, 0x12,
 	0x37, 0x0a, 0x0e, 0x4d, 0x61, 0x74, 0x63, 0x68, 0x54, 0x65, 0x61, 0x6d, 0x43, 0x6f, 0x75, 0x6e,
-	0x74, 0x18, 0x14, 0x20, 0x03, 0x28, 0x0b, 0x32, 0x0f, 0x2e, 0x4d, 0x61, 0x74, 0x63, 0x68, 0x54,
+	0x74, 0x18, 0x14, 0x20, 0x01, 0x28, 0x0b, 0x32, 0x0f, 0x2e, 0x4d, 0x61, 0x74, 0x63, 0x68, 0x54,
 	0x65, 0x61, 0x6d, 0x43, 0x6f, 0x75, 0x6e, 0x74, 0x52, 0x0e, 0x4d, 0x61, 0x74, 0x63, 0x68, 0x54,
 	0x65, 0x61, 0x6d, 0x43, 0x6f, 0x75, 0x6e, 0x74, 0x22, 0xf3, 0x03, 0x0a, 0x0d, 0x4d, 0x61, 0x74,
 	0x63, 0x68, 0x49, 0x6e, 0x63, 0x69, 0x64, 0x65, 0x6e, 0x74, 0x12, 0x18, 0x0a, 0x07, 0x4d, 0x61,
