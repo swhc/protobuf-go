@@ -25,7 +25,7 @@ const (
 )
 
 //请求格式
-type Request struct {
+type FootRequest struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
@@ -35,8 +35,8 @@ type Request struct {
 	Language string `protobuf:"bytes,3,opt,name=language,proto3" json:"language,omitempty"` //请求语言  1:zh  2:en
 }
 
-func (x *Request) Reset() {
-	*x = Request{}
+func (x *FootRequest) Reset() {
+	*x = FootRequest{}
 	if protoimpl.UnsafeEnabled {
 		mi := &file_foot_server_proto_msgTypes[0]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
@@ -44,13 +44,13 @@ func (x *Request) Reset() {
 	}
 }
 
-func (x *Request) String() string {
+func (x *FootRequest) String() string {
 	return protoimpl.X.MessageStringOf(x)
 }
 
-func (*Request) ProtoMessage() {}
+func (*FootRequest) ProtoMessage() {}
 
-func (x *Request) ProtoReflect() protoreflect.Message {
+func (x *FootRequest) ProtoReflect() protoreflect.Message {
 	mi := &file_foot_server_proto_msgTypes[0]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
@@ -62,33 +62,33 @@ func (x *Request) ProtoReflect() protoreflect.Message {
 	return mi.MessageOf(x)
 }
 
-// Deprecated: Use Request.ProtoReflect.Descriptor instead.
-func (*Request) Descriptor() ([]byte, []int) {
+// Deprecated: Use FootRequest.ProtoReflect.Descriptor instead.
+func (*FootRequest) Descriptor() ([]byte, []int) {
 	return file_foot_server_proto_rawDescGZIP(), []int{0}
 }
 
-func (x *Request) GetMethod() string {
+func (x *FootRequest) GetMethod() string {
 	if x != nil {
 		return x.Method
 	}
 	return ""
 }
 
-func (x *Request) GetParams() []byte {
+func (x *FootRequest) GetParams() []byte {
 	if x != nil {
 		return x.Params
 	}
 	return nil
 }
 
-func (x *Request) GetLanguage() string {
+func (x *FootRequest) GetLanguage() string {
 	if x != nil {
 		return x.Language
 	}
 	return ""
 }
 
-type Response struct {
+type FootResponse struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
@@ -96,8 +96,8 @@ type Response struct {
 	Data []byte `protobuf:"bytes,3,opt,name=data,proto3" json:"data,omitempty"` //返回结果
 }
 
-func (x *Response) Reset() {
-	*x = Response{}
+func (x *FootResponse) Reset() {
+	*x = FootResponse{}
 	if protoimpl.UnsafeEnabled {
 		mi := &file_foot_server_proto_msgTypes[1]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
@@ -105,13 +105,13 @@ func (x *Response) Reset() {
 	}
 }
 
-func (x *Response) String() string {
+func (x *FootResponse) String() string {
 	return protoimpl.X.MessageStringOf(x)
 }
 
-func (*Response) ProtoMessage() {}
+func (*FootResponse) ProtoMessage() {}
 
-func (x *Response) ProtoReflect() protoreflect.Message {
+func (x *FootResponse) ProtoReflect() protoreflect.Message {
 	mi := &file_foot_server_proto_msgTypes[1]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
@@ -123,71 +123,16 @@ func (x *Response) ProtoReflect() protoreflect.Message {
 	return mi.MessageOf(x)
 }
 
-// Deprecated: Use Response.ProtoReflect.Descriptor instead.
-func (*Response) Descriptor() ([]byte, []int) {
+// Deprecated: Use FootResponse.ProtoReflect.Descriptor instead.
+func (*FootResponse) Descriptor() ([]byte, []int) {
 	return file_foot_server_proto_rawDescGZIP(), []int{1}
 }
 
-func (x *Response) GetData() []byte {
+func (x *FootResponse) GetData() []byte {
 	if x != nil {
 		return x.Data
 	}
 	return nil
-}
-
-type DataCenterResponse struct {
-	state         protoimpl.MessageState
-	sizeCache     protoimpl.SizeCache
-	unknownFields protoimpl.UnknownFields
-
-	Ret  int64  `protobuf:"varint,1,opt,name=ret,proto3" json:"ret,omitempty"`
-	Data string `protobuf:"bytes,2,opt,name=data,proto3" json:"data,omitempty"`
-}
-
-func (x *DataCenterResponse) Reset() {
-	*x = DataCenterResponse{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_foot_server_proto_msgTypes[2]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
-
-func (x *DataCenterResponse) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
-
-func (*DataCenterResponse) ProtoMessage() {}
-
-func (x *DataCenterResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_foot_server_proto_msgTypes[2]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
-}
-
-// Deprecated: Use DataCenterResponse.ProtoReflect.Descriptor instead.
-func (*DataCenterResponse) Descriptor() ([]byte, []int) {
-	return file_foot_server_proto_rawDescGZIP(), []int{2}
-}
-
-func (x *DataCenterResponse) GetRet() int64 {
-	if x != nil {
-		return x.Ret
-	}
-	return 0
-}
-
-func (x *DataCenterResponse) GetData() string {
-	if x != nil {
-		return x.Data
-	}
-	return ""
 }
 
 var File_foot_server_proto protoreflect.FileDescriptor
@@ -195,22 +140,19 @@ var File_foot_server_proto protoreflect.FileDescriptor
 var file_foot_server_proto_rawDesc = []byte{
 	0x0a, 0x11, 0x66, 0x6f, 0x6f, 0x74, 0x5f, 0x73, 0x65, 0x72, 0x76, 0x65, 0x72, 0x2e, 0x70, 0x72,
 	0x6f, 0x74, 0x6f, 0x1a, 0x18, 0x66, 0x6f, 0x6f, 0x74, 0x5f, 0x6d, 0x61, 0x74, 0x63, 0x68, 0x5f,
-	0x72, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x22, 0x55, 0x0a,
-	0x07, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x12, 0x16, 0x0a, 0x06, 0x6d, 0x65, 0x74, 0x68,
-	0x6f, 0x64, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x06, 0x6d, 0x65, 0x74, 0x68, 0x6f, 0x64,
-	0x12, 0x16, 0x0a, 0x06, 0x70, 0x61, 0x72, 0x61, 0x6d, 0x73, 0x18, 0x02, 0x20, 0x01, 0x28, 0x0c,
-	0x52, 0x06, 0x70, 0x61, 0x72, 0x61, 0x6d, 0x73, 0x12, 0x1a, 0x0a, 0x08, 0x6c, 0x61, 0x6e, 0x67,
-	0x75, 0x61, 0x67, 0x65, 0x18, 0x03, 0x20, 0x01, 0x28, 0x09, 0x52, 0x08, 0x6c, 0x61, 0x6e, 0x67,
-	0x75, 0x61, 0x67, 0x65, 0x22, 0x1e, 0x0a, 0x08, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65,
-	0x12, 0x12, 0x0a, 0x04, 0x64, 0x61, 0x74, 0x61, 0x18, 0x03, 0x20, 0x01, 0x28, 0x0c, 0x52, 0x04,
-	0x64, 0x61, 0x74, 0x61, 0x22, 0x3a, 0x0a, 0x12, 0x44, 0x61, 0x74, 0x61, 0x43, 0x65, 0x6e, 0x74,
-	0x65, 0x72, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x12, 0x10, 0x0a, 0x03, 0x72, 0x65,
-	0x74, 0x18, 0x01, 0x20, 0x01, 0x28, 0x03, 0x52, 0x03, 0x72, 0x65, 0x74, 0x12, 0x12, 0x0a, 0x04,
-	0x64, 0x61, 0x74, 0x61, 0x18, 0x02, 0x20, 0x01, 0x28, 0x09, 0x52, 0x04, 0x64, 0x61, 0x74, 0x61,
-	0x32, 0x48, 0x0a, 0x08, 0x46, 0x6f, 0x6f, 0x74, 0x42, 0x61, 0x6c, 0x6c, 0x12, 0x3c, 0x0a, 0x16,
-	0x46, 0x6f, 0x6f, 0x74, 0x4d, 0x61, 0x74, 0x63, 0x68, 0x41, 0x67, 0x61, 0x69, 0x6e, 0x73, 0x74,
-	0x44, 0x65, 0x74, 0x61, 0x69, 0x6c, 0x12, 0x15, 0x2e, 0x46, 0x6f, 0x6f, 0x74, 0x4d, 0x61, 0x74,
-	0x63, 0x68, 0x49, 0x6e, 0x66, 0x6f, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x09, 0x2e,
+	0x72, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x22, 0x59, 0x0a,
+	0x0b, 0x46, 0x6f, 0x6f, 0x74, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x12, 0x16, 0x0a, 0x06,
+	0x6d, 0x65, 0x74, 0x68, 0x6f, 0x64, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x06, 0x6d, 0x65,
+	0x74, 0x68, 0x6f, 0x64, 0x12, 0x16, 0x0a, 0x06, 0x70, 0x61, 0x72, 0x61, 0x6d, 0x73, 0x18, 0x02,
+	0x20, 0x01, 0x28, 0x0c, 0x52, 0x06, 0x70, 0x61, 0x72, 0x61, 0x6d, 0x73, 0x12, 0x1a, 0x0a, 0x08,
+	0x6c, 0x61, 0x6e, 0x67, 0x75, 0x61, 0x67, 0x65, 0x18, 0x03, 0x20, 0x01, 0x28, 0x09, 0x52, 0x08,
+	0x6c, 0x61, 0x6e, 0x67, 0x75, 0x61, 0x67, 0x65, 0x22, 0x22, 0x0a, 0x0c, 0x46, 0x6f, 0x6f, 0x74,
+	0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x12, 0x12, 0x0a, 0x04, 0x64, 0x61, 0x74, 0x61,
+	0x18, 0x03, 0x20, 0x01, 0x28, 0x0c, 0x52, 0x04, 0x64, 0x61, 0x74, 0x61, 0x32, 0x4c, 0x0a, 0x08,
+	0x46, 0x6f, 0x6f, 0x74, 0x42, 0x61, 0x6c, 0x6c, 0x12, 0x40, 0x0a, 0x16, 0x46, 0x6f, 0x6f, 0x74,
+	0x4d, 0x61, 0x74, 0x63, 0x68, 0x41, 0x67, 0x61, 0x69, 0x6e, 0x73, 0x74, 0x44, 0x65, 0x74, 0x61,
+	0x69, 0x6c, 0x12, 0x15, 0x2e, 0x46, 0x6f, 0x6f, 0x74, 0x4d, 0x61, 0x74, 0x63, 0x68, 0x49, 0x6e,
+	0x66, 0x6f, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x0d, 0x2e, 0x46, 0x6f, 0x6f, 0x74,
 	0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x00, 0x42, 0x07, 0x5a, 0x05, 0x2e, 0x2f,
 	0x3b, 0x76, 0x31, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
 }
@@ -227,16 +169,15 @@ func file_foot_server_proto_rawDescGZIP() []byte {
 	return file_foot_server_proto_rawDescData
 }
 
-var file_foot_server_proto_msgTypes = make([]protoimpl.MessageInfo, 3)
+var file_foot_server_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
 var file_foot_server_proto_goTypes = []interface{}{
-	(*Request)(nil),              // 0: Request
-	(*Response)(nil),             // 1: Response
-	(*DataCenterResponse)(nil),   // 2: DataCenterResponse
-	(*FootMatchInfoRequest)(nil), // 3: FootMatchInfoRequest
+	(*FootRequest)(nil),          // 0: FootRequest
+	(*FootResponse)(nil),         // 1: FootResponse
+	(*FootMatchInfoRequest)(nil), // 2: FootMatchInfoRequest
 }
 var file_foot_server_proto_depIdxs = []int32{
-	3, // 0: FootBall.FootMatchAgainstDetail:input_type -> FootMatchInfoRequest
-	1, // 1: FootBall.FootMatchAgainstDetail:output_type -> Response
+	2, // 0: FootBall.FootMatchAgainstDetail:input_type -> FootMatchInfoRequest
+	1, // 1: FootBall.FootMatchAgainstDetail:output_type -> FootResponse
 	1, // [1:2] is the sub-list for method output_type
 	0, // [0:1] is the sub-list for method input_type
 	0, // [0:0] is the sub-list for extension type_name
@@ -252,7 +193,7 @@ func file_foot_server_proto_init() {
 	file_foot_match_request_proto_init()
 	if !protoimpl.UnsafeEnabled {
 		file_foot_server_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*Request); i {
+			switch v := v.(*FootRequest); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -264,19 +205,7 @@ func file_foot_server_proto_init() {
 			}
 		}
 		file_foot_server_proto_msgTypes[1].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*Response); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-		file_foot_server_proto_msgTypes[2].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*DataCenterResponse); i {
+			switch v := v.(*FootResponse); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -294,7 +223,7 @@ func file_foot_server_proto_init() {
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: file_foot_server_proto_rawDesc,
 			NumEnums:      0,
-			NumMessages:   3,
+			NumMessages:   2,
 			NumExtensions: 0,
 			NumServices:   1,
 		},
@@ -321,7 +250,7 @@ const _ = grpc.SupportPackageIsVersion6
 // For semantics around ctx use and closing/ending streaming RPCs, please refer to https://godoc.org/google.golang.org/grpc#ClientConn.NewStream.
 type FootBallClient interface {
 	//比赛对阵详情
-	FootMatchAgainstDetail(ctx context.Context, in *FootMatchInfoRequest, opts ...grpc.CallOption) (*Response, error)
+	FootMatchAgainstDetail(ctx context.Context, in *FootMatchInfoRequest, opts ...grpc.CallOption) (*FootResponse, error)
 }
 
 type footBallClient struct {
@@ -332,8 +261,8 @@ func NewFootBallClient(cc grpc.ClientConnInterface) FootBallClient {
 	return &footBallClient{cc}
 }
 
-func (c *footBallClient) FootMatchAgainstDetail(ctx context.Context, in *FootMatchInfoRequest, opts ...grpc.CallOption) (*Response, error) {
-	out := new(Response)
+func (c *footBallClient) FootMatchAgainstDetail(ctx context.Context, in *FootMatchInfoRequest, opts ...grpc.CallOption) (*FootResponse, error) {
+	out := new(FootResponse)
 	err := c.cc.Invoke(ctx, "/FootBall/FootMatchAgainstDetail", in, out, opts...)
 	if err != nil {
 		return nil, err
@@ -344,14 +273,14 @@ func (c *footBallClient) FootMatchAgainstDetail(ctx context.Context, in *FootMat
 // FootBallServer is the server API for FootBall service.
 type FootBallServer interface {
 	//比赛对阵详情
-	FootMatchAgainstDetail(context.Context, *FootMatchInfoRequest) (*Response, error)
+	FootMatchAgainstDetail(context.Context, *FootMatchInfoRequest) (*FootResponse, error)
 }
 
 // UnimplementedFootBallServer can be embedded to have forward compatible implementations.
 type UnimplementedFootBallServer struct {
 }
 
-func (*UnimplementedFootBallServer) FootMatchAgainstDetail(context.Context, *FootMatchInfoRequest) (*Response, error) {
+func (*UnimplementedFootBallServer) FootMatchAgainstDetail(context.Context, *FootMatchInfoRequest) (*FootResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method FootMatchAgainstDetail not implemented")
 }
 
