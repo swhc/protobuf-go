@@ -170,7 +170,7 @@ var file_foot_server_proto_rawDesc = []byte{
 	0x20, 0x01, 0x28, 0x09, 0x52, 0x08, 0x6c, 0x61, 0x6e, 0x67, 0x75, 0x61, 0x67, 0x65, 0x22, 0x22,
 	0x0a, 0x0c, 0x46, 0x6f, 0x6f, 0x74, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x12, 0x12,
 	0x0a, 0x04, 0x64, 0x61, 0x74, 0x61, 0x18, 0x03, 0x20, 0x01, 0x28, 0x0c, 0x52, 0x04, 0x64, 0x61,
-	0x74, 0x61, 0x32, 0xfd, 0x07, 0x0a, 0x08, 0x46, 0x6f, 0x6f, 0x74, 0x42, 0x61, 0x6c, 0x6c, 0x12,
+	0x74, 0x61, 0x32, 0x81, 0x08, 0x0a, 0x08, 0x46, 0x6f, 0x6f, 0x74, 0x42, 0x61, 0x6c, 0x6c, 0x12,
 	0x40, 0x0a, 0x16, 0x46, 0x6f, 0x6f, 0x74, 0x4d, 0x61, 0x74, 0x63, 0x68, 0x41, 0x67, 0x61, 0x69,
 	0x6e, 0x73, 0x74, 0x44, 0x65, 0x74, 0x61, 0x69, 0x6c, 0x12, 0x15, 0x2e, 0x46, 0x6f, 0x6f, 0x74,
 	0x4d, 0x61, 0x74, 0x63, 0x68, 0x49, 0x6e, 0x66, 0x6f, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74,
@@ -230,12 +230,12 @@ var file_foot_server_proto_rawDesc = []byte{
 	0x6f, 0x6f, 0x74, 0x54, 0x6f, 0x64, 0x61, 0x79, 0x4d, 0x61, 0x74, 0x63, 0x68, 0x12, 0x16, 0x2e,
 	0x46, 0x6f, 0x6f, 0x74, 0x54, 0x6f, 0x64, 0x61, 0x79, 0x4d, 0x61, 0x74, 0x63, 0x68, 0x52, 0x65,
 	0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x0d, 0x2e, 0x46, 0x6f, 0x6f, 0x74, 0x52, 0x65, 0x73, 0x70,
-	0x6f, 0x6e, 0x73, 0x65, 0x22, 0x00, 0x12, 0x3a, 0x0a, 0x0e, 0x47, 0x65, 0x74, 0x4c, 0x65, 0x61,
-	0x67, 0x75, 0x65, 0x53, 0x74, 0x61, 0x6e, 0x64, 0x12, 0x17, 0x2e, 0x46, 0x6f, 0x6f, 0x74, 0x4c,
-	0x65, 0x61, 0x67, 0x75, 0x65, 0x53, 0x74, 0x61, 0x6e, 0x64, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73,
-	0x74, 0x1a, 0x0d, 0x2e, 0x46, 0x6f, 0x6f, 0x74, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65,
-	0x22, 0x00, 0x42, 0x07, 0x5a, 0x05, 0x2e, 0x2f, 0x3b, 0x76, 0x31, 0x62, 0x06, 0x70, 0x72, 0x6f,
-	0x74, 0x6f, 0x33,
+	0x6f, 0x6e, 0x73, 0x65, 0x22, 0x00, 0x12, 0x3e, 0x0a, 0x12, 0x47, 0x65, 0x74, 0x46, 0x6f, 0x6f,
+	0x74, 0x4c, 0x65, 0x61, 0x67, 0x75, 0x65, 0x53, 0x74, 0x61, 0x6e, 0x64, 0x12, 0x17, 0x2e, 0x46,
+	0x6f, 0x6f, 0x74, 0x4c, 0x65, 0x61, 0x67, 0x75, 0x65, 0x53, 0x74, 0x61, 0x6e, 0x64, 0x52, 0x65,
+	0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x0d, 0x2e, 0x46, 0x6f, 0x6f, 0x74, 0x52, 0x65, 0x73, 0x70,
+	0x6f, 0x6e, 0x73, 0x65, 0x22, 0x00, 0x42, 0x07, 0x5a, 0x05, 0x2e, 0x2f, 0x3b, 0x76, 0x31, 0x62,
+	0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
 }
 
 var (
@@ -287,7 +287,7 @@ var file_foot_server_proto_depIdxs = []int32{
 	14, // 12: FootBall.FootMatchList:input_type -> FootMatchAllRequest
 	15, // 13: FootBall.FootTeamStand:input_type -> FootTeamStandRequest
 	16, // 14: FootBall.FootTodayMatch:input_type -> FootTodayMatchRequest
-	17, // 15: FootBall.GetLeagueStand:input_type -> FootLeagueStandRequest
+	17, // 15: FootBall.GetFootLeagueStand:input_type -> FootLeagueStandRequest
 	1,  // 16: FootBall.FootMatchAgainstDetail:output_type -> FootResponse
 	1,  // 17: FootBall.GetMatchOddList:output_type -> FootResponse
 	1,  // 18: FootBall.GetMatchOddListDetail:output_type -> FootResponse
@@ -303,7 +303,7 @@ var file_foot_server_proto_depIdxs = []int32{
 	1,  // 28: FootBall.FootMatchList:output_type -> FootResponse
 	1,  // 29: FootBall.FootTeamStand:output_type -> FootResponse
 	1,  // 30: FootBall.FootTodayMatch:output_type -> FootResponse
-	1,  // 31: FootBall.GetLeagueStand:output_type -> FootResponse
+	1,  // 31: FootBall.GetFootLeagueStand:output_type -> FootResponse
 	16, // [16:32] is the sub-list for method output_type
 	0,  // [0:16] is the sub-list for method input_type
 	0,  // [0:0] is the sub-list for extension type_name
@@ -395,6 +395,7 @@ type FootBallClient interface {
 	GetMatchOddList(ctx context.Context, in *FootOddListRequest, opts ...grpc.CallOption) (*FootResponse, error)
 	//指数数值明细
 	GetMatchOddListDetail(ctx context.Context, in *FootOddDetailRequest, opts ...grpc.CallOption) (*FootResponse, error)
+	//赛季列表
 	GetFootSeasonList(ctx context.Context, in *FootSeasonListRequest, opts ...grpc.CallOption) (*FootResponse, error)
 	//球员详情
 	FootPlayerDetail(ctx context.Context, in *FootPlayerInfoRequest, opts ...grpc.CallOption) (*FootResponse, error)
@@ -419,7 +420,7 @@ type FootBallClient interface {
 	//球队榜单
 	FootTodayMatch(ctx context.Context, in *FootTodayMatchRequest, opts ...grpc.CallOption) (*FootResponse, error)
 	//积分榜
-	GetLeagueStand(ctx context.Context, in *FootLeagueStandRequest, opts ...grpc.CallOption) (*FootResponse, error)
+	GetFootLeagueStand(ctx context.Context, in *FootLeagueStandRequest, opts ...grpc.CallOption) (*FootResponse, error)
 }
 
 type footBallClient struct {
@@ -565,9 +566,9 @@ func (c *footBallClient) FootTodayMatch(ctx context.Context, in *FootTodayMatchR
 	return out, nil
 }
 
-func (c *footBallClient) GetLeagueStand(ctx context.Context, in *FootLeagueStandRequest, opts ...grpc.CallOption) (*FootResponse, error) {
+func (c *footBallClient) GetFootLeagueStand(ctx context.Context, in *FootLeagueStandRequest, opts ...grpc.CallOption) (*FootResponse, error) {
 	out := new(FootResponse)
-	err := c.cc.Invoke(ctx, "/FootBall/GetLeagueStand", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/FootBall/GetFootLeagueStand", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -582,6 +583,7 @@ type FootBallServer interface {
 	GetMatchOddList(context.Context, *FootOddListRequest) (*FootResponse, error)
 	//指数数值明细
 	GetMatchOddListDetail(context.Context, *FootOddDetailRequest) (*FootResponse, error)
+	//赛季列表
 	GetFootSeasonList(context.Context, *FootSeasonListRequest) (*FootResponse, error)
 	//球员详情
 	FootPlayerDetail(context.Context, *FootPlayerInfoRequest) (*FootResponse, error)
@@ -606,7 +608,7 @@ type FootBallServer interface {
 	//球队榜单
 	FootTodayMatch(context.Context, *FootTodayMatchRequest) (*FootResponse, error)
 	//积分榜
-	GetLeagueStand(context.Context, *FootLeagueStandRequest) (*FootResponse, error)
+	GetFootLeagueStand(context.Context, *FootLeagueStandRequest) (*FootResponse, error)
 }
 
 // UnimplementedFootBallServer can be embedded to have forward compatible implementations.
@@ -658,8 +660,8 @@ func (*UnimplementedFootBallServer) FootTeamStand(context.Context, *FootTeamStan
 func (*UnimplementedFootBallServer) FootTodayMatch(context.Context, *FootTodayMatchRequest) (*FootResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method FootTodayMatch not implemented")
 }
-func (*UnimplementedFootBallServer) GetLeagueStand(context.Context, *FootLeagueStandRequest) (*FootResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method GetLeagueStand not implemented")
+func (*UnimplementedFootBallServer) GetFootLeagueStand(context.Context, *FootLeagueStandRequest) (*FootResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method GetFootLeagueStand not implemented")
 }
 
 func RegisterFootBallServer(s *grpc.Server, srv FootBallServer) {
@@ -936,20 +938,20 @@ func _FootBall_FootTodayMatch_Handler(srv interface{}, ctx context.Context, dec 
 	return interceptor(ctx, in, info, handler)
 }
 
-func _FootBall_GetLeagueStand_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _FootBall_GetFootLeagueStand_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(FootLeagueStandRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(FootBallServer).GetLeagueStand(ctx, in)
+		return srv.(FootBallServer).GetFootLeagueStand(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/FootBall/GetLeagueStand",
+		FullMethod: "/FootBall/GetFootLeagueStand",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(FootBallServer).GetLeagueStand(ctx, req.(*FootLeagueStandRequest))
+		return srv.(FootBallServer).GetFootLeagueStand(ctx, req.(*FootLeagueStandRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
@@ -1019,8 +1021,8 @@ var _FootBall_serviceDesc = grpc.ServiceDesc{
 			Handler:    _FootBall_FootTodayMatch_Handler,
 		},
 		{
-			MethodName: "GetLeagueStand",
-			Handler:    _FootBall_GetLeagueStand_Handler,
+			MethodName: "GetFootLeagueStand",
+			Handler:    _FootBall_GetFootLeagueStand_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
