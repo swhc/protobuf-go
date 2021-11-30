@@ -81,11 +81,11 @@ type FootContinentCountryTournamentInfoResponse struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Id        int64         `protobuf:"varint,3,opt,name=Id,proto3" json:"Id,omitempty"`              //地区ID
-	TabName   string        `protobuf:"bytes,4,opt,name=TabName,proto3" json:"TabName,omitempty"`     //选项卡名称
-	AreaImage string        `protobuf:"bytes,5,opt,name=AreaImage,proto3" json:"AreaImage,omitempty"` //地区的图片
-	Sort      int64         `protobuf:"varint,6,opt,name=Sort,proto3" json:"Sort,omitempty"`          //排序(忽略掉，返回数据就是已经排好了的)
-	AreaList  *FootAreaList `protobuf:"bytes,7,opt,name=AreaList,proto3" json:"AreaList,omitempty"`   //国家列表
+	Id        int64           `protobuf:"varint,3,opt,name=Id,proto3" json:"Id,omitempty"`              //地区ID
+	TabName   string          `protobuf:"bytes,4,opt,name=TabName,proto3" json:"TabName,omitempty"`     //选项卡名称
+	AreaImage string          `protobuf:"bytes,5,opt,name=AreaImage,proto3" json:"AreaImage,omitempty"` //地区的图片
+	Sort      int64           `protobuf:"varint,6,opt,name=Sort,proto3" json:"Sort,omitempty"`          //排序(忽略掉，返回数据就是已经排好了的)
+	AreaList  []*FootAreaList `protobuf:"bytes,7,rep,name=AreaList,proto3" json:"AreaList,omitempty"`   //国家列表
 }
 
 func (x *FootContinentCountryTournamentInfoResponse) Reset() {
@@ -148,7 +148,7 @@ func (x *FootContinentCountryTournamentInfoResponse) GetSort() int64 {
 	return 0
 }
 
-func (x *FootContinentCountryTournamentInfoResponse) GetAreaList() *FootAreaList {
+func (x *FootContinentCountryTournamentInfoResponse) GetAreaList() []*FootAreaList {
 	if x != nil {
 		return x.AreaList
 	}
@@ -160,12 +160,12 @@ type FootAreaList struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	AreaName  string         `protobuf:"bytes,8,opt,name=AreaName,proto3" json:"AreaName,omitempty"`    //地区名称
-	Count     int64          `protobuf:"varint,9,opt,name=Count,proto3" json:"Count,omitempty"`         //赛事数量
-	Id        int64          `protobuf:"varint,10,opt,name=Id,proto3" json:"Id,omitempty"`              //国家id
-	PId       int64          `protobuf:"varint,11,opt,name=PId,proto3" json:"PId,omitempty"`            //地区父级ID
-	AreaImage string         `protobuf:"bytes,12,opt,name=AreaImage,proto3" json:"AreaImage,omitempty"` //地区的图片
-	EventList *FootEventList `protobuf:"bytes,13,opt,name=EventList,proto3" json:"EventList,omitempty"` //地区下的赛事数据
+	AreaName  string           `protobuf:"bytes,8,opt,name=AreaName,proto3" json:"AreaName,omitempty"`    //地区名称
+	Count     int64            `protobuf:"varint,9,opt,name=Count,proto3" json:"Count,omitempty"`         //赛事数量
+	Id        int64            `protobuf:"varint,10,opt,name=Id,proto3" json:"Id,omitempty"`              //国家id
+	PId       int64            `protobuf:"varint,11,opt,name=PId,proto3" json:"PId,omitempty"`            //地区父级ID
+	AreaImage string           `protobuf:"bytes,12,opt,name=AreaImage,proto3" json:"AreaImage,omitempty"` //地区的图片
+	EventList []*FootEventList `protobuf:"bytes,13,rep,name=EventList,proto3" json:"EventList,omitempty"` //地区下的赛事数据
 }
 
 func (x *FootAreaList) Reset() {
@@ -235,7 +235,7 @@ func (x *FootAreaList) GetAreaImage() string {
 	return ""
 }
 
-func (x *FootAreaList) GetEventList() *FootEventList {
+func (x *FootAreaList) GetEventList() []*FootEventList {
 	if x != nil {
 		return x.EventList
 	}
@@ -390,7 +390,7 @@ var file_foot_continent_country_tournament_proto_rawDesc = []byte{
 	0x67, 0x65, 0x18, 0x05, 0x20, 0x01, 0x28, 0x09, 0x52, 0x09, 0x41, 0x72, 0x65, 0x61, 0x49, 0x6d,
 	0x61, 0x67, 0x65, 0x12, 0x12, 0x0a, 0x04, 0x53, 0x6f, 0x72, 0x74, 0x18, 0x06, 0x20, 0x01, 0x28,
 	0x03, 0x52, 0x04, 0x53, 0x6f, 0x72, 0x74, 0x12, 0x29, 0x0a, 0x08, 0x41, 0x72, 0x65, 0x61, 0x4c,
-	0x69, 0x73, 0x74, 0x18, 0x07, 0x20, 0x01, 0x28, 0x0b, 0x32, 0x0d, 0x2e, 0x46, 0x6f, 0x6f, 0x74,
+	0x69, 0x73, 0x74, 0x18, 0x07, 0x20, 0x03, 0x28, 0x0b, 0x32, 0x0d, 0x2e, 0x46, 0x6f, 0x6f, 0x74,
 	0x41, 0x72, 0x65, 0x61, 0x4c, 0x69, 0x73, 0x74, 0x52, 0x08, 0x41, 0x72, 0x65, 0x61, 0x4c, 0x69,
 	0x73, 0x74, 0x22, 0xae, 0x01, 0x0a, 0x0c, 0x46, 0x6f, 0x6f, 0x74, 0x41, 0x72, 0x65, 0x61, 0x4c,
 	0x69, 0x73, 0x74, 0x12, 0x1a, 0x0a, 0x08, 0x41, 0x72, 0x65, 0x61, 0x4e, 0x61, 0x6d, 0x65, 0x18,
@@ -401,7 +401,7 @@ var file_foot_continent_country_tournament_proto_rawDesc = []byte{
 	0x28, 0x03, 0x52, 0x03, 0x50, 0x49, 0x64, 0x12, 0x1c, 0x0a, 0x09, 0x41, 0x72, 0x65, 0x61, 0x49,
 	0x6d, 0x61, 0x67, 0x65, 0x18, 0x0c, 0x20, 0x01, 0x28, 0x09, 0x52, 0x09, 0x41, 0x72, 0x65, 0x61,
 	0x49, 0x6d, 0x61, 0x67, 0x65, 0x12, 0x2c, 0x0a, 0x09, 0x45, 0x76, 0x65, 0x6e, 0x74, 0x4c, 0x69,
-	0x73, 0x74, 0x18, 0x0d, 0x20, 0x01, 0x28, 0x0b, 0x32, 0x0e, 0x2e, 0x46, 0x6f, 0x6f, 0x74, 0x45,
+	0x73, 0x74, 0x18, 0x0d, 0x20, 0x03, 0x28, 0x0b, 0x32, 0x0e, 0x2e, 0x46, 0x6f, 0x6f, 0x74, 0x45,
 	0x76, 0x65, 0x6e, 0x74, 0x4c, 0x69, 0x73, 0x74, 0x52, 0x09, 0x45, 0x76, 0x65, 0x6e, 0x74, 0x4c,
 	0x69, 0x73, 0x74, 0x22, 0xcb, 0x02, 0x0a, 0x0d, 0x46, 0x6f, 0x6f, 0x74, 0x45, 0x76, 0x65, 0x6e,
 	0x74, 0x4c, 0x69, 0x73, 0x74, 0x12, 0x18, 0x0a, 0x07, 0x43, 0x6f, 0x6d, 0x4e, 0x61, 0x6d, 0x65,
