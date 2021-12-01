@@ -89,21 +89,24 @@ type FootPlayerInfoResponse struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	TeamId      int64  `protobuf:"varint,3,opt,name=TeamId,proto3" json:"TeamId,omitempty"`          //球队id
-	PersonId    int64  `protobuf:"varint,4,opt,name=PersonId,proto3" json:"PersonId,omitempty"`      //球员id
-	PersonName  string `protobuf:"bytes,5,opt,name=PersonName,proto3" json:"PersonName,omitempty"`   //球员中文名
-	EnglishName string `protobuf:"bytes,6,opt,name=EnglishName,proto3" json:"EnglishName,omitempty"` //球员英文名
-	Contry      string `protobuf:"bytes,7,opt,name=Contry,proto3" json:"Contry,omitempty"`           //球员国家
-	Age         int64  `protobuf:"varint,8,opt,name=Age,proto3" json:"Age,omitempty"`                //球员年龄
-	BrithDay    string `protobuf:"bytes,9,opt,name=BrithDay,proto3" json:"BrithDay,omitempty"`       //出生年月日
-	TeamName    string `protobuf:"bytes,10,opt,name=TeamName,proto3" json:"TeamName,omitempty"`      //球队名称
-	Position    string `protobuf:"bytes,11,opt,name=Position,proto3" json:"Position,omitempty"`      //位置【前锋、后卫...】
-	ClothesNum  int64  `protobuf:"varint,12,opt,name=ClothesNum,proto3" json:"ClothesNum,omitempty"` //衣服号码
-	Height      string `protobuf:"bytes,13,opt,name=Height,proto3" json:"Height,omitempty"`          //身高
-	Weight      string `protobuf:"bytes,14,opt,name=Weight,proto3" json:"Weight,omitempty"`          //体重
-	Image       string `protobuf:"bytes,15,opt,name=Image,proto3" json:"Image,omitempty"`            //头像
-	Honor       string `protobuf:"bytes,16,opt,name=Honor,proto3" json:"Honor,omitempty"`            //简介
-	TeamImages  string `protobuf:"bytes,17,opt,name=TeamImages,proto3" json:"TeamImages,omitempty"`  //球队队徽
+	TeamId       int64  `protobuf:"varint,3,opt,name=TeamId,proto3" json:"TeamId,omitempty"`             //球队id
+	PersonId     int64  `protobuf:"varint,4,opt,name=PersonId,proto3" json:"PersonId,omitempty"`         //球员id
+	PersonName   string `protobuf:"bytes,5,opt,name=PersonName,proto3" json:"PersonName,omitempty"`      //球员中文名
+	EnglishName  string `protobuf:"bytes,6,opt,name=EnglishName,proto3" json:"EnglishName,omitempty"`    //球员英文名
+	Contry       string `protobuf:"bytes,7,opt,name=Contry,proto3" json:"Contry,omitempty"`              //球员国家
+	Age          int64  `protobuf:"varint,8,opt,name=Age,proto3" json:"Age,omitempty"`                   //球员年龄
+	BrithDay     string `protobuf:"bytes,9,opt,name=BrithDay,proto3" json:"BrithDay,omitempty"`          //出生年月日
+	TeamName     string `protobuf:"bytes,10,opt,name=TeamName,proto3" json:"TeamName,omitempty"`         //球队名称
+	Position     string `protobuf:"bytes,11,opt,name=Position,proto3" json:"Position,omitempty"`         //位置【前锋、后卫...】
+	ClothesNum   int64  `protobuf:"varint,12,opt,name=ClothesNum,proto3" json:"ClothesNum,omitempty"`    //衣服号码
+	Height       string `protobuf:"bytes,13,opt,name=Height,proto3" json:"Height,omitempty"`             //身高
+	Weight       string `protobuf:"bytes,14,opt,name=Weight,proto3" json:"Weight,omitempty"`             //体重
+	Image        string `protobuf:"bytes,15,opt,name=Image,proto3" json:"Image,omitempty"`               //头像
+	Honor        string `protobuf:"bytes,16,opt,name=Honor,proto3" json:"Honor,omitempty"`               //简介
+	TeamImages   string `protobuf:"bytes,17,opt,name=TeamImages,proto3" json:"TeamImages,omitempty"`     //球队队徽
+	NationalFlag string `protobuf:"bytes,18,opt,name=NationalFlag,proto3" json:"NationalFlag,omitempty"` //国旗
+	Value        string `protobuf:"bytes,19,opt,name=Value,proto3" json:"Value,omitempty"`               //身价
+	Contract     int64  `protobuf:"varint,20,opt,name=Contract,proto3" json:"Contract,omitempty"`        //合同到期时间
 }
 
 func (x *FootPlayerInfoResponse) Reset() {
@@ -243,6 +246,27 @@ func (x *FootPlayerInfoResponse) GetTeamImages() string {
 	return ""
 }
 
+func (x *FootPlayerInfoResponse) GetNationalFlag() string {
+	if x != nil {
+		return x.NationalFlag
+	}
+	return ""
+}
+
+func (x *FootPlayerInfoResponse) GetValue() string {
+	if x != nil {
+		return x.Value
+	}
+	return ""
+}
+
+func (x *FootPlayerInfoResponse) GetContract() int64 {
+	if x != nil {
+		return x.Contract
+	}
+	return 0
+}
+
 var File_foot_player_detail_proto protoreflect.FileDescriptor
 
 var file_foot_player_detail_proto_rawDesc = []byte{
@@ -254,7 +278,7 @@ var file_foot_player_detail_proto_rawDesc = []byte{
 	0x18, 0x0a, 0x07, 0x73, 0x70, 0x6f, 0x72, 0x74, 0x49, 0x64, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09,
 	0x52, 0x07, 0x73, 0x70, 0x6f, 0x72, 0x74, 0x49, 0x64, 0x12, 0x1a, 0x0a, 0x08, 0x70, 0x65, 0x72,
 	0x73, 0x6f, 0x6e, 0x49, 0x64, 0x18, 0x02, 0x20, 0x01, 0x28, 0x03, 0x52, 0x08, 0x70, 0x65, 0x72,
-	0x73, 0x6f, 0x6e, 0x49, 0x64, 0x22, 0xa8, 0x03, 0x0a, 0x16, 0x46, 0x6f, 0x6f, 0x74, 0x50, 0x6c,
+	0x73, 0x6f, 0x6e, 0x49, 0x64, 0x22, 0xfe, 0x03, 0x0a, 0x16, 0x46, 0x6f, 0x6f, 0x74, 0x50, 0x6c,
 	0x61, 0x79, 0x65, 0x72, 0x49, 0x6e, 0x66, 0x6f, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65,
 	0x12, 0x16, 0x0a, 0x06, 0x54, 0x65, 0x61, 0x6d, 0x49, 0x64, 0x18, 0x03, 0x20, 0x01, 0x28, 0x03,
 	0x52, 0x06, 0x54, 0x65, 0x61, 0x6d, 0x49, 0x64, 0x12, 0x1a, 0x0a, 0x08, 0x50, 0x65, 0x72, 0x73,
@@ -281,8 +305,13 @@ var file_foot_player_detail_proto_rawDesc = []byte{
 	0x6e, 0x6f, 0x72, 0x18, 0x10, 0x20, 0x01, 0x28, 0x09, 0x52, 0x05, 0x48, 0x6f, 0x6e, 0x6f, 0x72,
 	0x12, 0x1e, 0x0a, 0x0a, 0x54, 0x65, 0x61, 0x6d, 0x49, 0x6d, 0x61, 0x67, 0x65, 0x73, 0x18, 0x11,
 	0x20, 0x01, 0x28, 0x09, 0x52, 0x0a, 0x54, 0x65, 0x61, 0x6d, 0x49, 0x6d, 0x61, 0x67, 0x65, 0x73,
-	0x42, 0x07, 0x5a, 0x05, 0x2e, 0x2f, 0x3b, 0x76, 0x31, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f,
-	0x33,
+	0x12, 0x22, 0x0a, 0x0c, 0x4e, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x61, 0x6c, 0x46, 0x6c, 0x61, 0x67,
+	0x18, 0x12, 0x20, 0x01, 0x28, 0x09, 0x52, 0x0c, 0x4e, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x61, 0x6c,
+	0x46, 0x6c, 0x61, 0x67, 0x12, 0x14, 0x0a, 0x05, 0x56, 0x61, 0x6c, 0x75, 0x65, 0x18, 0x13, 0x20,
+	0x01, 0x28, 0x09, 0x52, 0x05, 0x56, 0x61, 0x6c, 0x75, 0x65, 0x12, 0x1a, 0x0a, 0x08, 0x43, 0x6f,
+	0x6e, 0x74, 0x72, 0x61, 0x63, 0x74, 0x18, 0x14, 0x20, 0x01, 0x28, 0x03, 0x52, 0x08, 0x43, 0x6f,
+	0x6e, 0x74, 0x72, 0x61, 0x63, 0x74, 0x42, 0x07, 0x5a, 0x05, 0x2e, 0x2f, 0x3b, 0x76, 0x31, 0x62,
+	0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
 }
 
 var (
