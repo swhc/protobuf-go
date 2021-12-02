@@ -81,7 +81,7 @@ type CheckFootExistenceResponse struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	IsOK bool `protobuf:"varint,1,opt,name=IsOK,proto3" json:"IsOK,omitempty"` //总数
+	IsOK bool `protobuf:"varint,1,opt,name=IsOK,proto3" json:"IsOK,omitempty"` //是否存在
 }
 
 func (x *CheckFootExistenceResponse) Reset() {
