@@ -89,35 +89,37 @@ type FootMatchInfoResponse struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Id                int64          `protobuf:"varint,3,opt,name=Id,proto3" json:"Id,omitempty"`                                                   //比赛id
-	ChName            string         `protobuf:"bytes,4,opt,name=ChName,proto3" json:"ChName,omitempty"`                                            //比赛名称
-	Round             string         `protobuf:"bytes,5,opt,name=Round,proto3" json:"Round,omitempty"`                                              //场次
-	StartTime         int64          `protobuf:"varint,6,opt,name=StartTime,proto3" json:"StartTime,omitempty"`                                     //开始时间
-	MainTeamId        int64          `protobuf:"varint,7,opt,name=MainTeamId,proto3" json:"MainTeamId,omitempty"`                                   //主队id
-	MainTeamName      string         `protobuf:"bytes,8,opt,name=MainTeamName,proto3" json:"MainTeamName,omitempty"`                                //主队名称
-	MainTeamImages    string         `protobuf:"bytes,9,opt,name=MainTeamImages,proto3" json:"MainTeamImages,omitempty"`                            //主队头像
-	CustTeamId        int64          `protobuf:"varint,10,opt,name=CustTeamId,proto3" json:"CustTeamId,omitempty"`                                  //客队id
-	CustTeamName      string         `protobuf:"bytes,11,opt,name=CustTeamName,proto3" json:"CustTeamName,omitempty"`                               //客队名称
-	CustTeamImages    string         `protobuf:"bytes,12,opt,name=CustTeamImages,proto3" json:"CustTeamImages,omitempty"`                           //客队头像
-	MainTeamRank      int64          `protobuf:"varint,13,opt,name=MainTeamRank,proto3" json:"MainTeamRank,omitempty"`                              //主队排名
-	CustTeamRank      int64          `protobuf:"varint,14,opt,name=CustTeamRank,proto3" json:"CustTeamRank,omitempty"`                              //客队排名
-	EventStatusResult int64          `protobuf:"varint,15,opt,name=EventStatusResult,proto3" json:"EventStatusResult,omitempty"`                    //状态描述：1:未开始，2:开始，3:结束,4:中断，6:取消
-	IsCollect         bool           `protobuf:"varint,16,opt,name=IsCollect,proto3" json:"IsCollect,omitempty"`                                    //是否收藏
-	TeamMainScore     int64          `protobuf:"varint,17,opt,name=TeamMainScore,proto3" json:"TeamMainScore,omitempty"`                            //主队得分
-	TeamCustScore     int64          `protobuf:"varint,18,opt,name=TeamCustScore,proto3" json:"TeamCustScore,omitempty"`                            //客队得分
-	EventStatusId     int64          `protobuf:"varint,19,opt,name=EventStatusId,proto3" json:"EventStatusId,omitempty"`                            //2：上半场，10：中场休息，3：下半场，14：等待加时，8：加时赛上半场，9：加时赛下半场，20：等待点球，4：点球大战，13：点球大战完场
-	TimePlayed        int64          `protobuf:"varint,20,opt,name=TimePlayed,proto3" json:"TimePlayed,omitempty"`                                  //足球比赛已进行时间（秒）；示例：5656
-	TimeRunning       int64          `protobuf:"varint,21,opt,name=TimeRunning,proto3" json:"TimeRunning,omitempty"`                                //比赛时钟是否计时中：1计时中 0暂停计时；示例：0
-	TimeUpdate        int64          `protobuf:"varint,32,opt,name=TimeUpdate,proto3" json:"TimeUpdate,omitempty"`                                  //比赛进行时间更新时间；示例：2020-10-25 00:46:22.000
-	MainScore         int64          `protobuf:"varint,22,opt,name=MainScore,proto3" json:"MainScore,omitempty"`                                    //（加时赛）主队得分
-	MainPointSphere   int64          `protobuf:"varint,23,opt,name=MainPoint_sphere,json=MainPointSphere,proto3" json:"MainPoint_sphere,omitempty"` //主队点球数
-	CustScore         int64          `protobuf:"varint,24,opt,name=CustScore,proto3" json:"CustScore,omitempty"`                                    //（加时赛）客队得分
-	CustPointSphere   int64          `protobuf:"varint,25,opt,name=CustPoint_sphere,json=CustPointSphere,proto3" json:"CustPoint_sphere,omitempty"` //客队点球数
-	IsExtraTime       bool           `protobuf:"varint,31,opt,name=IsExtraTime,proto3" json:"IsExtraTime,omitempty"`                                //是否加时赛
-	IsPenaltyKick     bool           `protobuf:"varint,26,opt,name=IsPenaltyKick,proto3" json:"IsPenaltyKick,omitempty"`                            //是否点球
-	Elapsed           int64          `protobuf:"varint,27,opt,name=Elapsed,proto3" json:"Elapsed,omitempty"`                                        //时长
-	CurrentTime       int64          `protobuf:"varint,28,opt,name=CurrentTime,proto3" json:"CurrentTime,omitempty"`                                //服务器当前时间
-	Animation         *FootAnimation `protobuf:"bytes,30,opt,name=animation,proto3" json:"animation,omitempty"`                                     //动画
+	Id                int64            `protobuf:"varint,3,opt,name=Id,proto3" json:"Id,omitempty"`                                                   //比赛id
+	ChName            string           `protobuf:"bytes,4,opt,name=ChName,proto3" json:"ChName,omitempty"`                                            //比赛名称
+	Round             string           `protobuf:"bytes,5,opt,name=Round,proto3" json:"Round,omitempty"`                                              //场次
+	StartTime         int64            `protobuf:"varint,6,opt,name=StartTime,proto3" json:"StartTime,omitempty"`                                     //开始时间
+	MainTeamId        int64            `protobuf:"varint,7,opt,name=MainTeamId,proto3" json:"MainTeamId,omitempty"`                                   //主队id
+	MainTeamName      string           `protobuf:"bytes,8,opt,name=MainTeamName,proto3" json:"MainTeamName,omitempty"`                                //主队名称
+	MainTeamImages    string           `protobuf:"bytes,9,opt,name=MainTeamImages,proto3" json:"MainTeamImages,omitempty"`                            //主队头像
+	CustTeamId        int64            `protobuf:"varint,10,opt,name=CustTeamId,proto3" json:"CustTeamId,omitempty"`                                  //客队id
+	CustTeamName      string           `protobuf:"bytes,11,opt,name=CustTeamName,proto3" json:"CustTeamName,omitempty"`                               //客队名称
+	CustTeamImages    string           `protobuf:"bytes,12,opt,name=CustTeamImages,proto3" json:"CustTeamImages,omitempty"`                           //客队头像
+	MainTeamRank      int64            `protobuf:"varint,13,opt,name=MainTeamRank,proto3" json:"MainTeamRank,omitempty"`                              //主队排名
+	CustTeamRank      int64            `protobuf:"varint,14,opt,name=CustTeamRank,proto3" json:"CustTeamRank,omitempty"`                              //客队排名
+	EventStatusResult int64            `protobuf:"varint,15,opt,name=EventStatusResult,proto3" json:"EventStatusResult,omitempty"`                    //状态描述：1:未开始，2:开始，3:结束,4:中断，6:取消
+	IsCollect         bool             `protobuf:"varint,16,opt,name=IsCollect,proto3" json:"IsCollect,omitempty"`                                    //是否收藏
+	TeamMainScore     int64            `protobuf:"varint,17,opt,name=TeamMainScore,proto3" json:"TeamMainScore,omitempty"`                            //主队得分
+	TeamCustScore     int64            `protobuf:"varint,18,opt,name=TeamCustScore,proto3" json:"TeamCustScore,omitempty"`                            //客队得分
+	EventStatusId     int64            `protobuf:"varint,19,opt,name=EventStatusId,proto3" json:"EventStatusId,omitempty"`                            //2：上半场，10：中场休息，3：下半场，14：等待加时，8：加时赛上半场，9：加时赛下半场，20：等待点球，4：点球大战，13：点球大战完场
+	TimePlayed        int64            `protobuf:"varint,20,opt,name=TimePlayed,proto3" json:"TimePlayed,omitempty"`                                  //足球比赛已进行时间（秒）；示例：5656
+	TimeRunning       int64            `protobuf:"varint,21,opt,name=TimeRunning,proto3" json:"TimeRunning,omitempty"`                                //比赛时钟是否计时中：1计时中 0暂停计时；示例：0
+	TimeUpdate        int64            `protobuf:"varint,32,opt,name=TimeUpdate,proto3" json:"TimeUpdate,omitempty"`                                  //比赛进行时间更新时间；示例：2020-10-25 00:46:22.000
+	MainScore         int64            `protobuf:"varint,22,opt,name=MainScore,proto3" json:"MainScore,omitempty"`                                    //（加时赛）主队得分
+	MainPointSphere   int64            `protobuf:"varint,23,opt,name=MainPoint_sphere,json=MainPointSphere,proto3" json:"MainPoint_sphere,omitempty"` //主队点球数
+	CustScore         int64            `protobuf:"varint,24,opt,name=CustScore,proto3" json:"CustScore,omitempty"`                                    //（加时赛）客队得分
+	CustPointSphere   int64            `protobuf:"varint,25,opt,name=CustPoint_sphere,json=CustPointSphere,proto3" json:"CustPoint_sphere,omitempty"` //客队点球数
+	IsExtraTime       bool             `protobuf:"varint,31,opt,name=IsExtraTime,proto3" json:"IsExtraTime,omitempty"`                                //是否加时赛
+	IsPenaltyKick     bool             `protobuf:"varint,26,opt,name=IsPenaltyKick,proto3" json:"IsPenaltyKick,omitempty"`                            //是否点球
+	Elapsed           int64            `protobuf:"varint,27,opt,name=Elapsed,proto3" json:"Elapsed,omitempty"`                                        //时长
+	CurrentTime       int64            `protobuf:"varint,28,opt,name=CurrentTime,proto3" json:"CurrentTime,omitempty"`                                //服务器当前时间
+	Animation         *FootAnimation   `protobuf:"bytes,30,opt,name=animation,proto3" json:"animation,omitempty"`                                     //动画
+	PlaybackType      int64            `protobuf:"varint,33,opt,name=PlaybackType,proto3" json:"PlaybackType,omitempty"`                              //1:直播，2：3D ,3:都存在
+	AgainstLive       *FootAgainstLive `protobuf:"bytes,34,opt,name=AgainstLive,proto3" json:"AgainstLive,omitempty"`                                 //直播地址
 }
 
 func (x *FootMatchInfoResponse) Reset() {
@@ -355,12 +357,81 @@ func (x *FootMatchInfoResponse) GetAnimation() *FootAnimation {
 	return nil
 }
 
+func (x *FootMatchInfoResponse) GetPlaybackType() int64 {
+	if x != nil {
+		return x.PlaybackType
+	}
+	return 0
+}
+
+func (x *FootMatchInfoResponse) GetAgainstLive() *FootAgainstLive {
+	if x != nil {
+		return x.AgainstLive
+	}
+	return nil
+}
+
+type FootAgainstLive struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	Title string `protobuf:"bytes,1,opt,name=title,proto3" json:"title,omitempty"` //名称
+	Url   string `protobuf:"bytes,2,opt,name=url,proto3" json:"url,omitempty"`     //地址
+}
+
+func (x *FootAgainstLive) Reset() {
+	*x = FootAgainstLive{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_foot_match_request_proto_msgTypes[2]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *FootAgainstLive) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*FootAgainstLive) ProtoMessage() {}
+
+func (x *FootAgainstLive) ProtoReflect() protoreflect.Message {
+	mi := &file_foot_match_request_proto_msgTypes[2]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use FootAgainstLive.ProtoReflect.Descriptor instead.
+func (*FootAgainstLive) Descriptor() ([]byte, []int) {
+	return file_foot_match_request_proto_rawDescGZIP(), []int{2}
+}
+
+func (x *FootAgainstLive) GetTitle() string {
+	if x != nil {
+		return x.Title
+	}
+	return ""
+}
+
+func (x *FootAgainstLive) GetUrl() string {
+	if x != nil {
+		return x.Url
+	}
+	return ""
+}
+
 type FootAnimation struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Url    string `protobuf:"bytes,1,opt,name=url,proto3" json:"url,omitempty"`        //url
+	Url    string `protobuf:"bytes,1,opt,name=url,proto3" json:"url,omitempty"`        //链接
 	Width  int64  `protobuf:"varint,2,opt,name=width,proto3" json:"width,omitempty"`   //宽度
 	Height int64  `protobuf:"varint,3,opt,name=height,proto3" json:"height,omitempty"` //高度
 }
@@ -368,7 +439,7 @@ type FootAnimation struct {
 func (x *FootAnimation) Reset() {
 	*x = FootAnimation{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_foot_match_request_proto_msgTypes[2]
+		mi := &file_foot_match_request_proto_msgTypes[3]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -381,7 +452,7 @@ func (x *FootAnimation) String() string {
 func (*FootAnimation) ProtoMessage() {}
 
 func (x *FootAnimation) ProtoReflect() protoreflect.Message {
-	mi := &file_foot_match_request_proto_msgTypes[2]
+	mi := &file_foot_match_request_proto_msgTypes[3]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -394,7 +465,7 @@ func (x *FootAnimation) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use FootAnimation.ProtoReflect.Descriptor instead.
 func (*FootAnimation) Descriptor() ([]byte, []int) {
-	return file_foot_match_request_proto_rawDescGZIP(), []int{2}
+	return file_foot_match_request_proto_rawDescGZIP(), []int{3}
 }
 
 func (x *FootAnimation) GetUrl() string {
@@ -429,7 +500,7 @@ var file_foot_match_request_proto_rawDesc = []byte{
 	0x0a, 0x07, 0x73, 0x70, 0x6f, 0x72, 0x74, 0x49, 0x64, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52,
 	0x07, 0x73, 0x70, 0x6f, 0x72, 0x74, 0x49, 0x64, 0x12, 0x18, 0x0a, 0x07, 0x65, 0x76, 0x65, 0x6e,
 	0x74, 0x49, 0x64, 0x18, 0x02, 0x20, 0x01, 0x28, 0x09, 0x52, 0x07, 0x65, 0x76, 0x65, 0x6e, 0x74,
-	0x49, 0x64, 0x22, 0xf7, 0x07, 0x0a, 0x15, 0x46, 0x6f, 0x6f, 0x74, 0x4d, 0x61, 0x74, 0x63, 0x68,
+	0x49, 0x64, 0x22, 0xcf, 0x08, 0x0a, 0x15, 0x46, 0x6f, 0x6f, 0x74, 0x4d, 0x61, 0x74, 0x63, 0x68,
 	0x49, 0x6e, 0x66, 0x6f, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x12, 0x0e, 0x0a, 0x02,
 	0x49, 0x64, 0x18, 0x03, 0x20, 0x01, 0x28, 0x03, 0x52, 0x02, 0x49, 0x64, 0x12, 0x16, 0x0a, 0x06,
 	0x43, 0x68, 0x4e, 0x61, 0x6d, 0x65, 0x18, 0x04, 0x20, 0x01, 0x28, 0x09, 0x52, 0x06, 0x43, 0x68,
@@ -492,13 +563,23 @@ var file_foot_match_request_proto_rawDesc = []byte{
 	0x03, 0x52, 0x0b, 0x43, 0x75, 0x72, 0x72, 0x65, 0x6e, 0x74, 0x54, 0x69, 0x6d, 0x65, 0x12, 0x2c,
 	0x0a, 0x09, 0x61, 0x6e, 0x69, 0x6d, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x18, 0x1e, 0x20, 0x01, 0x28,
 	0x0b, 0x32, 0x0e, 0x2e, 0x46, 0x6f, 0x6f, 0x74, 0x41, 0x6e, 0x69, 0x6d, 0x61, 0x74, 0x69, 0x6f,
-	0x6e, 0x52, 0x09, 0x61, 0x6e, 0x69, 0x6d, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x22, 0x4f, 0x0a, 0x0d,
-	0x46, 0x6f, 0x6f, 0x74, 0x41, 0x6e, 0x69, 0x6d, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x12, 0x10, 0x0a,
-	0x03, 0x75, 0x72, 0x6c, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x03, 0x75, 0x72, 0x6c, 0x12,
-	0x14, 0x0a, 0x05, 0x77, 0x69, 0x64, 0x74, 0x68, 0x18, 0x02, 0x20, 0x01, 0x28, 0x03, 0x52, 0x05,
-	0x77, 0x69, 0x64, 0x74, 0x68, 0x12, 0x16, 0x0a, 0x06, 0x68, 0x65, 0x69, 0x67, 0x68, 0x74, 0x18,
-	0x03, 0x20, 0x01, 0x28, 0x03, 0x52, 0x06, 0x68, 0x65, 0x69, 0x67, 0x68, 0x74, 0x42, 0x07, 0x5a,
-	0x05, 0x2e, 0x2f, 0x3b, 0x76, 0x31, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
+	0x6e, 0x52, 0x09, 0x61, 0x6e, 0x69, 0x6d, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x12, 0x22, 0x0a, 0x0c,
+	0x50, 0x6c, 0x61, 0x79, 0x62, 0x61, 0x63, 0x6b, 0x54, 0x79, 0x70, 0x65, 0x18, 0x21, 0x20, 0x01,
+	0x28, 0x03, 0x52, 0x0c, 0x50, 0x6c, 0x61, 0x79, 0x62, 0x61, 0x63, 0x6b, 0x54, 0x79, 0x70, 0x65,
+	0x12, 0x32, 0x0a, 0x0b, 0x41, 0x67, 0x61, 0x69, 0x6e, 0x73, 0x74, 0x4c, 0x69, 0x76, 0x65, 0x18,
+	0x22, 0x20, 0x01, 0x28, 0x0b, 0x32, 0x10, 0x2e, 0x46, 0x6f, 0x6f, 0x74, 0x41, 0x67, 0x61, 0x69,
+	0x6e, 0x73, 0x74, 0x4c, 0x69, 0x76, 0x65, 0x52, 0x0b, 0x41, 0x67, 0x61, 0x69, 0x6e, 0x73, 0x74,
+	0x4c, 0x69, 0x76, 0x65, 0x22, 0x39, 0x0a, 0x0f, 0x46, 0x6f, 0x6f, 0x74, 0x41, 0x67, 0x61, 0x69,
+	0x6e, 0x73, 0x74, 0x4c, 0x69, 0x76, 0x65, 0x12, 0x14, 0x0a, 0x05, 0x74, 0x69, 0x74, 0x6c, 0x65,
+	0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x05, 0x74, 0x69, 0x74, 0x6c, 0x65, 0x12, 0x10, 0x0a,
+	0x03, 0x75, 0x72, 0x6c, 0x18, 0x02, 0x20, 0x01, 0x28, 0x09, 0x52, 0x03, 0x75, 0x72, 0x6c, 0x22,
+	0x4f, 0x0a, 0x0d, 0x46, 0x6f, 0x6f, 0x74, 0x41, 0x6e, 0x69, 0x6d, 0x61, 0x74, 0x69, 0x6f, 0x6e,
+	0x12, 0x10, 0x0a, 0x03, 0x75, 0x72, 0x6c, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x03, 0x75,
+	0x72, 0x6c, 0x12, 0x14, 0x0a, 0x05, 0x77, 0x69, 0x64, 0x74, 0x68, 0x18, 0x02, 0x20, 0x01, 0x28,
+	0x03, 0x52, 0x05, 0x77, 0x69, 0x64, 0x74, 0x68, 0x12, 0x16, 0x0a, 0x06, 0x68, 0x65, 0x69, 0x67,
+	0x68, 0x74, 0x18, 0x03, 0x20, 0x01, 0x28, 0x03, 0x52, 0x06, 0x68, 0x65, 0x69, 0x67, 0x68, 0x74,
+	0x42, 0x07, 0x5a, 0x05, 0x2e, 0x2f, 0x3b, 0x76, 0x31, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f,
+	0x33,
 }
 
 var (
@@ -513,19 +594,21 @@ func file_foot_match_request_proto_rawDescGZIP() []byte {
 	return file_foot_match_request_proto_rawDescData
 }
 
-var file_foot_match_request_proto_msgTypes = make([]protoimpl.MessageInfo, 3)
+var file_foot_match_request_proto_msgTypes = make([]protoimpl.MessageInfo, 4)
 var file_foot_match_request_proto_goTypes = []interface{}{
 	(*FootMatchInfoRequest)(nil),  // 0: FootMatchInfoRequest
 	(*FootMatchInfoResponse)(nil), // 1: FootMatchInfoResponse
-	(*FootAnimation)(nil),         // 2: FootAnimation
+	(*FootAgainstLive)(nil),       // 2: FootAgainstLive
+	(*FootAnimation)(nil),         // 3: FootAnimation
 }
 var file_foot_match_request_proto_depIdxs = []int32{
-	2, // 0: FootMatchInfoResponse.animation:type_name -> FootAnimation
-	1, // [1:1] is the sub-list for method output_type
-	1, // [1:1] is the sub-list for method input_type
-	1, // [1:1] is the sub-list for extension type_name
-	1, // [1:1] is the sub-list for extension extendee
-	0, // [0:1] is the sub-list for field type_name
+	3, // 0: FootMatchInfoResponse.animation:type_name -> FootAnimation
+	2, // 1: FootMatchInfoResponse.AgainstLive:type_name -> FootAgainstLive
+	2, // [2:2] is the sub-list for method output_type
+	2, // [2:2] is the sub-list for method input_type
+	2, // [2:2] is the sub-list for extension type_name
+	2, // [2:2] is the sub-list for extension extendee
+	0, // [0:2] is the sub-list for field type_name
 }
 
 func init() { file_foot_match_request_proto_init() }
@@ -559,6 +642,18 @@ func file_foot_match_request_proto_init() {
 			}
 		}
 		file_foot_match_request_proto_msgTypes[2].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*FootAgainstLive); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_foot_match_request_proto_msgTypes[3].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*FootAnimation); i {
 			case 0:
 				return &v.state
@@ -577,7 +672,7 @@ func file_foot_match_request_proto_init() {
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: file_foot_match_request_proto_rawDesc,
 			NumEnums:      0,
-			NumMessages:   3,
+			NumMessages:   4,
 			NumExtensions: 0,
 			NumServices:   0,
 		},
