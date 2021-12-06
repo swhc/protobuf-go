@@ -325,15 +325,15 @@ type FootLeagueList struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	EventId     int64 `protobuf:"varint,1,opt,name=eventId,proto3" json:"eventId,omitempty"`
-	Situation   int64 `protobuf:"varint,2,opt,name=situation,proto3" json:"situation,omitempty"`
-	WinNumber   int64 `protobuf:"varint,3,opt,name=winNumber,proto3" json:"winNumber,omitempty"`
-	FlatNumber  int64 `protobuf:"varint,4,opt,name=flatNumber,proto3" json:"flatNumber,omitempty"`
-	MinusNumber int64 `protobuf:"varint,5,opt,name=minusNumber,proto3" json:"minusNumber,omitempty"`
-	GoalAndLose int64 `protobuf:"varint,6,opt,name=goalAndLose,proto3" json:"goalAndLose,omitempty"`
-	Integral    int64 `protobuf:"varint,8,opt,name=integral,proto3" json:"integral,omitempty"`
-	Rank        int64 `protobuf:"varint,9,opt,name=rank,proto3" json:"rank,omitempty"`
-	HomeCourt   int64 `protobuf:"varint,10,opt,name=homeCourt,proto3" json:"homeCourt,omitempty"`
+	EventId     int64  `protobuf:"varint,1,opt,name=eventId,proto3" json:"eventId,omitempty"`
+	Situation   int64  `protobuf:"varint,2,opt,name=situation,proto3" json:"situation,omitempty"`
+	WinNumber   int64  `protobuf:"varint,3,opt,name=winNumber,proto3" json:"winNumber,omitempty"`
+	FlatNumber  int64  `protobuf:"varint,4,opt,name=flatNumber,proto3" json:"flatNumber,omitempty"`
+	MinusNumber int64  `protobuf:"varint,5,opt,name=minusNumber,proto3" json:"minusNumber,omitempty"`
+	GoalAndLose string `protobuf:"bytes,6,opt,name=goalAndLose,proto3" json:"goalAndLose,omitempty"`
+	Integral    int64  `protobuf:"varint,8,opt,name=integral,proto3" json:"integral,omitempty"`
+	Rank        int64  `protobuf:"varint,9,opt,name=rank,proto3" json:"rank,omitempty"`
+	HomeCourt   int64  `protobuf:"varint,10,opt,name=homeCourt,proto3" json:"homeCourt,omitempty"`
 }
 
 func (x *FootLeagueList) Reset() {
@@ -403,11 +403,11 @@ func (x *FootLeagueList) GetMinusNumber() int64 {
 	return 0
 }
 
-func (x *FootLeagueList) GetGoalAndLose() int64 {
+func (x *FootLeagueList) GetGoalAndLose() string {
 	if x != nil {
 		return x.GoalAndLose
 	}
-	return 0
+	return ""
 }
 
 func (x *FootLeagueList) GetIntegral() int64 {
@@ -1132,7 +1132,7 @@ var file_foot_base_data_proto_rawDesc = []byte{
 	0x62, 0x65, 0x72, 0x12, 0x20, 0x0a, 0x0b, 0x6d, 0x69, 0x6e, 0x75, 0x73, 0x4e, 0x75, 0x6d, 0x62,
 	0x65, 0x72, 0x18, 0x05, 0x20, 0x01, 0x28, 0x03, 0x52, 0x0b, 0x6d, 0x69, 0x6e, 0x75, 0x73, 0x4e,
 	0x75, 0x6d, 0x62, 0x65, 0x72, 0x12, 0x20, 0x0a, 0x0b, 0x67, 0x6f, 0x61, 0x6c, 0x41, 0x6e, 0x64,
-	0x4c, 0x6f, 0x73, 0x65, 0x18, 0x06, 0x20, 0x01, 0x28, 0x03, 0x52, 0x0b, 0x67, 0x6f, 0x61, 0x6c,
+	0x4c, 0x6f, 0x73, 0x65, 0x18, 0x06, 0x20, 0x01, 0x28, 0x09, 0x52, 0x0b, 0x67, 0x6f, 0x61, 0x6c,
 	0x41, 0x6e, 0x64, 0x4c, 0x6f, 0x73, 0x65, 0x12, 0x1a, 0x0a, 0x08, 0x69, 0x6e, 0x74, 0x65, 0x67,
 	0x72, 0x61, 0x6c, 0x18, 0x08, 0x20, 0x01, 0x28, 0x03, 0x52, 0x08, 0x69, 0x6e, 0x74, 0x65, 0x67,
 	0x72, 0x61, 0x6c, 0x12, 0x12, 0x0a, 0x04, 0x72, 0x61, 0x6e, 0x6b, 0x18, 0x09, 0x20, 0x01, 0x28,
