@@ -193,7 +193,7 @@ var file_foot_server_proto_rawDesc = []byte{
 	0x6c, 0x61, 0x6e, 0x67, 0x75, 0x61, 0x67, 0x65, 0x18, 0x03, 0x20, 0x01, 0x28, 0x09, 0x52, 0x08,
 	0x6c, 0x61, 0x6e, 0x67, 0x75, 0x61, 0x67, 0x65, 0x22, 0x22, 0x0a, 0x0c, 0x46, 0x6f, 0x6f, 0x74,
 	0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x12, 0x12, 0x0a, 0x04, 0x64, 0x61, 0x74, 0x61,
-	0x18, 0x03, 0x20, 0x01, 0x28, 0x0c, 0x52, 0x04, 0x64, 0x61, 0x74, 0x61, 0x32, 0xe0, 0x0e, 0x0a,
+	0x18, 0x03, 0x20, 0x01, 0x28, 0x0c, 0x52, 0x04, 0x64, 0x61, 0x74, 0x61, 0x32, 0xa1, 0x0f, 0x0a,
 	0x08, 0x46, 0x6f, 0x6f, 0x74, 0x42, 0x61, 0x6c, 0x6c, 0x12, 0x40, 0x0a, 0x16, 0x46, 0x6f, 0x6f,
 	0x74, 0x4d, 0x61, 0x74, 0x63, 0x68, 0x41, 0x67, 0x61, 0x69, 0x6e, 0x73, 0x74, 0x44, 0x65, 0x74,
 	0x61, 0x69, 0x6c, 0x12, 0x15, 0x2e, 0x46, 0x6f, 0x6f, 0x74, 0x4d, 0x61, 0x74, 0x63, 0x68, 0x49,
@@ -311,8 +311,13 @@ var file_foot_server_proto_rawDesc = []byte{
 	0x3e, 0x0a, 0x0d, 0x46, 0x6f, 0x6f, 0x74, 0x4d, 0x61, 0x74, 0x63, 0x68, 0x42, 0x61, 0x73, 0x65,
 	0x12, 0x14, 0x2e, 0x46, 0x6f, 0x6f, 0x74, 0x42, 0x61, 0x73, 0x65, 0x44, 0x61, 0x74, 0x61, 0x52,
 	0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x15, 0x2e, 0x46, 0x6f, 0x6f, 0x74, 0x42, 0x61, 0x73,
-	0x65, 0x44, 0x61, 0x74, 0x61, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x00, 0x42,
-	0x07, 0x5a, 0x05, 0x2e, 0x2f, 0x3b, 0x76, 0x31, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
+	0x65, 0x44, 0x61, 0x74, 0x61, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x00, 0x12,
+	0x3f, 0x0a, 0x11, 0x46, 0x6f, 0x6f, 0x74, 0x44, 0x61, 0x74, 0x61, 0x50, 0x72, 0x6f, 0x6d, 0x6f,
+	0x74, 0x69, 0x6f, 0x6e, 0x12, 0x19, 0x2e, 0x46, 0x6f, 0x6f, 0x74, 0x44, 0x61, 0x74, 0x61, 0x50,
+	0x72, 0x6f, 0x6d, 0x6f, 0x74, 0x69, 0x6f, 0x6e, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a,
+	0x0d, 0x2e, 0x46, 0x6f, 0x6f, 0x74, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x00,
+	0x42, 0x07, 0x5a, 0x05, 0x2e, 0x2f, 0x3b, 0x76, 0x31, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f,
+	0x33,
 }
 
 var (
@@ -361,7 +366,8 @@ var file_foot_server_proto_goTypes = []interface{}{
 	(*FootMatchListRequest)(nil),                      // 29: FootMatchListRequest
 	(*FootMatchPlusRequest)(nil),                      // 30: FootMatchPlusRequest
 	(*FootBaseDataRequest)(nil),                       // 31: FootBaseDataRequest
-	(*FootBaseDataResponse)(nil),                      // 32: FootBaseDataResponse
+	(*FootDataPromotionRequest)(nil),                  // 32: FootDataPromotionRequest
+	(*FootBaseDataResponse)(nil),                      // 33: FootBaseDataResponse
 }
 var file_foot_server_proto_depIdxs = []int32{
 	2,  // 0: FootBall.FootMatchAgainstDetail:input_type -> FootMatchInfoRequest
@@ -394,38 +400,40 @@ var file_foot_server_proto_depIdxs = []int32{
 	29, // 27: FootBall.FootMatchList:input_type -> FootMatchListRequest
 	30, // 28: FootBall.FootMatchPlus:input_type -> FootMatchPlusRequest
 	31, // 29: FootBall.FootMatchBase:input_type -> FootBaseDataRequest
-	1,  // 30: FootBall.FootMatchAgainstDetail:output_type -> FootResponse
-	1,  // 31: FootBall.GetMatchOddList:output_type -> FootResponse
-	1,  // 32: FootBall.GetMatchOddListDetail:output_type -> FootResponse
-	1,  // 33: FootBall.GetFootSeasonList:output_type -> FootResponse
-	1,  // 34: FootBall.FootPlayerDetail:output_type -> FootResponse
-	1,  // 35: FootBall.FootMatchCommentList:output_type -> FootResponse
-	1,  // 36: FootBall.GetFootMatchFiltrate:output_type -> FootResponse
-	1,  // 37: FootBall.GetFootContinentCountryTournamentData:output_type -> FootResponse
-	1,  // 38: FootBall.FootTeamDetail:output_type -> FootResponse
-	1,  // 39: FootBall.FootStandTag:output_type -> FootResponse
-	1,  // 40: FootBall.FootTeamMatch:output_type -> FootResponse
-	1,  // 41: FootBall.FootMatchTeamLineup:output_type -> FootResponse
-	1,  // 42: FootBall.FootTeamStand:output_type -> FootResponse
-	1,  // 43: FootBall.FootTodayMatch:output_type -> FootResponse
-	1,  // 44: FootBall.GetFootLeagueStand:output_type -> FootResponse
-	1,  // 45: FootBall.FootTeamTransfer:output_type -> FootResponse
-	1,  // 46: FootBall.GetFootPlayerStand:output_type -> FootResponse
-	1,  // 47: FootBall.FootLiveLineup:output_type -> FootResponse
-	1,  // 48: FootBall.FootLiveStat:output_type -> FootResponse
-	1,  // 49: FootBall.FootPlayerCareer:output_type -> FootResponse
-	1,  // 50: FootBall.FootTeamTransferYear:output_type -> FootResponse
-	1,  // 51: FootBall.GetFootCheckExistence:output_type -> FootResponse
-	1,  // 52: FootBall.FootFiltrationId:output_type -> FootResponse
-	1,  // 53: FootBall.GetDataTypeCount:output_type -> FootResponse
-	1,  // 54: FootBall.CheckFootData:output_type -> FootResponse
-	1,  // 55: FootBall.FootRealTime:output_type -> FootResponse
-	1,  // 56: FootBall.FootOddsFilter:output_type -> FootResponse
-	1,  // 57: FootBall.FootMatchList:output_type -> FootResponse
-	1,  // 58: FootBall.FootMatchPlus:output_type -> FootResponse
-	32, // 59: FootBall.FootMatchBase:output_type -> FootBaseDataResponse
-	30, // [30:60] is the sub-list for method output_type
-	0,  // [0:30] is the sub-list for method input_type
+	32, // 30: FootBall.FootDataPromotion:input_type -> FootDataPromotionRequest
+	1,  // 31: FootBall.FootMatchAgainstDetail:output_type -> FootResponse
+	1,  // 32: FootBall.GetMatchOddList:output_type -> FootResponse
+	1,  // 33: FootBall.GetMatchOddListDetail:output_type -> FootResponse
+	1,  // 34: FootBall.GetFootSeasonList:output_type -> FootResponse
+	1,  // 35: FootBall.FootPlayerDetail:output_type -> FootResponse
+	1,  // 36: FootBall.FootMatchCommentList:output_type -> FootResponse
+	1,  // 37: FootBall.GetFootMatchFiltrate:output_type -> FootResponse
+	1,  // 38: FootBall.GetFootContinentCountryTournamentData:output_type -> FootResponse
+	1,  // 39: FootBall.FootTeamDetail:output_type -> FootResponse
+	1,  // 40: FootBall.FootStandTag:output_type -> FootResponse
+	1,  // 41: FootBall.FootTeamMatch:output_type -> FootResponse
+	1,  // 42: FootBall.FootMatchTeamLineup:output_type -> FootResponse
+	1,  // 43: FootBall.FootTeamStand:output_type -> FootResponse
+	1,  // 44: FootBall.FootTodayMatch:output_type -> FootResponse
+	1,  // 45: FootBall.GetFootLeagueStand:output_type -> FootResponse
+	1,  // 46: FootBall.FootTeamTransfer:output_type -> FootResponse
+	1,  // 47: FootBall.GetFootPlayerStand:output_type -> FootResponse
+	1,  // 48: FootBall.FootLiveLineup:output_type -> FootResponse
+	1,  // 49: FootBall.FootLiveStat:output_type -> FootResponse
+	1,  // 50: FootBall.FootPlayerCareer:output_type -> FootResponse
+	1,  // 51: FootBall.FootTeamTransferYear:output_type -> FootResponse
+	1,  // 52: FootBall.GetFootCheckExistence:output_type -> FootResponse
+	1,  // 53: FootBall.FootFiltrationId:output_type -> FootResponse
+	1,  // 54: FootBall.GetDataTypeCount:output_type -> FootResponse
+	1,  // 55: FootBall.CheckFootData:output_type -> FootResponse
+	1,  // 56: FootBall.FootRealTime:output_type -> FootResponse
+	1,  // 57: FootBall.FootOddsFilter:output_type -> FootResponse
+	1,  // 58: FootBall.FootMatchList:output_type -> FootResponse
+	1,  // 59: FootBall.FootMatchPlus:output_type -> FootResponse
+	33, // 60: FootBall.FootMatchBase:output_type -> FootBaseDataResponse
+	1,  // 61: FootBall.FootDataPromotion:output_type -> FootResponse
+	31, // [31:62] is the sub-list for method output_type
+	0,  // [0:31] is the sub-list for method input_type
 	0,  // [0:0] is the sub-list for extension type_name
 	0,  // [0:0] is the sub-list for extension extendee
 	0,  // [0:0] is the sub-list for field type_name
@@ -584,6 +592,8 @@ type FootBallClient interface {
 	FootMatchPlus(ctx context.Context, in *FootMatchPlusRequest, opts ...grpc.CallOption) (*FootResponse, error)
 	// 基础数据
 	FootMatchBase(ctx context.Context, in *FootBaseDataRequest, opts ...grpc.CallOption) (*FootBaseDataResponse, error)
+	// 晋级图
+	FootDataPromotion(ctx context.Context, in *FootDataPromotionRequest, opts ...grpc.CallOption) (*FootResponse, error)
 }
 
 type footBallClient struct {
@@ -864,6 +874,15 @@ func (c *footBallClient) FootMatchBase(ctx context.Context, in *FootBaseDataRequ
 	return out, nil
 }
 
+func (c *footBallClient) FootDataPromotion(ctx context.Context, in *FootDataPromotionRequest, opts ...grpc.CallOption) (*FootResponse, error) {
+	out := new(FootResponse)
+	err := c.cc.Invoke(ctx, "/FootBall/FootDataPromotion", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 // FootBallServer is the server API for FootBall service.
 type FootBallServer interface {
 	//比赛对阵详情
@@ -926,6 +945,8 @@ type FootBallServer interface {
 	FootMatchPlus(context.Context, *FootMatchPlusRequest) (*FootResponse, error)
 	// 基础数据
 	FootMatchBase(context.Context, *FootBaseDataRequest) (*FootBaseDataResponse, error)
+	// 晋级图
+	FootDataPromotion(context.Context, *FootDataPromotionRequest) (*FootResponse, error)
 }
 
 // UnimplementedFootBallServer can be embedded to have forward compatible implementations.
@@ -1021,6 +1042,9 @@ func (*UnimplementedFootBallServer) FootMatchPlus(context.Context, *FootMatchPlu
 }
 func (*UnimplementedFootBallServer) FootMatchBase(context.Context, *FootBaseDataRequest) (*FootBaseDataResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method FootMatchBase not implemented")
+}
+func (*UnimplementedFootBallServer) FootDataPromotion(context.Context, *FootDataPromotionRequest) (*FootResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method FootDataPromotion not implemented")
 }
 
 func RegisterFootBallServer(s *grpc.Server, srv FootBallServer) {
@@ -1567,6 +1591,24 @@ func _FootBall_FootMatchBase_Handler(srv interface{}, ctx context.Context, dec f
 	return interceptor(ctx, in, info, handler)
 }
 
+func _FootBall_FootDataPromotion_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(FootDataPromotionRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(FootBallServer).FootDataPromotion(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/FootBall/FootDataPromotion",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(FootBallServer).FootDataPromotion(ctx, req.(*FootDataPromotionRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 var _FootBall_serviceDesc = grpc.ServiceDesc{
 	ServiceName: "FootBall",
 	HandlerType: (*FootBallServer)(nil),
@@ -1690,6 +1732,10 @@ var _FootBall_serviceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "FootMatchBase",
 			Handler:    _FootBall_FootMatchBase_Handler,
+		},
+		{
+			MethodName: "FootDataPromotion",
+			Handler:    _FootBall_FootDataPromotion_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
