@@ -500,20 +500,20 @@ type PlayerList struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Started       string  `protobuf:"bytes,2,opt,name=Started,proto3" json:"Started,omitempty"`               //首发
-	PlayName      string  `protobuf:"bytes,3,opt,name=PlayName,proto3" json:"PlayName,omitempty"`             //
-	PlayTime      float32 `protobuf:"fixed32,45,opt,name=PlayTime,proto3" json:"PlayTime,omitempty"`          //上场时间
-	Score         int64   `protobuf:"varint,4,opt,name=Score,proto3" json:"Score,omitempty"`                  //得分
-	Rebounds      int64   `protobuf:"varint,5,opt,name=Rebounds,proto3" json:"Rebounds,omitempty"`            //篮板
-	Assists       int64   `protobuf:"varint,6,opt,name=Assists,proto3" json:"Assists,omitempty"`              //助攻
-	GoalsAll      int64   `protobuf:"varint,7,opt,name=GoalsAll,proto3" json:"GoalsAll,omitempty"`            //三分投篮
-	GoalsHit      int64   `protobuf:"varint,15,opt,name=GoalsHit,proto3" json:"GoalsHit,omitempty"`           //三分命中
-	FreeThrowsAll int64   `protobuf:"varint,8,opt,name=FreeThrowsAll,proto3" json:"FreeThrowsAll,omitempty"`  //罚球投篮
-	FreeThrowsHit int64   `protobuf:"varint,16,opt,name=FreeThrowsHit,proto3" json:"FreeThrowsHit,omitempty"` //罚球命中
-	Steals        int64   `protobuf:"varint,9,opt,name=Steals,proto3" json:"Steals,omitempty"`                //抢断
-	Blocks        int64   `protobuf:"varint,10,opt,name=Blocks,proto3" json:"Blocks,omitempty"`               //盖帽
-	Turnovers     int64   `protobuf:"varint,11,opt,name=Turnovers,proto3" json:"Turnovers,omitempty"`         //失误
-	Fouls         int64   `protobuf:"varint,12,opt,name=Fouls,proto3" json:"Fouls,omitempty"`                 //犯规
+	Started       string `protobuf:"bytes,2,opt,name=Started,proto3" json:"Started,omitempty"`               //首发
+	PlayName      string `protobuf:"bytes,3,opt,name=PlayName,proto3" json:"PlayName,omitempty"`             //
+	PlayTime      string `protobuf:"bytes,45,opt,name=PlayTime,proto3" json:"PlayTime,omitempty"`            //上场时间
+	Score         int64  `protobuf:"varint,4,opt,name=Score,proto3" json:"Score,omitempty"`                  //得分
+	Rebounds      int64  `protobuf:"varint,5,opt,name=Rebounds,proto3" json:"Rebounds,omitempty"`            //篮板
+	Assists       int64  `protobuf:"varint,6,opt,name=Assists,proto3" json:"Assists,omitempty"`              //助攻
+	GoalsAll      int64  `protobuf:"varint,7,opt,name=GoalsAll,proto3" json:"GoalsAll,omitempty"`            //三分投篮
+	GoalsHit      int64  `protobuf:"varint,15,opt,name=GoalsHit,proto3" json:"GoalsHit,omitempty"`           //三分命中
+	FreeThrowsAll int64  `protobuf:"varint,8,opt,name=FreeThrowsAll,proto3" json:"FreeThrowsAll,omitempty"`  //罚球投篮
+	FreeThrowsHit int64  `protobuf:"varint,16,opt,name=FreeThrowsHit,proto3" json:"FreeThrowsHit,omitempty"` //罚球命中
+	Steals        int64  `protobuf:"varint,9,opt,name=Steals,proto3" json:"Steals,omitempty"`                //抢断
+	Blocks        int64  `protobuf:"varint,10,opt,name=Blocks,proto3" json:"Blocks,omitempty"`               //盖帽
+	Turnovers     int64  `protobuf:"varint,11,opt,name=Turnovers,proto3" json:"Turnovers,omitempty"`         //失误
+	Fouls         int64  `protobuf:"varint,12,opt,name=Fouls,proto3" json:"Fouls,omitempty"`                 //犯规
 }
 
 func (x *PlayerList) Reset() {
@@ -562,11 +562,11 @@ func (x *PlayerList) GetPlayName() string {
 	return ""
 }
 
-func (x *PlayerList) GetPlayTime() float32 {
+func (x *PlayerList) GetPlayTime() string {
 	if x != nil {
 		return x.PlayTime
 	}
-	return 0
+	return ""
 }
 
 func (x *PlayerList) GetScore() int64 {
@@ -872,7 +872,7 @@ var file_match_result_proto_rawDesc = []byte{
 	0x74, 0x65, 0x64, 0x18, 0x02, 0x20, 0x01, 0x28, 0x09, 0x52, 0x07, 0x53, 0x74, 0x61, 0x72, 0x74,
 	0x65, 0x64, 0x12, 0x1a, 0x0a, 0x08, 0x50, 0x6c, 0x61, 0x79, 0x4e, 0x61, 0x6d, 0x65, 0x18, 0x03,
 	0x20, 0x01, 0x28, 0x09, 0x52, 0x08, 0x50, 0x6c, 0x61, 0x79, 0x4e, 0x61, 0x6d, 0x65, 0x12, 0x1a,
-	0x0a, 0x08, 0x50, 0x6c, 0x61, 0x79, 0x54, 0x69, 0x6d, 0x65, 0x18, 0x2d, 0x20, 0x01, 0x28, 0x02,
+	0x0a, 0x08, 0x50, 0x6c, 0x61, 0x79, 0x54, 0x69, 0x6d, 0x65, 0x18, 0x2d, 0x20, 0x01, 0x28, 0x09,
 	0x52, 0x08, 0x50, 0x6c, 0x61, 0x79, 0x54, 0x69, 0x6d, 0x65, 0x12, 0x14, 0x0a, 0x05, 0x53, 0x63,
 	0x6f, 0x72, 0x65, 0x18, 0x04, 0x20, 0x01, 0x28, 0x03, 0x52, 0x05, 0x53, 0x63, 0x6f, 0x72, 0x65,
 	0x12, 0x1a, 0x0a, 0x08, 0x52, 0x65, 0x62, 0x6f, 0x75, 0x6e, 0x64, 0x73, 0x18, 0x05, 0x20, 0x01,
