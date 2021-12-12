@@ -1219,7 +1219,7 @@ type StatisticsListDetail struct {
 	TotalScoreType  int64   `protobuf:"varint,11,opt,name=TotalScoreType,proto3" json:"TotalScoreType,omitempty"`  //总分类型（1：大|胜|赢，2：平|走，3：小|输）
 	SameEvent       bool    `protobuf:"varint,12,opt,name=SameEvent,proto3" json:"SameEvent,omitempty"`            //同比赛
 	SameHomeCourt   bool    `protobuf:"varint,13,opt,name=SameHomeCourt,proto3" json:"SameHomeCourt,omitempty"`    //同主客
-	MarkType        int64   `protobuf:"varint,14,opt,name=MarkType,proto3" json:"MarkType,omitempty"`              //标记类型（1：胜|大，2：(平)走，3：负|小）
+	MarkType        int64   `protobuf:"varint,14,opt,name=MarkType,proto3" json:"MarkType,omitempty"`              //标记类型（1胜  2负）
 	IsMainTeam      bool    `protobuf:"varint,15,opt,name=IsMainTeam,proto3" json:"IsMainTeam,omitempty"`          //是否主队
 }
 
