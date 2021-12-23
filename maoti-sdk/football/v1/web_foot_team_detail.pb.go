@@ -1526,6 +1526,164 @@ func (x *WebFootTeamStats) GetData() string {
 	return ""
 }
 
+//球队详情 - 球队下的赛季列表
+type WebFootTeamSeasonListRequest struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	Language string `protobuf:"bytes,3,opt,name=language,proto3" json:"language,omitempty"` //请求语言
+	TeamId   int64  `protobuf:"varint,5,opt,name=teamId,proto3" json:"teamId,omitempty"`    //球队ID
+}
+
+func (x *WebFootTeamSeasonListRequest) Reset() {
+	*x = WebFootTeamSeasonListRequest{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_web_foot_team_detail_proto_msgTypes[21]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *WebFootTeamSeasonListRequest) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*WebFootTeamSeasonListRequest) ProtoMessage() {}
+
+func (x *WebFootTeamSeasonListRequest) ProtoReflect() protoreflect.Message {
+	mi := &file_web_foot_team_detail_proto_msgTypes[21]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use WebFootTeamSeasonListRequest.ProtoReflect.Descriptor instead.
+func (*WebFootTeamSeasonListRequest) Descriptor() ([]byte, []int) {
+	return file_web_foot_team_detail_proto_rawDescGZIP(), []int{21}
+}
+
+func (x *WebFootTeamSeasonListRequest) GetLanguage() string {
+	if x != nil {
+		return x.Language
+	}
+	return ""
+}
+
+func (x *WebFootTeamSeasonListRequest) GetTeamId() int64 {
+	if x != nil {
+		return x.TeamId
+	}
+	return 0
+}
+
+type WebFootTeamSeasonListResponse struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	Data []*WebFootTeamSeasonList `protobuf:"bytes,1,rep,name=Data,proto3" json:"Data,omitempty"`
+}
+
+func (x *WebFootTeamSeasonListResponse) Reset() {
+	*x = WebFootTeamSeasonListResponse{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_web_foot_team_detail_proto_msgTypes[22]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *WebFootTeamSeasonListResponse) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*WebFootTeamSeasonListResponse) ProtoMessage() {}
+
+func (x *WebFootTeamSeasonListResponse) ProtoReflect() protoreflect.Message {
+	mi := &file_web_foot_team_detail_proto_msgTypes[22]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use WebFootTeamSeasonListResponse.ProtoReflect.Descriptor instead.
+func (*WebFootTeamSeasonListResponse) Descriptor() ([]byte, []int) {
+	return file_web_foot_team_detail_proto_rawDescGZIP(), []int{22}
+}
+
+func (x *WebFootTeamSeasonListResponse) GetData() []*WebFootTeamSeasonList {
+	if x != nil {
+		return x.Data
+	}
+	return nil
+}
+
+type WebFootTeamSeasonList struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	SeasonName string `protobuf:"bytes,3,opt,name=seasonName,proto3" json:"seasonName,omitempty"` //赛季名称
+	SeasonId   int64  `protobuf:"varint,5,opt,name=seasonId,proto3" json:"seasonId,omitempty"`    //赛季ID
+}
+
+func (x *WebFootTeamSeasonList) Reset() {
+	*x = WebFootTeamSeasonList{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_web_foot_team_detail_proto_msgTypes[23]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *WebFootTeamSeasonList) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*WebFootTeamSeasonList) ProtoMessage() {}
+
+func (x *WebFootTeamSeasonList) ProtoReflect() protoreflect.Message {
+	mi := &file_web_foot_team_detail_proto_msgTypes[23]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use WebFootTeamSeasonList.ProtoReflect.Descriptor instead.
+func (*WebFootTeamSeasonList) Descriptor() ([]byte, []int) {
+	return file_web_foot_team_detail_proto_rawDescGZIP(), []int{23}
+}
+
+func (x *WebFootTeamSeasonList) GetSeasonName() string {
+	if x != nil {
+		return x.SeasonName
+	}
+	return ""
+}
+
+func (x *WebFootTeamSeasonList) GetSeasonId() int64 {
+	if x != nil {
+		return x.SeasonId
+	}
+	return 0
+}
+
 var File_web_foot_team_detail_proto protoreflect.FileDescriptor
 
 var file_web_foot_team_detail_proto_rawDesc = []byte{
@@ -1724,8 +1882,24 @@ var file_web_foot_team_detail_proto_rawDesc = []byte{
 	0x09, 0x52, 0x08, 0x70, 0x6c, 0x61, 0x79, 0x65, 0x72, 0x49, 0x64, 0x12, 0x1e, 0x0a, 0x0a, 0x70,
 	0x6c, 0x61, 0x79, 0x65, 0x72, 0x4e, 0x61, 0x6d, 0x65, 0x18, 0x03, 0x20, 0x01, 0x28, 0x09, 0x52,
 	0x0a, 0x70, 0x6c, 0x61, 0x79, 0x65, 0x72, 0x4e, 0x61, 0x6d, 0x65, 0x12, 0x12, 0x0a, 0x04, 0x64,
-	0x61, 0x74, 0x61, 0x18, 0x04, 0x20, 0x01, 0x28, 0x09, 0x52, 0x04, 0x64, 0x61, 0x74, 0x61, 0x42,
-	0x07, 0x5a, 0x05, 0x2e, 0x2f, 0x3b, 0x76, 0x31, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
+	0x61, 0x74, 0x61, 0x18, 0x04, 0x20, 0x01, 0x28, 0x09, 0x52, 0x04, 0x64, 0x61, 0x74, 0x61, 0x22,
+	0x52, 0x0a, 0x1c, 0x57, 0x65, 0x62, 0x46, 0x6f, 0x6f, 0x74, 0x54, 0x65, 0x61, 0x6d, 0x53, 0x65,
+	0x61, 0x73, 0x6f, 0x6e, 0x4c, 0x69, 0x73, 0x74, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x12,
+	0x1a, 0x0a, 0x08, 0x6c, 0x61, 0x6e, 0x67, 0x75, 0x61, 0x67, 0x65, 0x18, 0x03, 0x20, 0x01, 0x28,
+	0x09, 0x52, 0x08, 0x6c, 0x61, 0x6e, 0x67, 0x75, 0x61, 0x67, 0x65, 0x12, 0x16, 0x0a, 0x06, 0x74,
+	0x65, 0x61, 0x6d, 0x49, 0x64, 0x18, 0x05, 0x20, 0x01, 0x28, 0x03, 0x52, 0x06, 0x74, 0x65, 0x61,
+	0x6d, 0x49, 0x64, 0x22, 0x4b, 0x0a, 0x1d, 0x57, 0x65, 0x62, 0x46, 0x6f, 0x6f, 0x74, 0x54, 0x65,
+	0x61, 0x6d, 0x53, 0x65, 0x61, 0x73, 0x6f, 0x6e, 0x4c, 0x69, 0x73, 0x74, 0x52, 0x65, 0x73, 0x70,
+	0x6f, 0x6e, 0x73, 0x65, 0x12, 0x2a, 0x0a, 0x04, 0x44, 0x61, 0x74, 0x61, 0x18, 0x01, 0x20, 0x03,
+	0x28, 0x0b, 0x32, 0x16, 0x2e, 0x57, 0x65, 0x62, 0x46, 0x6f, 0x6f, 0x74, 0x54, 0x65, 0x61, 0x6d,
+	0x53, 0x65, 0x61, 0x73, 0x6f, 0x6e, 0x4c, 0x69, 0x73, 0x74, 0x52, 0x04, 0x44, 0x61, 0x74, 0x61,
+	0x22, 0x53, 0x0a, 0x15, 0x57, 0x65, 0x62, 0x46, 0x6f, 0x6f, 0x74, 0x54, 0x65, 0x61, 0x6d, 0x53,
+	0x65, 0x61, 0x73, 0x6f, 0x6e, 0x4c, 0x69, 0x73, 0x74, 0x12, 0x1e, 0x0a, 0x0a, 0x73, 0x65, 0x61,
+	0x73, 0x6f, 0x6e, 0x4e, 0x61, 0x6d, 0x65, 0x18, 0x03, 0x20, 0x01, 0x28, 0x09, 0x52, 0x0a, 0x73,
+	0x65, 0x61, 0x73, 0x6f, 0x6e, 0x4e, 0x61, 0x6d, 0x65, 0x12, 0x1a, 0x0a, 0x08, 0x73, 0x65, 0x61,
+	0x73, 0x6f, 0x6e, 0x49, 0x64, 0x18, 0x05, 0x20, 0x01, 0x28, 0x03, 0x52, 0x08, 0x73, 0x65, 0x61,
+	0x73, 0x6f, 0x6e, 0x49, 0x64, 0x42, 0x07, 0x5a, 0x05, 0x2e, 0x2f, 0x3b, 0x76, 0x31, 0x62, 0x06,
+	0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
 }
 
 var (
@@ -1740,7 +1914,7 @@ func file_web_foot_team_detail_proto_rawDescGZIP() []byte {
 	return file_web_foot_team_detail_proto_rawDescData
 }
 
-var file_web_foot_team_detail_proto_msgTypes = make([]protoimpl.MessageInfo, 21)
+var file_web_foot_team_detail_proto_msgTypes = make([]protoimpl.MessageInfo, 24)
 var file_web_foot_team_detail_proto_goTypes = []interface{}{
 	(*WebFootTeamDetailRequest)(nil),        // 0: WebFootTeamDetailRequest
 	(*WebFootTeamDetailResponse)(nil),       // 1: WebFootTeamDetailResponse
@@ -1763,6 +1937,9 @@ var file_web_foot_team_detail_proto_goTypes = []interface{}{
 	(*WebFootTeamStatsRequest)(nil),         // 18: WebFootTeamStatsRequest
 	(*WebFootTeamStatsResponse)(nil),        // 19: WebFootTeamStatsResponse
 	(*WebFootTeamStats)(nil),                // 20: WebFootTeamStats
+	(*WebFootTeamSeasonListRequest)(nil),    // 21: WebFootTeamSeasonListRequest
+	(*WebFootTeamSeasonListResponse)(nil),   // 22: WebFootTeamSeasonListResponse
+	(*WebFootTeamSeasonList)(nil),           // 23: WebFootTeamSeasonList
 }
 var file_web_foot_team_detail_proto_depIdxs = []int32{
 	4,  // 0: WebFootTeamMatchResponse.matchData:type_name -> WebFootTeamMatch
@@ -1774,11 +1951,12 @@ var file_web_foot_team_detail_proto_depIdxs = []int32{
 	13, // 6: WebFootTeamTransferResponse.transferData:type_name -> WebFootTeamTransfer
 	17, // 7: WebFootTeamStatsMenuResponse.Data:type_name -> WebFootTeamStatsMenu
 	20, // 8: WebFootTeamStatsResponse.Data:type_name -> WebFootTeamStats
-	9,  // [9:9] is the sub-list for method output_type
-	9,  // [9:9] is the sub-list for method input_type
-	9,  // [9:9] is the sub-list for extension type_name
-	9,  // [9:9] is the sub-list for extension extendee
-	0,  // [0:9] is the sub-list for field type_name
+	23, // 9: WebFootTeamSeasonListResponse.Data:type_name -> WebFootTeamSeasonList
+	10, // [10:10] is the sub-list for method output_type
+	10, // [10:10] is the sub-list for method input_type
+	10, // [10:10] is the sub-list for extension type_name
+	10, // [10:10] is the sub-list for extension extendee
+	0,  // [0:10] is the sub-list for field type_name
 }
 
 func init() { file_web_foot_team_detail_proto_init() }
@@ -2039,6 +2217,42 @@ func file_web_foot_team_detail_proto_init() {
 				return nil
 			}
 		}
+		file_web_foot_team_detail_proto_msgTypes[21].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*WebFootTeamSeasonListRequest); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_web_foot_team_detail_proto_msgTypes[22].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*WebFootTeamSeasonListResponse); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_web_foot_team_detail_proto_msgTypes[23].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*WebFootTeamSeasonList); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
 	}
 	type x struct{}
 	out := protoimpl.TypeBuilder{
@@ -2046,7 +2260,7 @@ func file_web_foot_team_detail_proto_init() {
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: file_web_foot_team_detail_proto_rawDesc,
 			NumEnums:      0,
-			NumMessages:   21,
+			NumMessages:   24,
 			NumExtensions: 0,
 			NumServices:   0,
 		},
