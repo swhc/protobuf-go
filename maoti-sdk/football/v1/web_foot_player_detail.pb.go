@@ -260,7 +260,7 @@ type WebPlayerChampion struct {
 	Number   int64  `protobuf:"varint,2,opt,name=number,proto3" json:"number,omitempty"`    //获得冠军次数
 	TeamId   int64  `protobuf:"varint,5,opt,name=teamId,proto3" json:"teamId,omitempty"`    //获得冠军所在队伍ID
 	TeamName string `protobuf:"bytes,3,opt,name=teamName,proto3" json:"teamName,omitempty"` //获得冠军所在队伍
-	Year     string `protobuf:"bytes,4,opt,name=year,proto3" json:"year,omitempty"`         //冠军年份
+	Year     string `protobuf:"bytes,4,opt,name=year,proto3" json:"year,omitempty"`         //获取冠军年份
 }
 
 func (x *WebPlayerChampion) Reset() {
