@@ -854,13 +854,13 @@ type FootBallClient interface {
 	WebFootMatchMonth(ctx context.Context, in *WebFootMatchMonthRequest, opts ...grpc.CallOption) (*FootResponse, error)
 	//web球队详情 - 球员伤停情况
 	WebFootTeamTransferInjury(ctx context.Context, in *WebFootTeamTransferInjuryRequest, opts ...grpc.CallOption) (*FootResponse, error)
-	//web队伍阵容
+	//web球队详情 - web队伍阵容
 	WebFootMatchLineup(ctx context.Context, in *WebFootMatchLineupRequest, opts ...grpc.CallOption) (*FootResponse, error)
 	//web球员详情
 	WebFootPlayerDetail(ctx context.Context, in *WebFootPlayerInfoRequest, opts ...grpc.CallOption) (*FootResponse, error)
 	//web联赛详情
 	WebFootLeagueDetail(ctx context.Context, in *WebFootLeagueDetailRequest, opts ...grpc.CallOption) (*FootResponse, error)
-	//web积分榜
+	//web联赛详情 - 积分榜
 	WebLeagueStand(ctx context.Context, in *WebLeagueStandRequest, opts ...grpc.CallOption) (*FootResponse, error)
 	//web联赛详情 - 球队球员技术统计侧边栏
 	WebFootLeagueStatsMenu(ctx context.Context, in *WebFootLeagueStatsMenuRequest, opts ...grpc.CallOption) (*FootResponse, error)
@@ -1493,13 +1493,13 @@ type FootBallServer interface {
 	WebFootMatchMonth(context.Context, *WebFootMatchMonthRequest) (*FootResponse, error)
 	//web球队详情 - 球员伤停情况
 	WebFootTeamTransferInjury(context.Context, *WebFootTeamTransferInjuryRequest) (*FootResponse, error)
-	//web队伍阵容
+	//web球队详情 - web队伍阵容
 	WebFootMatchLineup(context.Context, *WebFootMatchLineupRequest) (*FootResponse, error)
 	//web球员详情
 	WebFootPlayerDetail(context.Context, *WebFootPlayerInfoRequest) (*FootResponse, error)
 	//web联赛详情
 	WebFootLeagueDetail(context.Context, *WebFootLeagueDetailRequest) (*FootResponse, error)
-	//web积分榜
+	//web联赛详情 - 积分榜
 	WebLeagueStand(context.Context, *WebLeagueStandRequest) (*FootResponse, error)
 	//web联赛详情 - 球队球员技术统计侧边栏
 	WebFootLeagueStatsMenu(context.Context, *WebFootLeagueStatsMenuRequest) (*FootResponse, error)
