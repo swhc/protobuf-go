@@ -20,7 +20,7 @@ const (
 	_ = protoimpl.EnforceVersion(protoimpl.MaxVersion - 20)
 )
 
-//指数-列表
+//联赛的回合赛程
 type WebFootMatchListRequest struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache

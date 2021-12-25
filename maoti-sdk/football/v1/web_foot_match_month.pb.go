@@ -20,7 +20,7 @@ const (
 	_ = protoimpl.EnforceVersion(protoimpl.MaxVersion - 20)
 )
 
-//指数-列表
+//队伍的比赛月份
 type WebFootMatchMonthRequest struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
