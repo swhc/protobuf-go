@@ -226,6 +226,457 @@ func (x *WebFootLeagueSeasonList) GetSeasonName() string {
 	return ""
 }
 
+//web联赛详情 - 统计数据侧边栏
+type WebFootLeagueStatsMenuRequest struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	Language string `protobuf:"bytes,3,opt,name=language,proto3" json:"language,omitempty"` //请求语言  1:zh  2:en
+	MenuType string `protobuf:"bytes,4,opt,name=MenuType,proto3" json:"MenuType,omitempty"` //侧边栏类型  team:查询球队的侧边栏数据，player查询球员的侧边栏数据
+}
+
+func (x *WebFootLeagueStatsMenuRequest) Reset() {
+	*x = WebFootLeagueStatsMenuRequest{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_web_foot_league_detail_proto_msgTypes[3]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *WebFootLeagueStatsMenuRequest) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*WebFootLeagueStatsMenuRequest) ProtoMessage() {}
+
+func (x *WebFootLeagueStatsMenuRequest) ProtoReflect() protoreflect.Message {
+	mi := &file_web_foot_league_detail_proto_msgTypes[3]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use WebFootLeagueStatsMenuRequest.ProtoReflect.Descriptor instead.
+func (*WebFootLeagueStatsMenuRequest) Descriptor() ([]byte, []int) {
+	return file_web_foot_league_detail_proto_rawDescGZIP(), []int{3}
+}
+
+func (x *WebFootLeagueStatsMenuRequest) GetLanguage() string {
+	if x != nil {
+		return x.Language
+	}
+	return ""
+}
+
+func (x *WebFootLeagueStatsMenuRequest) GetMenuType() string {
+	if x != nil {
+		return x.MenuType
+	}
+	return ""
+}
+
+type WebFootLeagueStatsMenuResponse struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	Data []*WebFootLeagueStatsMenu `protobuf:"bytes,1,rep,name=Data,proto3" json:"Data,omitempty"`
+}
+
+func (x *WebFootLeagueStatsMenuResponse) Reset() {
+	*x = WebFootLeagueStatsMenuResponse{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_web_foot_league_detail_proto_msgTypes[4]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *WebFootLeagueStatsMenuResponse) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*WebFootLeagueStatsMenuResponse) ProtoMessage() {}
+
+func (x *WebFootLeagueStatsMenuResponse) ProtoReflect() protoreflect.Message {
+	mi := &file_web_foot_league_detail_proto_msgTypes[4]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use WebFootLeagueStatsMenuResponse.ProtoReflect.Descriptor instead.
+func (*WebFootLeagueStatsMenuResponse) Descriptor() ([]byte, []int) {
+	return file_web_foot_league_detail_proto_rawDescGZIP(), []int{4}
+}
+
+func (x *WebFootLeagueStatsMenuResponse) GetData() []*WebFootLeagueStatsMenu {
+	if x != nil {
+		return x.Data
+	}
+	return nil
+}
+
+type WebFootLeagueStatsMenu struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	Mark     string `protobuf:"bytes,2,opt,name=mark,proto3" json:"mark,omitempty"`                         //标记
+	MarkName string `protobuf:"bytes,3,opt,name=mark_name,json=markName,proto3" json:"mark_name,omitempty"` //标记名称
+}
+
+func (x *WebFootLeagueStatsMenu) Reset() {
+	*x = WebFootLeagueStatsMenu{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_web_foot_league_detail_proto_msgTypes[5]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *WebFootLeagueStatsMenu) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*WebFootLeagueStatsMenu) ProtoMessage() {}
+
+func (x *WebFootLeagueStatsMenu) ProtoReflect() protoreflect.Message {
+	mi := &file_web_foot_league_detail_proto_msgTypes[5]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use WebFootLeagueStatsMenu.ProtoReflect.Descriptor instead.
+func (*WebFootLeagueStatsMenu) Descriptor() ([]byte, []int) {
+	return file_web_foot_league_detail_proto_rawDescGZIP(), []int{5}
+}
+
+func (x *WebFootLeagueStatsMenu) GetMark() string {
+	if x != nil {
+		return x.Mark
+	}
+	return ""
+}
+
+func (x *WebFootLeagueStatsMenu) GetMarkName() string {
+	if x != nil {
+		return x.MarkName
+	}
+	return ""
+}
+
+//web联赛详情 - 联赛下的球队列表
+type WebFootLeagueTeamRequest struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	LeagueId int64  `protobuf:"varint,1,opt,name=LeagueId,proto3" json:"LeagueId,omitempty"` //联赛id
+	Language string `protobuf:"bytes,3,opt,name=language,proto3" json:"language,omitempty"`  //请求语言  1:zh  2:en
+}
+
+func (x *WebFootLeagueTeamRequest) Reset() {
+	*x = WebFootLeagueTeamRequest{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_web_foot_league_detail_proto_msgTypes[6]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *WebFootLeagueTeamRequest) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*WebFootLeagueTeamRequest) ProtoMessage() {}
+
+func (x *WebFootLeagueTeamRequest) ProtoReflect() protoreflect.Message {
+	mi := &file_web_foot_league_detail_proto_msgTypes[6]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use WebFootLeagueTeamRequest.ProtoReflect.Descriptor instead.
+func (*WebFootLeagueTeamRequest) Descriptor() ([]byte, []int) {
+	return file_web_foot_league_detail_proto_rawDescGZIP(), []int{6}
+}
+
+func (x *WebFootLeagueTeamRequest) GetLeagueId() int64 {
+	if x != nil {
+		return x.LeagueId
+	}
+	return 0
+}
+
+func (x *WebFootLeagueTeamRequest) GetLanguage() string {
+	if x != nil {
+		return x.Language
+	}
+	return ""
+}
+
+type WebFootLeagueTeamResponse struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	Data []*WebFootLeagueTeam `protobuf:"bytes,1,rep,name=Data,proto3" json:"Data,omitempty"`
+}
+
+func (x *WebFootLeagueTeamResponse) Reset() {
+	*x = WebFootLeagueTeamResponse{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_web_foot_league_detail_proto_msgTypes[7]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *WebFootLeagueTeamResponse) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*WebFootLeagueTeamResponse) ProtoMessage() {}
+
+func (x *WebFootLeagueTeamResponse) ProtoReflect() protoreflect.Message {
+	mi := &file_web_foot_league_detail_proto_msgTypes[7]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use WebFootLeagueTeamResponse.ProtoReflect.Descriptor instead.
+func (*WebFootLeagueTeamResponse) Descriptor() ([]byte, []int) {
+	return file_web_foot_league_detail_proto_rawDescGZIP(), []int{7}
+}
+
+func (x *WebFootLeagueTeamResponse) GetData() []*WebFootLeagueTeam {
+	if x != nil {
+		return x.Data
+	}
+	return nil
+}
+
+type WebFootLeagueTeam struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	TeamId   int64  `protobuf:"varint,1,opt,name=TeamId,proto3" json:"TeamId,omitempty"`    //球队id
+	TeamName string `protobuf:"bytes,2,opt,name=TeamName,proto3" json:"TeamName,omitempty"` //球队名称
+}
+
+func (x *WebFootLeagueTeam) Reset() {
+	*x = WebFootLeagueTeam{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_web_foot_league_detail_proto_msgTypes[8]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *WebFootLeagueTeam) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*WebFootLeagueTeam) ProtoMessage() {}
+
+func (x *WebFootLeagueTeam) ProtoReflect() protoreflect.Message {
+	mi := &file_web_foot_league_detail_proto_msgTypes[8]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use WebFootLeagueTeam.ProtoReflect.Descriptor instead.
+func (*WebFootLeagueTeam) Descriptor() ([]byte, []int) {
+	return file_web_foot_league_detail_proto_rawDescGZIP(), []int{8}
+}
+
+func (x *WebFootLeagueTeam) GetTeamId() int64 {
+	if x != nil {
+		return x.TeamId
+	}
+	return 0
+}
+
+func (x *WebFootLeagueTeam) GetTeamName() string {
+	if x != nil {
+		return x.TeamName
+	}
+	return ""
+}
+
+//web联赛详情 - 球队球员统计数据
+type WebFootLeagueStatsRequest struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	LeagueId int64  `protobuf:"varint,1,opt,name=LeagueId,proto3" json:"LeagueId,omitempty"` //联赛id
+	Language string `protobuf:"bytes,3,opt,name=language,proto3" json:"language,omitempty"`  //请求语言  1:zh  2:en
+}
+
+func (x *WebFootLeagueStatsRequest) Reset() {
+	*x = WebFootLeagueStatsRequest{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_web_foot_league_detail_proto_msgTypes[9]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *WebFootLeagueStatsRequest) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*WebFootLeagueStatsRequest) ProtoMessage() {}
+
+func (x *WebFootLeagueStatsRequest) ProtoReflect() protoreflect.Message {
+	mi := &file_web_foot_league_detail_proto_msgTypes[9]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use WebFootLeagueStatsRequest.ProtoReflect.Descriptor instead.
+func (*WebFootLeagueStatsRequest) Descriptor() ([]byte, []int) {
+	return file_web_foot_league_detail_proto_rawDescGZIP(), []int{9}
+}
+
+func (x *WebFootLeagueStatsRequest) GetLeagueId() int64 {
+	if x != nil {
+		return x.LeagueId
+	}
+	return 0
+}
+
+func (x *WebFootLeagueStatsRequest) GetLanguage() string {
+	if x != nil {
+		return x.Language
+	}
+	return ""
+}
+
+type WebFootLeagueStatsResponse struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	Rank       int64  `protobuf:"varint,1,opt,name=Rank,proto3" json:"Rank,omitempty"`            //排名
+	PlayerId   int64  `protobuf:"varint,2,opt,name=playerId,proto3" json:"playerId,omitempty"`    //球队id/球员id
+	PlayerName string `protobuf:"bytes,3,opt,name=playerName,proto3" json:"playerName,omitempty"` //球队名称/球员名称
+	Data       int64  `protobuf:"varint,4,opt,name=data,proto3" json:"data,omitempty"`            //数据
+	Corner     int64  `protobuf:"varint,5,opt,name=corner,proto3" json:"corner,omitempty"`        //角球，当查询进球数据时，该字段才可能有值
+}
+
+func (x *WebFootLeagueStatsResponse) Reset() {
+	*x = WebFootLeagueStatsResponse{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_web_foot_league_detail_proto_msgTypes[10]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *WebFootLeagueStatsResponse) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*WebFootLeagueStatsResponse) ProtoMessage() {}
+
+func (x *WebFootLeagueStatsResponse) ProtoReflect() protoreflect.Message {
+	mi := &file_web_foot_league_detail_proto_msgTypes[10]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use WebFootLeagueStatsResponse.ProtoReflect.Descriptor instead.
+func (*WebFootLeagueStatsResponse) Descriptor() ([]byte, []int) {
+	return file_web_foot_league_detail_proto_rawDescGZIP(), []int{10}
+}
+
+func (x *WebFootLeagueStatsResponse) GetRank() int64 {
+	if x != nil {
+		return x.Rank
+	}
+	return 0
+}
+
+func (x *WebFootLeagueStatsResponse) GetPlayerId() int64 {
+	if x != nil {
+		return x.PlayerId
+	}
+	return 0
+}
+
+func (x *WebFootLeagueStatsResponse) GetPlayerName() string {
+	if x != nil {
+		return x.PlayerName
+	}
+	return ""
+}
+
+func (x *WebFootLeagueStatsResponse) GetData() int64 {
+	if x != nil {
+		return x.Data
+	}
+	return 0
+}
+
+func (x *WebFootLeagueStatsResponse) GetCorner() int64 {
+	if x != nil {
+		return x.Corner
+	}
+	return 0
+}
+
 var File_web_foot_league_detail_proto protoreflect.FileDescriptor
 
 var file_web_foot_league_detail_proto_rawDesc = []byte{
@@ -257,8 +708,53 @@ var file_web_foot_league_detail_proto_rawDesc = []byte{
 	0x69, 0x73, 0x74, 0x12, 0x1a, 0x0a, 0x08, 0x53, 0x65, 0x61, 0x73, 0x6f, 0x6e, 0x49, 0x64, 0x18,
 	0x01, 0x20, 0x01, 0x28, 0x03, 0x52, 0x08, 0x53, 0x65, 0x61, 0x73, 0x6f, 0x6e, 0x49, 0x64, 0x12,
 	0x1e, 0x0a, 0x0a, 0x53, 0x65, 0x61, 0x73, 0x6f, 0x6e, 0x4e, 0x61, 0x6d, 0x65, 0x18, 0x02, 0x20,
-	0x01, 0x28, 0x09, 0x52, 0x0a, 0x53, 0x65, 0x61, 0x73, 0x6f, 0x6e, 0x4e, 0x61, 0x6d, 0x65, 0x42,
-	0x07, 0x5a, 0x05, 0x2e, 0x2f, 0x3b, 0x76, 0x31, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
+	0x01, 0x28, 0x09, 0x52, 0x0a, 0x53, 0x65, 0x61, 0x73, 0x6f, 0x6e, 0x4e, 0x61, 0x6d, 0x65, 0x22,
+	0x57, 0x0a, 0x1d, 0x57, 0x65, 0x62, 0x46, 0x6f, 0x6f, 0x74, 0x4c, 0x65, 0x61, 0x67, 0x75, 0x65,
+	0x53, 0x74, 0x61, 0x74, 0x73, 0x4d, 0x65, 0x6e, 0x75, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74,
+	0x12, 0x1a, 0x0a, 0x08, 0x6c, 0x61, 0x6e, 0x67, 0x75, 0x61, 0x67, 0x65, 0x18, 0x03, 0x20, 0x01,
+	0x28, 0x09, 0x52, 0x08, 0x6c, 0x61, 0x6e, 0x67, 0x75, 0x61, 0x67, 0x65, 0x12, 0x1a, 0x0a, 0x08,
+	0x4d, 0x65, 0x6e, 0x75, 0x54, 0x79, 0x70, 0x65, 0x18, 0x04, 0x20, 0x01, 0x28, 0x09, 0x52, 0x08,
+	0x4d, 0x65, 0x6e, 0x75, 0x54, 0x79, 0x70, 0x65, 0x22, 0x4d, 0x0a, 0x1e, 0x57, 0x65, 0x62, 0x46,
+	0x6f, 0x6f, 0x74, 0x4c, 0x65, 0x61, 0x67, 0x75, 0x65, 0x53, 0x74, 0x61, 0x74, 0x73, 0x4d, 0x65,
+	0x6e, 0x75, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x12, 0x2b, 0x0a, 0x04, 0x44, 0x61,
+	0x74, 0x61, 0x18, 0x01, 0x20, 0x03, 0x28, 0x0b, 0x32, 0x17, 0x2e, 0x57, 0x65, 0x62, 0x46, 0x6f,
+	0x6f, 0x74, 0x4c, 0x65, 0x61, 0x67, 0x75, 0x65, 0x53, 0x74, 0x61, 0x74, 0x73, 0x4d, 0x65, 0x6e,
+	0x75, 0x52, 0x04, 0x44, 0x61, 0x74, 0x61, 0x22, 0x49, 0x0a, 0x16, 0x57, 0x65, 0x62, 0x46, 0x6f,
+	0x6f, 0x74, 0x4c, 0x65, 0x61, 0x67, 0x75, 0x65, 0x53, 0x74, 0x61, 0x74, 0x73, 0x4d, 0x65, 0x6e,
+	0x75, 0x12, 0x12, 0x0a, 0x04, 0x6d, 0x61, 0x72, 0x6b, 0x18, 0x02, 0x20, 0x01, 0x28, 0x09, 0x52,
+	0x04, 0x6d, 0x61, 0x72, 0x6b, 0x12, 0x1b, 0x0a, 0x09, 0x6d, 0x61, 0x72, 0x6b, 0x5f, 0x6e, 0x61,
+	0x6d, 0x65, 0x18, 0x03, 0x20, 0x01, 0x28, 0x09, 0x52, 0x08, 0x6d, 0x61, 0x72, 0x6b, 0x4e, 0x61,
+	0x6d, 0x65, 0x22, 0x52, 0x0a, 0x18, 0x57, 0x65, 0x62, 0x46, 0x6f, 0x6f, 0x74, 0x4c, 0x65, 0x61,
+	0x67, 0x75, 0x65, 0x54, 0x65, 0x61, 0x6d, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x12, 0x1a,
+	0x0a, 0x08, 0x4c, 0x65, 0x61, 0x67, 0x75, 0x65, 0x49, 0x64, 0x18, 0x01, 0x20, 0x01, 0x28, 0x03,
+	0x52, 0x08, 0x4c, 0x65, 0x61, 0x67, 0x75, 0x65, 0x49, 0x64, 0x12, 0x1a, 0x0a, 0x08, 0x6c, 0x61,
+	0x6e, 0x67, 0x75, 0x61, 0x67, 0x65, 0x18, 0x03, 0x20, 0x01, 0x28, 0x09, 0x52, 0x08, 0x6c, 0x61,
+	0x6e, 0x67, 0x75, 0x61, 0x67, 0x65, 0x22, 0x43, 0x0a, 0x19, 0x57, 0x65, 0x62, 0x46, 0x6f, 0x6f,
+	0x74, 0x4c, 0x65, 0x61, 0x67, 0x75, 0x65, 0x54, 0x65, 0x61, 0x6d, 0x52, 0x65, 0x73, 0x70, 0x6f,
+	0x6e, 0x73, 0x65, 0x12, 0x26, 0x0a, 0x04, 0x44, 0x61, 0x74, 0x61, 0x18, 0x01, 0x20, 0x03, 0x28,
+	0x0b, 0x32, 0x12, 0x2e, 0x57, 0x65, 0x62, 0x46, 0x6f, 0x6f, 0x74, 0x4c, 0x65, 0x61, 0x67, 0x75,
+	0x65, 0x54, 0x65, 0x61, 0x6d, 0x52, 0x04, 0x44, 0x61, 0x74, 0x61, 0x22, 0x47, 0x0a, 0x11, 0x57,
+	0x65, 0x62, 0x46, 0x6f, 0x6f, 0x74, 0x4c, 0x65, 0x61, 0x67, 0x75, 0x65, 0x54, 0x65, 0x61, 0x6d,
+	0x12, 0x16, 0x0a, 0x06, 0x54, 0x65, 0x61, 0x6d, 0x49, 0x64, 0x18, 0x01, 0x20, 0x01, 0x28, 0x03,
+	0x52, 0x06, 0x54, 0x65, 0x61, 0x6d, 0x49, 0x64, 0x12, 0x1a, 0x0a, 0x08, 0x54, 0x65, 0x61, 0x6d,
+	0x4e, 0x61, 0x6d, 0x65, 0x18, 0x02, 0x20, 0x01, 0x28, 0x09, 0x52, 0x08, 0x54, 0x65, 0x61, 0x6d,
+	0x4e, 0x61, 0x6d, 0x65, 0x22, 0x53, 0x0a, 0x19, 0x57, 0x65, 0x62, 0x46, 0x6f, 0x6f, 0x74, 0x4c,
+	0x65, 0x61, 0x67, 0x75, 0x65, 0x53, 0x74, 0x61, 0x74, 0x73, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73,
+	0x74, 0x12, 0x1a, 0x0a, 0x08, 0x4c, 0x65, 0x61, 0x67, 0x75, 0x65, 0x49, 0x64, 0x18, 0x01, 0x20,
+	0x01, 0x28, 0x03, 0x52, 0x08, 0x4c, 0x65, 0x61, 0x67, 0x75, 0x65, 0x49, 0x64, 0x12, 0x1a, 0x0a,
+	0x08, 0x6c, 0x61, 0x6e, 0x67, 0x75, 0x61, 0x67, 0x65, 0x18, 0x03, 0x20, 0x01, 0x28, 0x09, 0x52,
+	0x08, 0x6c, 0x61, 0x6e, 0x67, 0x75, 0x61, 0x67, 0x65, 0x22, 0x98, 0x01, 0x0a, 0x1a, 0x57, 0x65,
+	0x62, 0x46, 0x6f, 0x6f, 0x74, 0x4c, 0x65, 0x61, 0x67, 0x75, 0x65, 0x53, 0x74, 0x61, 0x74, 0x73,
+	0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x12, 0x12, 0x0a, 0x04, 0x52, 0x61, 0x6e, 0x6b,
+	0x18, 0x01, 0x20, 0x01, 0x28, 0x03, 0x52, 0x04, 0x52, 0x61, 0x6e, 0x6b, 0x12, 0x1a, 0x0a, 0x08,
+	0x70, 0x6c, 0x61, 0x79, 0x65, 0x72, 0x49, 0x64, 0x18, 0x02, 0x20, 0x01, 0x28, 0x03, 0x52, 0x08,
+	0x70, 0x6c, 0x61, 0x79, 0x65, 0x72, 0x49, 0x64, 0x12, 0x1e, 0x0a, 0x0a, 0x70, 0x6c, 0x61, 0x79,
+	0x65, 0x72, 0x4e, 0x61, 0x6d, 0x65, 0x18, 0x03, 0x20, 0x01, 0x28, 0x09, 0x52, 0x0a, 0x70, 0x6c,
+	0x61, 0x79, 0x65, 0x72, 0x4e, 0x61, 0x6d, 0x65, 0x12, 0x12, 0x0a, 0x04, 0x64, 0x61, 0x74, 0x61,
+	0x18, 0x04, 0x20, 0x01, 0x28, 0x03, 0x52, 0x04, 0x64, 0x61, 0x74, 0x61, 0x12, 0x16, 0x0a, 0x06,
+	0x63, 0x6f, 0x72, 0x6e, 0x65, 0x72, 0x18, 0x05, 0x20, 0x01, 0x28, 0x03, 0x52, 0x06, 0x63, 0x6f,
+	0x72, 0x6e, 0x65, 0x72, 0x42, 0x07, 0x5a, 0x05, 0x2e, 0x2f, 0x3b, 0x76, 0x31, 0x62, 0x06, 0x70,
+	0x72, 0x6f, 0x74, 0x6f, 0x33,
 }
 
 var (
@@ -273,19 +769,29 @@ func file_web_foot_league_detail_proto_rawDescGZIP() []byte {
 	return file_web_foot_league_detail_proto_rawDescData
 }
 
-var file_web_foot_league_detail_proto_msgTypes = make([]protoimpl.MessageInfo, 3)
+var file_web_foot_league_detail_proto_msgTypes = make([]protoimpl.MessageInfo, 11)
 var file_web_foot_league_detail_proto_goTypes = []interface{}{
-	(*WebFootLeagueDetailRequest)(nil),  // 0: WebFootLeagueDetailRequest
-	(*WebFootLeagueDetailResponse)(nil), // 1: WebFootLeagueDetailResponse
-	(*WebFootLeagueSeasonList)(nil),     // 2: WebFootLeagueSeasonList
+	(*WebFootLeagueDetailRequest)(nil),     // 0: WebFootLeagueDetailRequest
+	(*WebFootLeagueDetailResponse)(nil),    // 1: WebFootLeagueDetailResponse
+	(*WebFootLeagueSeasonList)(nil),        // 2: WebFootLeagueSeasonList
+	(*WebFootLeagueStatsMenuRequest)(nil),  // 3: WebFootLeagueStatsMenuRequest
+	(*WebFootLeagueStatsMenuResponse)(nil), // 4: WebFootLeagueStatsMenuResponse
+	(*WebFootLeagueStatsMenu)(nil),         // 5: WebFootLeagueStatsMenu
+	(*WebFootLeagueTeamRequest)(nil),       // 6: WebFootLeagueTeamRequest
+	(*WebFootLeagueTeamResponse)(nil),      // 7: WebFootLeagueTeamResponse
+	(*WebFootLeagueTeam)(nil),              // 8: WebFootLeagueTeam
+	(*WebFootLeagueStatsRequest)(nil),      // 9: WebFootLeagueStatsRequest
+	(*WebFootLeagueStatsResponse)(nil),     // 10: WebFootLeagueStatsResponse
 }
 var file_web_foot_league_detail_proto_depIdxs = []int32{
 	2, // 0: WebFootLeagueDetailResponse.season:type_name -> WebFootLeagueSeasonList
-	1, // [1:1] is the sub-list for method output_type
-	1, // [1:1] is the sub-list for method input_type
-	1, // [1:1] is the sub-list for extension type_name
-	1, // [1:1] is the sub-list for extension extendee
-	0, // [0:1] is the sub-list for field type_name
+	5, // 1: WebFootLeagueStatsMenuResponse.Data:type_name -> WebFootLeagueStatsMenu
+	8, // 2: WebFootLeagueTeamResponse.Data:type_name -> WebFootLeagueTeam
+	3, // [3:3] is the sub-list for method output_type
+	3, // [3:3] is the sub-list for method input_type
+	3, // [3:3] is the sub-list for extension type_name
+	3, // [3:3] is the sub-list for extension extendee
+	0, // [0:3] is the sub-list for field type_name
 }
 
 func init() { file_web_foot_league_detail_proto_init() }
@@ -330,6 +836,102 @@ func file_web_foot_league_detail_proto_init() {
 				return nil
 			}
 		}
+		file_web_foot_league_detail_proto_msgTypes[3].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*WebFootLeagueStatsMenuRequest); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_web_foot_league_detail_proto_msgTypes[4].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*WebFootLeagueStatsMenuResponse); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_web_foot_league_detail_proto_msgTypes[5].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*WebFootLeagueStatsMenu); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_web_foot_league_detail_proto_msgTypes[6].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*WebFootLeagueTeamRequest); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_web_foot_league_detail_proto_msgTypes[7].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*WebFootLeagueTeamResponse); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_web_foot_league_detail_proto_msgTypes[8].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*WebFootLeagueTeam); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_web_foot_league_detail_proto_msgTypes[9].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*WebFootLeagueStatsRequest); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_web_foot_league_detail_proto_msgTypes[10].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*WebFootLeagueStatsResponse); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
 	}
 	type x struct{}
 	out := protoimpl.TypeBuilder{
@@ -337,7 +939,7 @@ func file_web_foot_league_detail_proto_init() {
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: file_web_foot_league_detail_proto_rawDesc,
 			NumEnums:      0,
-			NumMessages:   3,
+			NumMessages:   11,
 			NumExtensions: 0,
 			NumServices:   0,
 		},
