@@ -844,7 +844,7 @@ type FootBallClient interface {
 	WebLeagueStand(ctx context.Context, in *WebLeagueStandRequest, opts ...grpc.CallOption) (*FootResponse, error)
 	//web联赛详情 - 球队球员技术统计侧边栏
 	WebFootLeagueStatsMenu(ctx context.Context, in *WebFootLeagueStatsMenuRequest, opts ...grpc.CallOption) (*FootResponse, error)
-	//web联赛详情 - 联赛下的球队列表
+	//web联赛详情 - 联赛赛季下的球队列表
 	WebFootLeagueTeam(ctx context.Context, in *WebFootLeagueTeamRequest, opts ...grpc.CallOption) (*FootResponse, error)
 	//web联赛详情 - 球队球员技术统计
 	WebFootLeagueStats(ctx context.Context, in *WebFootLeagueStatsRequest, opts ...grpc.CallOption) (*FootResponse, error)
@@ -1461,7 +1461,7 @@ type FootBallServer interface {
 	WebLeagueStand(context.Context, *WebLeagueStandRequest) (*FootResponse, error)
 	//web联赛详情 - 球队球员技术统计侧边栏
 	WebFootLeagueStatsMenu(context.Context, *WebFootLeagueStatsMenuRequest) (*FootResponse, error)
-	//web联赛详情 - 联赛下的球队列表
+	//web联赛详情 - 联赛赛季下的球队列表
 	WebFootLeagueTeam(context.Context, *WebFootLeagueTeamRequest) (*FootResponse, error)
 	//web联赛详情 - 球队球员技术统计
 	WebFootLeagueStats(context.Context, *WebFootLeagueStatsRequest) (*FootResponse, error)
