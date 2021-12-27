@@ -401,31 +401,31 @@ var file_foot_server_proto_rawDesc = []byte{
 	0x65, 0x61, 0x73, 0x6f, 0x6e, 0x4c, 0x69, 0x73, 0x74, 0x12, 0x1d, 0x2e, 0x57, 0x65, 0x62, 0x46,
 	0x6f, 0x6f, 0x74, 0x54, 0x65, 0x61, 0x6d, 0x53, 0x65, 0x61, 0x73, 0x6f, 0x6e, 0x4c, 0x69, 0x73,
 	0x74, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x0d, 0x2e, 0x46, 0x6f, 0x6f, 0x74, 0x52,
-	0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x00, 0x12, 0x3d, 0x0a, 0x10, 0x57, 0x65, 0x62,
-	0x46, 0x6f, 0x6f, 0x74, 0x4d, 0x61, 0x74, 0x63, 0x68, 0x4c, 0x69, 0x73, 0x74, 0x12, 0x18, 0x2e,
-	0x57, 0x65, 0x62, 0x46, 0x6f, 0x6f, 0x74, 0x4d, 0x61, 0x74, 0x63, 0x68, 0x4c, 0x69, 0x73, 0x74,
-	0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x0d, 0x2e, 0x46, 0x6f, 0x6f, 0x74, 0x52, 0x65,
-	0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x00, 0x12, 0x3f, 0x0a, 0x11, 0x57, 0x65, 0x62, 0x46,
-	0x6f, 0x6f, 0x74, 0x4d, 0x61, 0x74, 0x63, 0x68, 0x4d, 0x6f, 0x6e, 0x74, 0x68, 0x12, 0x19, 0x2e,
-	0x57, 0x65, 0x62, 0x46, 0x6f, 0x6f, 0x74, 0x4d, 0x61, 0x74, 0x63, 0x68, 0x4d, 0x6f, 0x6e, 0x74,
-	0x68, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x0d, 0x2e, 0x46, 0x6f, 0x6f, 0x74, 0x52,
-	0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x00, 0x12, 0x4f, 0x0a, 0x19, 0x57, 0x65, 0x62,
-	0x46, 0x6f, 0x6f, 0x74, 0x54, 0x65, 0x61, 0x6d, 0x54, 0x72, 0x61, 0x6e, 0x73, 0x66, 0x65, 0x72,
-	0x49, 0x6e, 0x6a, 0x75, 0x72, 0x79, 0x12, 0x21, 0x2e, 0x57, 0x65, 0x62, 0x46, 0x6f, 0x6f, 0x74,
-	0x54, 0x65, 0x61, 0x6d, 0x54, 0x72, 0x61, 0x6e, 0x73, 0x66, 0x65, 0x72, 0x49, 0x6e, 0x6a, 0x75,
-	0x72, 0x79, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x0d, 0x2e, 0x46, 0x6f, 0x6f, 0x74,
-	0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x00, 0x12, 0x41, 0x0a, 0x12, 0x57, 0x65,
-	0x62, 0x46, 0x6f, 0x6f, 0x74, 0x4d, 0x61, 0x74, 0x63, 0x68, 0x4c, 0x69, 0x6e, 0x65, 0x75, 0x70,
-	0x12, 0x1a, 0x2e, 0x57, 0x65, 0x62, 0x46, 0x6f, 0x6f, 0x74, 0x4d, 0x61, 0x74, 0x63, 0x68, 0x4c,
-	0x69, 0x6e, 0x65, 0x75, 0x70, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x0d, 0x2e, 0x46,
-	0x6f, 0x6f, 0x74, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x00, 0x12, 0x41, 0x0a,
-	0x13, 0x57, 0x65, 0x62, 0x46, 0x6f, 0x6f, 0x74, 0x50, 0x6c, 0x61, 0x79, 0x65, 0x72, 0x44, 0x65,
-	0x74, 0x61, 0x69, 0x6c, 0x12, 0x19, 0x2e, 0x57, 0x65, 0x62, 0x46, 0x6f, 0x6f, 0x74, 0x50, 0x6c,
-	0x61, 0x79, 0x65, 0x72, 0x49, 0x6e, 0x66, 0x6f, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a,
-	0x0d, 0x2e, 0x46, 0x6f, 0x6f, 0x74, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x00,
-	0x12, 0x43, 0x0a, 0x13, 0x57, 0x65, 0x62, 0x46, 0x6f, 0x6f, 0x74, 0x4c, 0x65, 0x61, 0x67, 0x75,
-	0x65, 0x44, 0x65, 0x74, 0x61, 0x69, 0x6c, 0x12, 0x1b, 0x2e, 0x57, 0x65, 0x62, 0x46, 0x6f, 0x6f,
-	0x74, 0x4c, 0x65, 0x61, 0x67, 0x75, 0x65, 0x44, 0x65, 0x74, 0x61, 0x69, 0x6c, 0x52, 0x65, 0x71,
+	0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x00, 0x12, 0x3f, 0x0a, 0x11, 0x57, 0x65, 0x62,
+	0x46, 0x6f, 0x6f, 0x74, 0x4d, 0x61, 0x74, 0x63, 0x68, 0x4d, 0x6f, 0x6e, 0x74, 0x68, 0x12, 0x19,
+	0x2e, 0x57, 0x65, 0x62, 0x46, 0x6f, 0x6f, 0x74, 0x4d, 0x61, 0x74, 0x63, 0x68, 0x4d, 0x6f, 0x6e,
+	0x74, 0x68, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x0d, 0x2e, 0x46, 0x6f, 0x6f, 0x74,
+	0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x00, 0x12, 0x4f, 0x0a, 0x19, 0x57, 0x65,
+	0x62, 0x46, 0x6f, 0x6f, 0x74, 0x54, 0x65, 0x61, 0x6d, 0x54, 0x72, 0x61, 0x6e, 0x73, 0x66, 0x65,
+	0x72, 0x49, 0x6e, 0x6a, 0x75, 0x72, 0x79, 0x12, 0x21, 0x2e, 0x57, 0x65, 0x62, 0x46, 0x6f, 0x6f,
+	0x74, 0x54, 0x65, 0x61, 0x6d, 0x54, 0x72, 0x61, 0x6e, 0x73, 0x66, 0x65, 0x72, 0x49, 0x6e, 0x6a,
+	0x75, 0x72, 0x79, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x0d, 0x2e, 0x46, 0x6f, 0x6f,
+	0x74, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x00, 0x12, 0x41, 0x0a, 0x12, 0x57,
+	0x65, 0x62, 0x46, 0x6f, 0x6f, 0x74, 0x4d, 0x61, 0x74, 0x63, 0x68, 0x4c, 0x69, 0x6e, 0x65, 0x75,
+	0x70, 0x12, 0x1a, 0x2e, 0x57, 0x65, 0x62, 0x46, 0x6f, 0x6f, 0x74, 0x4d, 0x61, 0x74, 0x63, 0x68,
+	0x4c, 0x69, 0x6e, 0x65, 0x75, 0x70, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x0d, 0x2e,
+	0x46, 0x6f, 0x6f, 0x74, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x00, 0x12, 0x41,
+	0x0a, 0x13, 0x57, 0x65, 0x62, 0x46, 0x6f, 0x6f, 0x74, 0x50, 0x6c, 0x61, 0x79, 0x65, 0x72, 0x44,
+	0x65, 0x74, 0x61, 0x69, 0x6c, 0x12, 0x19, 0x2e, 0x57, 0x65, 0x62, 0x46, 0x6f, 0x6f, 0x74, 0x50,
+	0x6c, 0x61, 0x79, 0x65, 0x72, 0x49, 0x6e, 0x66, 0x6f, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74,
+	0x1a, 0x0d, 0x2e, 0x46, 0x6f, 0x6f, 0x74, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22,
+	0x00, 0x12, 0x43, 0x0a, 0x13, 0x57, 0x65, 0x62, 0x46, 0x6f, 0x6f, 0x74, 0x4c, 0x65, 0x61, 0x67,
+	0x75, 0x65, 0x44, 0x65, 0x74, 0x61, 0x69, 0x6c, 0x12, 0x1b, 0x2e, 0x57, 0x65, 0x62, 0x46, 0x6f,
+	0x6f, 0x74, 0x4c, 0x65, 0x61, 0x67, 0x75, 0x65, 0x44, 0x65, 0x74, 0x61, 0x69, 0x6c, 0x52, 0x65,
+	0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x0d, 0x2e, 0x46, 0x6f, 0x6f, 0x74, 0x52, 0x65, 0x73, 0x70,
+	0x6f, 0x6e, 0x73, 0x65, 0x22, 0x00, 0x12, 0x3d, 0x0a, 0x10, 0x57, 0x65, 0x62, 0x46, 0x6f, 0x6f,
+	0x74, 0x4d, 0x61, 0x74, 0x63, 0x68, 0x4c, 0x69, 0x73, 0x74, 0x12, 0x18, 0x2e, 0x57, 0x65, 0x62,
+	0x46, 0x6f, 0x6f, 0x74, 0x4d, 0x61, 0x74, 0x63, 0x68, 0x4c, 0x69, 0x73, 0x74, 0x52, 0x65, 0x71,
 	0x75, 0x65, 0x73, 0x74, 0x1a, 0x0d, 0x2e, 0x46, 0x6f, 0x6f, 0x74, 0x52, 0x65, 0x73, 0x70, 0x6f,
 	0x6e, 0x73, 0x65, 0x22, 0x00, 0x12, 0x39, 0x0a, 0x0e, 0x57, 0x65, 0x62, 0x4c, 0x65, 0x61, 0x67,
 	0x75, 0x65, 0x53, 0x74, 0x61, 0x6e, 0x64, 0x12, 0x16, 0x2e, 0x57, 0x65, 0x62, 0x4c, 0x65, 0x61,
@@ -526,12 +526,12 @@ var file_foot_server_proto_goTypes = []interface{}{
 	(*WebFootTeamStatsMenuRequest)(nil),               // 44: WebFootTeamStatsMenuRequest
 	(*WebFootTeamStatsRequest)(nil),                   // 45: WebFootTeamStatsRequest
 	(*WebFootTeamSeasonListRequest)(nil),              // 46: WebFootTeamSeasonListRequest
-	(*WebFootMatchListRequest)(nil),                   // 47: WebFootMatchListRequest
-	(*WebFootMatchMonthRequest)(nil),                  // 48: WebFootMatchMonthRequest
-	(*WebFootTeamTransferInjuryRequest)(nil),          // 49: WebFootTeamTransferInjuryRequest
-	(*WebFootMatchLineupRequest)(nil),                 // 50: WebFootMatchLineupRequest
-	(*WebFootPlayerInfoRequest)(nil),                  // 51: WebFootPlayerInfoRequest
-	(*WebFootLeagueDetailRequest)(nil),                // 52: WebFootLeagueDetailRequest
+	(*WebFootMatchMonthRequest)(nil),                  // 47: WebFootMatchMonthRequest
+	(*WebFootTeamTransferInjuryRequest)(nil),          // 48: WebFootTeamTransferInjuryRequest
+	(*WebFootMatchLineupRequest)(nil),                 // 49: WebFootMatchLineupRequest
+	(*WebFootPlayerInfoRequest)(nil),                  // 50: WebFootPlayerInfoRequest
+	(*WebFootLeagueDetailRequest)(nil),                // 51: WebFootLeagueDetailRequest
+	(*WebFootMatchListRequest)(nil),                   // 52: WebFootMatchListRequest
 	(*WebLeagueStandRequest)(nil),                     // 53: WebLeagueStandRequest
 	(*WebFootLeagueStatsMenuRequest)(nil),             // 54: WebFootLeagueStatsMenuRequest
 	(*WebFootLeagueTeamRequest)(nil),                  // 55: WebFootLeagueTeamRequest
@@ -588,12 +588,12 @@ var file_foot_server_proto_depIdxs = []int32{
 	44, // 42: FootBall.WebFootTeamStatsMenu:input_type -> WebFootTeamStatsMenuRequest
 	45, // 43: FootBall.WebFootTeamStats:input_type -> WebFootTeamStatsRequest
 	46, // 44: FootBall.WebFootTeamSeasonList:input_type -> WebFootTeamSeasonListRequest
-	47, // 45: FootBall.WebFootMatchList:input_type -> WebFootMatchListRequest
-	48, // 46: FootBall.WebFootMatchMonth:input_type -> WebFootMatchMonthRequest
-	49, // 47: FootBall.WebFootTeamTransferInjury:input_type -> WebFootTeamTransferInjuryRequest
-	50, // 48: FootBall.WebFootMatchLineup:input_type -> WebFootMatchLineupRequest
-	51, // 49: FootBall.WebFootPlayerDetail:input_type -> WebFootPlayerInfoRequest
-	52, // 50: FootBall.WebFootLeagueDetail:input_type -> WebFootLeagueDetailRequest
+	47, // 45: FootBall.WebFootMatchMonth:input_type -> WebFootMatchMonthRequest
+	48, // 46: FootBall.WebFootTeamTransferInjury:input_type -> WebFootTeamTransferInjuryRequest
+	49, // 47: FootBall.WebFootMatchLineup:input_type -> WebFootMatchLineupRequest
+	50, // 48: FootBall.WebFootPlayerDetail:input_type -> WebFootPlayerInfoRequest
+	51, // 49: FootBall.WebFootLeagueDetail:input_type -> WebFootLeagueDetailRequest
+	52, // 50: FootBall.WebFootMatchList:input_type -> WebFootMatchListRequest
 	53, // 51: FootBall.WebLeagueStand:input_type -> WebLeagueStandRequest
 	54, // 52: FootBall.WebFootLeagueStatsMenu:input_type -> WebFootLeagueStatsMenuRequest
 	55, // 53: FootBall.WebFootLeagueTeam:input_type -> WebFootLeagueTeamRequest
@@ -647,12 +647,12 @@ var file_foot_server_proto_depIdxs = []int32{
 	1,  // 101: FootBall.WebFootTeamStatsMenu:output_type -> FootResponse
 	1,  // 102: FootBall.WebFootTeamStats:output_type -> FootResponse
 	1,  // 103: FootBall.WebFootTeamSeasonList:output_type -> FootResponse
-	1,  // 104: FootBall.WebFootMatchList:output_type -> FootResponse
-	1,  // 105: FootBall.WebFootMatchMonth:output_type -> FootResponse
-	1,  // 106: FootBall.WebFootTeamTransferInjury:output_type -> FootResponse
-	1,  // 107: FootBall.WebFootMatchLineup:output_type -> FootResponse
-	1,  // 108: FootBall.WebFootPlayerDetail:output_type -> FootResponse
-	1,  // 109: FootBall.WebFootLeagueDetail:output_type -> FootResponse
+	1,  // 104: FootBall.WebFootMatchMonth:output_type -> FootResponse
+	1,  // 105: FootBall.WebFootTeamTransferInjury:output_type -> FootResponse
+	1,  // 106: FootBall.WebFootMatchLineup:output_type -> FootResponse
+	1,  // 107: FootBall.WebFootPlayerDetail:output_type -> FootResponse
+	1,  // 108: FootBall.WebFootLeagueDetail:output_type -> FootResponse
+	1,  // 109: FootBall.WebFootMatchList:output_type -> FootResponse
 	1,  // 110: FootBall.WebLeagueStand:output_type -> FootResponse
 	1,  // 111: FootBall.WebFootLeagueStatsMenu:output_type -> FootResponse
 	1,  // 112: FootBall.WebFootLeagueTeam:output_type -> FootResponse
@@ -866,18 +866,18 @@ type FootBallClient interface {
 	WebFootTeamStats(ctx context.Context, in *WebFootTeamStatsRequest, opts ...grpc.CallOption) (*FootResponse, error)
 	//web球队详情 - 球队下的赛季列表
 	WebFootTeamSeasonList(ctx context.Context, in *WebFootTeamSeasonListRequest, opts ...grpc.CallOption) (*FootResponse, error)
-	//web球队详情 - 比赛赛程
-	WebFootMatchList(ctx context.Context, in *WebFootMatchListRequest, opts ...grpc.CallOption) (*FootResponse, error)
 	//web球队详情 - 比赛月份
 	WebFootMatchMonth(ctx context.Context, in *WebFootMatchMonthRequest, opts ...grpc.CallOption) (*FootResponse, error)
 	//web球队详情 - 球员伤停情况
 	WebFootTeamTransferInjury(ctx context.Context, in *WebFootTeamTransferInjuryRequest, opts ...grpc.CallOption) (*FootResponse, error)
-	//web球队详情 - web队伍阵容
+	//web球队详情 - 队伍阵容
 	WebFootMatchLineup(ctx context.Context, in *WebFootMatchLineupRequest, opts ...grpc.CallOption) (*FootResponse, error)
 	//web球员详情
 	WebFootPlayerDetail(ctx context.Context, in *WebFootPlayerInfoRequest, opts ...grpc.CallOption) (*FootResponse, error)
 	//web联赛详情
 	WebFootLeagueDetail(ctx context.Context, in *WebFootLeagueDetailRequest, opts ...grpc.CallOption) (*FootResponse, error)
+	//web联赛详情 - 比赛赛程
+	WebFootMatchList(ctx context.Context, in *WebFootMatchListRequest, opts ...grpc.CallOption) (*FootResponse, error)
 	//web联赛详情 - 积分榜
 	WebLeagueStand(ctx context.Context, in *WebLeagueStandRequest, opts ...grpc.CallOption) (*FootResponse, error)
 	//web联赛详情 - 球队球员技术统计侧边栏
@@ -1309,15 +1309,6 @@ func (c *footBallClient) WebFootTeamSeasonList(ctx context.Context, in *WebFootT
 	return out, nil
 }
 
-func (c *footBallClient) WebFootMatchList(ctx context.Context, in *WebFootMatchListRequest, opts ...grpc.CallOption) (*FootResponse, error) {
-	out := new(FootResponse)
-	err := c.cc.Invoke(ctx, "/FootBall/WebFootMatchList", in, out, opts...)
-	if err != nil {
-		return nil, err
-	}
-	return out, nil
-}
-
 func (c *footBallClient) WebFootMatchMonth(ctx context.Context, in *WebFootMatchMonthRequest, opts ...grpc.CallOption) (*FootResponse, error) {
 	out := new(FootResponse)
 	err := c.cc.Invoke(ctx, "/FootBall/WebFootMatchMonth", in, out, opts...)
@@ -1357,6 +1348,15 @@ func (c *footBallClient) WebFootPlayerDetail(ctx context.Context, in *WebFootPla
 func (c *footBallClient) WebFootLeagueDetail(ctx context.Context, in *WebFootLeagueDetailRequest, opts ...grpc.CallOption) (*FootResponse, error) {
 	out := new(FootResponse)
 	err := c.cc.Invoke(ctx, "/FootBall/WebFootLeagueDetail", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *footBallClient) WebFootMatchList(ctx context.Context, in *WebFootMatchListRequest, opts ...grpc.CallOption) (*FootResponse, error) {
+	out := new(FootResponse)
+	err := c.cc.Invoke(ctx, "/FootBall/WebFootMatchList", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -1527,18 +1527,18 @@ type FootBallServer interface {
 	WebFootTeamStats(context.Context, *WebFootTeamStatsRequest) (*FootResponse, error)
 	//web球队详情 - 球队下的赛季列表
 	WebFootTeamSeasonList(context.Context, *WebFootTeamSeasonListRequest) (*FootResponse, error)
-	//web球队详情 - 比赛赛程
-	WebFootMatchList(context.Context, *WebFootMatchListRequest) (*FootResponse, error)
 	//web球队详情 - 比赛月份
 	WebFootMatchMonth(context.Context, *WebFootMatchMonthRequest) (*FootResponse, error)
 	//web球队详情 - 球员伤停情况
 	WebFootTeamTransferInjury(context.Context, *WebFootTeamTransferInjuryRequest) (*FootResponse, error)
-	//web球队详情 - web队伍阵容
+	//web球队详情 - 队伍阵容
 	WebFootMatchLineup(context.Context, *WebFootMatchLineupRequest) (*FootResponse, error)
 	//web球员详情
 	WebFootPlayerDetail(context.Context, *WebFootPlayerInfoRequest) (*FootResponse, error)
 	//web联赛详情
 	WebFootLeagueDetail(context.Context, *WebFootLeagueDetailRequest) (*FootResponse, error)
+	//web联赛详情 - 比赛赛程
+	WebFootMatchList(context.Context, *WebFootMatchListRequest) (*FootResponse, error)
 	//web联赛详情 - 积分榜
 	WebLeagueStand(context.Context, *WebLeagueStandRequest) (*FootResponse, error)
 	//web联赛详情 - 球队球员技术统计侧边栏
@@ -1696,9 +1696,6 @@ func (*UnimplementedFootBallServer) WebFootTeamStats(context.Context, *WebFootTe
 func (*UnimplementedFootBallServer) WebFootTeamSeasonList(context.Context, *WebFootTeamSeasonListRequest) (*FootResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method WebFootTeamSeasonList not implemented")
 }
-func (*UnimplementedFootBallServer) WebFootMatchList(context.Context, *WebFootMatchListRequest) (*FootResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method WebFootMatchList not implemented")
-}
 func (*UnimplementedFootBallServer) WebFootMatchMonth(context.Context, *WebFootMatchMonthRequest) (*FootResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method WebFootMatchMonth not implemented")
 }
@@ -1713,6 +1710,9 @@ func (*UnimplementedFootBallServer) WebFootPlayerDetail(context.Context, *WebFoo
 }
 func (*UnimplementedFootBallServer) WebFootLeagueDetail(context.Context, *WebFootLeagueDetailRequest) (*FootResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method WebFootLeagueDetail not implemented")
+}
+func (*UnimplementedFootBallServer) WebFootMatchList(context.Context, *WebFootMatchListRequest) (*FootResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method WebFootMatchList not implemented")
 }
 func (*UnimplementedFootBallServer) WebLeagueStand(context.Context, *WebLeagueStandRequest) (*FootResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method WebLeagueStand not implemented")
@@ -2553,24 +2553,6 @@ func _FootBall_WebFootTeamSeasonList_Handler(srv interface{}, ctx context.Contex
 	return interceptor(ctx, in, info, handler)
 }
 
-func _FootBall_WebFootMatchList_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(WebFootMatchListRequest)
-	if err := dec(in); err != nil {
-		return nil, err
-	}
-	if interceptor == nil {
-		return srv.(FootBallServer).WebFootMatchList(ctx, in)
-	}
-	info := &grpc.UnaryServerInfo{
-		Server:     srv,
-		FullMethod: "/FootBall/WebFootMatchList",
-	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(FootBallServer).WebFootMatchList(ctx, req.(*WebFootMatchListRequest))
-	}
-	return interceptor(ctx, in, info, handler)
-}
-
 func _FootBall_WebFootMatchMonth_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(WebFootMatchMonthRequest)
 	if err := dec(in); err != nil {
@@ -2657,6 +2639,24 @@ func _FootBall_WebFootLeagueDetail_Handler(srv interface{}, ctx context.Context,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(FootBallServer).WebFootLeagueDetail(ctx, req.(*WebFootLeagueDetailRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _FootBall_WebFootMatchList_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(WebFootMatchListRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(FootBallServer).WebFootMatchList(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/FootBall/WebFootMatchList",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(FootBallServer).WebFootMatchList(ctx, req.(*WebFootMatchListRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
@@ -2990,10 +2990,6 @@ var _FootBall_serviceDesc = grpc.ServiceDesc{
 			Handler:    _FootBall_WebFootTeamSeasonList_Handler,
 		},
 		{
-			MethodName: "WebFootMatchList",
-			Handler:    _FootBall_WebFootMatchList_Handler,
-		},
-		{
 			MethodName: "WebFootMatchMonth",
 			Handler:    _FootBall_WebFootMatchMonth_Handler,
 		},
@@ -3012,6 +3008,10 @@ var _FootBall_serviceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "WebFootLeagueDetail",
 			Handler:    _FootBall_WebFootLeagueDetail_Handler,
+		},
+		{
+			MethodName: "WebFootMatchList",
+			Handler:    _FootBall_WebFootMatchList_Handler,
 		},
 		{
 			MethodName: "WebLeagueStand",
