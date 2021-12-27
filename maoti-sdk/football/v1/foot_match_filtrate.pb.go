@@ -26,7 +26,7 @@ type FootMatchFiltrateRequest struct {
 	unknownFields protoimpl.UnknownFields
 
 	FilterType int64  `protobuf:"varint,6,opt,name=FilterType,proto3" json:"FilterType,omitempty"` //1=》即时数据，2=》热门
-	Language   string `protobuf:"bytes,3,opt,name=language,proto3" json:"language,omitempty"`      //请求语言  1:zh  2:en
+	Language   string `protobuf:"bytes,3,opt,name=language,proto3" json:"language,omitempty"`      //请求语言
 }
 
 func (x *FootMatchFiltrateRequest) Reset() {

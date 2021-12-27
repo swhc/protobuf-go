@@ -29,7 +29,7 @@ type FootMatchListRequest struct {
 	CmpId    int64  `protobuf:"varint,1,opt,name=cmp_id,json=cmpId,proto3" json:"cmp_id,omitempty"`         //  联赛id：46
 	SuppId   int64  `protobuf:"varint,2,opt,name=supp_id,json=suppId,proto3" json:"supp_id,omitempty"`      //  年份对应id
 	CptTurns string `protobuf:"bytes,3,opt,name=cpt_turns,json=cptTurns,proto3" json:"cpt_turns,omitempty"` //  轮次：第17轮
-	Language string `protobuf:"bytes,4,opt,name=language,proto3" json:"language,omitempty"`                 //请求语言  1:zh  2:en
+	Language string `protobuf:"bytes,4,opt,name=language,proto3" json:"language,omitempty"`                 //请求语言
 }
 
 func (x *FootMatchListRequest) Reset() {

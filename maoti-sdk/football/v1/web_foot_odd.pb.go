@@ -27,7 +27,7 @@ type WebOddListRequest struct {
 	unknownFields protoimpl.UnknownFields
 
 	EventId  int64  `protobuf:"varint,2,opt,name=eventId,proto3" json:"eventId,omitempty"`  //比赛id
-	Language string `protobuf:"bytes,3,opt,name=language,proto3" json:"language,omitempty"` //请求语言  1:zh  2:en
+	Language string `protobuf:"bytes,3,opt,name=language,proto3" json:"language,omitempty"` //请求语言
 }
 
 func (x *WebOddListRequest) Reset() {

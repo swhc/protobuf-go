@@ -27,7 +27,7 @@ type WebFootLeagueDetailRequest struct {
 	unknownFields protoimpl.UnknownFields
 
 	LeagueId int64  `protobuf:"varint,1,opt,name=LeagueId,proto3" json:"LeagueId,omitempty"` //联赛id
-	Language string `protobuf:"bytes,3,opt,name=language,proto3" json:"language,omitempty"`  //请求语言  1:zh  2:en
+	Language string `protobuf:"bytes,3,opt,name=language,proto3" json:"language,omitempty"`  //请求语言
 }
 
 func (x *WebFootLeagueDetailRequest) Reset() {
@@ -232,7 +232,7 @@ type WebFootLeagueStatsMenuRequest struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Language string `protobuf:"bytes,3,opt,name=language,proto3" json:"language,omitempty"` //请求语言  1:zh  2:en
+	Language string `protobuf:"bytes,3,opt,name=language,proto3" json:"language,omitempty"` //请求语言
 	MenuType string `protobuf:"bytes,4,opt,name=MenuType,proto3" json:"MenuType,omitempty"` //侧边栏类型  team:查询球队的侧边栏数据，player查询球员的侧边栏数据
 }
 
@@ -392,7 +392,7 @@ type WebFootLeagueTeamRequest struct {
 
 	LeagueId int64  `protobuf:"varint,1,opt,name=LeagueId,proto3" json:"LeagueId,omitempty"` //联赛id
 	SeasonId int64  `protobuf:"varint,2,opt,name=SeasonId,proto3" json:"SeasonId,omitempty"` //赛季id
-	Language string `protobuf:"bytes,3,opt,name=language,proto3" json:"language,omitempty"`  //请求语言  1:zh  2:en
+	Language string `protobuf:"bytes,3,opt,name=language,proto3" json:"language,omitempty"`  //请求语言
 }
 
 func (x *WebFootLeagueTeamRequest) Reset() {

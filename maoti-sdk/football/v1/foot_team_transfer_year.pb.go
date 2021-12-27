@@ -26,7 +26,7 @@ type FootTeamTransferYearRequest struct {
 	unknownFields protoimpl.UnknownFields
 
 	TeamId   int64  `protobuf:"varint,1,opt,name=teamId,proto3" json:"teamId,omitempty"`
-	Language string `protobuf:"bytes,2,opt,name=language,proto3" json:"language,omitempty"` //请求语言  1:zh  2:en
+	Language string `protobuf:"bytes,2,opt,name=language,proto3" json:"language,omitempty"` //请求语言
 }
 
 func (x *FootTeamTransferYearRequest) Reset() {

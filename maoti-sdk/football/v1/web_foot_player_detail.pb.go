@@ -28,7 +28,7 @@ type WebFootPlayerInfoRequest struct {
 
 	SportId  string `protobuf:"bytes,1,opt,name=sportId,proto3" json:"sportId,omitempty"`    //1足球 2篮球
 	PersonId int64  `protobuf:"varint,2,opt,name=personId,proto3" json:"personId,omitempty"` //球队id
-	Language string `protobuf:"bytes,3,opt,name=language,proto3" json:"language,omitempty"`  //请求语言  1:zh  2:en
+	Language string `protobuf:"bytes,3,opt,name=language,proto3" json:"language,omitempty"`  //请求语言
 }
 
 func (x *WebFootPlayerInfoRequest) Reset() {

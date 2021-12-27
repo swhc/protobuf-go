@@ -31,7 +31,7 @@ type FootOddsMatchListRequest struct {
 	PageSize     int64  `protobuf:"varint,3,opt,name=pageSize,proto3" json:"pageSize,omitempty"`         //条数
 	DateTime     string `protobuf:"bytes,4,opt,name=dateTime,proto3" json:"dateTime,omitempty"`          //比赛对应的时间，默认是今天格式：2021-06-08
 	TournamentId int64  `protobuf:"varint,5,opt,name=tournamentId,proto3" json:"tournamentId,omitempty"` //赛事搜索对应的赛事id 格式：1,2,3
-	Language     string `protobuf:"bytes,6,opt,name=language,proto3" json:"language,omitempty"`          //请求语言  1:zh  2:en
+	Language     string `protobuf:"bytes,6,opt,name=language,proto3" json:"language,omitempty"`          //请求语言
 }
 
 func (x *FootOddsMatchListRequest) Reset() {

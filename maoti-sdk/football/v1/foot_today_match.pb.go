@@ -27,7 +27,7 @@ type FootTodayMatchRequest struct {
 
 	TournamentId []int64 `protobuf:"varint,1,rep,packed,name=TournamentId,proto3" json:"TournamentId,omitempty"`
 	EventIds     []int64 `protobuf:"varint,2,rep,packed,name=EventIds,proto3" json:"EventIds,omitempty"`
-	Language     string  `protobuf:"bytes,3,opt,name=language,proto3" json:"language,omitempty"` //请求语言  1:zh  2:en
+	Language     string  `protobuf:"bytes,3,opt,name=language,proto3" json:"language,omitempty"` //请求语言
 }
 
 func (x *FootTodayMatchRequest) Reset() {

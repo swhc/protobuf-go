@@ -26,7 +26,7 @@ type FootOddFilterRequest struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Language string `protobuf:"bytes,1,opt,name=language,proto3" json:"language,omitempty"` //请求语言  1:zh  2:en
+	Language string `protobuf:"bytes,1,opt,name=language,proto3" json:"language,omitempty"` //请求语言
 }
 
 func (x *FootOddFilterRequest) Reset() {

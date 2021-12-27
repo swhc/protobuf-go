@@ -26,7 +26,7 @@ type FootPlayerCareerRequest struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Language string `protobuf:"bytes,3,opt,name=language,proto3" json:"language,omitempty"` //请求语言  1:zh  2:en
+	Language string `protobuf:"bytes,3,opt,name=language,proto3" json:"language,omitempty"` //请求语言
 	PersonId string `protobuf:"bytes,2,opt,name=personId,proto3" json:"personId,omitempty"` //比赛id
 }
 

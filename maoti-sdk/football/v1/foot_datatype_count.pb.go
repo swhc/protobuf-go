@@ -27,7 +27,7 @@ type DataTypeCountRequest struct {
 
 	CheckType int64   `protobuf:"varint,2,opt,name=checkType,proto3" json:"checkType,omitempty"` //1：联赛 2：比赛 3：队伍 4：赛季
 	Ids       []int64 `protobuf:"varint,3,rep,packed,name=ids,proto3" json:"ids,omitempty"`
-	Language  string  `protobuf:"bytes,4,opt,name=language,proto3" json:"language,omitempty"` //请求语言  1:zh  2:en
+	Language  string  `protobuf:"bytes,4,opt,name=language,proto3" json:"language,omitempty"` //请求语言
 }
 
 func (x *DataTypeCountRequest) Reset() {

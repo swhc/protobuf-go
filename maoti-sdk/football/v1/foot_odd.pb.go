@@ -28,7 +28,7 @@ type FootOddListRequest struct {
 
 	SportId  string `protobuf:"bytes,1,opt,name=sportId,proto3" json:"sportId,omitempty"`   //1足球 2篮球
 	EventId  int64  `protobuf:"varint,2,opt,name=eventId,proto3" json:"eventId,omitempty"`  //比赛id
-	Language string `protobuf:"bytes,3,opt,name=language,proto3" json:"language,omitempty"` //请求语言  1:zh  2:en
+	Language string `protobuf:"bytes,3,opt,name=language,proto3" json:"language,omitempty"` //请求语言
 }
 
 func (x *FootOddListRequest) Reset() {
@@ -285,7 +285,7 @@ type FootOddDetailRequest struct {
 	PageSize  int64  `protobuf:"varint,4,opt,name=pageSize,proto3" json:"pageSize,omitempty"`   //页大小
 	CompanyId int64  `protobuf:"varint,5,opt,name=companyId,proto3" json:"companyId,omitempty"` //公司id
 	PanId     int64  `protobuf:"varint,6,opt,name=panId,proto3" json:"panId,omitempty"`         //亚盘/欧盘/大小球id
-	Language  string `protobuf:"bytes,7,opt,name=language,proto3" json:"language,omitempty"`    //请求语言  1:zh  2:en
+	Language  string `protobuf:"bytes,7,opt,name=language,proto3" json:"language,omitempty"`    //请求语言
 }
 
 func (x *FootOddDetailRequest) Reset() {

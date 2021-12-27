@@ -26,7 +26,7 @@ type FootMatchPlusRequest struct {
 	unknownFields protoimpl.UnknownFields
 
 	MatchID  int64  `protobuf:"varint,1,opt,name=matchID,proto3" json:"matchID,omitempty"`  // 比赛id
-	Language string `protobuf:"bytes,2,opt,name=language,proto3" json:"language,omitempty"` //请求语言  1:zh  2:en
+	Language string `protobuf:"bytes,2,opt,name=language,proto3" json:"language,omitempty"` //请求语言
 }
 
 func (x *FootMatchPlusRequest) Reset() {

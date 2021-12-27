@@ -27,7 +27,7 @@ type FootStandTagRequest struct {
 
 	Mark     string `protobuf:"bytes,1,opt,name=mark,proto3" json:"mark,omitempty"`
 	SeasonId int64  `protobuf:"varint,2,opt,name=SeasonId,proto3" json:"SeasonId,omitempty"`
-	Language string `protobuf:"bytes,3,opt,name=language,proto3" json:"language,omitempty"` //请求语言  1:zh  2:en
+	Language string `protobuf:"bytes,3,opt,name=language,proto3" json:"language,omitempty"` //请求语言
 	ComId    int64  `protobuf:"varint,4,opt,name=comId,proto3" json:"comId,omitempty"`      //联赛ID
 }
 

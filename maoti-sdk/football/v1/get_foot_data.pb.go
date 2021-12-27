@@ -29,7 +29,7 @@ type CheckFootDataRequest struct {
 	CheckType int64   `protobuf:"varint,2,opt,name=CheckType,proto3" json:"CheckType,omitempty"` //1：联赛 2：比赛 3：队伍 4：赛季
 	Ids       []int64 `protobuf:"varint,3,rep,packed,name=ids,proto3" json:"ids,omitempty"`
 	IsHot     int64   `protobuf:"varint,1,opt,name=isHot,proto3" json:"isHot,omitempty"`
-	Language  string  `protobuf:"bytes,4,opt,name=language,proto3" json:"language,omitempty"`  //请求语言  1:zh  2:en
+	Language  string  `protobuf:"bytes,4,opt,name=language,proto3" json:"language,omitempty"`  //请求语言
 	KeyWord   string  `protobuf:"bytes,5,opt,name=keyWord,proto3" json:"keyWord,omitempty"`    //球队筛选
 	Page      int64   `protobuf:"varint,6,opt,name=page,proto3" json:"page,omitempty"`         //页
 	PageSize  int64   `protobuf:"varint,7,opt,name=pageSize,proto3" json:"pageSize,omitempty"` //每页数量

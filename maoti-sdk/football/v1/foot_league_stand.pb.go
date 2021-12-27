@@ -26,7 +26,7 @@ type FootLeagueStandRequest struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Language string `protobuf:"bytes,3,opt,name=language,proto3" json:"language,omitempty"`  //请求语言  1:zh  2:en
+	Language string `protobuf:"bytes,3,opt,name=language,proto3" json:"language,omitempty"`  //请求语言
 	SportId  string `protobuf:"bytes,1,opt,name=sportId,proto3" json:"sportId,omitempty"`    //1足球 2篮球
 	SeasonId int64  `protobuf:"varint,2,opt,name=SeasonId,proto3" json:"SeasonId,omitempty"` //年份对应id
 	CmpId    int64  `protobuf:"varint,4,opt,name=CmpId,proto3" json:"CmpId,omitempty"`       //联赛ID

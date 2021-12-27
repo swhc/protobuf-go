@@ -27,7 +27,7 @@ type FootLiveLineupRequest struct {
 	unknownFields protoimpl.UnknownFields
 
 	MatchId  int64  `protobuf:"varint,1,opt,name=matchId,proto3" json:"matchId,omitempty"`  //比赛id
-	Language string `protobuf:"bytes,2,opt,name=language,proto3" json:"language,omitempty"` //请求语言  1:zh  2:en
+	Language string `protobuf:"bytes,2,opt,name=language,proto3" json:"language,omitempty"` //请求语言
 }
 
 func (x *FootLiveLineupRequest) Reset() {

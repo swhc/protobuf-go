@@ -27,7 +27,7 @@ type FootTeamTransferRequest struct {
 
 	TeamId   int64  `protobuf:"varint,1,opt,name=teamId,proto3" json:"teamId,omitempty"`
 	Year     int64  `protobuf:"varint,2,opt,name=year,proto3" json:"year,omitempty"`
-	Language string `protobuf:"bytes,3,opt,name=language,proto3" json:"language,omitempty"` //请求语言  1:zh  2:en
+	Language string `protobuf:"bytes,3,opt,name=language,proto3" json:"language,omitempty"` //请求语言
 }
 
 func (x *FootTeamTransferRequest) Reset() {

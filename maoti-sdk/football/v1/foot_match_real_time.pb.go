@@ -33,7 +33,7 @@ type FootMatchRealTimeRequest struct {
 	DateTime     string  `protobuf:"bytes,3,opt,name=date_time,json=dateTime,proto3" json:"date_time,omitempty"` //全部比赛的日期  2020-09-01
 	TournamentId []int64 `protobuf:"varint,1,rep,packed,name=tournamentId,proto3" json:"tournamentId,omitempty"` //赛事筛选
 	EventIds     []int64 `protobuf:"varint,2,rep,packed,name=eventIds,proto3" json:"eventIds,omitempty"`         //比赛筛选
-	Language     string  `protobuf:"bytes,8,opt,name=language,proto3" json:"language,omitempty"`                 //请求语言  1:zh  2:en
+	Language     string  `protobuf:"bytes,8,opt,name=language,proto3" json:"language,omitempty"`                 //请求语言
 }
 
 func (x *FootMatchRealTimeRequest) Reset() {

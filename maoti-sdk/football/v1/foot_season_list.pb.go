@@ -28,7 +28,7 @@ type FootSeasonListRequest struct {
 
 	ComId    int64  `protobuf:"varint,1,opt,name=comId,proto3" json:"comId,omitempty"`       //联赛id
 	SeasonId int64  `protobuf:"varint,2,opt,name=seasonId,proto3" json:"seasonId,omitempty"` //赛事id
-	Language string `protobuf:"bytes,3,opt,name=language,proto3" json:"language,omitempty"`  //请求语言  1:zh  2:en
+	Language string `protobuf:"bytes,3,opt,name=language,proto3" json:"language,omitempty"`  //请求语言
 }
 
 func (x *FootSeasonListRequest) Reset() {

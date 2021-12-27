@@ -28,7 +28,7 @@ type WebFootMatchListRequest struct {
 
 	TournamentId int64  `protobuf:"varint,1,opt,name=tournamentId,proto3" json:"tournamentId,omitempty"` //联赛id
 	SeasonId     int64  `protobuf:"varint,2,opt,name=seasonId,proto3" json:"seasonId,omitempty"`         //赛季id
-	Language     string `protobuf:"bytes,3,opt,name=language,proto3" json:"language,omitempty"`          //请求语言  1:zh  2:en
+	Language     string `protobuf:"bytes,3,opt,name=language,proto3" json:"language,omitempty"`          //请求语言
 	CptTurns     string `protobuf:"bytes,4,opt,name=CptTurns,proto3" json:"CptTurns,omitempty"`          //指定round
 }
 
@@ -144,7 +144,7 @@ type WebMatchList struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Id            int64  `protobuf:"varint,1,opt,name=id,proto3" json:"id,omitempty"`                        //   id
+	Id            int64  `protobuf:"varint,1,opt,name=id,proto3" json:"id,omitempty"`                        //   比赛id
 	MatchTime     int64  `protobuf:"varint,2,opt,name=matchTime,proto3" json:"matchTime,omitempty"`          //   日期
 	MainTeamName  string `protobuf:"bytes,3,opt,name=mainTeamName,proto3" json:"mainTeamName,omitempty"`     //   主队名称
 	CustTeamName  string `protobuf:"bytes,4,opt,name=custTeamName,proto3" json:"custTeamName,omitempty"`     //   客队名称
@@ -157,7 +157,7 @@ type WebMatchList struct {
 	RoundType     string `protobuf:"bytes,13,opt,name=roundType,proto3" json:"roundType,omitempty"`          //   供应商比赛轮次类型
 	MainHalfScore int64  `protobuf:"varint,14,opt,name=mainHalfScore,proto3" json:"mainHalfScore,omitempty"` //主队半场比分
 	CustHalfScore int64  `protobuf:"varint,15,opt,name=custHalfScore,proto3" json:"custHalfScore,omitempty"` //客队半场比分
-	MatchStatus   string `protobuf:"bytes,16,opt,name=MatchStatus,proto3" json:"MatchStatus,omitempty"`
+	MatchStatus   string `protobuf:"bytes,16,opt,name=MatchStatus,proto3" json:"MatchStatus,omitempty"`      //比赛状态
 }
 
 func (x *WebMatchList) Reset() {

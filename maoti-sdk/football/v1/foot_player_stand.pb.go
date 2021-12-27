@@ -26,7 +26,7 @@ type FootPlayerStandRequest struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Language string `protobuf:"bytes,3,opt,name=language,proto3" json:"language,omitempty"`  //请求语言  1:zh  2:en
+	Language string `protobuf:"bytes,3,opt,name=language,proto3" json:"language,omitempty"`  //请求语言
 	SeasonId int64  `protobuf:"varint,5,opt,name=SeasonId,proto3" json:"SeasonId,omitempty"` //年份对应id
 	Mark     string `protobuf:"bytes,6,opt,name=Mark,proto3" json:"Mark,omitempty"`          //标记（goals/points:进球）
 	Page     int64  `protobuf:"varint,8,opt,name=Page,proto3" json:"Page,omitempty"`         //页码

@@ -27,7 +27,7 @@ type FootTeamDetailRequest struct {
 
 	TeamId   string `protobuf:"bytes,1,opt,name=teamId,proto3" json:"teamId,omitempty"`
 	ComId    int64  `protobuf:"varint,2,opt,name=ComId,proto3" json:"ComId,omitempty"`      //联赛id
-	Language string `protobuf:"bytes,3,opt,name=language,proto3" json:"language,omitempty"` //请求语言  1:zh  2:en
+	Language string `protobuf:"bytes,3,opt,name=language,proto3" json:"language,omitempty"` //请求语言
 }
 
 func (x *FootTeamDetailRequest) Reset() {

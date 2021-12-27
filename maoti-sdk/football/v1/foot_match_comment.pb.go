@@ -28,7 +28,7 @@ type FootMatchCommentRequest struct {
 
 	EventId   string `protobuf:"bytes,1,opt,name=eventId,proto3" json:"eventId,omitempty"`
 	CommentId string `protobuf:"bytes,2,opt,name=commentId,proto3" json:"commentId,omitempty"`
-	Language  string `protobuf:"bytes,3,opt,name=language,proto3" json:"language,omitempty"` //请求语言  1:zh  2:en
+	Language  string `protobuf:"bytes,3,opt,name=language,proto3" json:"language,omitempty"` //请求语言
 }
 
 func (x *FootMatchCommentRequest) Reset() {

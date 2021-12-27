@@ -30,7 +30,7 @@ type FootTeamMatchRequest struct {
 	Type       int64  `protobuf:"varint,3,opt,name=type,proto3" json:"type,omitempty"`
 	Page       int64  `protobuf:"varint,4,opt,name=page,proto3" json:"page,omitempty"`
 	PageSize   int64  `protobuf:"varint,5,opt,name=pageSize,proto3" json:"pageSize,omitempty"`
-	Language   string `protobuf:"bytes,6,opt,name=language,proto3" json:"language,omitempty"` //请求语言  1:zh  2:en
+	Language   string `protobuf:"bytes,6,opt,name=language,proto3" json:"language,omitempty"` //请求语言
 }
 
 func (x *FootTeamMatchRequest) Reset() {
