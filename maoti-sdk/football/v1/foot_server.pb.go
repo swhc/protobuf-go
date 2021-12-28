@@ -941,9 +941,9 @@ type FootBallClient interface {
 	WebFootInstantMatch(ctx context.Context, in *WebFootInstantMatchRequest, opts ...grpc.CallOption) (*FootResponse, error)
 	//web即时比赛列表 - 当天联赛列表
 	WebFootLeagueFilter(ctx context.Context, in *WebFootLeagueFilterRequest, opts ...grpc.CallOption) (*FootResponse, error)
-	//web指数详情
+	//web指数-欧盘
 	WebFootOddDetail(ctx context.Context, in *WebOddDetailRequest, opts ...grpc.CallOption) (*FootResponse, error)
-	//web即时比赛列表 - 当天联赛列表
+	//web指数-亚盘/大小球
 	WebOddHandicapOU(ctx context.Context, in *WebOddHandicapOURequest, opts ...grpc.CallOption) (*FootResponse, error)
 }
 
@@ -1646,9 +1646,9 @@ type FootBallServer interface {
 	WebFootInstantMatch(context.Context, *WebFootInstantMatchRequest) (*FootResponse, error)
 	//web即时比赛列表 - 当天联赛列表
 	WebFootLeagueFilter(context.Context, *WebFootLeagueFilterRequest) (*FootResponse, error)
-	//web指数详情
+	//web指数-欧盘
 	WebFootOddDetail(context.Context, *WebOddDetailRequest) (*FootResponse, error)
-	//web即时比赛列表 - 当天联赛列表
+	//web指数-亚盘/大小球
 	WebOddHandicapOU(context.Context, *WebOddHandicapOURequest) (*FootResponse, error)
 }
 
