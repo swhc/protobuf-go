@@ -690,7 +690,7 @@ type WebFootLeagueStats struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Rank   int64  `protobuf:"varint,1,opt,name=Rank,proto3" json:"Rank,omitempty"`     //排名
+	Rank   int64  `protobuf:"varint,1,opt,name=Rank,proto3" json:"Rank,omitempty"`     //排名，后端已实现排序，前端根据数据顺序给出下标即可
 	Id     int64  `protobuf:"varint,2,opt,name=Id,proto3" json:"Id,omitempty"`         //球队id/球员id
 	Name   string `protobuf:"bytes,3,opt,name=Name,proto3" json:"Name,omitempty"`      //球队名称/球员名称
 	Data   int64  `protobuf:"varint,4,opt,name=data,proto3" json:"data,omitempty"`     //数据
