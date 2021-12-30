@@ -26,7 +26,7 @@ type WebLeagueStandRequest struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	SeasonId int64  `protobuf:"varint,2,opt,name=seasonId,proto3" json:"seasonId,omitempty"` //联赛id
+	SeasonId int64  `protobuf:"varint,2,opt,name=seasonId,proto3" json:"seasonId,omitempty"` //赛季id
 	Language string `protobuf:"bytes,3,opt,name=language,proto3" json:"language,omitempty"`  //请求语言
 	RankType int64  `protobuf:"varint,4,opt,name=rankType,proto3" json:"rankType,omitempty"` //1主2客3全部
 }
