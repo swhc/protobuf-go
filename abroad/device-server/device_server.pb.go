@@ -24,18 +24,14 @@ const (
 	_ = protoimpl.EnforceVersion(protoimpl.MaxVersion - 20)
 )
 
-type Response struct {
+type Empty struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
-
-	Ret  int64  `protobuf:"varint,1,opt,name=ret,proto3" json:"ret,omitempty"`
-	Msg  string `protobuf:"bytes,2,opt,name=msg,proto3" json:"msg,omitempty"`
-	Data []byte `protobuf:"bytes,3,opt,name=data,proto3" json:"data,omitempty"`
 }
 
-func (x *Response) Reset() {
-	*x = Response{}
+func (x *Empty) Reset() {
+	*x = Empty{}
 	if protoimpl.UnsafeEnabled {
 		mi := &file_device_server_proto_msgTypes[0]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
@@ -43,13 +39,13 @@ func (x *Response) Reset() {
 	}
 }
 
-func (x *Response) String() string {
+func (x *Empty) String() string {
 	return protoimpl.X.MessageStringOf(x)
 }
 
-func (*Response) ProtoMessage() {}
+func (*Empty) ProtoMessage() {}
 
-func (x *Response) ProtoReflect() protoreflect.Message {
+func (x *Empty) ProtoReflect() protoreflect.Message {
 	mi := &file_device_server_proto_msgTypes[0]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
@@ -61,30 +57,9 @@ func (x *Response) ProtoReflect() protoreflect.Message {
 	return mi.MessageOf(x)
 }
 
-// Deprecated: Use Response.ProtoReflect.Descriptor instead.
-func (*Response) Descriptor() ([]byte, []int) {
+// Deprecated: Use Empty.ProtoReflect.Descriptor instead.
+func (*Empty) Descriptor() ([]byte, []int) {
 	return file_device_server_proto_rawDescGZIP(), []int{0}
-}
-
-func (x *Response) GetRet() int64 {
-	if x != nil {
-		return x.Ret
-	}
-	return 0
-}
-
-func (x *Response) GetMsg() string {
-	if x != nil {
-		return x.Msg
-	}
-	return ""
-}
-
-func (x *Response) GetData() []byte {
-	if x != nil {
-		return x.Data
-	}
-	return nil
 }
 
 var File_device_server_proto protoreflect.FileDescriptor
@@ -92,21 +67,16 @@ var File_device_server_proto protoreflect.FileDescriptor
 var file_device_server_proto_rawDesc = []byte{
 	0x0a, 0x13, 0x64, 0x65, 0x76, 0x69, 0x63, 0x65, 0x5f, 0x73, 0x65, 0x72, 0x76, 0x65, 0x72, 0x2e,
 	0x70, 0x72, 0x6f, 0x74, 0x6f, 0x1a, 0x13, 0x63, 0x6f, 0x6c, 0x6c, 0x65, 0x63, 0x74, 0x5f, 0x6d,
-	0x61, 0x74, 0x63, 0x68, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x1a, 0x14, 0x70, 0x75, 0x73, 0x68,
-	0x5f, 0x6d, 0x73, 0x67, 0x5f, 0x6d, 0x61, 0x74, 0x63, 0x68, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f,
-	0x22, 0x42, 0x0a, 0x08, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x12, 0x10, 0x0a, 0x03,
-	0x72, 0x65, 0x74, 0x18, 0x01, 0x20, 0x01, 0x28, 0x03, 0x52, 0x03, 0x72, 0x65, 0x74, 0x12, 0x10,
-	0x0a, 0x03, 0x6d, 0x73, 0x67, 0x18, 0x02, 0x20, 0x01, 0x28, 0x09, 0x52, 0x03, 0x6d, 0x73, 0x67,
-	0x12, 0x12, 0x0a, 0x04, 0x64, 0x61, 0x74, 0x61, 0x18, 0x03, 0x20, 0x01, 0x28, 0x0c, 0x52, 0x04,
-	0x64, 0x61, 0x74, 0x61, 0x32, 0x74, 0x0a, 0x06, 0x44, 0x65, 0x76, 0x69, 0x63, 0x65, 0x12, 0x34,
-	0x0a, 0x0c, 0x43, 0x6f, 0x6c, 0x6c, 0x65, 0x63, 0x74, 0x4d, 0x61, 0x74, 0x63, 0x68, 0x12, 0x19,
-	0x2e, 0x43, 0x6f, 0x6c, 0x6c, 0x65, 0x63, 0x74, 0x4d, 0x61, 0x74, 0x63, 0x68, 0x52, 0x65, 0x71,
-	0x75, 0x65, 0x73, 0x74, 0x50, 0x61, 0x72, 0x61, 0x6d, 0x1a, 0x09, 0x2e, 0x52, 0x65, 0x73, 0x70,
-	0x6f, 0x6e, 0x73, 0x65, 0x12, 0x34, 0x0a, 0x0c, 0x50, 0x75, 0x73, 0x68, 0x4d, 0x73, 0x67, 0x4d,
-	0x61, 0x74, 0x63, 0x68, 0x12, 0x19, 0x2e, 0x50, 0x75, 0x73, 0x68, 0x4d, 0x73, 0x67, 0x4d, 0x61,
-	0x74, 0x63, 0x68, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x50, 0x61, 0x72, 0x61, 0x6d, 0x1a,
-	0x09, 0x2e, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x42, 0x07, 0x5a, 0x05, 0x2e, 0x2f,
-	0x3b, 0x76, 0x31, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
+	0x61, 0x74, 0x63, 0x68, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x22, 0x07, 0x0a, 0x05, 0x45, 0x6d,
+	0x70, 0x74, 0x79, 0x32, 0x6e, 0x0a, 0x06, 0x44, 0x65, 0x76, 0x69, 0x63, 0x65, 0x12, 0x31, 0x0a,
+	0x0c, 0x43, 0x6f, 0x6c, 0x6c, 0x65, 0x63, 0x74, 0x4d, 0x61, 0x74, 0x63, 0x68, 0x12, 0x19, 0x2e,
+	0x43, 0x6f, 0x6c, 0x6c, 0x65, 0x63, 0x74, 0x4d, 0x61, 0x74, 0x63, 0x68, 0x52, 0x65, 0x71, 0x75,
+	0x65, 0x73, 0x74, 0x50, 0x61, 0x72, 0x61, 0x6d, 0x1a, 0x06, 0x2e, 0x45, 0x6d, 0x70, 0x74, 0x79,
+	0x12, 0x31, 0x0a, 0x0c, 0x50, 0x75, 0x73, 0x68, 0x4d, 0x73, 0x67, 0x4d, 0x61, 0x74, 0x63, 0x68,
+	0x12, 0x19, 0x2e, 0x50, 0x75, 0x73, 0x68, 0x4d, 0x73, 0x67, 0x4d, 0x61, 0x74, 0x63, 0x68, 0x52,
+	0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x50, 0x61, 0x72, 0x61, 0x6d, 0x1a, 0x06, 0x2e, 0x45, 0x6d,
+	0x70, 0x74, 0x79, 0x42, 0x07, 0x5a, 0x05, 0x2e, 0x2f, 0x3b, 0x76, 0x31, 0x62, 0x06, 0x70, 0x72,
+	0x6f, 0x74, 0x6f, 0x33,
 }
 
 var (
@@ -123,15 +93,15 @@ func file_device_server_proto_rawDescGZIP() []byte {
 
 var file_device_server_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_device_server_proto_goTypes = []interface{}{
-	(*Response)(nil),                 // 0: Response
+	(*Empty)(nil),                    // 0: Empty
 	(*CollectMatchRequestParam)(nil), // 1: CollectMatchRequestParam
 	(*PushMsgMatchRequestParam)(nil), // 2: PushMsgMatchRequestParam
 }
 var file_device_server_proto_depIdxs = []int32{
 	1, // 0: Device.CollectMatch:input_type -> CollectMatchRequestParam
 	2, // 1: Device.PushMsgMatch:input_type -> PushMsgMatchRequestParam
-	0, // 2: Device.CollectMatch:output_type -> Response
-	0, // 3: Device.PushMsgMatch:output_type -> Response
+	0, // 2: Device.CollectMatch:output_type -> Empty
+	0, // 3: Device.PushMsgMatch:output_type -> Empty
 	2, // [2:4] is the sub-list for method output_type
 	0, // [0:2] is the sub-list for method input_type
 	0, // [0:0] is the sub-list for extension type_name
@@ -145,10 +115,9 @@ func file_device_server_proto_init() {
 		return
 	}
 	file_collect_match_proto_init()
-	file_push_msg_match_proto_init()
 	if !protoimpl.UnsafeEnabled {
 		file_device_server_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*Response); i {
+			switch v := v.(*Empty); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -193,9 +162,9 @@ const _ = grpc.SupportPackageIsVersion6
 // For semantics around ctx use and closing/ending streaming RPCs, please refer to https://godoc.org/google.golang.org/grpc#ClientConn.NewStream.
 type DeviceClient interface {
 	// 收藏比赛 (取消也在)
-	CollectMatch(ctx context.Context, in *CollectMatchRequestParam, opts ...grpc.CallOption) (*Response, error)
+	CollectMatch(ctx context.Context, in *CollectMatchRequestParam, opts ...grpc.CallOption) (*Empty, error)
 	// 收藏比赛事件推送
-	PushMsgMatch(ctx context.Context, in *PushMsgMatchRequestParam, opts ...grpc.CallOption) (*Response, error)
+	PushMsgMatch(ctx context.Context, in *PushMsgMatchRequestParam, opts ...grpc.CallOption) (*Empty, error)
 }
 
 type deviceClient struct {
@@ -206,8 +175,8 @@ func NewDeviceClient(cc grpc.ClientConnInterface) DeviceClient {
 	return &deviceClient{cc}
 }
 
-func (c *deviceClient) CollectMatch(ctx context.Context, in *CollectMatchRequestParam, opts ...grpc.CallOption) (*Response, error) {
-	out := new(Response)
+func (c *deviceClient) CollectMatch(ctx context.Context, in *CollectMatchRequestParam, opts ...grpc.CallOption) (*Empty, error) {
+	out := new(Empty)
 	err := c.cc.Invoke(ctx, "/Device/CollectMatch", in, out, opts...)
 	if err != nil {
 		return nil, err
@@ -215,8 +184,8 @@ func (c *deviceClient) CollectMatch(ctx context.Context, in *CollectMatchRequest
 	return out, nil
 }
 
-func (c *deviceClient) PushMsgMatch(ctx context.Context, in *PushMsgMatchRequestParam, opts ...grpc.CallOption) (*Response, error) {
-	out := new(Response)
+func (c *deviceClient) PushMsgMatch(ctx context.Context, in *PushMsgMatchRequestParam, opts ...grpc.CallOption) (*Empty, error) {
+	out := new(Empty)
 	err := c.cc.Invoke(ctx, "/Device/PushMsgMatch", in, out, opts...)
 	if err != nil {
 		return nil, err
@@ -227,19 +196,19 @@ func (c *deviceClient) PushMsgMatch(ctx context.Context, in *PushMsgMatchRequest
 // DeviceServer is the server API for Device service.
 type DeviceServer interface {
 	// 收藏比赛 (取消也在)
-	CollectMatch(context.Context, *CollectMatchRequestParam) (*Response, error)
+	CollectMatch(context.Context, *CollectMatchRequestParam) (*Empty, error)
 	// 收藏比赛事件推送
-	PushMsgMatch(context.Context, *PushMsgMatchRequestParam) (*Response, error)
+	PushMsgMatch(context.Context, *PushMsgMatchRequestParam) (*Empty, error)
 }
 
 // UnimplementedDeviceServer can be embedded to have forward compatible implementations.
 type UnimplementedDeviceServer struct {
 }
 
-func (*UnimplementedDeviceServer) CollectMatch(context.Context, *CollectMatchRequestParam) (*Response, error) {
+func (*UnimplementedDeviceServer) CollectMatch(context.Context, *CollectMatchRequestParam) (*Empty, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method CollectMatch not implemented")
 }
-func (*UnimplementedDeviceServer) PushMsgMatch(context.Context, *PushMsgMatchRequestParam) (*Response, error) {
+func (*UnimplementedDeviceServer) PushMsgMatch(context.Context, *PushMsgMatchRequestParam) (*Empty, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method PushMsgMatch not implemented")
 }
 
