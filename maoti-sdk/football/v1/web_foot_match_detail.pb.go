@@ -27,7 +27,7 @@ type WebFootMatchDetailRequest struct {
 	unknownFields protoimpl.UnknownFields
 
 	MatchId  int64  `protobuf:"varint,1,opt,name=MatchId,proto3" json:"MatchId,omitempty"`   //比赛id
-	Language string `protobuf:"bytes,2,opt,name=language,proto3" json:"language,omitempty"`  //请求语言        int64 TimeZone = 6;   //时区
+	Language string `protobuf:"bytes,2,opt,name=language,proto3" json:"language,omitempty"`  //请求语言
 	TimeZone int64  `protobuf:"varint,6,opt,name=TimeZone,proto3" json:"TimeZone,omitempty"` //时区
 }
 
