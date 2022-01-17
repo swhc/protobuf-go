@@ -80,7 +80,8 @@ type FootMatchFinishResponse struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Matchs []*FootMatchFinishInfo `protobuf:"bytes,1,rep,name=matchs,proto3" json:"matchs,omitempty"`
+	Sport    int32   `protobuf:"varint,1,opt,name=Sport,proto3" json:"Sport,omitempty"`
+	MatchIDs []int64 `protobuf:"varint,2,rep,packed,name=matchIDs,proto3" json:"matchIDs,omitempty"`
 }
 
 func (x *FootMatchFinishResponse) Reset() {
@@ -115,66 +116,18 @@ func (*FootMatchFinishResponse) Descriptor() ([]byte, []int) {
 	return file_foot_match_finish_proto_rawDescGZIP(), []int{1}
 }
 
-func (x *FootMatchFinishResponse) GetMatchs() []*FootMatchFinishInfo {
+func (x *FootMatchFinishResponse) GetSport() int32 {
 	if x != nil {
-		return x.Matchs
+		return x.Sport
+	}
+	return 0
+}
+
+func (x *FootMatchFinishResponse) GetMatchIDs() []int64 {
+	if x != nil {
+		return x.MatchIDs
 	}
 	return nil
-}
-
-type FootMatchFinishInfo struct {
-	state         protoimpl.MessageState
-	sizeCache     protoimpl.SizeCache
-	unknownFields protoimpl.UnknownFields
-
-	MatchID     int64 `protobuf:"varint,1,opt,name=MatchID,proto3" json:"MatchID,omitempty"`
-	MatchResult int32 `protobuf:"varint,2,opt,name=MatchResult,proto3" json:"MatchResult,omitempty"` //比赛大状态；1进行中 2未开始  3已结束 4取消   该接口只会返回已经结束的比赛
-}
-
-func (x *FootMatchFinishInfo) Reset() {
-	*x = FootMatchFinishInfo{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_foot_match_finish_proto_msgTypes[2]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
-
-func (x *FootMatchFinishInfo) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
-
-func (*FootMatchFinishInfo) ProtoMessage() {}
-
-func (x *FootMatchFinishInfo) ProtoReflect() protoreflect.Message {
-	mi := &file_foot_match_finish_proto_msgTypes[2]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
-}
-
-// Deprecated: Use FootMatchFinishInfo.ProtoReflect.Descriptor instead.
-func (*FootMatchFinishInfo) Descriptor() ([]byte, []int) {
-	return file_foot_match_finish_proto_rawDescGZIP(), []int{2}
-}
-
-func (x *FootMatchFinishInfo) GetMatchID() int64 {
-	if x != nil {
-		return x.MatchID
-	}
-	return 0
-}
-
-func (x *FootMatchFinishInfo) GetMatchResult() int32 {
-	if x != nil {
-		return x.MatchResult
-	}
-	return 0
 }
 
 var File_foot_match_finish_proto protoreflect.FileDescriptor
@@ -186,18 +139,13 @@ var file_foot_match_finish_proto_rawDesc = []byte{
 	0x65, 0x73, 0x74, 0x12, 0x14, 0x0a, 0x05, 0x53, 0x70, 0x6f, 0x72, 0x74, 0x18, 0x01, 0x20, 0x01,
 	0x28, 0x05, 0x52, 0x05, 0x53, 0x70, 0x6f, 0x72, 0x74, 0x12, 0x1a, 0x0a, 0x08, 0x4d, 0x61, 0x74,
 	0x63, 0x68, 0x49, 0x44, 0x73, 0x18, 0x02, 0x20, 0x03, 0x28, 0x05, 0x52, 0x08, 0x4d, 0x61, 0x74,
-	0x63, 0x68, 0x49, 0x44, 0x73, 0x22, 0x47, 0x0a, 0x17, 0x46, 0x6f, 0x6f, 0x74, 0x4d, 0x61, 0x74,
+	0x63, 0x68, 0x49, 0x44, 0x73, 0x22, 0x4b, 0x0a, 0x17, 0x46, 0x6f, 0x6f, 0x74, 0x4d, 0x61, 0x74,
 	0x63, 0x68, 0x46, 0x69, 0x6e, 0x69, 0x73, 0x68, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65,
-	0x12, 0x2c, 0x0a, 0x06, 0x6d, 0x61, 0x74, 0x63, 0x68, 0x73, 0x18, 0x01, 0x20, 0x03, 0x28, 0x0b,
-	0x32, 0x14, 0x2e, 0x46, 0x6f, 0x6f, 0x74, 0x4d, 0x61, 0x74, 0x63, 0x68, 0x46, 0x69, 0x6e, 0x69,
-	0x73, 0x68, 0x49, 0x6e, 0x66, 0x6f, 0x52, 0x06, 0x6d, 0x61, 0x74, 0x63, 0x68, 0x73, 0x22, 0x51,
-	0x0a, 0x13, 0x46, 0x6f, 0x6f, 0x74, 0x4d, 0x61, 0x74, 0x63, 0x68, 0x46, 0x69, 0x6e, 0x69, 0x73,
-	0x68, 0x49, 0x6e, 0x66, 0x6f, 0x12, 0x18, 0x0a, 0x07, 0x4d, 0x61, 0x74, 0x63, 0x68, 0x49, 0x44,
-	0x18, 0x01, 0x20, 0x01, 0x28, 0x03, 0x52, 0x07, 0x4d, 0x61, 0x74, 0x63, 0x68, 0x49, 0x44, 0x12,
-	0x20, 0x0a, 0x0b, 0x4d, 0x61, 0x74, 0x63, 0x68, 0x52, 0x65, 0x73, 0x75, 0x6c, 0x74, 0x18, 0x02,
-	0x20, 0x01, 0x28, 0x05, 0x52, 0x0b, 0x4d, 0x61, 0x74, 0x63, 0x68, 0x52, 0x65, 0x73, 0x75, 0x6c,
-	0x74, 0x42, 0x07, 0x5a, 0x05, 0x2e, 0x2f, 0x3b, 0x76, 0x31, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74,
-	0x6f, 0x33,
+	0x12, 0x14, 0x0a, 0x05, 0x53, 0x70, 0x6f, 0x72, 0x74, 0x18, 0x01, 0x20, 0x01, 0x28, 0x05, 0x52,
+	0x05, 0x53, 0x70, 0x6f, 0x72, 0x74, 0x12, 0x1a, 0x0a, 0x08, 0x6d, 0x61, 0x74, 0x63, 0x68, 0x49,
+	0x44, 0x73, 0x18, 0x02, 0x20, 0x03, 0x28, 0x03, 0x52, 0x08, 0x6d, 0x61, 0x74, 0x63, 0x68, 0x49,
+	0x44, 0x73, 0x42, 0x07, 0x5a, 0x05, 0x2e, 0x2f, 0x3b, 0x76, 0x31, 0x62, 0x06, 0x70, 0x72, 0x6f,
+	0x74, 0x6f, 0x33,
 }
 
 var (
@@ -212,19 +160,17 @@ func file_foot_match_finish_proto_rawDescGZIP() []byte {
 	return file_foot_match_finish_proto_rawDescData
 }
 
-var file_foot_match_finish_proto_msgTypes = make([]protoimpl.MessageInfo, 3)
+var file_foot_match_finish_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
 var file_foot_match_finish_proto_goTypes = []interface{}{
 	(*FootMatchFinishRequest)(nil),  // 0: FootMatchFinishRequest
 	(*FootMatchFinishResponse)(nil), // 1: FootMatchFinishResponse
-	(*FootMatchFinishInfo)(nil),     // 2: FootMatchFinishInfo
 }
 var file_foot_match_finish_proto_depIdxs = []int32{
-	2, // 0: FootMatchFinishResponse.matchs:type_name -> FootMatchFinishInfo
-	1, // [1:1] is the sub-list for method output_type
-	1, // [1:1] is the sub-list for method input_type
-	1, // [1:1] is the sub-list for extension type_name
-	1, // [1:1] is the sub-list for extension extendee
-	0, // [0:1] is the sub-list for field type_name
+	0, // [0:0] is the sub-list for method output_type
+	0, // [0:0] is the sub-list for method input_type
+	0, // [0:0] is the sub-list for extension type_name
+	0, // [0:0] is the sub-list for extension extendee
+	0, // [0:0] is the sub-list for field type_name
 }
 
 func init() { file_foot_match_finish_proto_init() }
@@ -257,18 +203,6 @@ func file_foot_match_finish_proto_init() {
 				return nil
 			}
 		}
-		file_foot_match_finish_proto_msgTypes[2].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*FootMatchFinishInfo); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
 	}
 	type x struct{}
 	out := protoimpl.TypeBuilder{
@@ -276,7 +210,7 @@ func file_foot_match_finish_proto_init() {
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: file_foot_match_finish_proto_rawDesc,
 			NumEnums:      0,
-			NumMessages:   3,
+			NumMessages:   2,
 			NumExtensions: 0,
 			NumServices:   0,
 		},
