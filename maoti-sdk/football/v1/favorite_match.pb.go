@@ -195,8 +195,8 @@ type FavoriteMatchInfo struct {
 	StartTime         int64      `protobuf:"varint,3,opt,name=startTime,proto3" json:"startTime,omitempty"`                 //当前比赛开始时间戳
 	EndTime           int64      `protobuf:"varint,4,opt,name=endTime,proto3" json:"endTime,omitempty"`                     //结束时间
 	EventStatusResult int64      `protobuf:"varint,5,opt,name=eventStatusResult,proto3" json:"eventStatusResult,omitempty"` //当前比赛状态 1：未开始，2为开始，3为结束 4特殊状况临时中断比赛  5、延迟  6、取消
-	TeamMain          *TeamInfos `protobuf:"bytes,6,opt,name=teamMain,proto3" json:"teamMain,omitempty"`                    //主队数据信息
-	TeamCust          *TeamInfos `protobuf:"bytes,7,opt,name=teamCust,proto3" json:"teamCust,omitempty"`                    //客队数据信息
+	TeamMain          *TeamsInfo `protobuf:"bytes,6,opt,name=teamMain,proto3" json:"teamMain,omitempty"`                    //主队数据信息
+	TeamCust          *TeamsInfo `protobuf:"bytes,7,opt,name=teamCust,proto3" json:"teamCust,omitempty"`                    //客队数据信息
 	TotalScore        string     `protobuf:"bytes,8,opt,name=totalScore,proto3" json:"totalScore,omitempty"`                //主客总比分
 	Reason            string     `protobuf:"bytes,9,opt,name=reason,proto3" json:"reason,omitempty"`                        //备注说明：什么原因中断
 	CurrentTime       int64      `protobuf:"varint,10,opt,name=currentTime,proto3" json:"currentTime,omitempty"`            //服务器当前时间戳
@@ -274,14 +274,14 @@ func (x *FavoriteMatchInfo) GetEventStatusResult() int64 {
 	return 0
 }
 
-func (x *FavoriteMatchInfo) GetTeamMain() *TeamInfos {
+func (x *FavoriteMatchInfo) GetTeamMain() *TeamsInfo {
 	if x != nil {
 		return x.TeamMain
 	}
 	return nil
 }
 
-func (x *FavoriteMatchInfo) GetTeamCust() *TeamInfos {
+func (x *FavoriteMatchInfo) GetTeamCust() *TeamsInfo {
 	if x != nil {
 		return x.TeamCust
 	}
@@ -344,7 +344,7 @@ func (x *FavoriteMatchInfo) GetSportId() int64 {
 	return 0
 }
 
-type TeamInfos struct {
+type TeamsInfo struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
@@ -363,8 +363,8 @@ type TeamInfos struct {
 	FinalScore      int64  `protobuf:"varint,12,opt,name=finalScore,proto3" json:"finalScore,omitempty"`          //最终得分
 }
 
-func (x *TeamInfos) Reset() {
-	*x = TeamInfos{}
+func (x *TeamsInfo) Reset() {
+	*x = TeamsInfo{}
 	if protoimpl.UnsafeEnabled {
 		mi := &file_favorite_match_proto_msgTypes[4]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
@@ -372,13 +372,13 @@ func (x *TeamInfos) Reset() {
 	}
 }
 
-func (x *TeamInfos) String() string {
+func (x *TeamsInfo) String() string {
 	return protoimpl.X.MessageStringOf(x)
 }
 
-func (*TeamInfos) ProtoMessage() {}
+func (*TeamsInfo) ProtoMessage() {}
 
-func (x *TeamInfos) ProtoReflect() protoreflect.Message {
+func (x *TeamsInfo) ProtoReflect() protoreflect.Message {
 	mi := &file_favorite_match_proto_msgTypes[4]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
@@ -390,89 +390,89 @@ func (x *TeamInfos) ProtoReflect() protoreflect.Message {
 	return mi.MessageOf(x)
 }
 
-// Deprecated: Use TeamInfos.ProtoReflect.Descriptor instead.
-func (*TeamInfos) Descriptor() ([]byte, []int) {
+// Deprecated: Use TeamsInfo.ProtoReflect.Descriptor instead.
+func (*TeamsInfo) Descriptor() ([]byte, []int) {
 	return file_favorite_match_proto_rawDescGZIP(), []int{4}
 }
 
-func (x *TeamInfos) GetId() string {
+func (x *TeamsInfo) GetId() string {
 	if x != nil {
 		return x.Id
 	}
 	return ""
 }
 
-func (x *TeamInfos) GetName() string {
+func (x *TeamsInfo) GetName() string {
 	if x != nil {
 		return x.Name
 	}
 	return ""
 }
 
-func (x *TeamInfos) GetLogo() string {
+func (x *TeamsInfo) GetLogo() string {
 	if x != nil {
 		return x.Logo
 	}
 	return ""
 }
 
-func (x *TeamInfos) GetRank() int64 {
+func (x *TeamsInfo) GetRank() int64 {
 	if x != nil {
 		return x.Rank
 	}
 	return 0
 }
 
-func (x *TeamInfos) GetYellowCard() int64 {
+func (x *TeamsInfo) GetYellowCard() int64 {
 	if x != nil {
 		return x.YellowCard
 	}
 	return 0
 }
 
-func (x *TeamInfos) GetRedCard() int64 {
+func (x *TeamsInfo) GetRedCard() int64 {
 	if x != nil {
 		return x.RedCard
 	}
 	return 0
 }
 
-func (x *TeamInfos) GetHalfTimeScore() int64 {
+func (x *TeamsInfo) GetHalfTimeScore() int64 {
 	if x != nil {
 		return x.HalfTimeScore
 	}
 	return 0
 }
 
-func (x *TeamInfos) GetCornerScore() int64 {
+func (x *TeamsInfo) GetCornerScore() int64 {
 	if x != nil {
 		return x.CornerScore
 	}
 	return 0
 }
 
-func (x *TeamInfos) GetTotalGoalsScore() int64 {
+func (x *TeamsInfo) GetTotalGoalsScore() int64 {
 	if x != nil {
 		return x.TotalGoalsScore
 	}
 	return 0
 }
 
-func (x *TeamInfos) GetOvertimeScore() int64 {
+func (x *TeamsInfo) GetOvertimeScore() int64 {
 	if x != nil {
 		return x.OvertimeScore
 	}
 	return 0
 }
 
-func (x *TeamInfos) GetPenaltyScore() int64 {
+func (x *TeamsInfo) GetPenaltyScore() int64 {
 	if x != nil {
 		return x.PenaltyScore
 	}
 	return 0
 }
 
-func (x *TeamInfos) GetFinalScore() int64 {
+func (x *TeamsInfo) GetFinalScore() int64 {
 	if x != nil {
 		return x.FinalScore
 	}
@@ -513,10 +513,10 @@ var file_favorite_match_proto_rawDesc = []byte{
 	0x75, 0x6c, 0x74, 0x18, 0x05, 0x20, 0x01, 0x28, 0x03, 0x52, 0x11, 0x65, 0x76, 0x65, 0x6e, 0x74,
 	0x53, 0x74, 0x61, 0x74, 0x75, 0x73, 0x52, 0x65, 0x73, 0x75, 0x6c, 0x74, 0x12, 0x26, 0x0a, 0x08,
 	0x74, 0x65, 0x61, 0x6d, 0x4d, 0x61, 0x69, 0x6e, 0x18, 0x06, 0x20, 0x01, 0x28, 0x0b, 0x32, 0x0a,
-	0x2e, 0x54, 0x65, 0x61, 0x6d, 0x49, 0x6e, 0x66, 0x6f, 0x73, 0x52, 0x08, 0x74, 0x65, 0x61, 0x6d,
+	0x2e, 0x54, 0x65, 0x61, 0x6d, 0x73, 0x49, 0x6e, 0x66, 0x6f, 0x52, 0x08, 0x74, 0x65, 0x61, 0x6d,
 	0x4d, 0x61, 0x69, 0x6e, 0x12, 0x26, 0x0a, 0x08, 0x74, 0x65, 0x61, 0x6d, 0x43, 0x75, 0x73, 0x74,
-	0x18, 0x07, 0x20, 0x01, 0x28, 0x0b, 0x32, 0x0a, 0x2e, 0x54, 0x65, 0x61, 0x6d, 0x49, 0x6e, 0x66,
-	0x6f, 0x73, 0x52, 0x08, 0x74, 0x65, 0x61, 0x6d, 0x43, 0x75, 0x73, 0x74, 0x12, 0x1e, 0x0a, 0x0a,
+	0x18, 0x07, 0x20, 0x01, 0x28, 0x0b, 0x32, 0x0a, 0x2e, 0x54, 0x65, 0x61, 0x6d, 0x73, 0x49, 0x6e,
+	0x66, 0x6f, 0x52, 0x08, 0x74, 0x65, 0x61, 0x6d, 0x43, 0x75, 0x73, 0x74, 0x12, 0x1e, 0x0a, 0x0a,
 	0x74, 0x6f, 0x74, 0x61, 0x6c, 0x53, 0x63, 0x6f, 0x72, 0x65, 0x18, 0x08, 0x20, 0x01, 0x28, 0x09,
 	0x52, 0x0a, 0x74, 0x6f, 0x74, 0x61, 0x6c, 0x53, 0x63, 0x6f, 0x72, 0x65, 0x12, 0x16, 0x0a, 0x06,
 	0x72, 0x65, 0x61, 0x73, 0x6f, 0x6e, 0x18, 0x09, 0x20, 0x01, 0x28, 0x09, 0x52, 0x06, 0x72, 0x65,
@@ -533,7 +533,7 @@ var file_favorite_match_proto_rawDesc = []byte{
 	0x63, 0x6f, 0x6c, 0x6f, 0x72, 0x18, 0x0e, 0x20, 0x01, 0x28, 0x09, 0x52, 0x05, 0x63, 0x6f, 0x6c,
 	0x6f, 0x72, 0x12, 0x18, 0x0a, 0x07, 0x73, 0x70, 0x6f, 0x72, 0x74, 0x49, 0x64, 0x18, 0x0f, 0x20,
 	0x01, 0x28, 0x03, 0x52, 0x07, 0x73, 0x70, 0x6f, 0x72, 0x74, 0x49, 0x64, 0x22, 0xed, 0x02, 0x0a,
-	0x09, 0x54, 0x65, 0x61, 0x6d, 0x49, 0x6e, 0x66, 0x6f, 0x73, 0x12, 0x0e, 0x0a, 0x02, 0x69, 0x64,
+	0x09, 0x54, 0x65, 0x61, 0x6d, 0x73, 0x49, 0x6e, 0x66, 0x6f, 0x12, 0x0e, 0x0a, 0x02, 0x69, 0x64,
 	0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x02, 0x69, 0x64, 0x12, 0x12, 0x0a, 0x04, 0x6e, 0x61,
 	0x6d, 0x65, 0x18, 0x02, 0x20, 0x01, 0x28, 0x09, 0x52, 0x04, 0x6e, 0x61, 0x6d, 0x65, 0x12, 0x12,
 	0x0a, 0x04, 0x6c, 0x6f, 0x67, 0x6f, 0x18, 0x03, 0x20, 0x01, 0x28, 0x09, 0x52, 0x04, 0x6c, 0x6f,
@@ -577,13 +577,13 @@ var file_favorite_match_proto_goTypes = []interface{}{
 	(*FavoriteMatchResponse)(nil), // 1: FavoriteMatchResponse
 	(*FavoriteMatchList)(nil),     // 2: FavoriteMatchList
 	(*FavoriteMatchInfo)(nil),     // 3: FavoriteMatchInfo
-	(*TeamInfos)(nil),             // 4: TeamInfos
+	(*TeamsInfo)(nil),             // 4: TeamsInfo
 }
 var file_favorite_match_proto_depIdxs = []int32{
 	2, // 0: FavoriteMatchResponse.list:type_name -> FavoriteMatchList
 	3, // 1: FavoriteMatchList.list:type_name -> FavoriteMatchInfo
-	4, // 2: FavoriteMatchInfo.teamMain:type_name -> TeamInfos
-	4, // 3: FavoriteMatchInfo.teamCust:type_name -> TeamInfos
+	4, // 2: FavoriteMatchInfo.teamMain:type_name -> TeamsInfo
+	4, // 3: FavoriteMatchInfo.teamCust:type_name -> TeamsInfo
 	4, // [4:4] is the sub-list for method output_type
 	4, // [4:4] is the sub-list for method input_type
 	4, // [4:4] is the sub-list for extension type_name
@@ -646,7 +646,7 @@ func file_favorite_match_proto_init() {
 			}
 		}
 		file_favorite_match_proto_msgTypes[4].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*TeamInfos); i {
+			switch v := v.(*TeamsInfo); i {
 			case 0:
 				return &v.state
 			case 1:
