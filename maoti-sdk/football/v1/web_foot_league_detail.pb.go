@@ -83,7 +83,7 @@ type WebFootLeagueDetailResponse struct {
 
 	LeagueId    int64                      `protobuf:"varint,1,opt,name=LeagueId,proto3" json:"LeagueId,omitempty"`      //联赛id
 	LeagueName  string                     `protobuf:"bytes,3,opt,name=LeagueName,proto3" json:"LeagueName,omitempty"`   //联赛名称
-	LeagueType  int64                      `protobuf:"varint,9,opt,name=LeagueType,proto3" json:"LeagueType,omitempty"`  //联赛类型：2.联赛；1.杯赛
+	LeagueType  int64                      `protobuf:"varint,9,opt,name=LeagueType,proto3" json:"LeagueType,omitempty"`  //联赛类型：1.联赛；2.杯赛
 	Logo        string                     `protobuf:"bytes,4,opt,name=Logo,proto3" json:"Logo,omitempty"`               //联赛图片
 	CountryId   int64                      `protobuf:"varint,5,opt,name=CountryId,proto3" json:"CountryId,omitempty"`    //联赛国家ID
 	CountryName string                     `protobuf:"bytes,8,opt,name=CountryName,proto3" json:"CountryName,omitempty"` //联赛国家
