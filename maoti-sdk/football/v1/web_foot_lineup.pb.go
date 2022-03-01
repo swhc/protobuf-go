@@ -378,6 +378,894 @@ func (x *WebFootLiveLineupMember) GetPosition() int64 {
 	return 0
 }
 
+//本场换人
+type WebFootLiveLineupReplacementRequest struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	MatchId  int64  `protobuf:"varint,1,opt,name=MatchId,proto3" json:"MatchId,omitempty"`
+	Language string `protobuf:"bytes,2,opt,name=Language,proto3" json:"Language,omitempty"`
+}
+
+func (x *WebFootLiveLineupReplacementRequest) Reset() {
+	*x = WebFootLiveLineupReplacementRequest{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_web_foot_lineup_proto_msgTypes[4]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *WebFootLiveLineupReplacementRequest) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*WebFootLiveLineupReplacementRequest) ProtoMessage() {}
+
+func (x *WebFootLiveLineupReplacementRequest) ProtoReflect() protoreflect.Message {
+	mi := &file_web_foot_lineup_proto_msgTypes[4]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use WebFootLiveLineupReplacementRequest.ProtoReflect.Descriptor instead.
+func (*WebFootLiveLineupReplacementRequest) Descriptor() ([]byte, []int) {
+	return file_web_foot_lineup_proto_rawDescGZIP(), []int{4}
+}
+
+func (x *WebFootLiveLineupReplacementRequest) GetMatchId() int64 {
+	if x != nil {
+		return x.MatchId
+	}
+	return 0
+}
+
+func (x *WebFootLiveLineupReplacementRequest) GetLanguage() string {
+	if x != nil {
+		return x.Language
+	}
+	return ""
+}
+
+type WebFootLiveLineupReplacementResponse struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	Home *WebFootLiveLineupReplacementInfo `protobuf:"bytes,1,opt,name=home,proto3" json:"home,omitempty"`
+	Away *WebFootLiveLineupReplacementInfo `protobuf:"bytes,2,opt,name=away,proto3" json:"away,omitempty"`
+}
+
+func (x *WebFootLiveLineupReplacementResponse) Reset() {
+	*x = WebFootLiveLineupReplacementResponse{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_web_foot_lineup_proto_msgTypes[5]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *WebFootLiveLineupReplacementResponse) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*WebFootLiveLineupReplacementResponse) ProtoMessage() {}
+
+func (x *WebFootLiveLineupReplacementResponse) ProtoReflect() protoreflect.Message {
+	mi := &file_web_foot_lineup_proto_msgTypes[5]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use WebFootLiveLineupReplacementResponse.ProtoReflect.Descriptor instead.
+func (*WebFootLiveLineupReplacementResponse) Descriptor() ([]byte, []int) {
+	return file_web_foot_lineup_proto_rawDescGZIP(), []int{5}
+}
+
+func (x *WebFootLiveLineupReplacementResponse) GetHome() *WebFootLiveLineupReplacementInfo {
+	if x != nil {
+		return x.Home
+	}
+	return nil
+}
+
+func (x *WebFootLiveLineupReplacementResponse) GetAway() *WebFootLiveLineupReplacementInfo {
+	if x != nil {
+		return x.Away
+	}
+	return nil
+}
+
+type WebFootLiveLineupReplacementInfo struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	TeamId    int64                                 `protobuf:"varint,1,opt,name=TeamId,proto3" json:"TeamId,omitempty"`      //球队id
+	TeamName  string                                `protobuf:"bytes,2,opt,name=TeamName,proto3" json:"TeamName,omitempty"`   //球队名称
+	TeamImage string                                `protobuf:"bytes,3,opt,name=TeamImage,proto3" json:"TeamImage,omitempty"` //球队队徽
+	Member    []*WebFootLiveLineupReplacementMember `protobuf:"bytes,4,rep,name=Member,proto3" json:"Member,omitempty"`       //本场换人详情
+}
+
+func (x *WebFootLiveLineupReplacementInfo) Reset() {
+	*x = WebFootLiveLineupReplacementInfo{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_web_foot_lineup_proto_msgTypes[6]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *WebFootLiveLineupReplacementInfo) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*WebFootLiveLineupReplacementInfo) ProtoMessage() {}
+
+func (x *WebFootLiveLineupReplacementInfo) ProtoReflect() protoreflect.Message {
+	mi := &file_web_foot_lineup_proto_msgTypes[6]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use WebFootLiveLineupReplacementInfo.ProtoReflect.Descriptor instead.
+func (*WebFootLiveLineupReplacementInfo) Descriptor() ([]byte, []int) {
+	return file_web_foot_lineup_proto_rawDescGZIP(), []int{6}
+}
+
+func (x *WebFootLiveLineupReplacementInfo) GetTeamId() int64 {
+	if x != nil {
+		return x.TeamId
+	}
+	return 0
+}
+
+func (x *WebFootLiveLineupReplacementInfo) GetTeamName() string {
+	if x != nil {
+		return x.TeamName
+	}
+	return ""
+}
+
+func (x *WebFootLiveLineupReplacementInfo) GetTeamImage() string {
+	if x != nil {
+		return x.TeamImage
+	}
+	return ""
+}
+
+func (x *WebFootLiveLineupReplacementInfo) GetMember() []*WebFootLiveLineupReplacementMember {
+	if x != nil {
+		return x.Member
+	}
+	return nil
+}
+
+type WebFootLiveLineupReplacementMember struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	IntervalTime    int64  `protobuf:"varint,1,opt,name=IntervalTime,proto3" json:"IntervalTime,omitempty"`       //间隔时间
+	LowerPersonId   int64  `protobuf:"varint,2,opt,name=LowerPersonId,proto3" json:"LowerPersonId,omitempty"`     //（下场）球员d
+	LowerClothesNum int64  `protobuf:"varint,3,opt,name=LowerClothesNum,proto3" json:"LowerClothesNum,omitempty"` //（下场）球衣号码
+	LowerImage      string `protobuf:"bytes,4,opt,name=LowerImage,proto3" json:"LowerImage,omitempty"`            //（下场）球员图片
+	LowerPersonName string `protobuf:"bytes,5,opt,name=LowerPersonName,proto3" json:"LowerPersonName,omitempty"`  //（下场）球员名字
+	LowerPosition   string `protobuf:"bytes,6,opt,name=LowerPosition,proto3" json:"LowerPosition,omitempty"`      //（下场）球员位置
+	LowerType       int64  `protobuf:"varint,7,opt,name=LowerType,proto3" json:"LowerType,omitempty"`             //（下场）类型
+	UpperPersonId   int64  `protobuf:"varint,8,opt,name=UpperPersonId,proto3" json:"UpperPersonId,omitempty"`     //（上场）球员id
+	UpperClothesNum int64  `protobuf:"varint,9,opt,name=UpperClothesNum,proto3" json:"UpperClothesNum,omitempty"` //（上场）球衣号码
+	UpperImage      string `protobuf:"bytes,10,opt,name=UpperImage,proto3" json:"UpperImage,omitempty"`           //（上场）球员图片
+	UpperPersonName string `protobuf:"bytes,11,opt,name=UpperPersonName,proto3" json:"UpperPersonName,omitempty"` // （上场）球员名称
+	UpperPosition   string `protobuf:"bytes,12,opt,name=UpperPosition,proto3" json:"UpperPosition,omitempty"`     //（上场）球员位置
+	UpperType       int64  `protobuf:"varint,13,opt,name=UpperType,proto3" json:"UpperType,omitempty"`            //（上场）类型
+}
+
+func (x *WebFootLiveLineupReplacementMember) Reset() {
+	*x = WebFootLiveLineupReplacementMember{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_web_foot_lineup_proto_msgTypes[7]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *WebFootLiveLineupReplacementMember) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*WebFootLiveLineupReplacementMember) ProtoMessage() {}
+
+func (x *WebFootLiveLineupReplacementMember) ProtoReflect() protoreflect.Message {
+	mi := &file_web_foot_lineup_proto_msgTypes[7]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use WebFootLiveLineupReplacementMember.ProtoReflect.Descriptor instead.
+func (*WebFootLiveLineupReplacementMember) Descriptor() ([]byte, []int) {
+	return file_web_foot_lineup_proto_rawDescGZIP(), []int{7}
+}
+
+func (x *WebFootLiveLineupReplacementMember) GetIntervalTime() int64 {
+	if x != nil {
+		return x.IntervalTime
+	}
+	return 0
+}
+
+func (x *WebFootLiveLineupReplacementMember) GetLowerPersonId() int64 {
+	if x != nil {
+		return x.LowerPersonId
+	}
+	return 0
+}
+
+func (x *WebFootLiveLineupReplacementMember) GetLowerClothesNum() int64 {
+	if x != nil {
+		return x.LowerClothesNum
+	}
+	return 0
+}
+
+func (x *WebFootLiveLineupReplacementMember) GetLowerImage() string {
+	if x != nil {
+		return x.LowerImage
+	}
+	return ""
+}
+
+func (x *WebFootLiveLineupReplacementMember) GetLowerPersonName() string {
+	if x != nil {
+		return x.LowerPersonName
+	}
+	return ""
+}
+
+func (x *WebFootLiveLineupReplacementMember) GetLowerPosition() string {
+	if x != nil {
+		return x.LowerPosition
+	}
+	return ""
+}
+
+func (x *WebFootLiveLineupReplacementMember) GetLowerType() int64 {
+	if x != nil {
+		return x.LowerType
+	}
+	return 0
+}
+
+func (x *WebFootLiveLineupReplacementMember) GetUpperPersonId() int64 {
+	if x != nil {
+		return x.UpperPersonId
+	}
+	return 0
+}
+
+func (x *WebFootLiveLineupReplacementMember) GetUpperClothesNum() int64 {
+	if x != nil {
+		return x.UpperClothesNum
+	}
+	return 0
+}
+
+func (x *WebFootLiveLineupReplacementMember) GetUpperImage() string {
+	if x != nil {
+		return x.UpperImage
+	}
+	return ""
+}
+
+func (x *WebFootLiveLineupReplacementMember) GetUpperPersonName() string {
+	if x != nil {
+		return x.UpperPersonName
+	}
+	return ""
+}
+
+func (x *WebFootLiveLineupReplacementMember) GetUpperPosition() string {
+	if x != nil {
+		return x.UpperPosition
+	}
+	return ""
+}
+
+func (x *WebFootLiveLineupReplacementMember) GetUpperType() int64 {
+	if x != nil {
+		return x.UpperType
+	}
+	return 0
+}
+
+//伤停
+type WebFootLiveLineupInjuryRequest struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	MatchId  int64  `protobuf:"varint,1,opt,name=MatchId,proto3" json:"MatchId,omitempty"`
+	Language string `protobuf:"bytes,2,opt,name=Language,proto3" json:"Language,omitempty"`
+}
+
+func (x *WebFootLiveLineupInjuryRequest) Reset() {
+	*x = WebFootLiveLineupInjuryRequest{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_web_foot_lineup_proto_msgTypes[8]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *WebFootLiveLineupInjuryRequest) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*WebFootLiveLineupInjuryRequest) ProtoMessage() {}
+
+func (x *WebFootLiveLineupInjuryRequest) ProtoReflect() protoreflect.Message {
+	mi := &file_web_foot_lineup_proto_msgTypes[8]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use WebFootLiveLineupInjuryRequest.ProtoReflect.Descriptor instead.
+func (*WebFootLiveLineupInjuryRequest) Descriptor() ([]byte, []int) {
+	return file_web_foot_lineup_proto_rawDescGZIP(), []int{8}
+}
+
+func (x *WebFootLiveLineupInjuryRequest) GetMatchId() int64 {
+	if x != nil {
+		return x.MatchId
+	}
+	return 0
+}
+
+func (x *WebFootLiveLineupInjuryRequest) GetLanguage() string {
+	if x != nil {
+		return x.Language
+	}
+	return ""
+}
+
+type WebFootLiveLineupInjuryResponse struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	Home *WebFootLiveLineupInjuryInfo `protobuf:"bytes,1,opt,name=home,proto3" json:"home,omitempty"`
+	Away *WebFootLiveLineupInjuryInfo `protobuf:"bytes,2,opt,name=away,proto3" json:"away,omitempty"`
+}
+
+func (x *WebFootLiveLineupInjuryResponse) Reset() {
+	*x = WebFootLiveLineupInjuryResponse{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_web_foot_lineup_proto_msgTypes[9]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *WebFootLiveLineupInjuryResponse) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*WebFootLiveLineupInjuryResponse) ProtoMessage() {}
+
+func (x *WebFootLiveLineupInjuryResponse) ProtoReflect() protoreflect.Message {
+	mi := &file_web_foot_lineup_proto_msgTypes[9]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use WebFootLiveLineupInjuryResponse.ProtoReflect.Descriptor instead.
+func (*WebFootLiveLineupInjuryResponse) Descriptor() ([]byte, []int) {
+	return file_web_foot_lineup_proto_rawDescGZIP(), []int{9}
+}
+
+func (x *WebFootLiveLineupInjuryResponse) GetHome() *WebFootLiveLineupInjuryInfo {
+	if x != nil {
+		return x.Home
+	}
+	return nil
+}
+
+func (x *WebFootLiveLineupInjuryResponse) GetAway() *WebFootLiveLineupInjuryInfo {
+	if x != nil {
+		return x.Away
+	}
+	return nil
+}
+
+type WebFootLiveLineupInjuryInfo struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	TeamId    int64                            `protobuf:"varint,1,opt,name=TeamId,proto3" json:"TeamId,omitempty"`
+	TeamName  string                           `protobuf:"bytes,2,opt,name=TeamName,proto3" json:"TeamName,omitempty"`
+	TeamImage string                           `protobuf:"bytes,3,opt,name=TeamImage,proto3" json:"TeamImage,omitempty"`
+	Member    []*WebFootLiveLineupInjuryMember `protobuf:"bytes,4,rep,name=Member,proto3" json:"Member,omitempty"`
+}
+
+func (x *WebFootLiveLineupInjuryInfo) Reset() {
+	*x = WebFootLiveLineupInjuryInfo{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_web_foot_lineup_proto_msgTypes[10]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *WebFootLiveLineupInjuryInfo) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*WebFootLiveLineupInjuryInfo) ProtoMessage() {}
+
+func (x *WebFootLiveLineupInjuryInfo) ProtoReflect() protoreflect.Message {
+	mi := &file_web_foot_lineup_proto_msgTypes[10]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use WebFootLiveLineupInjuryInfo.ProtoReflect.Descriptor instead.
+func (*WebFootLiveLineupInjuryInfo) Descriptor() ([]byte, []int) {
+	return file_web_foot_lineup_proto_rawDescGZIP(), []int{10}
+}
+
+func (x *WebFootLiveLineupInjuryInfo) GetTeamId() int64 {
+	if x != nil {
+		return x.TeamId
+	}
+	return 0
+}
+
+func (x *WebFootLiveLineupInjuryInfo) GetTeamName() string {
+	if x != nil {
+		return x.TeamName
+	}
+	return ""
+}
+
+func (x *WebFootLiveLineupInjuryInfo) GetTeamImage() string {
+	if x != nil {
+		return x.TeamImage
+	}
+	return ""
+}
+
+func (x *WebFootLiveLineupInjuryInfo) GetMember() []*WebFootLiveLineupInjuryMember {
+	if x != nil {
+		return x.Member
+	}
+	return nil
+}
+
+type WebFootLiveLineupInjuryMember struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	PersonId   int64  `protobuf:"varint,1,opt,name=PersonId,proto3" json:"PersonId,omitempty"`     //球员id
+	PersonName string `protobuf:"bytes,2,opt,name=PersonName,proto3" json:"PersonName,omitempty"`  //球员名字
+	Image      string `protobuf:"bytes,3,opt,name=Image,proto3" json:"Image,omitempty"`            //球员图片
+	Position   string `protobuf:"bytes,4,opt,name=Position,proto3" json:"Position,omitempty"`      //球员位置
+	ClothesNum int64  `protobuf:"varint,5,opt,name=ClothesNum,proto3" json:"ClothesNum,omitempty"` //球衣号码
+	Reason     string `protobuf:"bytes,6,opt,name=Reason,proto3" json:"Reason,omitempty"`          //受伤等原因
+}
+
+func (x *WebFootLiveLineupInjuryMember) Reset() {
+	*x = WebFootLiveLineupInjuryMember{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_web_foot_lineup_proto_msgTypes[11]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *WebFootLiveLineupInjuryMember) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*WebFootLiveLineupInjuryMember) ProtoMessage() {}
+
+func (x *WebFootLiveLineupInjuryMember) ProtoReflect() protoreflect.Message {
+	mi := &file_web_foot_lineup_proto_msgTypes[11]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use WebFootLiveLineupInjuryMember.ProtoReflect.Descriptor instead.
+func (*WebFootLiveLineupInjuryMember) Descriptor() ([]byte, []int) {
+	return file_web_foot_lineup_proto_rawDescGZIP(), []int{11}
+}
+
+func (x *WebFootLiveLineupInjuryMember) GetPersonId() int64 {
+	if x != nil {
+		return x.PersonId
+	}
+	return 0
+}
+
+func (x *WebFootLiveLineupInjuryMember) GetPersonName() string {
+	if x != nil {
+		return x.PersonName
+	}
+	return ""
+}
+
+func (x *WebFootLiveLineupInjuryMember) GetImage() string {
+	if x != nil {
+		return x.Image
+	}
+	return ""
+}
+
+func (x *WebFootLiveLineupInjuryMember) GetPosition() string {
+	if x != nil {
+		return x.Position
+	}
+	return ""
+}
+
+func (x *WebFootLiveLineupInjuryMember) GetClothesNum() int64 {
+	if x != nil {
+		return x.ClothesNum
+	}
+	return 0
+}
+
+func (x *WebFootLiveLineupInjuryMember) GetReason() string {
+	if x != nil {
+		return x.Reason
+	}
+	return ""
+}
+
+//相同阵型
+type WebFootLineupSameFormationRequest struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	MatchId  int64  `protobuf:"varint,1,opt,name=MatchId,proto3" json:"MatchId,omitempty"`
+	Language string `protobuf:"bytes,2,opt,name=Language,proto3" json:"Language,omitempty"`
+}
+
+func (x *WebFootLineupSameFormationRequest) Reset() {
+	*x = WebFootLineupSameFormationRequest{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_web_foot_lineup_proto_msgTypes[12]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *WebFootLineupSameFormationRequest) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*WebFootLineupSameFormationRequest) ProtoMessage() {}
+
+func (x *WebFootLineupSameFormationRequest) ProtoReflect() protoreflect.Message {
+	mi := &file_web_foot_lineup_proto_msgTypes[12]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use WebFootLineupSameFormationRequest.ProtoReflect.Descriptor instead.
+func (*WebFootLineupSameFormationRequest) Descriptor() ([]byte, []int) {
+	return file_web_foot_lineup_proto_rawDescGZIP(), []int{12}
+}
+
+func (x *WebFootLineupSameFormationRequest) GetMatchId() int64 {
+	if x != nil {
+		return x.MatchId
+	}
+	return 0
+}
+
+func (x *WebFootLineupSameFormationRequest) GetLanguage() string {
+	if x != nil {
+		return x.Language
+	}
+	return ""
+}
+
+type WebFootLineupSameFormationResponse struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	Data []*WebFootLineupSameFormation `protobuf:"bytes,1,rep,name=data,proto3" json:"data,omitempty"`
+}
+
+func (x *WebFootLineupSameFormationResponse) Reset() {
+	*x = WebFootLineupSameFormationResponse{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_web_foot_lineup_proto_msgTypes[13]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *WebFootLineupSameFormationResponse) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*WebFootLineupSameFormationResponse) ProtoMessage() {}
+
+func (x *WebFootLineupSameFormationResponse) ProtoReflect() protoreflect.Message {
+	mi := &file_web_foot_lineup_proto_msgTypes[13]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use WebFootLineupSameFormationResponse.ProtoReflect.Descriptor instead.
+func (*WebFootLineupSameFormationResponse) Descriptor() ([]byte, []int) {
+	return file_web_foot_lineup_proto_rawDescGZIP(), []int{13}
+}
+
+func (x *WebFootLineupSameFormationResponse) GetData() []*WebFootLineupSameFormation {
+	if x != nil {
+		return x.Data
+	}
+	return nil
+}
+
+type WebFootLineupSameFormation struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	MatchId        int64  `protobuf:"varint,1,opt,name=MatchId,proto3" json:"MatchId,omitempty"`                //比赛id
+	HomeTeamId     int64  `protobuf:"varint,2,opt,name=HomeTeamId,proto3" json:"HomeTeamId,omitempty"`          //主队id
+	HomeTeamLogo   string `protobuf:"bytes,3,opt,name=HomeTeamLogo,proto3" json:"HomeTeamLogo,omitempty"`       // 主队图片
+	HomeName       string `protobuf:"bytes,4,opt,name=HomeName,proto3" json:"HomeName,omitempty"`               //主队名称
+	HomeScore      string `protobuf:"bytes,5,opt,name=HomeScore,proto3" json:"HomeScore,omitempty"`             //主队比分
+	AwayTeamId     int64  `protobuf:"varint,6,opt,name=AwayTeamId,proto3" json:"AwayTeamId,omitempty"`          // 客队id
+	AwayTeamLogo   string `protobuf:"bytes,7,opt,name=AwayTeamLogo,proto3" json:"AwayTeamLogo,omitempty"`       // 客队图片
+	AwayName       string `protobuf:"bytes,8,opt,name=AwayName,proto3" json:"AwayName,omitempty"`               // 客队名称
+	AwayScore      string `protobuf:"bytes,9,opt,name=AwayScore,proto3" json:"AwayScore,omitempty"`             // 客队得分
+	MatchTime      int64  `protobuf:"varint,10,opt,name=MatchTime,proto3" json:"MatchTime,omitempty"`           // 比赛时间
+	TournamentId   int64  `protobuf:"varint,11,opt,name=TournamentId,proto3" json:"TournamentId,omitempty"`     // 联赛id
+	TournamentName string `protobuf:"bytes,12,opt,name=TournamentName,proto3" json:"TournamentName,omitempty"`  // 联赛名称
+	IsTournament   bool   `protobuf:"varint,13,opt,name=IsTournament,proto3" json:"IsTournament,omitempty"`     // 是否本赛事
+	IsHomeTeam     bool   `protobuf:"varint,14,opt,name=IsHomeTeam,proto3" json:"IsHomeTeam,omitempty"`         // 是否同主
+	IsAwayTeam     bool   `protobuf:"varint,15,opt,name=IsAwayTeam,proto3" json:"IsAwayTeam,omitempty"`         // 是否同客
+	IsIdenticalLet bool   `protobuf:"varint,16,opt,name=IsIdenticalLet,proto3" json:"IsIdenticalLet,omitempty"` // 是否相同让球
+	HomeHalfScore  string `protobuf:"bytes,17,opt,name=HomeHalfScore,proto3" json:"HomeHalfScore,omitempty"`    //主队半场比分
+	AwayHalfScore  string `protobuf:"bytes,18,opt,name=AwayHalfScore,proto3" json:"AwayHalfScore,omitempty"`    //客队半场比分
+	Winner         int64  `protobuf:"varint,19,opt,name=Winner,proto3" json:"Winner,omitempty"`                 // 0未知 1主 2客3平
+}
+
+func (x *WebFootLineupSameFormation) Reset() {
+	*x = WebFootLineupSameFormation{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_web_foot_lineup_proto_msgTypes[14]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *WebFootLineupSameFormation) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*WebFootLineupSameFormation) ProtoMessage() {}
+
+func (x *WebFootLineupSameFormation) ProtoReflect() protoreflect.Message {
+	mi := &file_web_foot_lineup_proto_msgTypes[14]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use WebFootLineupSameFormation.ProtoReflect.Descriptor instead.
+func (*WebFootLineupSameFormation) Descriptor() ([]byte, []int) {
+	return file_web_foot_lineup_proto_rawDescGZIP(), []int{14}
+}
+
+func (x *WebFootLineupSameFormation) GetMatchId() int64 {
+	if x != nil {
+		return x.MatchId
+	}
+	return 0
+}
+
+func (x *WebFootLineupSameFormation) GetHomeTeamId() int64 {
+	if x != nil {
+		return x.HomeTeamId
+	}
+	return 0
+}
+
+func (x *WebFootLineupSameFormation) GetHomeTeamLogo() string {
+	if x != nil {
+		return x.HomeTeamLogo
+	}
+	return ""
+}
+
+func (x *WebFootLineupSameFormation) GetHomeName() string {
+	if x != nil {
+		return x.HomeName
+	}
+	return ""
+}
+
+func (x *WebFootLineupSameFormation) GetHomeScore() string {
+	if x != nil {
+		return x.HomeScore
+	}
+	return ""
+}
+
+func (x *WebFootLineupSameFormation) GetAwayTeamId() int64 {
+	if x != nil {
+		return x.AwayTeamId
+	}
+	return 0
+}
+
+func (x *WebFootLineupSameFormation) GetAwayTeamLogo() string {
+	if x != nil {
+		return x.AwayTeamLogo
+	}
+	return ""
+}
+
+func (x *WebFootLineupSameFormation) GetAwayName() string {
+	if x != nil {
+		return x.AwayName
+	}
+	return ""
+}
+
+func (x *WebFootLineupSameFormation) GetAwayScore() string {
+	if x != nil {
+		return x.AwayScore
+	}
+	return ""
+}
+
+func (x *WebFootLineupSameFormation) GetMatchTime() int64 {
+	if x != nil {
+		return x.MatchTime
+	}
+	return 0
+}
+
+func (x *WebFootLineupSameFormation) GetTournamentId() int64 {
+	if x != nil {
+		return x.TournamentId
+	}
+	return 0
+}
+
+func (x *WebFootLineupSameFormation) GetTournamentName() string {
+	if x != nil {
+		return x.TournamentName
+	}
+	return ""
+}
+
+func (x *WebFootLineupSameFormation) GetIsTournament() bool {
+	if x != nil {
+		return x.IsTournament
+	}
+	return false
+}
+
+func (x *WebFootLineupSameFormation) GetIsHomeTeam() bool {
+	if x != nil {
+		return x.IsHomeTeam
+	}
+	return false
+}
+
+func (x *WebFootLineupSameFormation) GetIsAwayTeam() bool {
+	if x != nil {
+		return x.IsAwayTeam
+	}
+	return false
+}
+
+func (x *WebFootLineupSameFormation) GetIsIdenticalLet() bool {
+	if x != nil {
+		return x.IsIdenticalLet
+	}
+	return false
+}
+
+func (x *WebFootLineupSameFormation) GetHomeHalfScore() string {
+	if x != nil {
+		return x.HomeHalfScore
+	}
+	return ""
+}
+
+func (x *WebFootLineupSameFormation) GetAwayHalfScore() string {
+	if x != nil {
+		return x.AwayHalfScore
+	}
+	return ""
+}
+
+func (x *WebFootLineupSameFormation) GetWinner() int64 {
+	if x != nil {
+		return x.Winner
+	}
+	return 0
+}
+
 var File_web_foot_lineup_proto protoreflect.FileDescriptor
 
 var file_web_foot_lineup_proto_rawDesc = []byte{
@@ -443,8 +1331,156 @@ var file_web_foot_lineup_proto_rawDesc = []byte{
 	0x63, 0x6c, 0x6f, 0x74, 0x68, 0x65, 0x73, 0x5f, 0x6e, 0x75, 0x6d, 0x18, 0x06, 0x20, 0x01, 0x28,
 	0x03, 0x52, 0x0a, 0x63, 0x6c, 0x6f, 0x74, 0x68, 0x65, 0x73, 0x4e, 0x75, 0x6d, 0x12, 0x1a, 0x0a,
 	0x08, 0x70, 0x6f, 0x73, 0x69, 0x74, 0x69, 0x6f, 0x6e, 0x18, 0x07, 0x20, 0x01, 0x28, 0x03, 0x52,
-	0x08, 0x70, 0x6f, 0x73, 0x69, 0x74, 0x69, 0x6f, 0x6e, 0x42, 0x07, 0x5a, 0x05, 0x2e, 0x2f, 0x3b,
-	0x76, 0x31, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
+	0x08, 0x70, 0x6f, 0x73, 0x69, 0x74, 0x69, 0x6f, 0x6e, 0x22, 0x5b, 0x0a, 0x23, 0x57, 0x65, 0x62,
+	0x46, 0x6f, 0x6f, 0x74, 0x4c, 0x69, 0x76, 0x65, 0x4c, 0x69, 0x6e, 0x65, 0x75, 0x70, 0x52, 0x65,
+	0x70, 0x6c, 0x61, 0x63, 0x65, 0x6d, 0x65, 0x6e, 0x74, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74,
+	0x12, 0x18, 0x0a, 0x07, 0x4d, 0x61, 0x74, 0x63, 0x68, 0x49, 0x64, 0x18, 0x01, 0x20, 0x01, 0x28,
+	0x03, 0x52, 0x07, 0x4d, 0x61, 0x74, 0x63, 0x68, 0x49, 0x64, 0x12, 0x1a, 0x0a, 0x08, 0x4c, 0x61,
+	0x6e, 0x67, 0x75, 0x61, 0x67, 0x65, 0x18, 0x02, 0x20, 0x01, 0x28, 0x09, 0x52, 0x08, 0x4c, 0x61,
+	0x6e, 0x67, 0x75, 0x61, 0x67, 0x65, 0x22, 0x94, 0x01, 0x0a, 0x24, 0x57, 0x65, 0x62, 0x46, 0x6f,
+	0x6f, 0x74, 0x4c, 0x69, 0x76, 0x65, 0x4c, 0x69, 0x6e, 0x65, 0x75, 0x70, 0x52, 0x65, 0x70, 0x6c,
+	0x61, 0x63, 0x65, 0x6d, 0x65, 0x6e, 0x74, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x12,
+	0x35, 0x0a, 0x04, 0x68, 0x6f, 0x6d, 0x65, 0x18, 0x01, 0x20, 0x01, 0x28, 0x0b, 0x32, 0x21, 0x2e,
+	0x57, 0x65, 0x62, 0x46, 0x6f, 0x6f, 0x74, 0x4c, 0x69, 0x76, 0x65, 0x4c, 0x69, 0x6e, 0x65, 0x75,
+	0x70, 0x52, 0x65, 0x70, 0x6c, 0x61, 0x63, 0x65, 0x6d, 0x65, 0x6e, 0x74, 0x49, 0x6e, 0x66, 0x6f,
+	0x52, 0x04, 0x68, 0x6f, 0x6d, 0x65, 0x12, 0x35, 0x0a, 0x04, 0x61, 0x77, 0x61, 0x79, 0x18, 0x02,
+	0x20, 0x01, 0x28, 0x0b, 0x32, 0x21, 0x2e, 0x57, 0x65, 0x62, 0x46, 0x6f, 0x6f, 0x74, 0x4c, 0x69,
+	0x76, 0x65, 0x4c, 0x69, 0x6e, 0x65, 0x75, 0x70, 0x52, 0x65, 0x70, 0x6c, 0x61, 0x63, 0x65, 0x6d,
+	0x65, 0x6e, 0x74, 0x49, 0x6e, 0x66, 0x6f, 0x52, 0x04, 0x61, 0x77, 0x61, 0x79, 0x22, 0xb1, 0x01,
+	0x0a, 0x20, 0x57, 0x65, 0x62, 0x46, 0x6f, 0x6f, 0x74, 0x4c, 0x69, 0x76, 0x65, 0x4c, 0x69, 0x6e,
+	0x65, 0x75, 0x70, 0x52, 0x65, 0x70, 0x6c, 0x61, 0x63, 0x65, 0x6d, 0x65, 0x6e, 0x74, 0x49, 0x6e,
+	0x66, 0x6f, 0x12, 0x16, 0x0a, 0x06, 0x54, 0x65, 0x61, 0x6d, 0x49, 0x64, 0x18, 0x01, 0x20, 0x01,
+	0x28, 0x03, 0x52, 0x06, 0x54, 0x65, 0x61, 0x6d, 0x49, 0x64, 0x12, 0x1a, 0x0a, 0x08, 0x54, 0x65,
+	0x61, 0x6d, 0x4e, 0x61, 0x6d, 0x65, 0x18, 0x02, 0x20, 0x01, 0x28, 0x09, 0x52, 0x08, 0x54, 0x65,
+	0x61, 0x6d, 0x4e, 0x61, 0x6d, 0x65, 0x12, 0x1c, 0x0a, 0x09, 0x54, 0x65, 0x61, 0x6d, 0x49, 0x6d,
+	0x61, 0x67, 0x65, 0x18, 0x03, 0x20, 0x01, 0x28, 0x09, 0x52, 0x09, 0x54, 0x65, 0x61, 0x6d, 0x49,
+	0x6d, 0x61, 0x67, 0x65, 0x12, 0x3b, 0x0a, 0x06, 0x4d, 0x65, 0x6d, 0x62, 0x65, 0x72, 0x18, 0x04,
+	0x20, 0x03, 0x28, 0x0b, 0x32, 0x23, 0x2e, 0x57, 0x65, 0x62, 0x46, 0x6f, 0x6f, 0x74, 0x4c, 0x69,
+	0x76, 0x65, 0x4c, 0x69, 0x6e, 0x65, 0x75, 0x70, 0x52, 0x65, 0x70, 0x6c, 0x61, 0x63, 0x65, 0x6d,
+	0x65, 0x6e, 0x74, 0x4d, 0x65, 0x6d, 0x62, 0x65, 0x72, 0x52, 0x06, 0x4d, 0x65, 0x6d, 0x62, 0x65,
+	0x72, 0x22, 0x84, 0x04, 0x0a, 0x22, 0x57, 0x65, 0x62, 0x46, 0x6f, 0x6f, 0x74, 0x4c, 0x69, 0x76,
+	0x65, 0x4c, 0x69, 0x6e, 0x65, 0x75, 0x70, 0x52, 0x65, 0x70, 0x6c, 0x61, 0x63, 0x65, 0x6d, 0x65,
+	0x6e, 0x74, 0x4d, 0x65, 0x6d, 0x62, 0x65, 0x72, 0x12, 0x22, 0x0a, 0x0c, 0x49, 0x6e, 0x74, 0x65,
+	0x72, 0x76, 0x61, 0x6c, 0x54, 0x69, 0x6d, 0x65, 0x18, 0x01, 0x20, 0x01, 0x28, 0x03, 0x52, 0x0c,
+	0x49, 0x6e, 0x74, 0x65, 0x72, 0x76, 0x61, 0x6c, 0x54, 0x69, 0x6d, 0x65, 0x12, 0x24, 0x0a, 0x0d,
+	0x4c, 0x6f, 0x77, 0x65, 0x72, 0x50, 0x65, 0x72, 0x73, 0x6f, 0x6e, 0x49, 0x64, 0x18, 0x02, 0x20,
+	0x01, 0x28, 0x03, 0x52, 0x0d, 0x4c, 0x6f, 0x77, 0x65, 0x72, 0x50, 0x65, 0x72, 0x73, 0x6f, 0x6e,
+	0x49, 0x64, 0x12, 0x28, 0x0a, 0x0f, 0x4c, 0x6f, 0x77, 0x65, 0x72, 0x43, 0x6c, 0x6f, 0x74, 0x68,
+	0x65, 0x73, 0x4e, 0x75, 0x6d, 0x18, 0x03, 0x20, 0x01, 0x28, 0x03, 0x52, 0x0f, 0x4c, 0x6f, 0x77,
+	0x65, 0x72, 0x43, 0x6c, 0x6f, 0x74, 0x68, 0x65, 0x73, 0x4e, 0x75, 0x6d, 0x12, 0x1e, 0x0a, 0x0a,
+	0x4c, 0x6f, 0x77, 0x65, 0x72, 0x49, 0x6d, 0x61, 0x67, 0x65, 0x18, 0x04, 0x20, 0x01, 0x28, 0x09,
+	0x52, 0x0a, 0x4c, 0x6f, 0x77, 0x65, 0x72, 0x49, 0x6d, 0x61, 0x67, 0x65, 0x12, 0x28, 0x0a, 0x0f,
+	0x4c, 0x6f, 0x77, 0x65, 0x72, 0x50, 0x65, 0x72, 0x73, 0x6f, 0x6e, 0x4e, 0x61, 0x6d, 0x65, 0x18,
+	0x05, 0x20, 0x01, 0x28, 0x09, 0x52, 0x0f, 0x4c, 0x6f, 0x77, 0x65, 0x72, 0x50, 0x65, 0x72, 0x73,
+	0x6f, 0x6e, 0x4e, 0x61, 0x6d, 0x65, 0x12, 0x24, 0x0a, 0x0d, 0x4c, 0x6f, 0x77, 0x65, 0x72, 0x50,
+	0x6f, 0x73, 0x69, 0x74, 0x69, 0x6f, 0x6e, 0x18, 0x06, 0x20, 0x01, 0x28, 0x09, 0x52, 0x0d, 0x4c,
+	0x6f, 0x77, 0x65, 0x72, 0x50, 0x6f, 0x73, 0x69, 0x74, 0x69, 0x6f, 0x6e, 0x12, 0x1c, 0x0a, 0x09,
+	0x4c, 0x6f, 0x77, 0x65, 0x72, 0x54, 0x79, 0x70, 0x65, 0x18, 0x07, 0x20, 0x01, 0x28, 0x03, 0x52,
+	0x09, 0x4c, 0x6f, 0x77, 0x65, 0x72, 0x54, 0x79, 0x70, 0x65, 0x12, 0x24, 0x0a, 0x0d, 0x55, 0x70,
+	0x70, 0x65, 0x72, 0x50, 0x65, 0x72, 0x73, 0x6f, 0x6e, 0x49, 0x64, 0x18, 0x08, 0x20, 0x01, 0x28,
+	0x03, 0x52, 0x0d, 0x55, 0x70, 0x70, 0x65, 0x72, 0x50, 0x65, 0x72, 0x73, 0x6f, 0x6e, 0x49, 0x64,
+	0x12, 0x28, 0x0a, 0x0f, 0x55, 0x70, 0x70, 0x65, 0x72, 0x43, 0x6c, 0x6f, 0x74, 0x68, 0x65, 0x73,
+	0x4e, 0x75, 0x6d, 0x18, 0x09, 0x20, 0x01, 0x28, 0x03, 0x52, 0x0f, 0x55, 0x70, 0x70, 0x65, 0x72,
+	0x43, 0x6c, 0x6f, 0x74, 0x68, 0x65, 0x73, 0x4e, 0x75, 0x6d, 0x12, 0x1e, 0x0a, 0x0a, 0x55, 0x70,
+	0x70, 0x65, 0x72, 0x49, 0x6d, 0x61, 0x67, 0x65, 0x18, 0x0a, 0x20, 0x01, 0x28, 0x09, 0x52, 0x0a,
+	0x55, 0x70, 0x70, 0x65, 0x72, 0x49, 0x6d, 0x61, 0x67, 0x65, 0x12, 0x28, 0x0a, 0x0f, 0x55, 0x70,
+	0x70, 0x65, 0x72, 0x50, 0x65, 0x72, 0x73, 0x6f, 0x6e, 0x4e, 0x61, 0x6d, 0x65, 0x18, 0x0b, 0x20,
+	0x01, 0x28, 0x09, 0x52, 0x0f, 0x55, 0x70, 0x70, 0x65, 0x72, 0x50, 0x65, 0x72, 0x73, 0x6f, 0x6e,
+	0x4e, 0x61, 0x6d, 0x65, 0x12, 0x24, 0x0a, 0x0d, 0x55, 0x70, 0x70, 0x65, 0x72, 0x50, 0x6f, 0x73,
+	0x69, 0x74, 0x69, 0x6f, 0x6e, 0x18, 0x0c, 0x20, 0x01, 0x28, 0x09, 0x52, 0x0d, 0x55, 0x70, 0x70,
+	0x65, 0x72, 0x50, 0x6f, 0x73, 0x69, 0x74, 0x69, 0x6f, 0x6e, 0x12, 0x1c, 0x0a, 0x09, 0x55, 0x70,
+	0x70, 0x65, 0x72, 0x54, 0x79, 0x70, 0x65, 0x18, 0x0d, 0x20, 0x01, 0x28, 0x03, 0x52, 0x09, 0x55,
+	0x70, 0x70, 0x65, 0x72, 0x54, 0x79, 0x70, 0x65, 0x22, 0x56, 0x0a, 0x1e, 0x57, 0x65, 0x62, 0x46,
+	0x6f, 0x6f, 0x74, 0x4c, 0x69, 0x76, 0x65, 0x4c, 0x69, 0x6e, 0x65, 0x75, 0x70, 0x49, 0x6e, 0x6a,
+	0x75, 0x72, 0x79, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x12, 0x18, 0x0a, 0x07, 0x4d, 0x61,
+	0x74, 0x63, 0x68, 0x49, 0x64, 0x18, 0x01, 0x20, 0x01, 0x28, 0x03, 0x52, 0x07, 0x4d, 0x61, 0x74,
+	0x63, 0x68, 0x49, 0x64, 0x12, 0x1a, 0x0a, 0x08, 0x4c, 0x61, 0x6e, 0x67, 0x75, 0x61, 0x67, 0x65,
+	0x18, 0x02, 0x20, 0x01, 0x28, 0x09, 0x52, 0x08, 0x4c, 0x61, 0x6e, 0x67, 0x75, 0x61, 0x67, 0x65,
+	0x22, 0x85, 0x01, 0x0a, 0x1f, 0x57, 0x65, 0x62, 0x46, 0x6f, 0x6f, 0x74, 0x4c, 0x69, 0x76, 0x65,
+	0x4c, 0x69, 0x6e, 0x65, 0x75, 0x70, 0x49, 0x6e, 0x6a, 0x75, 0x72, 0x79, 0x52, 0x65, 0x73, 0x70,
+	0x6f, 0x6e, 0x73, 0x65, 0x12, 0x30, 0x0a, 0x04, 0x68, 0x6f, 0x6d, 0x65, 0x18, 0x01, 0x20, 0x01,
+	0x28, 0x0b, 0x32, 0x1c, 0x2e, 0x57, 0x65, 0x62, 0x46, 0x6f, 0x6f, 0x74, 0x4c, 0x69, 0x76, 0x65,
+	0x4c, 0x69, 0x6e, 0x65, 0x75, 0x70, 0x49, 0x6e, 0x6a, 0x75, 0x72, 0x79, 0x49, 0x6e, 0x66, 0x6f,
+	0x52, 0x04, 0x68, 0x6f, 0x6d, 0x65, 0x12, 0x30, 0x0a, 0x04, 0x61, 0x77, 0x61, 0x79, 0x18, 0x02,
+	0x20, 0x01, 0x28, 0x0b, 0x32, 0x1c, 0x2e, 0x57, 0x65, 0x62, 0x46, 0x6f, 0x6f, 0x74, 0x4c, 0x69,
+	0x76, 0x65, 0x4c, 0x69, 0x6e, 0x65, 0x75, 0x70, 0x49, 0x6e, 0x6a, 0x75, 0x72, 0x79, 0x49, 0x6e,
+	0x66, 0x6f, 0x52, 0x04, 0x61, 0x77, 0x61, 0x79, 0x22, 0xa7, 0x01, 0x0a, 0x1b, 0x57, 0x65, 0x62,
+	0x46, 0x6f, 0x6f, 0x74, 0x4c, 0x69, 0x76, 0x65, 0x4c, 0x69, 0x6e, 0x65, 0x75, 0x70, 0x49, 0x6e,
+	0x6a, 0x75, 0x72, 0x79, 0x49, 0x6e, 0x66, 0x6f, 0x12, 0x16, 0x0a, 0x06, 0x54, 0x65, 0x61, 0x6d,
+	0x49, 0x64, 0x18, 0x01, 0x20, 0x01, 0x28, 0x03, 0x52, 0x06, 0x54, 0x65, 0x61, 0x6d, 0x49, 0x64,
+	0x12, 0x1a, 0x0a, 0x08, 0x54, 0x65, 0x61, 0x6d, 0x4e, 0x61, 0x6d, 0x65, 0x18, 0x02, 0x20, 0x01,
+	0x28, 0x09, 0x52, 0x08, 0x54, 0x65, 0x61, 0x6d, 0x4e, 0x61, 0x6d, 0x65, 0x12, 0x1c, 0x0a, 0x09,
+	0x54, 0x65, 0x61, 0x6d, 0x49, 0x6d, 0x61, 0x67, 0x65, 0x18, 0x03, 0x20, 0x01, 0x28, 0x09, 0x52,
+	0x09, 0x54, 0x65, 0x61, 0x6d, 0x49, 0x6d, 0x61, 0x67, 0x65, 0x12, 0x36, 0x0a, 0x06, 0x4d, 0x65,
+	0x6d, 0x62, 0x65, 0x72, 0x18, 0x04, 0x20, 0x03, 0x28, 0x0b, 0x32, 0x1e, 0x2e, 0x57, 0x65, 0x62,
+	0x46, 0x6f, 0x6f, 0x74, 0x4c, 0x69, 0x76, 0x65, 0x4c, 0x69, 0x6e, 0x65, 0x75, 0x70, 0x49, 0x6e,
+	0x6a, 0x75, 0x72, 0x79, 0x4d, 0x65, 0x6d, 0x62, 0x65, 0x72, 0x52, 0x06, 0x4d, 0x65, 0x6d, 0x62,
+	0x65, 0x72, 0x22, 0xc5, 0x01, 0x0a, 0x1d, 0x57, 0x65, 0x62, 0x46, 0x6f, 0x6f, 0x74, 0x4c, 0x69,
+	0x76, 0x65, 0x4c, 0x69, 0x6e, 0x65, 0x75, 0x70, 0x49, 0x6e, 0x6a, 0x75, 0x72, 0x79, 0x4d, 0x65,
+	0x6d, 0x62, 0x65, 0x72, 0x12, 0x1a, 0x0a, 0x08, 0x50, 0x65, 0x72, 0x73, 0x6f, 0x6e, 0x49, 0x64,
+	0x18, 0x01, 0x20, 0x01, 0x28, 0x03, 0x52, 0x08, 0x50, 0x65, 0x72, 0x73, 0x6f, 0x6e, 0x49, 0x64,
+	0x12, 0x1e, 0x0a, 0x0a, 0x50, 0x65, 0x72, 0x73, 0x6f, 0x6e, 0x4e, 0x61, 0x6d, 0x65, 0x18, 0x02,
+	0x20, 0x01, 0x28, 0x09, 0x52, 0x0a, 0x50, 0x65, 0x72, 0x73, 0x6f, 0x6e, 0x4e, 0x61, 0x6d, 0x65,
+	0x12, 0x14, 0x0a, 0x05, 0x49, 0x6d, 0x61, 0x67, 0x65, 0x18, 0x03, 0x20, 0x01, 0x28, 0x09, 0x52,
+	0x05, 0x49, 0x6d, 0x61, 0x67, 0x65, 0x12, 0x1a, 0x0a, 0x08, 0x50, 0x6f, 0x73, 0x69, 0x74, 0x69,
+	0x6f, 0x6e, 0x18, 0x04, 0x20, 0x01, 0x28, 0x09, 0x52, 0x08, 0x50, 0x6f, 0x73, 0x69, 0x74, 0x69,
+	0x6f, 0x6e, 0x12, 0x1e, 0x0a, 0x0a, 0x43, 0x6c, 0x6f, 0x74, 0x68, 0x65, 0x73, 0x4e, 0x75, 0x6d,
+	0x18, 0x05, 0x20, 0x01, 0x28, 0x03, 0x52, 0x0a, 0x43, 0x6c, 0x6f, 0x74, 0x68, 0x65, 0x73, 0x4e,
+	0x75, 0x6d, 0x12, 0x16, 0x0a, 0x06, 0x52, 0x65, 0x61, 0x73, 0x6f, 0x6e, 0x18, 0x06, 0x20, 0x01,
+	0x28, 0x09, 0x52, 0x06, 0x52, 0x65, 0x61, 0x73, 0x6f, 0x6e, 0x22, 0x59, 0x0a, 0x21, 0x57, 0x65,
+	0x62, 0x46, 0x6f, 0x6f, 0x74, 0x4c, 0x69, 0x6e, 0x65, 0x75, 0x70, 0x53, 0x61, 0x6d, 0x65, 0x46,
+	0x6f, 0x72, 0x6d, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x12,
+	0x18, 0x0a, 0x07, 0x4d, 0x61, 0x74, 0x63, 0x68, 0x49, 0x64, 0x18, 0x01, 0x20, 0x01, 0x28, 0x03,
+	0x52, 0x07, 0x4d, 0x61, 0x74, 0x63, 0x68, 0x49, 0x64, 0x12, 0x1a, 0x0a, 0x08, 0x4c, 0x61, 0x6e,
+	0x67, 0x75, 0x61, 0x67, 0x65, 0x18, 0x02, 0x20, 0x01, 0x28, 0x09, 0x52, 0x08, 0x4c, 0x61, 0x6e,
+	0x67, 0x75, 0x61, 0x67, 0x65, 0x22, 0x55, 0x0a, 0x22, 0x57, 0x65, 0x62, 0x46, 0x6f, 0x6f, 0x74,
+	0x4c, 0x69, 0x6e, 0x65, 0x75, 0x70, 0x53, 0x61, 0x6d, 0x65, 0x46, 0x6f, 0x72, 0x6d, 0x61, 0x74,
+	0x69, 0x6f, 0x6e, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x12, 0x2f, 0x0a, 0x04, 0x64,
+	0x61, 0x74, 0x61, 0x18, 0x01, 0x20, 0x03, 0x28, 0x0b, 0x32, 0x1b, 0x2e, 0x57, 0x65, 0x62, 0x46,
+	0x6f, 0x6f, 0x74, 0x4c, 0x69, 0x6e, 0x65, 0x75, 0x70, 0x53, 0x61, 0x6d, 0x65, 0x46, 0x6f, 0x72,
+	0x6d, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x52, 0x04, 0x64, 0x61, 0x74, 0x61, 0x22, 0x8c, 0x05, 0x0a,
+	0x1a, 0x57, 0x65, 0x62, 0x46, 0x6f, 0x6f, 0x74, 0x4c, 0x69, 0x6e, 0x65, 0x75, 0x70, 0x53, 0x61,
+	0x6d, 0x65, 0x46, 0x6f, 0x72, 0x6d, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x12, 0x18, 0x0a, 0x07, 0x4d,
+	0x61, 0x74, 0x63, 0x68, 0x49, 0x64, 0x18, 0x01, 0x20, 0x01, 0x28, 0x03, 0x52, 0x07, 0x4d, 0x61,
+	0x74, 0x63, 0x68, 0x49, 0x64, 0x12, 0x1e, 0x0a, 0x0a, 0x48, 0x6f, 0x6d, 0x65, 0x54, 0x65, 0x61,
+	0x6d, 0x49, 0x64, 0x18, 0x02, 0x20, 0x01, 0x28, 0x03, 0x52, 0x0a, 0x48, 0x6f, 0x6d, 0x65, 0x54,
+	0x65, 0x61, 0x6d, 0x49, 0x64, 0x12, 0x22, 0x0a, 0x0c, 0x48, 0x6f, 0x6d, 0x65, 0x54, 0x65, 0x61,
+	0x6d, 0x4c, 0x6f, 0x67, 0x6f, 0x18, 0x03, 0x20, 0x01, 0x28, 0x09, 0x52, 0x0c, 0x48, 0x6f, 0x6d,
+	0x65, 0x54, 0x65, 0x61, 0x6d, 0x4c, 0x6f, 0x67, 0x6f, 0x12, 0x1a, 0x0a, 0x08, 0x48, 0x6f, 0x6d,
+	0x65, 0x4e, 0x61, 0x6d, 0x65, 0x18, 0x04, 0x20, 0x01, 0x28, 0x09, 0x52, 0x08, 0x48, 0x6f, 0x6d,
+	0x65, 0x4e, 0x61, 0x6d, 0x65, 0x12, 0x1c, 0x0a, 0x09, 0x48, 0x6f, 0x6d, 0x65, 0x53, 0x63, 0x6f,
+	0x72, 0x65, 0x18, 0x05, 0x20, 0x01, 0x28, 0x09, 0x52, 0x09, 0x48, 0x6f, 0x6d, 0x65, 0x53, 0x63,
+	0x6f, 0x72, 0x65, 0x12, 0x1e, 0x0a, 0x0a, 0x41, 0x77, 0x61, 0x79, 0x54, 0x65, 0x61, 0x6d, 0x49,
+	0x64, 0x18, 0x06, 0x20, 0x01, 0x28, 0x03, 0x52, 0x0a, 0x41, 0x77, 0x61, 0x79, 0x54, 0x65, 0x61,
+	0x6d, 0x49, 0x64, 0x12, 0x22, 0x0a, 0x0c, 0x41, 0x77, 0x61, 0x79, 0x54, 0x65, 0x61, 0x6d, 0x4c,
+	0x6f, 0x67, 0x6f, 0x18, 0x07, 0x20, 0x01, 0x28, 0x09, 0x52, 0x0c, 0x41, 0x77, 0x61, 0x79, 0x54,
+	0x65, 0x61, 0x6d, 0x4c, 0x6f, 0x67, 0x6f, 0x12, 0x1a, 0x0a, 0x08, 0x41, 0x77, 0x61, 0x79, 0x4e,
+	0x61, 0x6d, 0x65, 0x18, 0x08, 0x20, 0x01, 0x28, 0x09, 0x52, 0x08, 0x41, 0x77, 0x61, 0x79, 0x4e,
+	0x61, 0x6d, 0x65, 0x12, 0x1c, 0x0a, 0x09, 0x41, 0x77, 0x61, 0x79, 0x53, 0x63, 0x6f, 0x72, 0x65,
+	0x18, 0x09, 0x20, 0x01, 0x28, 0x09, 0x52, 0x09, 0x41, 0x77, 0x61, 0x79, 0x53, 0x63, 0x6f, 0x72,
+	0x65, 0x12, 0x1c, 0x0a, 0x09, 0x4d, 0x61, 0x74, 0x63, 0x68, 0x54, 0x69, 0x6d, 0x65, 0x18, 0x0a,
+	0x20, 0x01, 0x28, 0x03, 0x52, 0x09, 0x4d, 0x61, 0x74, 0x63, 0x68, 0x54, 0x69, 0x6d, 0x65, 0x12,
+	0x22, 0x0a, 0x0c, 0x54, 0x6f, 0x75, 0x72, 0x6e, 0x61, 0x6d, 0x65, 0x6e, 0x74, 0x49, 0x64, 0x18,
+	0x0b, 0x20, 0x01, 0x28, 0x03, 0x52, 0x0c, 0x54, 0x6f, 0x75, 0x72, 0x6e, 0x61, 0x6d, 0x65, 0x6e,
+	0x74, 0x49, 0x64, 0x12, 0x26, 0x0a, 0x0e, 0x54, 0x6f, 0x75, 0x72, 0x6e, 0x61, 0x6d, 0x65, 0x6e,
+	0x74, 0x4e, 0x61, 0x6d, 0x65, 0x18, 0x0c, 0x20, 0x01, 0x28, 0x09, 0x52, 0x0e, 0x54, 0x6f, 0x75,
+	0x72, 0x6e, 0x61, 0x6d, 0x65, 0x6e, 0x74, 0x4e, 0x61, 0x6d, 0x65, 0x12, 0x22, 0x0a, 0x0c, 0x49,
+	0x73, 0x54, 0x6f, 0x75, 0x72, 0x6e, 0x61, 0x6d, 0x65, 0x6e, 0x74, 0x18, 0x0d, 0x20, 0x01, 0x28,
+	0x08, 0x52, 0x0c, 0x49, 0x73, 0x54, 0x6f, 0x75, 0x72, 0x6e, 0x61, 0x6d, 0x65, 0x6e, 0x74, 0x12,
+	0x1e, 0x0a, 0x0a, 0x49, 0x73, 0x48, 0x6f, 0x6d, 0x65, 0x54, 0x65, 0x61, 0x6d, 0x18, 0x0e, 0x20,
+	0x01, 0x28, 0x08, 0x52, 0x0a, 0x49, 0x73, 0x48, 0x6f, 0x6d, 0x65, 0x54, 0x65, 0x61, 0x6d, 0x12,
+	0x1e, 0x0a, 0x0a, 0x49, 0x73, 0x41, 0x77, 0x61, 0x79, 0x54, 0x65, 0x61, 0x6d, 0x18, 0x0f, 0x20,
+	0x01, 0x28, 0x08, 0x52, 0x0a, 0x49, 0x73, 0x41, 0x77, 0x61, 0x79, 0x54, 0x65, 0x61, 0x6d, 0x12,
+	0x26, 0x0a, 0x0e, 0x49, 0x73, 0x49, 0x64, 0x65, 0x6e, 0x74, 0x69, 0x63, 0x61, 0x6c, 0x4c, 0x65,
+	0x74, 0x18, 0x10, 0x20, 0x01, 0x28, 0x08, 0x52, 0x0e, 0x49, 0x73, 0x49, 0x64, 0x65, 0x6e, 0x74,
+	0x69, 0x63, 0x61, 0x6c, 0x4c, 0x65, 0x74, 0x12, 0x24, 0x0a, 0x0d, 0x48, 0x6f, 0x6d, 0x65, 0x48,
+	0x61, 0x6c, 0x66, 0x53, 0x63, 0x6f, 0x72, 0x65, 0x18, 0x11, 0x20, 0x01, 0x28, 0x09, 0x52, 0x0d,
+	0x48, 0x6f, 0x6d, 0x65, 0x48, 0x61, 0x6c, 0x66, 0x53, 0x63, 0x6f, 0x72, 0x65, 0x12, 0x24, 0x0a,
+	0x0d, 0x41, 0x77, 0x61, 0x79, 0x48, 0x61, 0x6c, 0x66, 0x53, 0x63, 0x6f, 0x72, 0x65, 0x18, 0x12,
+	0x20, 0x01, 0x28, 0x09, 0x52, 0x0d, 0x41, 0x77, 0x61, 0x79, 0x48, 0x61, 0x6c, 0x66, 0x53, 0x63,
+	0x6f, 0x72, 0x65, 0x12, 0x16, 0x0a, 0x06, 0x57, 0x69, 0x6e, 0x6e, 0x65, 0x72, 0x18, 0x13, 0x20,
+	0x01, 0x28, 0x03, 0x52, 0x06, 0x57, 0x69, 0x6e, 0x6e, 0x65, 0x72, 0x42, 0x07, 0x5a, 0x05, 0x2e,
+	0x2f, 0x3b, 0x76, 0x31, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
 }
 
 var (
@@ -459,24 +1495,42 @@ func file_web_foot_lineup_proto_rawDescGZIP() []byte {
 	return file_web_foot_lineup_proto_rawDescData
 }
 
-var file_web_foot_lineup_proto_msgTypes = make([]protoimpl.MessageInfo, 4)
+var file_web_foot_lineup_proto_msgTypes = make([]protoimpl.MessageInfo, 15)
 var file_web_foot_lineup_proto_goTypes = []interface{}{
-	(*WebFootMatchLineupRequest)(nil),  // 0: WebFootMatchLineupRequest
-	(*WebFootMatchLineupResponse)(nil), // 1: WebFootMatchLineupResponse
-	(*WebFootMatchLineup)(nil),         // 2: WebFootMatchLineup
-	(*WebFootLiveLineupMember)(nil),    // 3: WebFootLiveLineupMember
+	(*WebFootMatchLineupRequest)(nil),            // 0: WebFootMatchLineupRequest
+	(*WebFootMatchLineupResponse)(nil),           // 1: WebFootMatchLineupResponse
+	(*WebFootMatchLineup)(nil),                   // 2: WebFootMatchLineup
+	(*WebFootLiveLineupMember)(nil),              // 3: WebFootLiveLineupMember
+	(*WebFootLiveLineupReplacementRequest)(nil),  // 4: WebFootLiveLineupReplacementRequest
+	(*WebFootLiveLineupReplacementResponse)(nil), // 5: WebFootLiveLineupReplacementResponse
+	(*WebFootLiveLineupReplacementInfo)(nil),     // 6: WebFootLiveLineupReplacementInfo
+	(*WebFootLiveLineupReplacementMember)(nil),   // 7: WebFootLiveLineupReplacementMember
+	(*WebFootLiveLineupInjuryRequest)(nil),       // 8: WebFootLiveLineupInjuryRequest
+	(*WebFootLiveLineupInjuryResponse)(nil),      // 9: WebFootLiveLineupInjuryResponse
+	(*WebFootLiveLineupInjuryInfo)(nil),          // 10: WebFootLiveLineupInjuryInfo
+	(*WebFootLiveLineupInjuryMember)(nil),        // 11: WebFootLiveLineupInjuryMember
+	(*WebFootLineupSameFormationRequest)(nil),    // 12: WebFootLineupSameFormationRequest
+	(*WebFootLineupSameFormationResponse)(nil),   // 13: WebFootLineupSameFormationResponse
+	(*WebFootLineupSameFormation)(nil),           // 14: WebFootLineupSameFormation
 }
 var file_web_foot_lineup_proto_depIdxs = []int32{
-	2, // 0: WebFootMatchLineupResponse.starting_main:type_name -> WebFootMatchLineup
-	2, // 1: WebFootMatchLineupResponse.starting_cust:type_name -> WebFootMatchLineup
-	2, // 2: WebFootMatchLineupResponse.forecast_main:type_name -> WebFootMatchLineup
-	2, // 3: WebFootMatchLineupResponse.forecast_cust:type_name -> WebFootMatchLineup
-	3, // 4: WebFootMatchLineup.member:type_name -> WebFootLiveLineupMember
-	5, // [5:5] is the sub-list for method output_type
-	5, // [5:5] is the sub-list for method input_type
-	5, // [5:5] is the sub-list for extension type_name
-	5, // [5:5] is the sub-list for extension extendee
-	0, // [0:5] is the sub-list for field type_name
+	2,  // 0: WebFootMatchLineupResponse.starting_main:type_name -> WebFootMatchLineup
+	2,  // 1: WebFootMatchLineupResponse.starting_cust:type_name -> WebFootMatchLineup
+	2,  // 2: WebFootMatchLineupResponse.forecast_main:type_name -> WebFootMatchLineup
+	2,  // 3: WebFootMatchLineupResponse.forecast_cust:type_name -> WebFootMatchLineup
+	3,  // 4: WebFootMatchLineup.member:type_name -> WebFootLiveLineupMember
+	6,  // 5: WebFootLiveLineupReplacementResponse.home:type_name -> WebFootLiveLineupReplacementInfo
+	6,  // 6: WebFootLiveLineupReplacementResponse.away:type_name -> WebFootLiveLineupReplacementInfo
+	7,  // 7: WebFootLiveLineupReplacementInfo.Member:type_name -> WebFootLiveLineupReplacementMember
+	10, // 8: WebFootLiveLineupInjuryResponse.home:type_name -> WebFootLiveLineupInjuryInfo
+	10, // 9: WebFootLiveLineupInjuryResponse.away:type_name -> WebFootLiveLineupInjuryInfo
+	11, // 10: WebFootLiveLineupInjuryInfo.Member:type_name -> WebFootLiveLineupInjuryMember
+	14, // 11: WebFootLineupSameFormationResponse.data:type_name -> WebFootLineupSameFormation
+	12, // [12:12] is the sub-list for method output_type
+	12, // [12:12] is the sub-list for method input_type
+	12, // [12:12] is the sub-list for extension type_name
+	12, // [12:12] is the sub-list for extension extendee
+	0,  // [0:12] is the sub-list for field type_name
 }
 
 func init() { file_web_foot_lineup_proto_init() }
@@ -533,6 +1587,138 @@ func file_web_foot_lineup_proto_init() {
 				return nil
 			}
 		}
+		file_web_foot_lineup_proto_msgTypes[4].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*WebFootLiveLineupReplacementRequest); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_web_foot_lineup_proto_msgTypes[5].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*WebFootLiveLineupReplacementResponse); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_web_foot_lineup_proto_msgTypes[6].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*WebFootLiveLineupReplacementInfo); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_web_foot_lineup_proto_msgTypes[7].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*WebFootLiveLineupReplacementMember); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_web_foot_lineup_proto_msgTypes[8].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*WebFootLiveLineupInjuryRequest); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_web_foot_lineup_proto_msgTypes[9].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*WebFootLiveLineupInjuryResponse); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_web_foot_lineup_proto_msgTypes[10].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*WebFootLiveLineupInjuryInfo); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_web_foot_lineup_proto_msgTypes[11].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*WebFootLiveLineupInjuryMember); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_web_foot_lineup_proto_msgTypes[12].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*WebFootLineupSameFormationRequest); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_web_foot_lineup_proto_msgTypes[13].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*WebFootLineupSameFormationResponse); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_web_foot_lineup_proto_msgTypes[14].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*WebFootLineupSameFormation); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
 	}
 	type x struct{}
 	out := protoimpl.TypeBuilder{
@@ -540,7 +1726,7 @@ func file_web_foot_lineup_proto_init() {
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: file_web_foot_lineup_proto_rawDesc,
 			NumEnums:      0,
-			NumMessages:   4,
+			NumMessages:   15,
 			NumExtensions: 0,
 			NumServices:   0,
 		},

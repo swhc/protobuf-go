@@ -245,7 +245,7 @@ var file_foot_server_proto_rawDesc = []byte{
 	0x6c, 0x61, 0x6e, 0x67, 0x75, 0x61, 0x67, 0x65, 0x18, 0x03, 0x20, 0x01, 0x28, 0x09, 0x52, 0x08,
 	0x6c, 0x61, 0x6e, 0x67, 0x75, 0x61, 0x67, 0x65, 0x22, 0x22, 0x0a, 0x0c, 0x46, 0x6f, 0x6f, 0x74,
 	0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x12, 0x12, 0x0a, 0x04, 0x64, 0x61, 0x74, 0x61,
-	0x18, 0x03, 0x20, 0x01, 0x28, 0x0c, 0x52, 0x04, 0x64, 0x61, 0x74, 0x61, 0x32, 0xc7, 0x26, 0x0a,
+	0x18, 0x03, 0x20, 0x01, 0x28, 0x0c, 0x52, 0x04, 0x64, 0x61, 0x74, 0x61, 0x32, 0xbe, 0x28, 0x0a,
 	0x08, 0x46, 0x6f, 0x6f, 0x74, 0x42, 0x61, 0x6c, 0x6c, 0x12, 0x40, 0x0a, 0x16, 0x46, 0x6f, 0x6f,
 	0x74, 0x4d, 0x61, 0x74, 0x63, 0x68, 0x41, 0x67, 0x61, 0x69, 0x6e, 0x73, 0x74, 0x44, 0x65, 0x74,
 	0x61, 0x69, 0x6c, 0x12, 0x15, 0x2e, 0x46, 0x6f, 0x6f, 0x74, 0x4d, 0x61, 0x74, 0x63, 0x68, 0x49,
@@ -528,34 +528,49 @@ var file_foot_server_proto_rawDesc = []byte{
 	0x6f, 0x74, 0x4d, 0x61, 0x74, 0x63, 0x68, 0x54, 0x65, 0x61, 0x6d, 0x46, 0x75, 0x74, 0x75, 0x72,
 	0x65, 0x53, 0x63, 0x68, 0x65, 0x64, 0x75, 0x6c, 0x65, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74,
 	0x1a, 0x0d, 0x2e, 0x46, 0x6f, 0x6f, 0x74, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22,
-	0x00, 0x12, 0x3d, 0x0a, 0x10, 0x46, 0x75, 0x74, 0x75, 0x72, 0x65, 0x4d, 0x61, 0x74, 0x63, 0x68,
-	0x43, 0x6f, 0x75, 0x6e, 0x74, 0x12, 0x18, 0x2e, 0x46, 0x75, 0x74, 0x75, 0x72, 0x65, 0x4d, 0x61,
-	0x74, 0x63, 0x68, 0x43, 0x6f, 0x75, 0x6e, 0x74, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a,
-	0x0d, 0x2e, 0x46, 0x6f, 0x6f, 0x74, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x00,
-	0x12, 0x41, 0x0a, 0x12, 0x46, 0x6f, 0x6f, 0x74, 0x4d, 0x61, 0x74, 0x63, 0x68, 0x44, 0x65, 0x74,
-	0x61, 0x69, 0x6c, 0x41, 0x6c, 0x6c, 0x12, 0x1a, 0x2e, 0x46, 0x6f, 0x6f, 0x74, 0x4d, 0x61, 0x74,
-	0x63, 0x68, 0x44, 0x65, 0x74, 0x61, 0x69, 0x6c, 0x41, 0x6c, 0x6c, 0x52, 0x65, 0x71, 0x75, 0x65,
-	0x73, 0x74, 0x1a, 0x0d, 0x2e, 0x46, 0x6f, 0x6f, 0x74, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73,
-	0x65, 0x22, 0x00, 0x12, 0x37, 0x0a, 0x0b, 0x4d, 0x61, 0x74, 0x63, 0x68, 0x46, 0x69, 0x6e, 0x69,
-	0x73, 0x68, 0x12, 0x17, 0x2e, 0x46, 0x6f, 0x6f, 0x74, 0x4d, 0x61, 0x74, 0x63, 0x68, 0x46, 0x69,
-	0x6e, 0x69, 0x73, 0x68, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x0d, 0x2e, 0x46, 0x6f,
-	0x6f, 0x74, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x00, 0x12, 0x3b, 0x0a, 0x11,
-	0x46, 0x61, 0x76, 0x6f, 0x72, 0x69, 0x74, 0x65, 0x4d, 0x61, 0x74, 0x63, 0x68, 0x4c, 0x69, 0x73,
-	0x74, 0x12, 0x15, 0x2e, 0x46, 0x61, 0x76, 0x6f, 0x72, 0x69, 0x74, 0x65, 0x4d, 0x61, 0x74, 0x63,
-	0x68, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x0d, 0x2e, 0x46, 0x6f, 0x6f, 0x74, 0x52,
-	0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x00, 0x12, 0x3d, 0x0a, 0x10, 0x43, 0x68, 0x65,
-	0x63, 0x6b, 0x4d, 0x61, 0x74, 0x63, 0x68, 0x53, 0x74, 0x61, 0x74, 0x75, 0x73, 0x12, 0x18, 0x2e,
-	0x43, 0x68, 0x65, 0x63, 0x6b, 0x4d, 0x61, 0x74, 0x63, 0x68, 0x53, 0x74, 0x61, 0x74, 0x75, 0x73,
+	0x00, 0x12, 0x55, 0x0a, 0x1c, 0x57, 0x65, 0x62, 0x46, 0x6f, 0x6f, 0x74, 0x4c, 0x69, 0x76, 0x65,
+	0x4c, 0x69, 0x6e, 0x65, 0x75, 0x70, 0x52, 0x65, 0x70, 0x6c, 0x61, 0x63, 0x65, 0x6d, 0x65, 0x6e,
+	0x74, 0x12, 0x24, 0x2e, 0x57, 0x65, 0x62, 0x46, 0x6f, 0x6f, 0x74, 0x4c, 0x69, 0x76, 0x65, 0x4c,
+	0x69, 0x6e, 0x65, 0x75, 0x70, 0x52, 0x65, 0x70, 0x6c, 0x61, 0x63, 0x65, 0x6d, 0x65, 0x6e, 0x74,
 	0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x0d, 0x2e, 0x46, 0x6f, 0x6f, 0x74, 0x52, 0x65,
-	0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x00, 0x12, 0x35, 0x0a, 0x0c, 0x53, 0x71, 0x6c, 0x69,
-	0x74, 0x65, 0x44, 0x62, 0x54, 0x69, 0x6d, 0x65, 0x12, 0x14, 0x2e, 0x53, 0x71, 0x6c, 0x69, 0x74,
-	0x65, 0x44, 0x62, 0x54, 0x69, 0x6d, 0x65, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x0d,
+	0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x00, 0x12, 0x4b, 0x0a, 0x17, 0x57, 0x65, 0x62, 0x46,
+	0x6f, 0x6f, 0x74, 0x4c, 0x69, 0x76, 0x65, 0x4c, 0x69, 0x6e, 0x65, 0x75, 0x70, 0x49, 0x6e, 0x6a,
+	0x75, 0x72, 0x79, 0x12, 0x1f, 0x2e, 0x57, 0x65, 0x62, 0x46, 0x6f, 0x6f, 0x74, 0x4c, 0x69, 0x76,
+	0x65, 0x4c, 0x69, 0x6e, 0x65, 0x75, 0x70, 0x49, 0x6e, 0x6a, 0x75, 0x72, 0x79, 0x52, 0x65, 0x71,
+	0x75, 0x65, 0x73, 0x74, 0x1a, 0x0d, 0x2e, 0x46, 0x6f, 0x6f, 0x74, 0x52, 0x65, 0x73, 0x70, 0x6f,
+	0x6e, 0x73, 0x65, 0x22, 0x00, 0x12, 0x51, 0x0a, 0x1a, 0x57, 0x65, 0x62, 0x46, 0x6f, 0x6f, 0x74,
+	0x4c, 0x69, 0x6e, 0x65, 0x75, 0x70, 0x53, 0x61, 0x6d, 0x65, 0x46, 0x6f, 0x72, 0x6d, 0x61, 0x74,
+	0x69, 0x6f, 0x6e, 0x12, 0x22, 0x2e, 0x57, 0x65, 0x62, 0x46, 0x6f, 0x6f, 0x74, 0x4c, 0x69, 0x6e,
+	0x65, 0x75, 0x70, 0x53, 0x61, 0x6d, 0x65, 0x46, 0x6f, 0x72, 0x6d, 0x61, 0x74, 0x69, 0x6f, 0x6e,
+	0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x0d, 0x2e, 0x46, 0x6f, 0x6f, 0x74, 0x52, 0x65,
+	0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x00, 0x12, 0x3d, 0x0a, 0x10, 0x46, 0x75, 0x74, 0x75,
+	0x72, 0x65, 0x4d, 0x61, 0x74, 0x63, 0x68, 0x43, 0x6f, 0x75, 0x6e, 0x74, 0x12, 0x18, 0x2e, 0x46,
+	0x75, 0x74, 0x75, 0x72, 0x65, 0x4d, 0x61, 0x74, 0x63, 0x68, 0x43, 0x6f, 0x75, 0x6e, 0x74, 0x52,
+	0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x0d, 0x2e, 0x46, 0x6f, 0x6f, 0x74, 0x52, 0x65, 0x73,
+	0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x00, 0x12, 0x41, 0x0a, 0x12, 0x46, 0x6f, 0x6f, 0x74, 0x4d,
+	0x61, 0x74, 0x63, 0x68, 0x44, 0x65, 0x74, 0x61, 0x69, 0x6c, 0x41, 0x6c, 0x6c, 0x12, 0x1a, 0x2e,
+	0x46, 0x6f, 0x6f, 0x74, 0x4d, 0x61, 0x74, 0x63, 0x68, 0x44, 0x65, 0x74, 0x61, 0x69, 0x6c, 0x41,
+	0x6c, 0x6c, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x0d, 0x2e, 0x46, 0x6f, 0x6f, 0x74,
+	0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x00, 0x12, 0x37, 0x0a, 0x0b, 0x4d, 0x61,
+	0x74, 0x63, 0x68, 0x46, 0x69, 0x6e, 0x69, 0x73, 0x68, 0x12, 0x17, 0x2e, 0x46, 0x6f, 0x6f, 0x74,
+	0x4d, 0x61, 0x74, 0x63, 0x68, 0x46, 0x69, 0x6e, 0x69, 0x73, 0x68, 0x52, 0x65, 0x71, 0x75, 0x65,
+	0x73, 0x74, 0x1a, 0x0d, 0x2e, 0x46, 0x6f, 0x6f, 0x74, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73,
+	0x65, 0x22, 0x00, 0x12, 0x3b, 0x0a, 0x11, 0x46, 0x61, 0x76, 0x6f, 0x72, 0x69, 0x74, 0x65, 0x4d,
+	0x61, 0x74, 0x63, 0x68, 0x4c, 0x69, 0x73, 0x74, 0x12, 0x15, 0x2e, 0x46, 0x61, 0x76, 0x6f, 0x72,
+	0x69, 0x74, 0x65, 0x4d, 0x61, 0x74, 0x63, 0x68, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a,
+	0x0d, 0x2e, 0x46, 0x6f, 0x6f, 0x74, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x00,
+	0x12, 0x3d, 0x0a, 0x10, 0x43, 0x68, 0x65, 0x63, 0x6b, 0x4d, 0x61, 0x74, 0x63, 0x68, 0x53, 0x74,
+	0x61, 0x74, 0x75, 0x73, 0x12, 0x18, 0x2e, 0x43, 0x68, 0x65, 0x63, 0x6b, 0x4d, 0x61, 0x74, 0x63,
+	0x68, 0x53, 0x74, 0x61, 0x74, 0x75, 0x73, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x0d,
 	0x2e, 0x46, 0x6f, 0x6f, 0x74, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x00, 0x12,
-	0x35, 0x0a, 0x0c, 0x53, 0x71, 0x6c, 0x69, 0x74, 0x65, 0x44, 0x62, 0x44, 0x61, 0x74, 0x61, 0x12,
-	0x14, 0x2e, 0x53, 0x71, 0x6c, 0x69, 0x74, 0x65, 0x44, 0x62, 0x44, 0x61, 0x74, 0x61, 0x52, 0x65,
+	0x35, 0x0a, 0x0c, 0x53, 0x71, 0x6c, 0x69, 0x74, 0x65, 0x44, 0x62, 0x54, 0x69, 0x6d, 0x65, 0x12,
+	0x14, 0x2e, 0x53, 0x71, 0x6c, 0x69, 0x74, 0x65, 0x44, 0x62, 0x54, 0x69, 0x6d, 0x65, 0x52, 0x65,
 	0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x0d, 0x2e, 0x46, 0x6f, 0x6f, 0x74, 0x52, 0x65, 0x73, 0x70,
-	0x6f, 0x6e, 0x73, 0x65, 0x22, 0x00, 0x42, 0x07, 0x5a, 0x05, 0x2e, 0x2f, 0x3b, 0x76, 0x31, 0x62,
-	0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
+	0x6f, 0x6e, 0x73, 0x65, 0x22, 0x00, 0x12, 0x35, 0x0a, 0x0c, 0x53, 0x71, 0x6c, 0x69, 0x74, 0x65,
+	0x44, 0x62, 0x44, 0x61, 0x74, 0x61, 0x12, 0x14, 0x2e, 0x53, 0x71, 0x6c, 0x69, 0x74, 0x65, 0x44,
+	0x62, 0x44, 0x61, 0x74, 0x61, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x0d, 0x2e, 0x46,
+	0x6f, 0x6f, 0x74, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x00, 0x42, 0x07, 0x5a,
+	0x05, 0x2e, 0x2f, 0x3b, 0x76, 0x31, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
 }
 
 var (
@@ -642,14 +657,17 @@ var file_foot_server_proto_goTypes = []interface{}{
 	(*WebFootMatchTeamHandsOnRecordRequest)(nil),      // 67: WebFootMatchTeamHandsOnRecordRequest
 	(*WebFootMatchTeamRecentRecordRequest)(nil),       // 68: WebFootMatchTeamRecentRecordRequest
 	(*WebFootMatchTeamFutureScheduleRequest)(nil),     // 69: WebFootMatchTeamFutureScheduleRequest
-	(*FutureMatchCountRequest)(nil),                   // 70: FutureMatchCountRequest
-	(*FootMatchDetailAllRequest)(nil),                 // 71: FootMatchDetailAllRequest
-	(*FootMatchFinishRequest)(nil),                    // 72: FootMatchFinishRequest
-	(*FavoriteMatchRequest)(nil),                      // 73: FavoriteMatchRequest
-	(*CheckMatchStatusRequest)(nil),                   // 74: CheckMatchStatusRequest
-	(*SqliteDbTimeRequest)(nil),                       // 75: SqliteDbTimeRequest
-	(*SqliteDbDataRequest)(nil),                       // 76: SqliteDbDataRequest
-	(*FootMatchInProgressResponse)(nil),               // 77: FootMatchInProgressResponse
+	(*WebFootLiveLineupReplacementRequest)(nil),       // 70: WebFootLiveLineupReplacementRequest
+	(*WebFootLiveLineupInjuryRequest)(nil),            // 71: WebFootLiveLineupInjuryRequest
+	(*WebFootLineupSameFormationRequest)(nil),         // 72: WebFootLineupSameFormationRequest
+	(*FutureMatchCountRequest)(nil),                   // 73: FutureMatchCountRequest
+	(*FootMatchDetailAllRequest)(nil),                 // 74: FootMatchDetailAllRequest
+	(*FootMatchFinishRequest)(nil),                    // 75: FootMatchFinishRequest
+	(*FavoriteMatchRequest)(nil),                      // 76: FavoriteMatchRequest
+	(*CheckMatchStatusRequest)(nil),                   // 77: CheckMatchStatusRequest
+	(*SqliteDbTimeRequest)(nil),                       // 78: SqliteDbTimeRequest
+	(*SqliteDbDataRequest)(nil),                       // 79: SqliteDbDataRequest
+	(*FootMatchInProgressResponse)(nil),               // 80: FootMatchInProgressResponse
 }
 var file_foot_server_proto_depIdxs = []int32{
 	2,  // 0: FootBall.FootMatchAgainstDetail:input_type -> FootMatchInfoRequest
@@ -720,90 +738,96 @@ var file_foot_server_proto_depIdxs = []int32{
 	67, // 65: FootBall.WebFootMatchTeamHandsOnRecord:input_type -> WebFootMatchTeamHandsOnRecordRequest
 	68, // 66: FootBall.WebFootMatchTeamRecentRecord:input_type -> WebFootMatchTeamRecentRecordRequest
 	69, // 67: FootBall.WebFootMatchTeamFutureSchedule:input_type -> WebFootMatchTeamFutureScheduleRequest
-	70, // 68: FootBall.FutureMatchCount:input_type -> FutureMatchCountRequest
-	71, // 69: FootBall.FootMatchDetailAll:input_type -> FootMatchDetailAllRequest
-	72, // 70: FootBall.MatchFinish:input_type -> FootMatchFinishRequest
-	73, // 71: FootBall.FavoriteMatchList:input_type -> FavoriteMatchRequest
-	74, // 72: FootBall.CheckMatchStatus:input_type -> CheckMatchStatusRequest
-	75, // 73: FootBall.SqliteDbTime:input_type -> SqliteDbTimeRequest
-	76, // 74: FootBall.SqliteDbData:input_type -> SqliteDbDataRequest
-	1,  // 75: FootBall.FootMatchAgainstDetail:output_type -> FootResponse
-	1,  // 76: FootBall.GetMatchOddList:output_type -> FootResponse
-	1,  // 77: FootBall.GetMatchOddListDetail:output_type -> FootResponse
-	1,  // 78: FootBall.GetFootSeasonList:output_type -> FootResponse
-	1,  // 79: FootBall.FootPlayerDetail:output_type -> FootResponse
-	1,  // 80: FootBall.FootMatchCommentList:output_type -> FootResponse
-	1,  // 81: FootBall.GetFootMatchFiltrate:output_type -> FootResponse
-	1,  // 82: FootBall.GetFootContinentCountryTournamentData:output_type -> FootResponse
-	1,  // 83: FootBall.FootTeamDetail:output_type -> FootResponse
-	1,  // 84: FootBall.FootStandTag:output_type -> FootResponse
-	1,  // 85: FootBall.FootTeamMatch:output_type -> FootResponse
-	1,  // 86: FootBall.FootMatchTeamLineup:output_type -> FootResponse
-	1,  // 87: FootBall.FootTeamStand:output_type -> FootResponse
-	1,  // 88: FootBall.FootTodayMatch:output_type -> FootResponse
-	1,  // 89: FootBall.GetFootLeagueStand:output_type -> FootResponse
-	1,  // 90: FootBall.FootTeamTransfer:output_type -> FootResponse
-	1,  // 91: FootBall.GetFootPlayerStand:output_type -> FootResponse
-	1,  // 92: FootBall.FootLiveLineup:output_type -> FootResponse
-	1,  // 93: FootBall.FootLiveStat:output_type -> FootResponse
-	1,  // 94: FootBall.FootPlayerCareer:output_type -> FootResponse
-	1,  // 95: FootBall.FootTeamTransferYear:output_type -> FootResponse
-	1,  // 96: FootBall.GetFootCheckExistence:output_type -> FootResponse
-	1,  // 97: FootBall.FootFiltrationId:output_type -> FootResponse
-	1,  // 98: FootBall.GetDataTypeCount:output_type -> FootResponse
-	1,  // 99: FootBall.CheckFootData:output_type -> FootResponse
-	1,  // 100: FootBall.FootRealTime:output_type -> FootResponse
-	1,  // 101: FootBall.FootRealTimeV2:output_type -> FootResponse
-	1,  // 102: FootBall.FootOddsFilter:output_type -> FootResponse
-	1,  // 103: FootBall.FootMatchList:output_type -> FootResponse
-	1,  // 104: FootBall.FootMatchPlus:output_type -> FootResponse
-	1,  // 105: FootBall.FootMatchBase:output_type -> FootResponse
-	77, // 106: FootBall.FootMatchInProgress:output_type -> FootMatchInProgressResponse
-	1,  // 107: FootBall.FootDataPromotion:output_type -> FootResponse
-	1,  // 108: FootBall.FootLineupAverageData:output_type -> FootResponse
-	1,  // 109: FootBall.FootLineupMatchData:output_type -> FootResponse
-	1,  // 110: FootBall.FootQuestionMatch:output_type -> FootResponse
-	1,  // 111: FootBall.WebFootSeasonList:output_type -> FootResponse
-	1,  // 112: FootBall.GetWebOddList:output_type -> FootResponse
-	1,  // 113: FootBall.WebFootTeamDetail:output_type -> FootResponse
-	1,  // 114: FootBall.WebFootTeamMatch:output_type -> FootResponse
-	1,  // 115: FootBall.WebFootTeamPlayer:output_type -> FootResponse
-	1,  // 116: FootBall.WebFootTransfer:output_type -> FootResponse
-	1,  // 117: FootBall.WebFootTeamTransferYear:output_type -> FootResponse
-	1,  // 118: FootBall.WebFootTeamStatsMenu:output_type -> FootResponse
-	1,  // 119: FootBall.WebFootTeamStats:output_type -> FootResponse
-	1,  // 120: FootBall.WebFootTeamSeasonList:output_type -> FootResponse
-	1,  // 121: FootBall.WebFootMatchList:output_type -> FootResponse
-	1,  // 122: FootBall.WebFootMatchMonth:output_type -> FootResponse
-	1,  // 123: FootBall.WebFootTeamTransferInjury:output_type -> FootResponse
-	1,  // 124: FootBall.WebFootMatchLastLineup:output_type -> FootResponse
-	1,  // 125: FootBall.WebFootPlayerDetail:output_type -> FootResponse
-	1,  // 126: FootBall.WebFootLeagueDetail:output_type -> FootResponse
-	1,  // 127: FootBall.WebLeagueStand:output_type -> FootResponse
-	1,  // 128: FootBall.WebFootLeagueStatsMenu:output_type -> FootResponse
-	1,  // 129: FootBall.WebFootLeagueTeam:output_type -> FootResponse
-	1,  // 130: FootBall.WebFootLeagueStats:output_type -> FootResponse
-	1,  // 131: FootBall.WebFootMatchDetail:output_type -> FootResponse
-	1,  // 132: FootBall.WebFootContinentLeague:output_type -> FootResponse
-	1,  // 133: FootBall.WebFootMatchCount:output_type -> FootResponse
-	1,  // 134: FootBall.WebFootMatchIncident:output_type -> FootResponse
-	1,  // 135: FootBall.WebFootInstantMatch:output_type -> FootResponse
-	1,  // 136: FootBall.WebFootLeagueFilter:output_type -> FootResponse
-	1,  // 137: FootBall.WebFootOddDetail:output_type -> FootResponse
-	1,  // 138: FootBall.WebOddHandicapOU:output_type -> FootResponse
-	1,  // 139: FootBall.WebFootMatchLineup:output_type -> FootResponse
-	1,  // 140: FootBall.WebFootMatchTeamHandsOnRecord:output_type -> FootResponse
-	1,  // 141: FootBall.WebFootMatchTeamRecentRecord:output_type -> FootResponse
-	1,  // 142: FootBall.WebFootMatchTeamFutureSchedule:output_type -> FootResponse
-	1,  // 143: FootBall.FutureMatchCount:output_type -> FootResponse
-	1,  // 144: FootBall.FootMatchDetailAll:output_type -> FootResponse
-	1,  // 145: FootBall.MatchFinish:output_type -> FootResponse
-	1,  // 146: FootBall.FavoriteMatchList:output_type -> FootResponse
-	1,  // 147: FootBall.CheckMatchStatus:output_type -> FootResponse
-	1,  // 148: FootBall.SqliteDbTime:output_type -> FootResponse
-	1,  // 149: FootBall.SqliteDbData:output_type -> FootResponse
-	75, // [75:150] is the sub-list for method output_type
-	0,  // [0:75] is the sub-list for method input_type
+	70, // 68: FootBall.WebFootLiveLineupReplacement:input_type -> WebFootLiveLineupReplacementRequest
+	71, // 69: FootBall.WebFootLiveLineupInjury:input_type -> WebFootLiveLineupInjuryRequest
+	72, // 70: FootBall.WebFootLineupSameFormation:input_type -> WebFootLineupSameFormationRequest
+	73, // 71: FootBall.FutureMatchCount:input_type -> FutureMatchCountRequest
+	74, // 72: FootBall.FootMatchDetailAll:input_type -> FootMatchDetailAllRequest
+	75, // 73: FootBall.MatchFinish:input_type -> FootMatchFinishRequest
+	76, // 74: FootBall.FavoriteMatchList:input_type -> FavoriteMatchRequest
+	77, // 75: FootBall.CheckMatchStatus:input_type -> CheckMatchStatusRequest
+	78, // 76: FootBall.SqliteDbTime:input_type -> SqliteDbTimeRequest
+	79, // 77: FootBall.SqliteDbData:input_type -> SqliteDbDataRequest
+	1,  // 78: FootBall.FootMatchAgainstDetail:output_type -> FootResponse
+	1,  // 79: FootBall.GetMatchOddList:output_type -> FootResponse
+	1,  // 80: FootBall.GetMatchOddListDetail:output_type -> FootResponse
+	1,  // 81: FootBall.GetFootSeasonList:output_type -> FootResponse
+	1,  // 82: FootBall.FootPlayerDetail:output_type -> FootResponse
+	1,  // 83: FootBall.FootMatchCommentList:output_type -> FootResponse
+	1,  // 84: FootBall.GetFootMatchFiltrate:output_type -> FootResponse
+	1,  // 85: FootBall.GetFootContinentCountryTournamentData:output_type -> FootResponse
+	1,  // 86: FootBall.FootTeamDetail:output_type -> FootResponse
+	1,  // 87: FootBall.FootStandTag:output_type -> FootResponse
+	1,  // 88: FootBall.FootTeamMatch:output_type -> FootResponse
+	1,  // 89: FootBall.FootMatchTeamLineup:output_type -> FootResponse
+	1,  // 90: FootBall.FootTeamStand:output_type -> FootResponse
+	1,  // 91: FootBall.FootTodayMatch:output_type -> FootResponse
+	1,  // 92: FootBall.GetFootLeagueStand:output_type -> FootResponse
+	1,  // 93: FootBall.FootTeamTransfer:output_type -> FootResponse
+	1,  // 94: FootBall.GetFootPlayerStand:output_type -> FootResponse
+	1,  // 95: FootBall.FootLiveLineup:output_type -> FootResponse
+	1,  // 96: FootBall.FootLiveStat:output_type -> FootResponse
+	1,  // 97: FootBall.FootPlayerCareer:output_type -> FootResponse
+	1,  // 98: FootBall.FootTeamTransferYear:output_type -> FootResponse
+	1,  // 99: FootBall.GetFootCheckExistence:output_type -> FootResponse
+	1,  // 100: FootBall.FootFiltrationId:output_type -> FootResponse
+	1,  // 101: FootBall.GetDataTypeCount:output_type -> FootResponse
+	1,  // 102: FootBall.CheckFootData:output_type -> FootResponse
+	1,  // 103: FootBall.FootRealTime:output_type -> FootResponse
+	1,  // 104: FootBall.FootRealTimeV2:output_type -> FootResponse
+	1,  // 105: FootBall.FootOddsFilter:output_type -> FootResponse
+	1,  // 106: FootBall.FootMatchList:output_type -> FootResponse
+	1,  // 107: FootBall.FootMatchPlus:output_type -> FootResponse
+	1,  // 108: FootBall.FootMatchBase:output_type -> FootResponse
+	80, // 109: FootBall.FootMatchInProgress:output_type -> FootMatchInProgressResponse
+	1,  // 110: FootBall.FootDataPromotion:output_type -> FootResponse
+	1,  // 111: FootBall.FootLineupAverageData:output_type -> FootResponse
+	1,  // 112: FootBall.FootLineupMatchData:output_type -> FootResponse
+	1,  // 113: FootBall.FootQuestionMatch:output_type -> FootResponse
+	1,  // 114: FootBall.WebFootSeasonList:output_type -> FootResponse
+	1,  // 115: FootBall.GetWebOddList:output_type -> FootResponse
+	1,  // 116: FootBall.WebFootTeamDetail:output_type -> FootResponse
+	1,  // 117: FootBall.WebFootTeamMatch:output_type -> FootResponse
+	1,  // 118: FootBall.WebFootTeamPlayer:output_type -> FootResponse
+	1,  // 119: FootBall.WebFootTransfer:output_type -> FootResponse
+	1,  // 120: FootBall.WebFootTeamTransferYear:output_type -> FootResponse
+	1,  // 121: FootBall.WebFootTeamStatsMenu:output_type -> FootResponse
+	1,  // 122: FootBall.WebFootTeamStats:output_type -> FootResponse
+	1,  // 123: FootBall.WebFootTeamSeasonList:output_type -> FootResponse
+	1,  // 124: FootBall.WebFootMatchList:output_type -> FootResponse
+	1,  // 125: FootBall.WebFootMatchMonth:output_type -> FootResponse
+	1,  // 126: FootBall.WebFootTeamTransferInjury:output_type -> FootResponse
+	1,  // 127: FootBall.WebFootMatchLastLineup:output_type -> FootResponse
+	1,  // 128: FootBall.WebFootPlayerDetail:output_type -> FootResponse
+	1,  // 129: FootBall.WebFootLeagueDetail:output_type -> FootResponse
+	1,  // 130: FootBall.WebLeagueStand:output_type -> FootResponse
+	1,  // 131: FootBall.WebFootLeagueStatsMenu:output_type -> FootResponse
+	1,  // 132: FootBall.WebFootLeagueTeam:output_type -> FootResponse
+	1,  // 133: FootBall.WebFootLeagueStats:output_type -> FootResponse
+	1,  // 134: FootBall.WebFootMatchDetail:output_type -> FootResponse
+	1,  // 135: FootBall.WebFootContinentLeague:output_type -> FootResponse
+	1,  // 136: FootBall.WebFootMatchCount:output_type -> FootResponse
+	1,  // 137: FootBall.WebFootMatchIncident:output_type -> FootResponse
+	1,  // 138: FootBall.WebFootInstantMatch:output_type -> FootResponse
+	1,  // 139: FootBall.WebFootLeagueFilter:output_type -> FootResponse
+	1,  // 140: FootBall.WebFootOddDetail:output_type -> FootResponse
+	1,  // 141: FootBall.WebOddHandicapOU:output_type -> FootResponse
+	1,  // 142: FootBall.WebFootMatchLineup:output_type -> FootResponse
+	1,  // 143: FootBall.WebFootMatchTeamHandsOnRecord:output_type -> FootResponse
+	1,  // 144: FootBall.WebFootMatchTeamRecentRecord:output_type -> FootResponse
+	1,  // 145: FootBall.WebFootMatchTeamFutureSchedule:output_type -> FootResponse
+	1,  // 146: FootBall.WebFootLiveLineupReplacement:output_type -> FootResponse
+	1,  // 147: FootBall.WebFootLiveLineupInjury:output_type -> FootResponse
+	1,  // 148: FootBall.WebFootLineupSameFormation:output_type -> FootResponse
+	1,  // 149: FootBall.FutureMatchCount:output_type -> FootResponse
+	1,  // 150: FootBall.FootMatchDetailAll:output_type -> FootResponse
+	1,  // 151: FootBall.MatchFinish:output_type -> FootResponse
+	1,  // 152: FootBall.FavoriteMatchList:output_type -> FootResponse
+	1,  // 153: FootBall.CheckMatchStatus:output_type -> FootResponse
+	1,  // 154: FootBall.SqliteDbTime:output_type -> FootResponse
+	1,  // 155: FootBall.SqliteDbData:output_type -> FootResponse
+	78, // [78:156] is the sub-list for method output_type
+	0,  // [0:78] is the sub-list for method input_type
 	0,  // [0:0] is the sub-list for extension type_name
 	0,  // [0:0] is the sub-list for extension extendee
 	0,  // [0:0] is the sub-list for field type_name
@@ -1068,6 +1092,12 @@ type FootBallClient interface {
 	WebFootMatchTeamRecentRecord(ctx context.Context, in *WebFootMatchTeamRecentRecordRequest, opts ...grpc.CallOption) (*FootResponse, error)
 	//web即时比赛列表 - 比赛详情 - H2H主客队伍未来赛程
 	WebFootMatchTeamFutureSchedule(ctx context.Context, in *WebFootMatchTeamFutureScheduleRequest, opts ...grpc.CallOption) (*FootResponse, error)
+	//web即时比赛列表 - 比赛详情 - Lineup主客队伍本场换人记录
+	WebFootLiveLineupReplacement(ctx context.Context, in *WebFootLiveLineupReplacementRequest, opts ...grpc.CallOption) (*FootResponse, error)
+	//web即时比赛列表 - 比赛详情 - Lineup主客队伍伤停记录
+	WebFootLiveLineupInjury(ctx context.Context, in *WebFootLiveLineupInjuryRequest, opts ...grpc.CallOption) (*FootResponse, error)
+	//web即时比赛列表 - 比赛详情 - Lineup相同阵型比赛数据
+	WebFootLineupSameFormation(ctx context.Context, in *WebFootLineupSameFormationRequest, opts ...grpc.CallOption) (*FootResponse, error)
 	//近30天比赛的数量
 	FutureMatchCount(ctx context.Context, in *FutureMatchCountRequest, opts ...grpc.CallOption) (*FootResponse, error)
 	//比赛详情
@@ -1704,6 +1734,33 @@ func (c *footBallClient) WebFootMatchTeamFutureSchedule(ctx context.Context, in 
 	return out, nil
 }
 
+func (c *footBallClient) WebFootLiveLineupReplacement(ctx context.Context, in *WebFootLiveLineupReplacementRequest, opts ...grpc.CallOption) (*FootResponse, error) {
+	out := new(FootResponse)
+	err := c.cc.Invoke(ctx, "/FootBall/WebFootLiveLineupReplacement", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *footBallClient) WebFootLiveLineupInjury(ctx context.Context, in *WebFootLiveLineupInjuryRequest, opts ...grpc.CallOption) (*FootResponse, error) {
+	out := new(FootResponse)
+	err := c.cc.Invoke(ctx, "/FootBall/WebFootLiveLineupInjury", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *footBallClient) WebFootLineupSameFormation(ctx context.Context, in *WebFootLineupSameFormationRequest, opts ...grpc.CallOption) (*FootResponse, error) {
+	out := new(FootResponse)
+	err := c.cc.Invoke(ctx, "/FootBall/WebFootLineupSameFormation", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 func (c *footBallClient) FutureMatchCount(ctx context.Context, in *FutureMatchCountRequest, opts ...grpc.CallOption) (*FootResponse, error) {
 	out := new(FootResponse)
 	err := c.cc.Invoke(ctx, "/FootBall/FutureMatchCount", in, out, opts...)
@@ -1905,6 +1962,12 @@ type FootBallServer interface {
 	WebFootMatchTeamRecentRecord(context.Context, *WebFootMatchTeamRecentRecordRequest) (*FootResponse, error)
 	//web即时比赛列表 - 比赛详情 - H2H主客队伍未来赛程
 	WebFootMatchTeamFutureSchedule(context.Context, *WebFootMatchTeamFutureScheduleRequest) (*FootResponse, error)
+	//web即时比赛列表 - 比赛详情 - Lineup主客队伍本场换人记录
+	WebFootLiveLineupReplacement(context.Context, *WebFootLiveLineupReplacementRequest) (*FootResponse, error)
+	//web即时比赛列表 - 比赛详情 - Lineup主客队伍伤停记录
+	WebFootLiveLineupInjury(context.Context, *WebFootLiveLineupInjuryRequest) (*FootResponse, error)
+	//web即时比赛列表 - 比赛详情 - Lineup相同阵型比赛数据
+	WebFootLineupSameFormation(context.Context, *WebFootLineupSameFormationRequest) (*FootResponse, error)
 	//近30天比赛的数量
 	FutureMatchCount(context.Context, *FutureMatchCountRequest) (*FootResponse, error)
 	//比赛详情
@@ -2128,6 +2191,15 @@ func (*UnimplementedFootBallServer) WebFootMatchTeamRecentRecord(context.Context
 }
 func (*UnimplementedFootBallServer) WebFootMatchTeamFutureSchedule(context.Context, *WebFootMatchTeamFutureScheduleRequest) (*FootResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method WebFootMatchTeamFutureSchedule not implemented")
+}
+func (*UnimplementedFootBallServer) WebFootLiveLineupReplacement(context.Context, *WebFootLiveLineupReplacementRequest) (*FootResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method WebFootLiveLineupReplacement not implemented")
+}
+func (*UnimplementedFootBallServer) WebFootLiveLineupInjury(context.Context, *WebFootLiveLineupInjuryRequest) (*FootResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method WebFootLiveLineupInjury not implemented")
+}
+func (*UnimplementedFootBallServer) WebFootLineupSameFormation(context.Context, *WebFootLineupSameFormationRequest) (*FootResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method WebFootLineupSameFormation not implemented")
 }
 func (*UnimplementedFootBallServer) FutureMatchCount(context.Context, *FutureMatchCountRequest) (*FootResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method FutureMatchCount not implemented")
@@ -3379,6 +3451,60 @@ func _FootBall_WebFootMatchTeamFutureSchedule_Handler(srv interface{}, ctx conte
 	return interceptor(ctx, in, info, handler)
 }
 
+func _FootBall_WebFootLiveLineupReplacement_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(WebFootLiveLineupReplacementRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(FootBallServer).WebFootLiveLineupReplacement(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/FootBall/WebFootLiveLineupReplacement",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(FootBallServer).WebFootLiveLineupReplacement(ctx, req.(*WebFootLiveLineupReplacementRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _FootBall_WebFootLiveLineupInjury_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(WebFootLiveLineupInjuryRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(FootBallServer).WebFootLiveLineupInjury(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/FootBall/WebFootLiveLineupInjury",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(FootBallServer).WebFootLiveLineupInjury(ctx, req.(*WebFootLiveLineupInjuryRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _FootBall_WebFootLineupSameFormation_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(WebFootLineupSameFormationRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(FootBallServer).WebFootLineupSameFormation(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/FootBall/WebFootLineupSameFormation",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(FootBallServer).WebFootLineupSameFormation(ctx, req.(*WebFootLineupSameFormationRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 func _FootBall_FutureMatchCount_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(FutureMatchCountRequest)
 	if err := dec(in); err != nil {
@@ -3780,6 +3906,18 @@ var _FootBall_serviceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "WebFootMatchTeamFutureSchedule",
 			Handler:    _FootBall_WebFootMatchTeamFutureSchedule_Handler,
+		},
+		{
+			MethodName: "WebFootLiveLineupReplacement",
+			Handler:    _FootBall_WebFootLiveLineupReplacement_Handler,
+		},
+		{
+			MethodName: "WebFootLiveLineupInjury",
+			Handler:    _FootBall_WebFootLiveLineupInjury_Handler,
+		},
+		{
+			MethodName: "WebFootLineupSameFormation",
+			Handler:    _FootBall_WebFootLineupSameFormation_Handler,
 		},
 		{
 			MethodName: "FutureMatchCount",
