@@ -1266,6 +1266,307 @@ func (x *WebFootLineupSameFormation) GetWinner() int64 {
 	return 0
 }
 
+//预测阵容占比
+type WebFootLineupAverageDataRequest struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	MatchId int64 `protobuf:"varint,1,opt,name=MatchId,proto3" json:"MatchId,omitempty"`
+}
+
+func (x *WebFootLineupAverageDataRequest) Reset() {
+	*x = WebFootLineupAverageDataRequest{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_web_foot_lineup_proto_msgTypes[15]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *WebFootLineupAverageDataRequest) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*WebFootLineupAverageDataRequest) ProtoMessage() {}
+
+func (x *WebFootLineupAverageDataRequest) ProtoReflect() protoreflect.Message {
+	mi := &file_web_foot_lineup_proto_msgTypes[15]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use WebFootLineupAverageDataRequest.ProtoReflect.Descriptor instead.
+func (*WebFootLineupAverageDataRequest) Descriptor() ([]byte, []int) {
+	return file_web_foot_lineup_proto_rawDescGZIP(), []int{15}
+}
+
+func (x *WebFootLineupAverageDataRequest) GetMatchId() int64 {
+	if x != nil {
+		return x.MatchId
+	}
+	return 0
+}
+
+type WebFootLineupAverageDataResponse struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	Data string `protobuf:"bytes,1,opt,name=Data,proto3" json:"Data,omitempty"`
+}
+
+func (x *WebFootLineupAverageDataResponse) Reset() {
+	*x = WebFootLineupAverageDataResponse{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_web_foot_lineup_proto_msgTypes[16]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *WebFootLineupAverageDataResponse) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*WebFootLineupAverageDataResponse) ProtoMessage() {}
+
+func (x *WebFootLineupAverageDataResponse) ProtoReflect() protoreflect.Message {
+	mi := &file_web_foot_lineup_proto_msgTypes[16]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use WebFootLineupAverageDataResponse.ProtoReflect.Descriptor instead.
+func (*WebFootLineupAverageDataResponse) Descriptor() ([]byte, []int) {
+	return file_web_foot_lineup_proto_rawDescGZIP(), []int{16}
+}
+
+func (x *WebFootLineupAverageDataResponse) GetData() string {
+	if x != nil {
+		return x.Data
+	}
+	return ""
+}
+
+//替补阵容
+type WebFootReserveLineupRequest struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	MatchId int64 `protobuf:"varint,1,opt,name=MatchId,proto3" json:"MatchId,omitempty"`
+}
+
+func (x *WebFootReserveLineupRequest) Reset() {
+	*x = WebFootReserveLineupRequest{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_web_foot_lineup_proto_msgTypes[17]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *WebFootReserveLineupRequest) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*WebFootReserveLineupRequest) ProtoMessage() {}
+
+func (x *WebFootReserveLineupRequest) ProtoReflect() protoreflect.Message {
+	mi := &file_web_foot_lineup_proto_msgTypes[17]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use WebFootReserveLineupRequest.ProtoReflect.Descriptor instead.
+func (*WebFootReserveLineupRequest) Descriptor() ([]byte, []int) {
+	return file_web_foot_lineup_proto_rawDescGZIP(), []int{17}
+}
+
+func (x *WebFootReserveLineupRequest) GetMatchId() int64 {
+	if x != nil {
+		return x.MatchId
+	}
+	return 0
+}
+
+type WebFootReserveLineupResponse struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	TeamId    int64                        `protobuf:"varint,1,opt,name=TeamId,proto3" json:"TeamId,omitempty"`
+	TeamName  string                       `protobuf:"bytes,2,opt,name=TeamName,proto3" json:"TeamName,omitempty"`
+	TeamImage string                       `protobuf:"bytes,3,opt,name=TeamImage,proto3" json:"TeamImage,omitempty"`
+	Member    []*WebFootUndeterminedMember `protobuf:"bytes,4,rep,name=Member,proto3" json:"Member,omitempty"`
+}
+
+func (x *WebFootReserveLineupResponse) Reset() {
+	*x = WebFootReserveLineupResponse{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_web_foot_lineup_proto_msgTypes[18]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *WebFootReserveLineupResponse) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*WebFootReserveLineupResponse) ProtoMessage() {}
+
+func (x *WebFootReserveLineupResponse) ProtoReflect() protoreflect.Message {
+	mi := &file_web_foot_lineup_proto_msgTypes[18]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use WebFootReserveLineupResponse.ProtoReflect.Descriptor instead.
+func (*WebFootReserveLineupResponse) Descriptor() ([]byte, []int) {
+	return file_web_foot_lineup_proto_rawDescGZIP(), []int{18}
+}
+
+func (x *WebFootReserveLineupResponse) GetTeamId() int64 {
+	if x != nil {
+		return x.TeamId
+	}
+	return 0
+}
+
+func (x *WebFootReserveLineupResponse) GetTeamName() string {
+	if x != nil {
+		return x.TeamName
+	}
+	return ""
+}
+
+func (x *WebFootReserveLineupResponse) GetTeamImage() string {
+	if x != nil {
+		return x.TeamImage
+	}
+	return ""
+}
+
+func (x *WebFootReserveLineupResponse) GetMember() []*WebFootUndeterminedMember {
+	if x != nil {
+		return x.Member
+	}
+	return nil
+}
+
+type WebFootUndeterminedMember struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	PersonId   int64  `protobuf:"varint,1,opt,name=PersonId,proto3" json:"PersonId,omitempty"`
+	PersonName string `protobuf:"bytes,2,opt,name=PersonName,proto3" json:"PersonName,omitempty"`
+	Image      string `protobuf:"bytes,3,opt,name=Image,proto3" json:"Image,omitempty"`
+	Position   string `protobuf:"bytes,4,opt,name=Position,proto3" json:"Position,omitempty"`
+	ClothesNum int64  `protobuf:"varint,5,opt,name=ClothesNum,proto3" json:"ClothesNum,omitempty"`
+	Reason     string `protobuf:"bytes,6,opt,name=Reason,proto3" json:"Reason,omitempty"`
+}
+
+func (x *WebFootUndeterminedMember) Reset() {
+	*x = WebFootUndeterminedMember{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_web_foot_lineup_proto_msgTypes[19]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *WebFootUndeterminedMember) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*WebFootUndeterminedMember) ProtoMessage() {}
+
+func (x *WebFootUndeterminedMember) ProtoReflect() protoreflect.Message {
+	mi := &file_web_foot_lineup_proto_msgTypes[19]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use WebFootUndeterminedMember.ProtoReflect.Descriptor instead.
+func (*WebFootUndeterminedMember) Descriptor() ([]byte, []int) {
+	return file_web_foot_lineup_proto_rawDescGZIP(), []int{19}
+}
+
+func (x *WebFootUndeterminedMember) GetPersonId() int64 {
+	if x != nil {
+		return x.PersonId
+	}
+	return 0
+}
+
+func (x *WebFootUndeterminedMember) GetPersonName() string {
+	if x != nil {
+		return x.PersonName
+	}
+	return ""
+}
+
+func (x *WebFootUndeterminedMember) GetImage() string {
+	if x != nil {
+		return x.Image
+	}
+	return ""
+}
+
+func (x *WebFootUndeterminedMember) GetPosition() string {
+	if x != nil {
+		return x.Position
+	}
+	return ""
+}
+
+func (x *WebFootUndeterminedMember) GetClothesNum() int64 {
+	if x != nil {
+		return x.ClothesNum
+	}
+	return 0
+}
+
+func (x *WebFootUndeterminedMember) GetReason() string {
+	if x != nil {
+		return x.Reason
+	}
+	return ""
+}
+
 var File_web_foot_lineup_proto protoreflect.FileDescriptor
 
 var file_web_foot_lineup_proto_rawDesc = []byte{
@@ -1479,8 +1780,42 @@ var file_web_foot_lineup_proto_rawDesc = []byte{
 	0x0d, 0x41, 0x77, 0x61, 0x79, 0x48, 0x61, 0x6c, 0x66, 0x53, 0x63, 0x6f, 0x72, 0x65, 0x18, 0x12,
 	0x20, 0x01, 0x28, 0x09, 0x52, 0x0d, 0x41, 0x77, 0x61, 0x79, 0x48, 0x61, 0x6c, 0x66, 0x53, 0x63,
 	0x6f, 0x72, 0x65, 0x12, 0x16, 0x0a, 0x06, 0x57, 0x69, 0x6e, 0x6e, 0x65, 0x72, 0x18, 0x13, 0x20,
-	0x01, 0x28, 0x03, 0x52, 0x06, 0x57, 0x69, 0x6e, 0x6e, 0x65, 0x72, 0x42, 0x07, 0x5a, 0x05, 0x2e,
-	0x2f, 0x3b, 0x76, 0x31, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
+	0x01, 0x28, 0x03, 0x52, 0x06, 0x57, 0x69, 0x6e, 0x6e, 0x65, 0x72, 0x22, 0x3b, 0x0a, 0x1f, 0x57,
+	0x65, 0x62, 0x46, 0x6f, 0x6f, 0x74, 0x4c, 0x69, 0x6e, 0x65, 0x75, 0x70, 0x41, 0x76, 0x65, 0x72,
+	0x61, 0x67, 0x65, 0x44, 0x61, 0x74, 0x61, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x12, 0x18,
+	0x0a, 0x07, 0x4d, 0x61, 0x74, 0x63, 0x68, 0x49, 0x64, 0x18, 0x01, 0x20, 0x01, 0x28, 0x03, 0x52,
+	0x07, 0x4d, 0x61, 0x74, 0x63, 0x68, 0x49, 0x64, 0x22, 0x36, 0x0a, 0x20, 0x57, 0x65, 0x62, 0x46,
+	0x6f, 0x6f, 0x74, 0x4c, 0x69, 0x6e, 0x65, 0x75, 0x70, 0x41, 0x76, 0x65, 0x72, 0x61, 0x67, 0x65,
+	0x44, 0x61, 0x74, 0x61, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x12, 0x12, 0x0a, 0x04,
+	0x44, 0x61, 0x74, 0x61, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x04, 0x44, 0x61, 0x74, 0x61,
+	0x22, 0x37, 0x0a, 0x1b, 0x57, 0x65, 0x62, 0x46, 0x6f, 0x6f, 0x74, 0x52, 0x65, 0x73, 0x65, 0x72,
+	0x76, 0x65, 0x4c, 0x69, 0x6e, 0x65, 0x75, 0x70, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x12,
+	0x18, 0x0a, 0x07, 0x4d, 0x61, 0x74, 0x63, 0x68, 0x49, 0x64, 0x18, 0x01, 0x20, 0x01, 0x28, 0x03,
+	0x52, 0x07, 0x4d, 0x61, 0x74, 0x63, 0x68, 0x49, 0x64, 0x22, 0xa4, 0x01, 0x0a, 0x1c, 0x57, 0x65,
+	0x62, 0x46, 0x6f, 0x6f, 0x74, 0x52, 0x65, 0x73, 0x65, 0x72, 0x76, 0x65, 0x4c, 0x69, 0x6e, 0x65,
+	0x75, 0x70, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x12, 0x16, 0x0a, 0x06, 0x54, 0x65,
+	0x61, 0x6d, 0x49, 0x64, 0x18, 0x01, 0x20, 0x01, 0x28, 0x03, 0x52, 0x06, 0x54, 0x65, 0x61, 0x6d,
+	0x49, 0x64, 0x12, 0x1a, 0x0a, 0x08, 0x54, 0x65, 0x61, 0x6d, 0x4e, 0x61, 0x6d, 0x65, 0x18, 0x02,
+	0x20, 0x01, 0x28, 0x09, 0x52, 0x08, 0x54, 0x65, 0x61, 0x6d, 0x4e, 0x61, 0x6d, 0x65, 0x12, 0x1c,
+	0x0a, 0x09, 0x54, 0x65, 0x61, 0x6d, 0x49, 0x6d, 0x61, 0x67, 0x65, 0x18, 0x03, 0x20, 0x01, 0x28,
+	0x09, 0x52, 0x09, 0x54, 0x65, 0x61, 0x6d, 0x49, 0x6d, 0x61, 0x67, 0x65, 0x12, 0x32, 0x0a, 0x06,
+	0x4d, 0x65, 0x6d, 0x62, 0x65, 0x72, 0x18, 0x04, 0x20, 0x03, 0x28, 0x0b, 0x32, 0x1a, 0x2e, 0x57,
+	0x65, 0x62, 0x46, 0x6f, 0x6f, 0x74, 0x55, 0x6e, 0x64, 0x65, 0x74, 0x65, 0x72, 0x6d, 0x69, 0x6e,
+	0x65, 0x64, 0x4d, 0x65, 0x6d, 0x62, 0x65, 0x72, 0x52, 0x06, 0x4d, 0x65, 0x6d, 0x62, 0x65, 0x72,
+	0x22, 0xc1, 0x01, 0x0a, 0x19, 0x57, 0x65, 0x62, 0x46, 0x6f, 0x6f, 0x74, 0x55, 0x6e, 0x64, 0x65,
+	0x74, 0x65, 0x72, 0x6d, 0x69, 0x6e, 0x65, 0x64, 0x4d, 0x65, 0x6d, 0x62, 0x65, 0x72, 0x12, 0x1a,
+	0x0a, 0x08, 0x50, 0x65, 0x72, 0x73, 0x6f, 0x6e, 0x49, 0x64, 0x18, 0x01, 0x20, 0x01, 0x28, 0x03,
+	0x52, 0x08, 0x50, 0x65, 0x72, 0x73, 0x6f, 0x6e, 0x49, 0x64, 0x12, 0x1e, 0x0a, 0x0a, 0x50, 0x65,
+	0x72, 0x73, 0x6f, 0x6e, 0x4e, 0x61, 0x6d, 0x65, 0x18, 0x02, 0x20, 0x01, 0x28, 0x09, 0x52, 0x0a,
+	0x50, 0x65, 0x72, 0x73, 0x6f, 0x6e, 0x4e, 0x61, 0x6d, 0x65, 0x12, 0x14, 0x0a, 0x05, 0x49, 0x6d,
+	0x61, 0x67, 0x65, 0x18, 0x03, 0x20, 0x01, 0x28, 0x09, 0x52, 0x05, 0x49, 0x6d, 0x61, 0x67, 0x65,
+	0x12, 0x1a, 0x0a, 0x08, 0x50, 0x6f, 0x73, 0x69, 0x74, 0x69, 0x6f, 0x6e, 0x18, 0x04, 0x20, 0x01,
+	0x28, 0x09, 0x52, 0x08, 0x50, 0x6f, 0x73, 0x69, 0x74, 0x69, 0x6f, 0x6e, 0x12, 0x1e, 0x0a, 0x0a,
+	0x43, 0x6c, 0x6f, 0x74, 0x68, 0x65, 0x73, 0x4e, 0x75, 0x6d, 0x18, 0x05, 0x20, 0x01, 0x28, 0x03,
+	0x52, 0x0a, 0x43, 0x6c, 0x6f, 0x74, 0x68, 0x65, 0x73, 0x4e, 0x75, 0x6d, 0x12, 0x16, 0x0a, 0x06,
+	0x52, 0x65, 0x61, 0x73, 0x6f, 0x6e, 0x18, 0x06, 0x20, 0x01, 0x28, 0x09, 0x52, 0x06, 0x52, 0x65,
+	0x61, 0x73, 0x6f, 0x6e, 0x42, 0x07, 0x5a, 0x05, 0x2e, 0x2f, 0x3b, 0x76, 0x31, 0x62, 0x06, 0x70,
+	0x72, 0x6f, 0x74, 0x6f, 0x33,
 }
 
 var (
@@ -1495,7 +1830,7 @@ func file_web_foot_lineup_proto_rawDescGZIP() []byte {
 	return file_web_foot_lineup_proto_rawDescData
 }
 
-var file_web_foot_lineup_proto_msgTypes = make([]protoimpl.MessageInfo, 15)
+var file_web_foot_lineup_proto_msgTypes = make([]protoimpl.MessageInfo, 20)
 var file_web_foot_lineup_proto_goTypes = []interface{}{
 	(*WebFootMatchLineupRequest)(nil),            // 0: WebFootMatchLineupRequest
 	(*WebFootMatchLineupResponse)(nil),           // 1: WebFootMatchLineupResponse
@@ -1512,6 +1847,11 @@ var file_web_foot_lineup_proto_goTypes = []interface{}{
 	(*WebFootLineupSameFormationRequest)(nil),    // 12: WebFootLineupSameFormationRequest
 	(*WebFootLineupSameFormationResponse)(nil),   // 13: WebFootLineupSameFormationResponse
 	(*WebFootLineupSameFormation)(nil),           // 14: WebFootLineupSameFormation
+	(*WebFootLineupAverageDataRequest)(nil),      // 15: WebFootLineupAverageDataRequest
+	(*WebFootLineupAverageDataResponse)(nil),     // 16: WebFootLineupAverageDataResponse
+	(*WebFootReserveLineupRequest)(nil),          // 17: WebFootReserveLineupRequest
+	(*WebFootReserveLineupResponse)(nil),         // 18: WebFootReserveLineupResponse
+	(*WebFootUndeterminedMember)(nil),            // 19: WebFootUndeterminedMember
 }
 var file_web_foot_lineup_proto_depIdxs = []int32{
 	2,  // 0: WebFootMatchLineupResponse.starting_main:type_name -> WebFootMatchLineup
@@ -1526,11 +1866,12 @@ var file_web_foot_lineup_proto_depIdxs = []int32{
 	10, // 9: WebFootLiveLineupInjuryResponse.away:type_name -> WebFootLiveLineupInjuryInfo
 	11, // 10: WebFootLiveLineupInjuryInfo.Member:type_name -> WebFootLiveLineupInjuryMember
 	14, // 11: WebFootLineupSameFormationResponse.data:type_name -> WebFootLineupSameFormation
-	12, // [12:12] is the sub-list for method output_type
-	12, // [12:12] is the sub-list for method input_type
-	12, // [12:12] is the sub-list for extension type_name
-	12, // [12:12] is the sub-list for extension extendee
-	0,  // [0:12] is the sub-list for field type_name
+	19, // 12: WebFootReserveLineupResponse.Member:type_name -> WebFootUndeterminedMember
+	13, // [13:13] is the sub-list for method output_type
+	13, // [13:13] is the sub-list for method input_type
+	13, // [13:13] is the sub-list for extension type_name
+	13, // [13:13] is the sub-list for extension extendee
+	0,  // [0:13] is the sub-list for field type_name
 }
 
 func init() { file_web_foot_lineup_proto_init() }
@@ -1719,6 +2060,66 @@ func file_web_foot_lineup_proto_init() {
 				return nil
 			}
 		}
+		file_web_foot_lineup_proto_msgTypes[15].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*WebFootLineupAverageDataRequest); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_web_foot_lineup_proto_msgTypes[16].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*WebFootLineupAverageDataResponse); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_web_foot_lineup_proto_msgTypes[17].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*WebFootReserveLineupRequest); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_web_foot_lineup_proto_msgTypes[18].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*WebFootReserveLineupResponse); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_web_foot_lineup_proto_msgTypes[19].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*WebFootUndeterminedMember); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
 	}
 	type x struct{}
 	out := protoimpl.TypeBuilder{
@@ -1726,7 +2127,7 @@ func file_web_foot_lineup_proto_init() {
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: file_web_foot_lineup_proto_rawDesc,
 			NumEnums:      0,
-			NumMessages:   15,
+			NumMessages:   20,
 			NumExtensions: 0,
 			NumServices:   0,
 		},
