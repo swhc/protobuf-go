@@ -1557,6 +1557,418 @@ func (x *V2TeamCommonFormationInfo) GetPlayerId() int64 {
 	return 0
 }
 
+//球队详情 - 球队的冠军信息
+type V2FootTeamChampionRequest struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	Language string `protobuf:"bytes,1,opt,name=language,proto3" json:"language,omitempty"` //请求语言
+	TeamId   int64  `protobuf:"varint,2,opt,name=teamId,proto3" json:"teamId,omitempty"`    //球队ID
+}
+
+func (x *V2FootTeamChampionRequest) Reset() {
+	*x = V2FootTeamChampionRequest{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_v2_foot_team_detail_proto_msgTypes[22]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *V2FootTeamChampionRequest) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*V2FootTeamChampionRequest) ProtoMessage() {}
+
+func (x *V2FootTeamChampionRequest) ProtoReflect() protoreflect.Message {
+	mi := &file_v2_foot_team_detail_proto_msgTypes[22]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use V2FootTeamChampionRequest.ProtoReflect.Descriptor instead.
+func (*V2FootTeamChampionRequest) Descriptor() ([]byte, []int) {
+	return file_v2_foot_team_detail_proto_rawDescGZIP(), []int{22}
+}
+
+func (x *V2FootTeamChampionRequest) GetLanguage() string {
+	if x != nil {
+		return x.Language
+	}
+	return ""
+}
+
+func (x *V2FootTeamChampionRequest) GetTeamId() int64 {
+	if x != nil {
+		return x.TeamId
+	}
+	return 0
+}
+
+type V2FootTeamChampionResponse struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	Info []*V2FootTeamChampionInfo `protobuf:"bytes,1,rep,name=info,proto3" json:"info,omitempty"`
+}
+
+func (x *V2FootTeamChampionResponse) Reset() {
+	*x = V2FootTeamChampionResponse{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_v2_foot_team_detail_proto_msgTypes[23]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *V2FootTeamChampionResponse) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*V2FootTeamChampionResponse) ProtoMessage() {}
+
+func (x *V2FootTeamChampionResponse) ProtoReflect() protoreflect.Message {
+	mi := &file_v2_foot_team_detail_proto_msgTypes[23]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use V2FootTeamChampionResponse.ProtoReflect.Descriptor instead.
+func (*V2FootTeamChampionResponse) Descriptor() ([]byte, []int) {
+	return file_v2_foot_team_detail_proto_rawDescGZIP(), []int{23}
+}
+
+func (x *V2FootTeamChampionResponse) GetInfo() []*V2FootTeamChampionInfo {
+	if x != nil {
+		return x.Info
+	}
+	return nil
+}
+
+type V2FootTeamChampionInfo struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	TournamentId   int64  `protobuf:"varint,1,opt,name=tournamentId,proto3" json:"tournamentId,omitempty"`    //联赛ID
+	TournamentName string `protobuf:"bytes,2,opt,name=tournamentName,proto3" json:"tournamentName,omitempty"` //联赛名称
+	TournamentLogo string `protobuf:"bytes,3,opt,name=tournamentLogo,proto3" json:"tournamentLogo,omitempty"` //联赛图片
+	Seasons        string `protobuf:"bytes,4,opt,name=seasons,proto3" json:"seasons,omitempty"`               //赛季
+}
+
+func (x *V2FootTeamChampionInfo) Reset() {
+	*x = V2FootTeamChampionInfo{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_v2_foot_team_detail_proto_msgTypes[24]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *V2FootTeamChampionInfo) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*V2FootTeamChampionInfo) ProtoMessage() {}
+
+func (x *V2FootTeamChampionInfo) ProtoReflect() protoreflect.Message {
+	mi := &file_v2_foot_team_detail_proto_msgTypes[24]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use V2FootTeamChampionInfo.ProtoReflect.Descriptor instead.
+func (*V2FootTeamChampionInfo) Descriptor() ([]byte, []int) {
+	return file_v2_foot_team_detail_proto_rawDescGZIP(), []int{24}
+}
+
+func (x *V2FootTeamChampionInfo) GetTournamentId() int64 {
+	if x != nil {
+		return x.TournamentId
+	}
+	return 0
+}
+
+func (x *V2FootTeamChampionInfo) GetTournamentName() string {
+	if x != nil {
+		return x.TournamentName
+	}
+	return ""
+}
+
+func (x *V2FootTeamChampionInfo) GetTournamentLogo() string {
+	if x != nil {
+		return x.TournamentLogo
+	}
+	return ""
+}
+
+func (x *V2FootTeamChampionInfo) GetSeasons() string {
+	if x != nil {
+		return x.Seasons
+	}
+	return ""
+}
+
+//球队详情 - 球队的事件统计信息
+type V2FootTeamIncidentRequest struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	Language string `protobuf:"bytes,1,opt,name=language,proto3" json:"language,omitempty"`  //请求语言
+	TeamId   int64  `protobuf:"varint,2,opt,name=teamId,proto3" json:"teamId,omitempty"`     //球队ID
+	SeasonId int64  `protobuf:"varint,3,opt,name=seasonId,proto3" json:"seasonId,omitempty"` //赛季ID
+}
+
+func (x *V2FootTeamIncidentRequest) Reset() {
+	*x = V2FootTeamIncidentRequest{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_v2_foot_team_detail_proto_msgTypes[25]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *V2FootTeamIncidentRequest) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*V2FootTeamIncidentRequest) ProtoMessage() {}
+
+func (x *V2FootTeamIncidentRequest) ProtoReflect() protoreflect.Message {
+	mi := &file_v2_foot_team_detail_proto_msgTypes[25]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use V2FootTeamIncidentRequest.ProtoReflect.Descriptor instead.
+func (*V2FootTeamIncidentRequest) Descriptor() ([]byte, []int) {
+	return file_v2_foot_team_detail_proto_rawDescGZIP(), []int{25}
+}
+
+func (x *V2FootTeamIncidentRequest) GetLanguage() string {
+	if x != nil {
+		return x.Language
+	}
+	return ""
+}
+
+func (x *V2FootTeamIncidentRequest) GetTeamId() int64 {
+	if x != nil {
+		return x.TeamId
+	}
+	return 0
+}
+
+func (x *V2FootTeamIncidentRequest) GetSeasonId() int64 {
+	if x != nil {
+		return x.SeasonId
+	}
+	return 0
+}
+
+type V2FootTeamIncidentResponse struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	Matchs  int64                     `protobuf:"varint,1,opt,name=matchs,proto3" json:"matchs,omitempty"`   //总比赛场次
+	Goals   int64                     `protobuf:"varint,2,opt,name=goals,proto3" json:"goals,omitempty"`     //总进球数
+	Yellows int64                     `protobuf:"varint,3,opt,name=yellows,proto3" json:"yellows,omitempty"` //总黄牌数
+	Reds    int64                     `protobuf:"varint,4,opt,name=reds,proto3" json:"reds,omitempty"`       //总红牌数
+	Info    []*V2FootTeamIncidentInfo `protobuf:"bytes,5,rep,name=info,proto3" json:"info,omitempty"`
+}
+
+func (x *V2FootTeamIncidentResponse) Reset() {
+	*x = V2FootTeamIncidentResponse{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_v2_foot_team_detail_proto_msgTypes[26]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *V2FootTeamIncidentResponse) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*V2FootTeamIncidentResponse) ProtoMessage() {}
+
+func (x *V2FootTeamIncidentResponse) ProtoReflect() protoreflect.Message {
+	mi := &file_v2_foot_team_detail_proto_msgTypes[26]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use V2FootTeamIncidentResponse.ProtoReflect.Descriptor instead.
+func (*V2FootTeamIncidentResponse) Descriptor() ([]byte, []int) {
+	return file_v2_foot_team_detail_proto_rawDescGZIP(), []int{26}
+}
+
+func (x *V2FootTeamIncidentResponse) GetMatchs() int64 {
+	if x != nil {
+		return x.Matchs
+	}
+	return 0
+}
+
+func (x *V2FootTeamIncidentResponse) GetGoals() int64 {
+	if x != nil {
+		return x.Goals
+	}
+	return 0
+}
+
+func (x *V2FootTeamIncidentResponse) GetYellows() int64 {
+	if x != nil {
+		return x.Yellows
+	}
+	return 0
+}
+
+func (x *V2FootTeamIncidentResponse) GetReds() int64 {
+	if x != nil {
+		return x.Reds
+	}
+	return 0
+}
+
+func (x *V2FootTeamIncidentResponse) GetInfo() []*V2FootTeamIncidentInfo {
+	if x != nil {
+		return x.Info
+	}
+	return nil
+}
+
+type V2FootTeamIncidentInfo struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	TournamentId   int64  `protobuf:"varint,1,opt,name=tournamentId,proto3" json:"tournamentId,omitempty"`    //联赛ID
+	TournamentName string `protobuf:"bytes,2,opt,name=tournamentName,proto3" json:"tournamentName,omitempty"` //联赛名称
+	TournamentLogo string `protobuf:"bytes,3,opt,name=tournamentLogo,proto3" json:"tournamentLogo,omitempty"` //联赛图片
+	Match          int64  `protobuf:"varint,4,opt,name=match,proto3" json:"match,omitempty"`                  //比赛场次
+	Goal           int64  `protobuf:"varint,5,opt,name=goal,proto3" json:"goal,omitempty"`                    //进球数
+	Yellow         int64  `protobuf:"varint,6,opt,name=yellow,proto3" json:"yellow,omitempty"`                //黄牌数
+	Red            int64  `protobuf:"varint,7,opt,name=red,proto3" json:"red,omitempty"`                      //红牌数
+}
+
+func (x *V2FootTeamIncidentInfo) Reset() {
+	*x = V2FootTeamIncidentInfo{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_v2_foot_team_detail_proto_msgTypes[27]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *V2FootTeamIncidentInfo) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*V2FootTeamIncidentInfo) ProtoMessage() {}
+
+func (x *V2FootTeamIncidentInfo) ProtoReflect() protoreflect.Message {
+	mi := &file_v2_foot_team_detail_proto_msgTypes[27]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use V2FootTeamIncidentInfo.ProtoReflect.Descriptor instead.
+func (*V2FootTeamIncidentInfo) Descriptor() ([]byte, []int) {
+	return file_v2_foot_team_detail_proto_rawDescGZIP(), []int{27}
+}
+
+func (x *V2FootTeamIncidentInfo) GetTournamentId() int64 {
+	if x != nil {
+		return x.TournamentId
+	}
+	return 0
+}
+
+func (x *V2FootTeamIncidentInfo) GetTournamentName() string {
+	if x != nil {
+		return x.TournamentName
+	}
+	return ""
+}
+
+func (x *V2FootTeamIncidentInfo) GetTournamentLogo() string {
+	if x != nil {
+		return x.TournamentLogo
+	}
+	return ""
+}
+
+func (x *V2FootTeamIncidentInfo) GetMatch() int64 {
+	if x != nil {
+		return x.Match
+	}
+	return 0
+}
+
+func (x *V2FootTeamIncidentInfo) GetGoal() int64 {
+	if x != nil {
+		return x.Goal
+	}
+	return 0
+}
+
+func (x *V2FootTeamIncidentInfo) GetYellow() int64 {
+	if x != nil {
+		return x.Yellow
+	}
+	return 0
+}
+
+func (x *V2FootTeamIncidentInfo) GetRed() int64 {
+	if x != nil {
+		return x.Red
+	}
+	return 0
+}
+
 var File_v2_foot_team_detail_proto protoreflect.FileDescriptor
 
 var file_v2_foot_team_detail_proto_rawDesc = []byte{
@@ -1753,8 +2165,60 @@ var file_v2_foot_team_detail_proto_rawDesc = []byte{
 	0x79, 0x65, 0x72, 0x4c, 0x6f, 0x67, 0x6f, 0x18, 0x07, 0x20, 0x01, 0x28, 0x09, 0x52, 0x0a, 0x70,
 	0x6c, 0x61, 0x79, 0x65, 0x72, 0x4c, 0x6f, 0x67, 0x6f, 0x12, 0x1a, 0x0a, 0x08, 0x70, 0x6c, 0x61,
 	0x79, 0x65, 0x72, 0x49, 0x64, 0x18, 0x06, 0x20, 0x01, 0x28, 0x03, 0x52, 0x08, 0x70, 0x6c, 0x61,
-	0x79, 0x65, 0x72, 0x49, 0x64, 0x42, 0x07, 0x5a, 0x05, 0x2e, 0x2f, 0x3b, 0x76, 0x31, 0x62, 0x06,
-	0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
+	0x79, 0x65, 0x72, 0x49, 0x64, 0x22, 0x4f, 0x0a, 0x19, 0x56, 0x32, 0x46, 0x6f, 0x6f, 0x74, 0x54,
+	0x65, 0x61, 0x6d, 0x43, 0x68, 0x61, 0x6d, 0x70, 0x69, 0x6f, 0x6e, 0x52, 0x65, 0x71, 0x75, 0x65,
+	0x73, 0x74, 0x12, 0x1a, 0x0a, 0x08, 0x6c, 0x61, 0x6e, 0x67, 0x75, 0x61, 0x67, 0x65, 0x18, 0x01,
+	0x20, 0x01, 0x28, 0x09, 0x52, 0x08, 0x6c, 0x61, 0x6e, 0x67, 0x75, 0x61, 0x67, 0x65, 0x12, 0x16,
+	0x0a, 0x06, 0x74, 0x65, 0x61, 0x6d, 0x49, 0x64, 0x18, 0x02, 0x20, 0x01, 0x28, 0x03, 0x52, 0x06,
+	0x74, 0x65, 0x61, 0x6d, 0x49, 0x64, 0x22, 0x49, 0x0a, 0x1a, 0x56, 0x32, 0x46, 0x6f, 0x6f, 0x74,
+	0x54, 0x65, 0x61, 0x6d, 0x43, 0x68, 0x61, 0x6d, 0x70, 0x69, 0x6f, 0x6e, 0x52, 0x65, 0x73, 0x70,
+	0x6f, 0x6e, 0x73, 0x65, 0x12, 0x2b, 0x0a, 0x04, 0x69, 0x6e, 0x66, 0x6f, 0x18, 0x01, 0x20, 0x03,
+	0x28, 0x0b, 0x32, 0x17, 0x2e, 0x56, 0x32, 0x46, 0x6f, 0x6f, 0x74, 0x54, 0x65, 0x61, 0x6d, 0x43,
+	0x68, 0x61, 0x6d, 0x70, 0x69, 0x6f, 0x6e, 0x49, 0x6e, 0x66, 0x6f, 0x52, 0x04, 0x69, 0x6e, 0x66,
+	0x6f, 0x22, 0xa6, 0x01, 0x0a, 0x16, 0x56, 0x32, 0x46, 0x6f, 0x6f, 0x74, 0x54, 0x65, 0x61, 0x6d,
+	0x43, 0x68, 0x61, 0x6d, 0x70, 0x69, 0x6f, 0x6e, 0x49, 0x6e, 0x66, 0x6f, 0x12, 0x22, 0x0a, 0x0c,
+	0x74, 0x6f, 0x75, 0x72, 0x6e, 0x61, 0x6d, 0x65, 0x6e, 0x74, 0x49, 0x64, 0x18, 0x01, 0x20, 0x01,
+	0x28, 0x03, 0x52, 0x0c, 0x74, 0x6f, 0x75, 0x72, 0x6e, 0x61, 0x6d, 0x65, 0x6e, 0x74, 0x49, 0x64,
+	0x12, 0x26, 0x0a, 0x0e, 0x74, 0x6f, 0x75, 0x72, 0x6e, 0x61, 0x6d, 0x65, 0x6e, 0x74, 0x4e, 0x61,
+	0x6d, 0x65, 0x18, 0x02, 0x20, 0x01, 0x28, 0x09, 0x52, 0x0e, 0x74, 0x6f, 0x75, 0x72, 0x6e, 0x61,
+	0x6d, 0x65, 0x6e, 0x74, 0x4e, 0x61, 0x6d, 0x65, 0x12, 0x26, 0x0a, 0x0e, 0x74, 0x6f, 0x75, 0x72,
+	0x6e, 0x61, 0x6d, 0x65, 0x6e, 0x74, 0x4c, 0x6f, 0x67, 0x6f, 0x18, 0x03, 0x20, 0x01, 0x28, 0x09,
+	0x52, 0x0e, 0x74, 0x6f, 0x75, 0x72, 0x6e, 0x61, 0x6d, 0x65, 0x6e, 0x74, 0x4c, 0x6f, 0x67, 0x6f,
+	0x12, 0x18, 0x0a, 0x07, 0x73, 0x65, 0x61, 0x73, 0x6f, 0x6e, 0x73, 0x18, 0x04, 0x20, 0x01, 0x28,
+	0x09, 0x52, 0x07, 0x73, 0x65, 0x61, 0x73, 0x6f, 0x6e, 0x73, 0x22, 0x6b, 0x0a, 0x19, 0x56, 0x32,
+	0x46, 0x6f, 0x6f, 0x74, 0x54, 0x65, 0x61, 0x6d, 0x49, 0x6e, 0x63, 0x69, 0x64, 0x65, 0x6e, 0x74,
+	0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x12, 0x1a, 0x0a, 0x08, 0x6c, 0x61, 0x6e, 0x67, 0x75,
+	0x61, 0x67, 0x65, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x08, 0x6c, 0x61, 0x6e, 0x67, 0x75,
+	0x61, 0x67, 0x65, 0x12, 0x16, 0x0a, 0x06, 0x74, 0x65, 0x61, 0x6d, 0x49, 0x64, 0x18, 0x02, 0x20,
+	0x01, 0x28, 0x03, 0x52, 0x06, 0x74, 0x65, 0x61, 0x6d, 0x49, 0x64, 0x12, 0x1a, 0x0a, 0x08, 0x73,
+	0x65, 0x61, 0x73, 0x6f, 0x6e, 0x49, 0x64, 0x18, 0x03, 0x20, 0x01, 0x28, 0x03, 0x52, 0x08, 0x73,
+	0x65, 0x61, 0x73, 0x6f, 0x6e, 0x49, 0x64, 0x22, 0xa5, 0x01, 0x0a, 0x1a, 0x56, 0x32, 0x46, 0x6f,
+	0x6f, 0x74, 0x54, 0x65, 0x61, 0x6d, 0x49, 0x6e, 0x63, 0x69, 0x64, 0x65, 0x6e, 0x74, 0x52, 0x65,
+	0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x12, 0x16, 0x0a, 0x06, 0x6d, 0x61, 0x74, 0x63, 0x68, 0x73,
+	0x18, 0x01, 0x20, 0x01, 0x28, 0x03, 0x52, 0x06, 0x6d, 0x61, 0x74, 0x63, 0x68, 0x73, 0x12, 0x14,
+	0x0a, 0x05, 0x67, 0x6f, 0x61, 0x6c, 0x73, 0x18, 0x02, 0x20, 0x01, 0x28, 0x03, 0x52, 0x05, 0x67,
+	0x6f, 0x61, 0x6c, 0x73, 0x12, 0x18, 0x0a, 0x07, 0x79, 0x65, 0x6c, 0x6c, 0x6f, 0x77, 0x73, 0x18,
+	0x03, 0x20, 0x01, 0x28, 0x03, 0x52, 0x07, 0x79, 0x65, 0x6c, 0x6c, 0x6f, 0x77, 0x73, 0x12, 0x12,
+	0x0a, 0x04, 0x72, 0x65, 0x64, 0x73, 0x18, 0x04, 0x20, 0x01, 0x28, 0x03, 0x52, 0x04, 0x72, 0x65,
+	0x64, 0x73, 0x12, 0x2b, 0x0a, 0x04, 0x69, 0x6e, 0x66, 0x6f, 0x18, 0x05, 0x20, 0x03, 0x28, 0x0b,
+	0x32, 0x17, 0x2e, 0x56, 0x32, 0x46, 0x6f, 0x6f, 0x74, 0x54, 0x65, 0x61, 0x6d, 0x49, 0x6e, 0x63,
+	0x69, 0x64, 0x65, 0x6e, 0x74, 0x49, 0x6e, 0x66, 0x6f, 0x52, 0x04, 0x69, 0x6e, 0x66, 0x6f, 0x22,
+	0xe0, 0x01, 0x0a, 0x16, 0x56, 0x32, 0x46, 0x6f, 0x6f, 0x74, 0x54, 0x65, 0x61, 0x6d, 0x49, 0x6e,
+	0x63, 0x69, 0x64, 0x65, 0x6e, 0x74, 0x49, 0x6e, 0x66, 0x6f, 0x12, 0x22, 0x0a, 0x0c, 0x74, 0x6f,
+	0x75, 0x72, 0x6e, 0x61, 0x6d, 0x65, 0x6e, 0x74, 0x49, 0x64, 0x18, 0x01, 0x20, 0x01, 0x28, 0x03,
+	0x52, 0x0c, 0x74, 0x6f, 0x75, 0x72, 0x6e, 0x61, 0x6d, 0x65, 0x6e, 0x74, 0x49, 0x64, 0x12, 0x26,
+	0x0a, 0x0e, 0x74, 0x6f, 0x75, 0x72, 0x6e, 0x61, 0x6d, 0x65, 0x6e, 0x74, 0x4e, 0x61, 0x6d, 0x65,
+	0x18, 0x02, 0x20, 0x01, 0x28, 0x09, 0x52, 0x0e, 0x74, 0x6f, 0x75, 0x72, 0x6e, 0x61, 0x6d, 0x65,
+	0x6e, 0x74, 0x4e, 0x61, 0x6d, 0x65, 0x12, 0x26, 0x0a, 0x0e, 0x74, 0x6f, 0x75, 0x72, 0x6e, 0x61,
+	0x6d, 0x65, 0x6e, 0x74, 0x4c, 0x6f, 0x67, 0x6f, 0x18, 0x03, 0x20, 0x01, 0x28, 0x09, 0x52, 0x0e,
+	0x74, 0x6f, 0x75, 0x72, 0x6e, 0x61, 0x6d, 0x65, 0x6e, 0x74, 0x4c, 0x6f, 0x67, 0x6f, 0x12, 0x14,
+	0x0a, 0x05, 0x6d, 0x61, 0x74, 0x63, 0x68, 0x18, 0x04, 0x20, 0x01, 0x28, 0x03, 0x52, 0x05, 0x6d,
+	0x61, 0x74, 0x63, 0x68, 0x12, 0x12, 0x0a, 0x04, 0x67, 0x6f, 0x61, 0x6c, 0x18, 0x05, 0x20, 0x01,
+	0x28, 0x03, 0x52, 0x04, 0x67, 0x6f, 0x61, 0x6c, 0x12, 0x16, 0x0a, 0x06, 0x79, 0x65, 0x6c, 0x6c,
+	0x6f, 0x77, 0x18, 0x06, 0x20, 0x01, 0x28, 0x03, 0x52, 0x06, 0x79, 0x65, 0x6c, 0x6c, 0x6f, 0x77,
+	0x12, 0x10, 0x0a, 0x03, 0x72, 0x65, 0x64, 0x18, 0x07, 0x20, 0x01, 0x28, 0x03, 0x52, 0x03, 0x72,
+	0x65, 0x64, 0x42, 0x07, 0x5a, 0x05, 0x2e, 0x2f, 0x3b, 0x76, 0x31, 0x62, 0x06, 0x70, 0x72, 0x6f,
+	0x74, 0x6f, 0x33,
 }
 
 var (
@@ -1769,7 +2233,7 @@ func file_v2_foot_team_detail_proto_rawDescGZIP() []byte {
 	return file_v2_foot_team_detail_proto_rawDescData
 }
 
-var file_v2_foot_team_detail_proto_msgTypes = make([]protoimpl.MessageInfo, 22)
+var file_v2_foot_team_detail_proto_msgTypes = make([]protoimpl.MessageInfo, 28)
 var file_v2_foot_team_detail_proto_goTypes = []interface{}{
 	(*V2FootTeamPlayerRequest)(nil),           // 0: V2FootTeamPlayerRequest
 	(*V2FootTeamPlayerResponse)(nil),          // 1: V2FootTeamPlayerResponse
@@ -1793,6 +2257,12 @@ var file_v2_foot_team_detail_proto_goTypes = []interface{}{
 	(*V2FootTeamCommonFormationRequest)(nil),  // 19: V2FootTeamCommonFormationRequest
 	(*V2FootTeamCommonFormationResponse)(nil), // 20: V2FootTeamCommonFormationResponse
 	(*V2TeamCommonFormationInfo)(nil),         // 21: V2TeamCommonFormationInfo
+	(*V2FootTeamChampionRequest)(nil),         // 22: V2FootTeamChampionRequest
+	(*V2FootTeamChampionResponse)(nil),        // 23: V2FootTeamChampionResponse
+	(*V2FootTeamChampionInfo)(nil),            // 24: V2FootTeamChampionInfo
+	(*V2FootTeamIncidentRequest)(nil),         // 25: V2FootTeamIncidentRequest
+	(*V2FootTeamIncidentResponse)(nil),        // 26: V2FootTeamIncidentResponse
+	(*V2FootTeamIncidentInfo)(nil),            // 27: V2FootTeamIncidentInfo
 }
 var file_v2_foot_team_detail_proto_depIdxs = []int32{
 	3,  // 0: V2FootTeamPlayerResponse.back:type_name -> V2FootTeamPlayerBack
@@ -1806,11 +2276,13 @@ var file_v2_foot_team_detail_proto_depIdxs = []int32{
 	15, // 8: V2FootTeamStatsResponse.Data:type_name -> V2FootTeamStats
 	18, // 9: V2FootTeamSeasonListResponse.Data:type_name -> V2FootTeamSeasonList
 	21, // 10: V2FootTeamCommonFormationResponse.lineup:type_name -> V2TeamCommonFormationInfo
-	11, // [11:11] is the sub-list for method output_type
-	11, // [11:11] is the sub-list for method input_type
-	11, // [11:11] is the sub-list for extension type_name
-	11, // [11:11] is the sub-list for extension extendee
-	0,  // [0:11] is the sub-list for field type_name
+	24, // 11: V2FootTeamChampionResponse.info:type_name -> V2FootTeamChampionInfo
+	27, // 12: V2FootTeamIncidentResponse.info:type_name -> V2FootTeamIncidentInfo
+	13, // [13:13] is the sub-list for method output_type
+	13, // [13:13] is the sub-list for method input_type
+	13, // [13:13] is the sub-list for extension type_name
+	13, // [13:13] is the sub-list for extension extendee
+	0,  // [0:13] is the sub-list for field type_name
 }
 
 func init() { file_v2_foot_team_detail_proto_init() }
@@ -2083,6 +2555,78 @@ func file_v2_foot_team_detail_proto_init() {
 				return nil
 			}
 		}
+		file_v2_foot_team_detail_proto_msgTypes[22].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*V2FootTeamChampionRequest); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_v2_foot_team_detail_proto_msgTypes[23].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*V2FootTeamChampionResponse); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_v2_foot_team_detail_proto_msgTypes[24].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*V2FootTeamChampionInfo); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_v2_foot_team_detail_proto_msgTypes[25].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*V2FootTeamIncidentRequest); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_v2_foot_team_detail_proto_msgTypes[26].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*V2FootTeamIncidentResponse); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_v2_foot_team_detail_proto_msgTypes[27].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*V2FootTeamIncidentInfo); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
 	}
 	type x struct{}
 	out := protoimpl.TypeBuilder{
@@ -2090,7 +2634,7 @@ func file_v2_foot_team_detail_proto_init() {
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: file_v2_foot_team_detail_proto_rawDesc,
 			NumEnums:      0,
-			NumMessages:   22,
+			NumMessages:   28,
 			NumExtensions: 0,
 			NumServices:   0,
 		},
