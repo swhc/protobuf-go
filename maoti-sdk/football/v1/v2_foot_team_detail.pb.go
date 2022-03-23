@@ -1969,6 +1969,180 @@ func (x *V2FootTeamIncidentInfo) GetRed() int64 {
 	return 0
 }
 
+type V2FootTeamFeaturesRequest struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	Language string `protobuf:"bytes,1,opt,name=language,proto3" json:"language,omitempty"` //请求语言
+	TeamId   int64  `protobuf:"varint,2,opt,name=teamId,proto3" json:"teamId,omitempty"`    //球队ID
+}
+
+func (x *V2FootTeamFeaturesRequest) Reset() {
+	*x = V2FootTeamFeaturesRequest{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_v2_foot_team_detail_proto_msgTypes[28]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *V2FootTeamFeaturesRequest) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*V2FootTeamFeaturesRequest) ProtoMessage() {}
+
+func (x *V2FootTeamFeaturesRequest) ProtoReflect() protoreflect.Message {
+	mi := &file_v2_foot_team_detail_proto_msgTypes[28]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use V2FootTeamFeaturesRequest.ProtoReflect.Descriptor instead.
+func (*V2FootTeamFeaturesRequest) Descriptor() ([]byte, []int) {
+	return file_v2_foot_team_detail_proto_rawDescGZIP(), []int{28}
+}
+
+func (x *V2FootTeamFeaturesRequest) GetLanguage() string {
+	if x != nil {
+		return x.Language
+	}
+	return ""
+}
+
+func (x *V2FootTeamFeaturesRequest) GetTeamId() int64 {
+	if x != nil {
+		return x.TeamId
+	}
+	return 0
+}
+
+type V2FootTeamFeaturesResponse struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	Offensive   float32  `protobuf:"fixed32,1,opt,name=offensive,proto3" json:"offensive,omitempty"`                        //进攻评分
+	Defensive   float32  `protobuf:"fixed32,2,opt,name=defensive,proto3" json:"defensive,omitempty"`                        //防守评分
+	Tactical    float32  `protobuf:"fixed32,3,opt,name=tactical,proto3" json:"tactical,omitempty"`                          //战术评分
+	Worth       float32  `protobuf:"fixed32,4,opt,name=worth,proto3" json:"worth,omitempty"`                                //身价评分
+	Expect      float32  `protobuf:"fixed32,5,opt,name=expect,proto3" json:"expect,omitempty"`                              //期望值
+	StatusScore float32  `protobuf:"fixed32,6,opt,name=status_score,json=statusScore,proto3" json:"status_score,omitempty"` //期望值
+	TotalScore  float32  `protobuf:"fixed32,7,opt,name=total_score,json=totalScore,proto3" json:"total_score,omitempty"`    //总评分
+	Strengths   string   `protobuf:"bytes,8,opt,name=strengths,proto3" json:"strengths,omitempty"`                          //优点描述
+	Weaknesses  string   `protobuf:"bytes,9,opt,name=weaknesses,proto3" json:"weaknesses,omitempty"`                        //缺点描述
+	Title       []string `protobuf:"bytes,10,rep,name=title,proto3" json:"title,omitempty"`                                 //标题
+}
+
+func (x *V2FootTeamFeaturesResponse) Reset() {
+	*x = V2FootTeamFeaturesResponse{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_v2_foot_team_detail_proto_msgTypes[29]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *V2FootTeamFeaturesResponse) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*V2FootTeamFeaturesResponse) ProtoMessage() {}
+
+func (x *V2FootTeamFeaturesResponse) ProtoReflect() protoreflect.Message {
+	mi := &file_v2_foot_team_detail_proto_msgTypes[29]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use V2FootTeamFeaturesResponse.ProtoReflect.Descriptor instead.
+func (*V2FootTeamFeaturesResponse) Descriptor() ([]byte, []int) {
+	return file_v2_foot_team_detail_proto_rawDescGZIP(), []int{29}
+}
+
+func (x *V2FootTeamFeaturesResponse) GetOffensive() float32 {
+	if x != nil {
+		return x.Offensive
+	}
+	return 0
+}
+
+func (x *V2FootTeamFeaturesResponse) GetDefensive() float32 {
+	if x != nil {
+		return x.Defensive
+	}
+	return 0
+}
+
+func (x *V2FootTeamFeaturesResponse) GetTactical() float32 {
+	if x != nil {
+		return x.Tactical
+	}
+	return 0
+}
+
+func (x *V2FootTeamFeaturesResponse) GetWorth() float32 {
+	if x != nil {
+		return x.Worth
+	}
+	return 0
+}
+
+func (x *V2FootTeamFeaturesResponse) GetExpect() float32 {
+	if x != nil {
+		return x.Expect
+	}
+	return 0
+}
+
+func (x *V2FootTeamFeaturesResponse) GetStatusScore() float32 {
+	if x != nil {
+		return x.StatusScore
+	}
+	return 0
+}
+
+func (x *V2FootTeamFeaturesResponse) GetTotalScore() float32 {
+	if x != nil {
+		return x.TotalScore
+	}
+	return 0
+}
+
+func (x *V2FootTeamFeaturesResponse) GetStrengths() string {
+	if x != nil {
+		return x.Strengths
+	}
+	return ""
+}
+
+func (x *V2FootTeamFeaturesResponse) GetWeaknesses() string {
+	if x != nil {
+		return x.Weaknesses
+	}
+	return ""
+}
+
+func (x *V2FootTeamFeaturesResponse) GetTitle() []string {
+	if x != nil {
+		return x.Title
+	}
+	return nil
+}
+
 var File_v2_foot_team_detail_proto protoreflect.FileDescriptor
 
 var file_v2_foot_team_detail_proto_rawDesc = []byte{
@@ -2216,8 +2390,33 @@ var file_v2_foot_team_detail_proto_rawDesc = []byte{
 	0x12, 0x12, 0x0a, 0x04, 0x67, 0x6f, 0x61, 0x6c, 0x18, 0x05, 0x20, 0x01, 0x28, 0x03, 0x52, 0x04,
 	0x67, 0x6f, 0x61, 0x6c, 0x12, 0x16, 0x0a, 0x06, 0x79, 0x65, 0x6c, 0x6c, 0x6f, 0x77, 0x18, 0x06,
 	0x20, 0x01, 0x28, 0x03, 0x52, 0x06, 0x79, 0x65, 0x6c, 0x6c, 0x6f, 0x77, 0x12, 0x10, 0x0a, 0x03,
-	0x72, 0x65, 0x64, 0x18, 0x07, 0x20, 0x01, 0x28, 0x03, 0x52, 0x03, 0x72, 0x65, 0x64, 0x42, 0x07,
-	0x5a, 0x05, 0x2e, 0x2f, 0x3b, 0x76, 0x31, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
+	0x72, 0x65, 0x64, 0x18, 0x07, 0x20, 0x01, 0x28, 0x03, 0x52, 0x03, 0x72, 0x65, 0x64, 0x22, 0x4f,
+	0x0a, 0x19, 0x56, 0x32, 0x46, 0x6f, 0x6f, 0x74, 0x54, 0x65, 0x61, 0x6d, 0x46, 0x65, 0x61, 0x74,
+	0x75, 0x72, 0x65, 0x73, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x12, 0x1a, 0x0a, 0x08, 0x6c,
+	0x61, 0x6e, 0x67, 0x75, 0x61, 0x67, 0x65, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x08, 0x6c,
+	0x61, 0x6e, 0x67, 0x75, 0x61, 0x67, 0x65, 0x12, 0x16, 0x0a, 0x06, 0x74, 0x65, 0x61, 0x6d, 0x49,
+	0x64, 0x18, 0x02, 0x20, 0x01, 0x28, 0x03, 0x52, 0x06, 0x74, 0x65, 0x61, 0x6d, 0x49, 0x64, 0x22,
+	0xba, 0x02, 0x0a, 0x1a, 0x56, 0x32, 0x46, 0x6f, 0x6f, 0x74, 0x54, 0x65, 0x61, 0x6d, 0x46, 0x65,
+	0x61, 0x74, 0x75, 0x72, 0x65, 0x73, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x12, 0x1c,
+	0x0a, 0x09, 0x6f, 0x66, 0x66, 0x65, 0x6e, 0x73, 0x69, 0x76, 0x65, 0x18, 0x01, 0x20, 0x01, 0x28,
+	0x02, 0x52, 0x09, 0x6f, 0x66, 0x66, 0x65, 0x6e, 0x73, 0x69, 0x76, 0x65, 0x12, 0x1c, 0x0a, 0x09,
+	0x64, 0x65, 0x66, 0x65, 0x6e, 0x73, 0x69, 0x76, 0x65, 0x18, 0x02, 0x20, 0x01, 0x28, 0x02, 0x52,
+	0x09, 0x64, 0x65, 0x66, 0x65, 0x6e, 0x73, 0x69, 0x76, 0x65, 0x12, 0x1a, 0x0a, 0x08, 0x74, 0x61,
+	0x63, 0x74, 0x69, 0x63, 0x61, 0x6c, 0x18, 0x03, 0x20, 0x01, 0x28, 0x02, 0x52, 0x08, 0x74, 0x61,
+	0x63, 0x74, 0x69, 0x63, 0x61, 0x6c, 0x12, 0x14, 0x0a, 0x05, 0x77, 0x6f, 0x72, 0x74, 0x68, 0x18,
+	0x04, 0x20, 0x01, 0x28, 0x02, 0x52, 0x05, 0x77, 0x6f, 0x72, 0x74, 0x68, 0x12, 0x16, 0x0a, 0x06,
+	0x65, 0x78, 0x70, 0x65, 0x63, 0x74, 0x18, 0x05, 0x20, 0x01, 0x28, 0x02, 0x52, 0x06, 0x65, 0x78,
+	0x70, 0x65, 0x63, 0x74, 0x12, 0x21, 0x0a, 0x0c, 0x73, 0x74, 0x61, 0x74, 0x75, 0x73, 0x5f, 0x73,
+	0x63, 0x6f, 0x72, 0x65, 0x18, 0x06, 0x20, 0x01, 0x28, 0x02, 0x52, 0x0b, 0x73, 0x74, 0x61, 0x74,
+	0x75, 0x73, 0x53, 0x63, 0x6f, 0x72, 0x65, 0x12, 0x1f, 0x0a, 0x0b, 0x74, 0x6f, 0x74, 0x61, 0x6c,
+	0x5f, 0x73, 0x63, 0x6f, 0x72, 0x65, 0x18, 0x07, 0x20, 0x01, 0x28, 0x02, 0x52, 0x0a, 0x74, 0x6f,
+	0x74, 0x61, 0x6c, 0x53, 0x63, 0x6f, 0x72, 0x65, 0x12, 0x1c, 0x0a, 0x09, 0x73, 0x74, 0x72, 0x65,
+	0x6e, 0x67, 0x74, 0x68, 0x73, 0x18, 0x08, 0x20, 0x01, 0x28, 0x09, 0x52, 0x09, 0x73, 0x74, 0x72,
+	0x65, 0x6e, 0x67, 0x74, 0x68, 0x73, 0x12, 0x1e, 0x0a, 0x0a, 0x77, 0x65, 0x61, 0x6b, 0x6e, 0x65,
+	0x73, 0x73, 0x65, 0x73, 0x18, 0x09, 0x20, 0x01, 0x28, 0x09, 0x52, 0x0a, 0x77, 0x65, 0x61, 0x6b,
+	0x6e, 0x65, 0x73, 0x73, 0x65, 0x73, 0x12, 0x14, 0x0a, 0x05, 0x74, 0x69, 0x74, 0x6c, 0x65, 0x18,
+	0x0a, 0x20, 0x03, 0x28, 0x09, 0x52, 0x05, 0x74, 0x69, 0x74, 0x6c, 0x65, 0x42, 0x07, 0x5a, 0x05,
+	0x2e, 0x2f, 0x3b, 0x76, 0x31, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
 }
 
 var (
@@ -2232,7 +2431,7 @@ func file_v2_foot_team_detail_proto_rawDescGZIP() []byte {
 	return file_v2_foot_team_detail_proto_rawDescData
 }
 
-var file_v2_foot_team_detail_proto_msgTypes = make([]protoimpl.MessageInfo, 28)
+var file_v2_foot_team_detail_proto_msgTypes = make([]protoimpl.MessageInfo, 30)
 var file_v2_foot_team_detail_proto_goTypes = []interface{}{
 	(*V2FootTeamPlayerRequest)(nil),           // 0: V2FootTeamPlayerRequest
 	(*V2FootTeamPlayerResponse)(nil),          // 1: V2FootTeamPlayerResponse
@@ -2262,6 +2461,8 @@ var file_v2_foot_team_detail_proto_goTypes = []interface{}{
 	(*V2FootTeamIncidentRequest)(nil),         // 25: V2FootTeamIncidentRequest
 	(*V2FootTeamIncidentResponse)(nil),        // 26: V2FootTeamIncidentResponse
 	(*V2FootTeamIncidentInfo)(nil),            // 27: V2FootTeamIncidentInfo
+	(*V2FootTeamFeaturesRequest)(nil),         // 28: V2FootTeamFeaturesRequest
+	(*V2FootTeamFeaturesResponse)(nil),        // 29: V2FootTeamFeaturesResponse
 }
 var file_v2_foot_team_detail_proto_depIdxs = []int32{
 	3,  // 0: V2FootTeamPlayerResponse.back:type_name -> V2FootTeamPlayerBack
@@ -2626,6 +2827,30 @@ func file_v2_foot_team_detail_proto_init() {
 				return nil
 			}
 		}
+		file_v2_foot_team_detail_proto_msgTypes[28].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*V2FootTeamFeaturesRequest); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_v2_foot_team_detail_proto_msgTypes[29].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*V2FootTeamFeaturesResponse); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
 	}
 	type x struct{}
 	out := protoimpl.TypeBuilder{
@@ -2633,7 +2858,7 @@ func file_v2_foot_team_detail_proto_init() {
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: file_v2_foot_team_detail_proto_rawDesc,
 			NumEnums:      0,
-			NumMessages:   28,
+			NumMessages:   30,
 			NumExtensions: 0,
 			NumServices:   0,
 		},
