@@ -118,7 +118,7 @@ var file_device_server_proto_rawDesc = []byte{
 	0x65, 0x63, 0x74, 0x5f, 0x76, 0x32, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x22, 0x07, 0x0a, 0x05,
 	0x45, 0x6d, 0x70, 0x74, 0x79, 0x22, 0x1f, 0x0a, 0x0b, 0x43, 0x6f, 0x6c, 0x6c, 0x65, 0x63, 0x74,
 	0x4c, 0x69, 0x73, 0x74, 0x12, 0x10, 0x0a, 0x03, 0x49, 0x64, 0x73, 0x18, 0x01, 0x20, 0x03, 0x28,
-	0x03, 0x52, 0x03, 0x49, 0x64, 0x73, 0x32, 0x92, 0x02, 0x0a, 0x06, 0x44, 0x65, 0x76, 0x69, 0x63,
+	0x03, 0x52, 0x03, 0x49, 0x64, 0x73, 0x32, 0xc8, 0x02, 0x0a, 0x06, 0x44, 0x65, 0x76, 0x69, 0x63,
 	0x65, 0x12, 0x31, 0x0a, 0x0c, 0x43, 0x6f, 0x6c, 0x6c, 0x65, 0x63, 0x74, 0x4d, 0x61, 0x74, 0x63,
 	0x68, 0x12, 0x19, 0x2e, 0x43, 0x6f, 0x6c, 0x6c, 0x65, 0x63, 0x74, 0x4d, 0x61, 0x74, 0x63, 0x68,
 	0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x50, 0x61, 0x72, 0x61, 0x6d, 0x1a, 0x06, 0x2e, 0x45,
@@ -135,8 +135,12 @@ var file_device_server_proto_rawDesc = []byte{
 	0x52, 0x65, 0x73, 0x70, 0x12, 0x35, 0x0a, 0x11, 0x55, 0x70, 0x64, 0x61, 0x74, 0x65, 0x50, 0x75,
 	0x73, 0x68, 0x53, 0x65, 0x74, 0x74, 0x69, 0x6e, 0x67, 0x12, 0x18, 0x2e, 0x50, 0x75, 0x73, 0x68,
 	0x53, 0x65, 0x74, 0x74, 0x69, 0x6e, 0x67, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x50, 0x61,
-	0x72, 0x61, 0x6d, 0x1a, 0x06, 0x2e, 0x45, 0x6d, 0x70, 0x74, 0x79, 0x42, 0x07, 0x5a, 0x05, 0x2e,
-	0x2f, 0x3b, 0x76, 0x31, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
+	0x72, 0x61, 0x6d, 0x1a, 0x06, 0x2e, 0x45, 0x6d, 0x70, 0x74, 0x79, 0x12, 0x34, 0x0a, 0x10, 0x43,
+	0x6f, 0x6c, 0x6c, 0x65, 0x63, 0x74, 0x43, 0x69, 0x64, 0x55, 0x70, 0x64, 0x61, 0x74, 0x65, 0x12,
+	0x18, 0x2e, 0x43, 0x6f, 0x6c, 0x6c, 0x65, 0x63, 0x74, 0x43, 0x69, 0x64, 0x55, 0x70, 0x64, 0x61,
+	0x74, 0x65, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x06, 0x2e, 0x45, 0x6d, 0x70, 0x74,
+	0x79, 0x42, 0x07, 0x5a, 0x05, 0x2e, 0x2f, 0x3b, 0x76, 0x31, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74,
+	0x6f, 0x33,
 }
 
 var (
@@ -160,7 +164,8 @@ var file_device_server_proto_goTypes = []interface{}{
 	(*CollectRequestParam)(nil),      // 4: CollectRequestParam
 	(*CollectListRequestParam)(nil),  // 5: CollectListRequestParam
 	(*PushSettingRequestParam)(nil),  // 6: PushSettingRequestParam
-	(*CollectListResp)(nil),          // 7: CollectListResp
+	(*CollectCidUpdateRequest)(nil),  // 7: CollectCidUpdateRequest
+	(*CollectListResp)(nil),          // 8: CollectListResp
 }
 var file_device_server_proto_depIdxs = []int32{
 	2, // 0: Device.CollectMatch:input_type -> CollectMatchRequestParam
@@ -168,13 +173,15 @@ var file_device_server_proto_depIdxs = []int32{
 	4, // 2: Device.CollectHandle:input_type -> CollectRequestParam
 	5, // 3: Device.GetCollectList:input_type -> CollectListRequestParam
 	6, // 4: Device.UpdatePushSetting:input_type -> PushSettingRequestParam
-	0, // 5: Device.CollectMatch:output_type -> Empty
-	0, // 6: Device.PushMsgMatch:output_type -> Empty
-	0, // 7: Device.CollectHandle:output_type -> Empty
-	7, // 8: Device.GetCollectList:output_type -> CollectListResp
-	0, // 9: Device.UpdatePushSetting:output_type -> Empty
-	5, // [5:10] is the sub-list for method output_type
-	0, // [0:5] is the sub-list for method input_type
+	7, // 5: Device.CollectCidUpdate:input_type -> CollectCidUpdateRequest
+	0, // 6: Device.CollectMatch:output_type -> Empty
+	0, // 7: Device.PushMsgMatch:output_type -> Empty
+	0, // 8: Device.CollectHandle:output_type -> Empty
+	8, // 9: Device.GetCollectList:output_type -> CollectListResp
+	0, // 10: Device.UpdatePushSetting:output_type -> Empty
+	0, // 11: Device.CollectCidUpdate:output_type -> Empty
+	6, // [6:12] is the sub-list for method output_type
+	0, // [0:6] is the sub-list for method input_type
 	0, // [0:0] is the sub-list for extension type_name
 	0, // [0:0] is the sub-list for extension extendee
 	0, // [0:0] is the sub-list for field type_name
@@ -253,6 +260,8 @@ type DeviceClient interface {
 	CollectHandle(ctx context.Context, in *CollectRequestParam, opts ...grpc.CallOption) (*Empty, error)
 	GetCollectList(ctx context.Context, in *CollectListRequestParam, opts ...grpc.CallOption) (*CollectListResp, error)
 	UpdatePushSetting(ctx context.Context, in *PushSettingRequestParam, opts ...grpc.CallOption) (*Empty, error)
+	// 登录后收藏表cid更新
+	CollectCidUpdate(ctx context.Context, in *CollectCidUpdateRequest, opts ...grpc.CallOption) (*Empty, error)
 }
 
 type deviceClient struct {
@@ -308,6 +317,15 @@ func (c *deviceClient) UpdatePushSetting(ctx context.Context, in *PushSettingReq
 	return out, nil
 }
 
+func (c *deviceClient) CollectCidUpdate(ctx context.Context, in *CollectCidUpdateRequest, opts ...grpc.CallOption) (*Empty, error) {
+	out := new(Empty)
+	err := c.cc.Invoke(ctx, "/Device/CollectCidUpdate", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 // DeviceServer is the server API for Device service.
 type DeviceServer interface {
 	// 收藏比赛 (取消也在)
@@ -318,6 +336,8 @@ type DeviceServer interface {
 	CollectHandle(context.Context, *CollectRequestParam) (*Empty, error)
 	GetCollectList(context.Context, *CollectListRequestParam) (*CollectListResp, error)
 	UpdatePushSetting(context.Context, *PushSettingRequestParam) (*Empty, error)
+	// 登录后收藏表cid更新
+	CollectCidUpdate(context.Context, *CollectCidUpdateRequest) (*Empty, error)
 }
 
 // UnimplementedDeviceServer can be embedded to have forward compatible implementations.
@@ -338,6 +358,9 @@ func (*UnimplementedDeviceServer) GetCollectList(context.Context, *CollectListRe
 }
 func (*UnimplementedDeviceServer) UpdatePushSetting(context.Context, *PushSettingRequestParam) (*Empty, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method UpdatePushSetting not implemented")
+}
+func (*UnimplementedDeviceServer) CollectCidUpdate(context.Context, *CollectCidUpdateRequest) (*Empty, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method CollectCidUpdate not implemented")
 }
 
 func RegisterDeviceServer(s *grpc.Server, srv DeviceServer) {
@@ -434,6 +457,24 @@ func _Device_UpdatePushSetting_Handler(srv interface{}, ctx context.Context, dec
 	return interceptor(ctx, in, info, handler)
 }
 
+func _Device_CollectCidUpdate_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(CollectCidUpdateRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(DeviceServer).CollectCidUpdate(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/Device/CollectCidUpdate",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(DeviceServer).CollectCidUpdate(ctx, req.(*CollectCidUpdateRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 var _Device_serviceDesc = grpc.ServiceDesc{
 	ServiceName: "Device",
 	HandlerType: (*DeviceServer)(nil),
@@ -457,6 +498,10 @@ var _Device_serviceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "UpdatePushSetting",
 			Handler:    _Device_UpdatePushSetting_Handler,
+		},
+		{
+			MethodName: "CollectCidUpdate",
+			Handler:    _Device_CollectCidUpdate_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
