@@ -652,7 +652,7 @@ type V2FootTeamTransferResponse struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	TotalPrice   float32               `protobuf:"fixed32,5,opt,name=TotalPrice,proto3" json:"TotalPrice,omitempty"`    //总转会金额
+	TotalPrice   string                `protobuf:"bytes,5,opt,name=TotalPrice,proto3" json:"TotalPrice,omitempty"`      //总转会金额
 	TransferData []*V2FootTeamTransfer `protobuf:"bytes,21,rep,name=transferData,proto3" json:"transferData,omitempty"` //转会记录
 }
 
@@ -688,11 +688,11 @@ func (*V2FootTeamTransferResponse) Descriptor() ([]byte, []int) {
 	return file_v2_foot_team_detail_proto_rawDescGZIP(), []int{8}
 }
 
-func (x *V2FootTeamTransferResponse) GetTotalPrice() float32 {
+func (x *V2FootTeamTransferResponse) GetTotalPrice() string {
 	if x != nil {
 		return x.TotalPrice
 	}
-	return 0
+	return ""
 }
 
 func (x *V2FootTeamTransferResponse) GetTransferData() []*V2FootTeamTransfer {
@@ -707,16 +707,16 @@ type V2FootTeamTransfer struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Id           int64   `protobuf:"varint,1,opt,name=Id,proto3" json:"Id,omitempty"`                    //球员id
-	Name         string  `protobuf:"bytes,2,opt,name=Name,proto3" json:"Name,omitempty"`                 //球员名称
-	Image        string  `protobuf:"bytes,3,opt,name=Image,proto3" json:"Image,omitempty"`               //球员头像
-	Age          string  `protobuf:"bytes,4,opt,name=age,proto3" json:"age,omitempty"`                   //球员年龄
-	TransferType string  `protobuf:"bytes,9,opt,name=transferType,proto3" json:"transferType,omitempty"` //转会类型 转入，转出
-	Price        float32 `protobuf:"fixed32,6,opt,name=price,proto3" json:"price,omitempty"`             //转会金额
-	TeamId       string  `protobuf:"bytes,10,opt,name=TeamId,proto3" json:"TeamId,omitempty"`            //来自...球队或从...球队过来的id
-	TeamName     string  `protobuf:"bytes,7,opt,name=TeamName,proto3" json:"TeamName,omitempty"`         //来自...球队或从...球队过来名称
-	StartTime    int64   `protobuf:"varint,8,opt,name=StartTime,proto3" json:"StartTime,omitempty"`      //来自...球队或从...球队的时间
-	Type         int32   `protobuf:"varint,11,opt,name=Type,proto3" json:"Type,omitempty"`               //类型 1. 租借 2 租借结束  3 转会 4 生涯结束
+	Id           int64  `protobuf:"varint,1,opt,name=Id,proto3" json:"Id,omitempty"`                    //球员id
+	Name         string `protobuf:"bytes,2,opt,name=Name,proto3" json:"Name,omitempty"`                 //球员名称
+	Image        string `protobuf:"bytes,3,opt,name=Image,proto3" json:"Image,omitempty"`               //球员头像
+	Age          string `protobuf:"bytes,4,opt,name=age,proto3" json:"age,omitempty"`                   //球员年龄
+	TransferType string `protobuf:"bytes,9,opt,name=transferType,proto3" json:"transferType,omitempty"` //转会类型 转入，转出
+	Price        string `protobuf:"bytes,6,opt,name=price,proto3" json:"price,omitempty"`               //转会金额
+	TeamId       string `protobuf:"bytes,10,opt,name=TeamId,proto3" json:"TeamId,omitempty"`            //来自...球队或从...球队过来的id
+	TeamName     string `protobuf:"bytes,7,opt,name=TeamName,proto3" json:"TeamName,omitempty"`         //来自...球队或从...球队过来名称
+	StartTime    int64  `protobuf:"varint,8,opt,name=StartTime,proto3" json:"StartTime,omitempty"`      //来自...球队或从...球队的时间
+	Type         int32  `protobuf:"varint,11,opt,name=Type,proto3" json:"Type,omitempty"`               //类型 1. 租借 2 租借结束  3 转会 4 生涯结束
 }
 
 func (x *V2FootTeamTransfer) Reset() {
@@ -786,11 +786,11 @@ func (x *V2FootTeamTransfer) GetTransferType() string {
 	return ""
 }
 
-func (x *V2FootTeamTransfer) GetPrice() float32 {
+func (x *V2FootTeamTransfer) GetPrice() string {
 	if x != nil {
 		return x.Price
 	}
-	return 0
+	return ""
 }
 
 func (x *V2FootTeamTransfer) GetTeamId() string {
@@ -2222,7 +2222,7 @@ var file_v2_foot_team_detail_proto_rawDesc = []byte{
 	0x6e, 0x65, 0x22, 0x75, 0x0a, 0x1a, 0x56, 0x32, 0x46, 0x6f, 0x6f, 0x74, 0x54, 0x65, 0x61, 0x6d,
 	0x54, 0x72, 0x61, 0x6e, 0x73, 0x66, 0x65, 0x72, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65,
 	0x12, 0x1e, 0x0a, 0x0a, 0x54, 0x6f, 0x74, 0x61, 0x6c, 0x50, 0x72, 0x69, 0x63, 0x65, 0x18, 0x05,
-	0x20, 0x01, 0x28, 0x02, 0x52, 0x0a, 0x54, 0x6f, 0x74, 0x61, 0x6c, 0x50, 0x72, 0x69, 0x63, 0x65,
+	0x20, 0x01, 0x28, 0x09, 0x52, 0x0a, 0x54, 0x6f, 0x74, 0x61, 0x6c, 0x50, 0x72, 0x69, 0x63, 0x65,
 	0x12, 0x37, 0x0a, 0x0c, 0x74, 0x72, 0x61, 0x6e, 0x73, 0x66, 0x65, 0x72, 0x44, 0x61, 0x74, 0x61,
 	0x18, 0x15, 0x20, 0x03, 0x28, 0x0b, 0x32, 0x13, 0x2e, 0x56, 0x32, 0x46, 0x6f, 0x6f, 0x74, 0x54,
 	0x65, 0x61, 0x6d, 0x54, 0x72, 0x61, 0x6e, 0x73, 0x66, 0x65, 0x72, 0x52, 0x0c, 0x74, 0x72, 0x61,
@@ -2235,7 +2235,7 @@ var file_v2_foot_team_detail_proto_rawDesc = []byte{
 	0x65, 0x18, 0x04, 0x20, 0x01, 0x28, 0x09, 0x52, 0x03, 0x61, 0x67, 0x65, 0x12, 0x22, 0x0a, 0x0c,
 	0x74, 0x72, 0x61, 0x6e, 0x73, 0x66, 0x65, 0x72, 0x54, 0x79, 0x70, 0x65, 0x18, 0x09, 0x20, 0x01,
 	0x28, 0x09, 0x52, 0x0c, 0x74, 0x72, 0x61, 0x6e, 0x73, 0x66, 0x65, 0x72, 0x54, 0x79, 0x70, 0x65,
-	0x12, 0x14, 0x0a, 0x05, 0x70, 0x72, 0x69, 0x63, 0x65, 0x18, 0x06, 0x20, 0x01, 0x28, 0x02, 0x52,
+	0x12, 0x14, 0x0a, 0x05, 0x70, 0x72, 0x69, 0x63, 0x65, 0x18, 0x06, 0x20, 0x01, 0x28, 0x09, 0x52,
 	0x05, 0x70, 0x72, 0x69, 0x63, 0x65, 0x12, 0x16, 0x0a, 0x06, 0x54, 0x65, 0x61, 0x6d, 0x49, 0x64,
 	0x18, 0x0a, 0x20, 0x01, 0x28, 0x09, 0x52, 0x06, 0x54, 0x65, 0x61, 0x6d, 0x49, 0x64, 0x12, 0x1a,
 	0x0a, 0x08, 0x54, 0x65, 0x61, 0x6d, 0x4e, 0x61, 0x6d, 0x65, 0x18, 0x07, 0x20, 0x01, 0x28, 0x09,
