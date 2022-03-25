@@ -716,7 +716,7 @@ type V2FootTeamTransfer struct {
 	TeamId       string `protobuf:"bytes,10,opt,name=TeamId,proto3" json:"TeamId,omitempty"`            //来自...球队或从...球队过来的id
 	TeamName     string `protobuf:"bytes,7,opt,name=TeamName,proto3" json:"TeamName,omitempty"`         //来自...球队或从...球队过来名称
 	StartTime    int64  `protobuf:"varint,8,opt,name=StartTime,proto3" json:"StartTime,omitempty"`      //来自...球队或从...球队的时间
-	Type         int32  `protobuf:"varint,11,opt,name=Type,proto3" json:"Type,omitempty"`               //类型 1. 租借 2 租借结束  3 转会 4 生涯结束
+	Type         int32  `protobuf:"varint,11,opt,name=Type,proto3" json:"Type,omitempty"`               //类型 1、租借;2、租借结束;3、转会;4、职业生涯结束;5、选秀;6、解约;7、签约
 }
 
 func (x *V2FootTeamTransfer) Reset() {
