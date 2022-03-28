@@ -350,7 +350,7 @@ var file_foot_server_proto_rawDesc = []byte{
 	0x6e, 0x49, 0x64, 0x12, 0x1a, 0x0a, 0x08, 0x6c, 0x61, 0x6e, 0x67, 0x75, 0x61, 0x67, 0x65, 0x18,
 	0x03, 0x20, 0x01, 0x28, 0x09, 0x52, 0x08, 0x6c, 0x61, 0x6e, 0x67, 0x75, 0x61, 0x67, 0x65, 0x12,
 	0x1a, 0x0a, 0x08, 0x73, 0x65, 0x61, 0x73, 0x6f, 0x6e, 0x49, 0x64, 0x18, 0x04, 0x20, 0x01, 0x28,
-	0x03, 0x52, 0x08, 0x73, 0x65, 0x61, 0x73, 0x6f, 0x6e, 0x49, 0x64, 0x32, 0xee, 0x39, 0x0a, 0x08,
+	0x03, 0x52, 0x08, 0x73, 0x65, 0x61, 0x73, 0x6f, 0x6e, 0x49, 0x64, 0x32, 0xf0, 0x39, 0x0a, 0x08,
 	0x46, 0x6f, 0x6f, 0x74, 0x42, 0x61, 0x6c, 0x6c, 0x12, 0x40, 0x0a, 0x16, 0x46, 0x6f, 0x6f, 0x74,
 	0x4d, 0x61, 0x74, 0x63, 0x68, 0x41, 0x67, 0x61, 0x69, 0x6e, 0x73, 0x74, 0x44, 0x65, 0x74, 0x61,
 	0x69, 0x6c, 0x12, 0x15, 0x2e, 0x46, 0x6f, 0x6f, 0x74, 0x4d, 0x61, 0x74, 0x63, 0x68, 0x49, 0x6e,
@@ -809,12 +809,12 @@ var file_foot_server_proto_rawDesc = []byte{
 	0x4f, 0x76, 0x65, 0x72, 0x76, 0x69, 0x65, 0x77, 0x12, 0x1e, 0x2e, 0x46, 0x6f, 0x6f, 0x74, 0x54,
 	0x6f, 0x75, 0x72, 0x6e, 0x61, 0x6d, 0x65, 0x6e, 0x74, 0x4f, 0x76, 0x65, 0x72, 0x76, 0x69, 0x65,
 	0x77, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x0d, 0x2e, 0x46, 0x6f, 0x6f, 0x74, 0x52,
-	0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x00, 0x12, 0x41, 0x0a, 0x13, 0x56, 0x32, 0x46,
+	0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x00, 0x12, 0x43, 0x0a, 0x13, 0x56, 0x32, 0x46,
 	0x6f, 0x6f, 0x74, 0x4d, 0x61, 0x74, 0x63, 0x68, 0x46, 0x69, 0x6c, 0x74, 0x72, 0x61, 0x74, 0x65,
-	0x12, 0x19, 0x2e, 0x46, 0x6f, 0x6f, 0x74, 0x4d, 0x61, 0x74, 0x63, 0x68, 0x46, 0x69, 0x6c, 0x74,
-	0x72, 0x61, 0x74, 0x65, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x0d, 0x2e, 0x46, 0x6f,
-	0x6f, 0x74, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x00, 0x42, 0x07, 0x5a, 0x05,
-	0x2e, 0x2f, 0x3b, 0x76, 0x31, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
+	0x12, 0x1b, 0x2e, 0x56, 0x32, 0x46, 0x6f, 0x6f, 0x74, 0x4d, 0x61, 0x74, 0x63, 0x68, 0x46, 0x69,
+	0x6c, 0x74, 0x72, 0x61, 0x74, 0x65, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x0d, 0x2e,
+	0x46, 0x6f, 0x6f, 0x74, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x00, 0x42, 0x07,
+	0x5a, 0x05, 0x2e, 0x2f, 0x3b, 0x76, 0x31, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
 }
 
 var (
@@ -936,7 +936,8 @@ var file_foot_server_proto_goTypes = []interface{}{
 	(*V2StatsPlayerRequest)(nil),                      // 102: V2StatsPlayerRequest
 	(*V2FootPlayerCollectsRequest)(nil),               // 103: V2FootPlayerCollectsRequest
 	(*FootTournamentOverviewRequest)(nil),             // 104: FootTournamentOverviewRequest
-	(*FootMatchInProgressResponse)(nil),               // 105: FootMatchInProgressResponse
+	(*V2FootMatchFiltrateRequest)(nil),                // 105: V2FootMatchFiltrateRequest
+	(*FootMatchInProgressResponse)(nil),               // 106: FootMatchInProgressResponse
 }
 var file_foot_server_proto_depIdxs = []int32{
 	3,   // 0: FootBall.FootMatchAgainstDetail:input_type -> FootMatchInfoRequest
@@ -1048,7 +1049,7 @@ var file_foot_server_proto_depIdxs = []int32{
 	102, // 106: FootBall.V2StatsPlayer:input_type -> V2StatsPlayerRequest
 	103, // 107: FootBall.V2FootPlayerCollects:input_type -> V2FootPlayerCollectsRequest
 	104, // 108: FootBall.V2FootTournamentOverview:input_type -> FootTournamentOverviewRequest
-	9,   // 109: FootBall.V2FootMatchFiltrate:input_type -> FootMatchFiltrateRequest
+	105, // 109: FootBall.V2FootMatchFiltrate:input_type -> V2FootMatchFiltrateRequest
 	1,   // 110: FootBall.FootMatchAgainstDetail:output_type -> FootResponse
 	1,   // 111: FootBall.GetMatchOddList:output_type -> FootResponse
 	1,   // 112: FootBall.GetMatchOddListDetail:output_type -> FootResponse
@@ -1080,7 +1081,7 @@ var file_foot_server_proto_depIdxs = []int32{
 	1,   // 138: FootBall.FootMatchList:output_type -> FootResponse
 	1,   // 139: FootBall.FootMatchPlus:output_type -> FootResponse
 	1,   // 140: FootBall.FootMatchBase:output_type -> FootResponse
-	105, // 141: FootBall.FootMatchInProgress:output_type -> FootMatchInProgressResponse
+	106, // 141: FootBall.FootMatchInProgress:output_type -> FootMatchInProgressResponse
 	1,   // 142: FootBall.FootDataPromotion:output_type -> FootResponse
 	1,   // 143: FootBall.FootLineupAverageData:output_type -> FootResponse
 	1,   // 144: FootBall.FootLineupMatchData:output_type -> FootResponse
@@ -1535,7 +1536,7 @@ type FootBallClient interface {
 	// v2 联赛概况
 	V2FootTournamentOverview(ctx context.Context, in *FootTournamentOverviewRequest, opts ...grpc.CallOption) (*FootResponse, error)
 	// v2 赛事筛选 和之前一样改了里面数据 所以新加了个
-	V2FootMatchFiltrate(ctx context.Context, in *FootMatchFiltrateRequest, opts ...grpc.CallOption) (*FootResponse, error)
+	V2FootMatchFiltrate(ctx context.Context, in *V2FootMatchFiltrateRequest, opts ...grpc.CallOption) (*FootResponse, error)
 }
 
 type footBallClient struct {
@@ -2527,7 +2528,7 @@ func (c *footBallClient) V2FootTournamentOverview(ctx context.Context, in *FootT
 	return out, nil
 }
 
-func (c *footBallClient) V2FootMatchFiltrate(ctx context.Context, in *FootMatchFiltrateRequest, opts ...grpc.CallOption) (*FootResponse, error) {
+func (c *footBallClient) V2FootMatchFiltrate(ctx context.Context, in *V2FootMatchFiltrateRequest, opts ...grpc.CallOption) (*FootResponse, error) {
 	out := new(FootResponse)
 	err := c.cc.Invoke(ctx, "/FootBall/V2FootMatchFiltrate", in, out, opts...)
 	if err != nil {
@@ -2758,7 +2759,7 @@ type FootBallServer interface {
 	// v2 联赛概况
 	V2FootTournamentOverview(context.Context, *FootTournamentOverviewRequest) (*FootResponse, error)
 	// v2 赛事筛选 和之前一样改了里面数据 所以新加了个
-	V2FootMatchFiltrate(context.Context, *FootMatchFiltrateRequest) (*FootResponse, error)
+	V2FootMatchFiltrate(context.Context, *V2FootMatchFiltrateRequest) (*FootResponse, error)
 }
 
 // UnimplementedFootBallServer can be embedded to have forward compatible implementations.
@@ -3092,7 +3093,7 @@ func (*UnimplementedFootBallServer) V2FootPlayerCollects(context.Context, *V2Foo
 func (*UnimplementedFootBallServer) V2FootTournamentOverview(context.Context, *FootTournamentOverviewRequest) (*FootResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method V2FootTournamentOverview not implemented")
 }
-func (*UnimplementedFootBallServer) V2FootMatchFiltrate(context.Context, *FootMatchFiltrateRequest) (*FootResponse, error) {
+func (*UnimplementedFootBallServer) V2FootMatchFiltrate(context.Context, *V2FootMatchFiltrateRequest) (*FootResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method V2FootMatchFiltrate not implemented")
 }
 
@@ -5063,7 +5064,7 @@ func _FootBall_V2FootTournamentOverview_Handler(srv interface{}, ctx context.Con
 }
 
 func _FootBall_V2FootMatchFiltrate_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(FootMatchFiltrateRequest)
+	in := new(V2FootMatchFiltrateRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
@@ -5075,7 +5076,7 @@ func _FootBall_V2FootMatchFiltrate_Handler(srv interface{}, ctx context.Context,
 		FullMethod: "/FootBall/V2FootMatchFiltrate",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(FootBallServer).V2FootMatchFiltrate(ctx, req.(*FootMatchFiltrateRequest))
+		return srv.(FootBallServer).V2FootMatchFiltrate(ctx, req.(*V2FootMatchFiltrateRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
