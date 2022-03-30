@@ -80,7 +80,7 @@ type CollectItem struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Type string  `protobuf:"bytes,1,opt,name=Type,proto3" json:"Type,omitempty"`       // 数据类型 match;fb_tournament;bb_tournament;fb_team;bb_team;fb_player;bb_player;expert;plans
+	Type string  `protobuf:"bytes,1,opt,name=Type,proto3" json:"Type,omitempty"`       // 数据类型 fb_match;bb_match;fb_tournament;bb_tournament;fb_team;bb_team;fb_player;bb_player;expert;plans
 	Ids  []int64 `protobuf:"varint,2,rep,packed,name=Ids,proto3" json:"Ids,omitempty"` //  收藏的id 正数为收藏 负数为取消
 }
 
