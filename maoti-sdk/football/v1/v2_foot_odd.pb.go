@@ -20,18 +20,19 @@ const (
 	_ = protoimpl.EnforceVersion(protoimpl.MaxVersion - 20)
 )
 
-type V2FootMatchOddListRequest struct {
+//v2 即时比赛列表 - 比赛详情 - 指数列表 - 欧赔（1x2）列表
+type V2FootMatchEuropeanOddsListRequest struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	SportId  int64  `protobuf:"varint,1,opt,name=sportId,proto3" json:"sportId,omitempty"`  //1足球 2篮球
-	EventId  int64  `protobuf:"varint,2,opt,name=eventId,proto3" json:"eventId,omitempty"`  //比赛id
-	Language string `protobuf:"bytes,3,opt,name=language,proto3" json:"language,omitempty"` //请求语言
+	EventId  int64  `protobuf:"varint,1,opt,name=eventId,proto3" json:"eventId,omitempty"`   //比赛id
+	Language string `protobuf:"bytes,2,opt,name=language,proto3" json:"language,omitempty"`  //请求语言
+	TimeZone int64  `protobuf:"varint,3,opt,name=timeZone,proto3" json:"timeZone,omitempty"` //时区
 }
 
-func (x *V2FootMatchOddListRequest) Reset() {
-	*x = V2FootMatchOddListRequest{}
+func (x *V2FootMatchEuropeanOddsListRequest) Reset() {
+	*x = V2FootMatchEuropeanOddsListRequest{}
 	if protoimpl.UnsafeEnabled {
 		mi := &file_v2_foot_odd_proto_msgTypes[0]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
@@ -39,13 +40,13 @@ func (x *V2FootMatchOddListRequest) Reset() {
 	}
 }
 
-func (x *V2FootMatchOddListRequest) String() string {
+func (x *V2FootMatchEuropeanOddsListRequest) String() string {
 	return protoimpl.X.MessageStringOf(x)
 }
 
-func (*V2FootMatchOddListRequest) ProtoMessage() {}
+func (*V2FootMatchEuropeanOddsListRequest) ProtoMessage() {}
 
-func (x *V2FootMatchOddListRequest) ProtoReflect() protoreflect.Message {
+func (x *V2FootMatchEuropeanOddsListRequest) ProtoReflect() protoreflect.Message {
 	mi := &file_v2_foot_odd_proto_msgTypes[0]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
@@ -57,42 +58,46 @@ func (x *V2FootMatchOddListRequest) ProtoReflect() protoreflect.Message {
 	return mi.MessageOf(x)
 }
 
-// Deprecated: Use V2FootMatchOddListRequest.ProtoReflect.Descriptor instead.
-func (*V2FootMatchOddListRequest) Descriptor() ([]byte, []int) {
+// Deprecated: Use V2FootMatchEuropeanOddsListRequest.ProtoReflect.Descriptor instead.
+func (*V2FootMatchEuropeanOddsListRequest) Descriptor() ([]byte, []int) {
 	return file_v2_foot_odd_proto_rawDescGZIP(), []int{0}
 }
 
-func (x *V2FootMatchOddListRequest) GetSportId() int64 {
-	if x != nil {
-		return x.SportId
-	}
-	return 0
-}
-
-func (x *V2FootMatchOddListRequest) GetEventId() int64 {
+func (x *V2FootMatchEuropeanOddsListRequest) GetEventId() int64 {
 	if x != nil {
 		return x.EventId
 	}
 	return 0
 }
 
-func (x *V2FootMatchOddListRequest) GetLanguage() string {
+func (x *V2FootMatchEuropeanOddsListRequest) GetLanguage() string {
 	if x != nil {
 		return x.Language
 	}
 	return ""
 }
 
-type V2FootMatchOddListResponse struct {
+func (x *V2FootMatchEuropeanOddsListRequest) GetTimeZone() int64 {
+	if x != nil {
+		return x.TimeZone
+	}
+	return 0
+}
+
+type V2FootMatchEuropeanOddsListResponse struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Data []*V2FootMatchOddData `protobuf:"bytes,3,rep,name=data,proto3" json:"data,omitempty"`
+	Maximum    *V2OddsDetails     `protobuf:"bytes,1,opt,name=maximum,proto3" json:"maximum,omitempty"`
+	Minimum    *V2OddsDetails     `protobuf:"bytes,2,opt,name=minimum,proto3" json:"minimum,omitempty"`
+	Average    *V2OddsDetails     `protobuf:"bytes,4,opt,name=Average,proto3" json:"Average,omitempty"`
+	Dispersion []float32          `protobuf:"fixed32,5,rep,packed,name=dispersion,proto3" json:"dispersion,omitempty"` //凯利离散度
+	List       []*V2OddDetailList `protobuf:"bytes,6,rep,name=list,proto3" json:"list,omitempty"`
 }
 
-func (x *V2FootMatchOddListResponse) Reset() {
-	*x = V2FootMatchOddListResponse{}
+func (x *V2FootMatchEuropeanOddsListResponse) Reset() {
+	*x = V2FootMatchEuropeanOddsListResponse{}
 	if protoimpl.UnsafeEnabled {
 		mi := &file_v2_foot_odd_proto_msgTypes[1]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
@@ -100,13 +105,13 @@ func (x *V2FootMatchOddListResponse) Reset() {
 	}
 }
 
-func (x *V2FootMatchOddListResponse) String() string {
+func (x *V2FootMatchEuropeanOddsListResponse) String() string {
 	return protoimpl.X.MessageStringOf(x)
 }
 
-func (*V2FootMatchOddListResponse) ProtoMessage() {}
+func (*V2FootMatchEuropeanOddsListResponse) ProtoMessage() {}
 
-func (x *V2FootMatchOddListResponse) ProtoReflect() protoreflect.Message {
+func (x *V2FootMatchEuropeanOddsListResponse) ProtoReflect() protoreflect.Message {
 	mi := &file_v2_foot_odd_proto_msgTypes[1]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
@@ -118,31 +123,60 @@ func (x *V2FootMatchOddListResponse) ProtoReflect() protoreflect.Message {
 	return mi.MessageOf(x)
 }
 
-// Deprecated: Use V2FootMatchOddListResponse.ProtoReflect.Descriptor instead.
-func (*V2FootMatchOddListResponse) Descriptor() ([]byte, []int) {
+// Deprecated: Use V2FootMatchEuropeanOddsListResponse.ProtoReflect.Descriptor instead.
+func (*V2FootMatchEuropeanOddsListResponse) Descriptor() ([]byte, []int) {
 	return file_v2_foot_odd_proto_rawDescGZIP(), []int{1}
 }
 
-func (x *V2FootMatchOddListResponse) GetData() []*V2FootMatchOddData {
+func (x *V2FootMatchEuropeanOddsListResponse) GetMaximum() *V2OddsDetails {
 	if x != nil {
-		return x.Data
+		return x.Maximum
 	}
 	return nil
 }
 
-type V2FootMatchOddData struct {
+func (x *V2FootMatchEuropeanOddsListResponse) GetMinimum() *V2OddsDetails {
+	if x != nil {
+		return x.Minimum
+	}
+	return nil
+}
+
+func (x *V2FootMatchEuropeanOddsListResponse) GetAverage() *V2OddsDetails {
+	if x != nil {
+		return x.Average
+	}
+	return nil
+}
+
+func (x *V2FootMatchEuropeanOddsListResponse) GetDispersion() []float32 {
+	if x != nil {
+		return x.Dispersion
+	}
+	return nil
+}
+
+func (x *V2FootMatchEuropeanOddsListResponse) GetList() []*V2OddDetailList {
+	if x != nil {
+		return x.List
+	}
+	return nil
+}
+
+type V2OddDetailList struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Name   string                `protobuf:"bytes,1,opt,name=name,proto3" json:"name,omitempty"` //tab名称
-	Id     int64                 `protobuf:"varint,2,opt,name=id,proto3" json:"id,omitempty"`    //tab id 1亚盘 2欧盘 3大小球
-	Titles []string              `protobuf:"bytes,3,rep,name=titles,proto3" json:"titles,omitempty"`
-	List   []*V2FootMatchOddList `protobuf:"bytes,4,rep,name=list,proto3" json:"list,omitempty"`
+	Init        *V2OddsDetails `protobuf:"bytes,1,opt,name=init,proto3" json:"init,omitempty"`
+	Curr        *V2OddsDetails `protobuf:"bytes,2,opt,name=curr,proto3" json:"curr,omitempty"`
+	CompanyName string         `protobuf:"bytes,3,opt,name=companyName,proto3" json:"companyName,omitempty"` //公司名称
+	CompanyId   int64          `protobuf:"varint,4,opt,name=companyId,proto3" json:"companyId,omitempty"`    //公司id
+	Mark        int64          `protobuf:"varint,5,opt,name=mark,proto3" json:"mark,omitempty"`              //最早和最晚：1.最早；2.最晚；0.无
 }
 
-func (x *V2FootMatchOddData) Reset() {
-	*x = V2FootMatchOddData{}
+func (x *V2OddDetailList) Reset() {
+	*x = V2OddDetailList{}
 	if protoimpl.UnsafeEnabled {
 		mi := &file_v2_foot_odd_proto_msgTypes[2]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
@@ -150,13 +184,13 @@ func (x *V2FootMatchOddData) Reset() {
 	}
 }
 
-func (x *V2FootMatchOddData) String() string {
+func (x *V2OddDetailList) String() string {
 	return protoimpl.X.MessageStringOf(x)
 }
 
-func (*V2FootMatchOddData) ProtoMessage() {}
+func (*V2OddDetailList) ProtoMessage() {}
 
-func (x *V2FootMatchOddData) ProtoReflect() protoreflect.Message {
+func (x *V2OddDetailList) ProtoReflect() protoreflect.Message {
 	mi := &file_v2_foot_odd_proto_msgTypes[2]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
@@ -168,53 +202,65 @@ func (x *V2FootMatchOddData) ProtoReflect() protoreflect.Message {
 	return mi.MessageOf(x)
 }
 
-// Deprecated: Use V2FootMatchOddData.ProtoReflect.Descriptor instead.
-func (*V2FootMatchOddData) Descriptor() ([]byte, []int) {
+// Deprecated: Use V2OddDetailList.ProtoReflect.Descriptor instead.
+func (*V2OddDetailList) Descriptor() ([]byte, []int) {
 	return file_v2_foot_odd_proto_rawDescGZIP(), []int{2}
 }
 
-func (x *V2FootMatchOddData) GetName() string {
+func (x *V2OddDetailList) GetInit() *V2OddsDetails {
 	if x != nil {
-		return x.Name
+		return x.Init
+	}
+	return nil
+}
+
+func (x *V2OddDetailList) GetCurr() *V2OddsDetails {
+	if x != nil {
+		return x.Curr
+	}
+	return nil
+}
+
+func (x *V2OddDetailList) GetCompanyName() string {
+	if x != nil {
+		return x.CompanyName
 	}
 	return ""
 }
 
-func (x *V2FootMatchOddData) GetId() int64 {
+func (x *V2OddDetailList) GetCompanyId() int64 {
 	if x != nil {
-		return x.Id
+		return x.CompanyId
 	}
 	return 0
 }
 
-func (x *V2FootMatchOddData) GetTitles() []string {
+func (x *V2OddDetailList) GetMark() int64 {
 	if x != nil {
-		return x.Titles
+		return x.Mark
 	}
-	return nil
+	return 0
 }
 
-func (x *V2FootMatchOddData) GetList() []*V2FootMatchOddList {
-	if x != nil {
-		return x.List
-	}
-	return nil
-}
-
-type V2FootMatchOddList struct {
+type V2OddsDetails struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Id       int64    `protobuf:"varint,1,opt,name=id,proto3" json:"id,omitempty"`            //公司id
-	Name     string   `protobuf:"bytes,2,opt,name=name,proto3" json:"name,omitempty"`         //公司名称
-	Mark     int64    `protobuf:"varint,5,opt,name=mark,proto3" json:"mark,omitempty"`        //初盘最晚和最早标记；1.最早；2.最晚；仅供初盘数据使用
-	NowData  []string `protobuf:"bytes,3,rep,name=nowData,proto3" json:"nowData,omitempty"`   //当前数据
-	InitData []string `protobuf:"bytes,4,rep,name=initData,proto3" json:"initData,omitempty"` //初始数据
+	Win        float32   `protobuf:"fixed32,1,opt,name=win,proto3" json:"win,omitempty"`                      //胜
+	Draw       float32   `protobuf:"fixed32,2,opt,name=draw,proto3" json:"draw,omitempty"`                    //平
+	Lose       float32   `protobuf:"fixed32,3,opt,name=lose,proto3" json:"lose,omitempty"`                    //负
+	WinProb    float32   `protobuf:"fixed32,4,opt,name=winProb,proto3" json:"winProb,omitempty"`              //胜率
+	DrawProb   float32   `protobuf:"fixed32,5,opt,name=drawProb,proto3" json:"drawProb,omitempty"`            //平率
+	LoseProb   float32   `protobuf:"fixed32,6,opt,name=loseProb,proto3" json:"loseProb,omitempty"`            //负率
+	ReturnProb float32   `protobuf:"fixed32,7,opt,name=returnProb,proto3" json:"returnProb,omitempty"`        //返回率
+	KellyIndex []float32 `protobuf:"fixed32,8,rep,packed,name=kellyIndex,proto3" json:"kellyIndex,omitempty"` //凯利指数
+	Variety    int64     `protobuf:"varint,9,opt,name=variety,proto3" json:"variety,omitempty"`               //时间
+	View       string    `protobuf:"bytes,10,opt,name=view,proto3" json:"view,omitempty"`                     //视图
 }
 
-func (x *V2FootMatchOddList) Reset() {
-	*x = V2FootMatchOddList{}
+func (x *V2OddsDetails) Reset() {
+	*x = V2OddsDetails{}
 	if protoimpl.UnsafeEnabled {
 		mi := &file_v2_foot_odd_proto_msgTypes[3]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
@@ -222,13 +268,13 @@ func (x *V2FootMatchOddList) Reset() {
 	}
 }
 
-func (x *V2FootMatchOddList) String() string {
+func (x *V2OddsDetails) String() string {
 	return protoimpl.X.MessageStringOf(x)
 }
 
-func (*V2FootMatchOddList) ProtoMessage() {}
+func (*V2OddsDetails) ProtoMessage() {}
 
-func (x *V2FootMatchOddList) ProtoReflect() protoreflect.Message {
+func (x *V2OddsDetails) ProtoReflect() protoreflect.Message {
 	mi := &file_v2_foot_odd_proto_msgTypes[3]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
@@ -240,79 +286,440 @@ func (x *V2FootMatchOddList) ProtoReflect() protoreflect.Message {
 	return mi.MessageOf(x)
 }
 
-// Deprecated: Use V2FootMatchOddList.ProtoReflect.Descriptor instead.
-func (*V2FootMatchOddList) Descriptor() ([]byte, []int) {
+// Deprecated: Use V2OddsDetails.ProtoReflect.Descriptor instead.
+func (*V2OddsDetails) Descriptor() ([]byte, []int) {
 	return file_v2_foot_odd_proto_rawDescGZIP(), []int{3}
 }
 
-func (x *V2FootMatchOddList) GetId() int64 {
+func (x *V2OddsDetails) GetWin() float32 {
 	if x != nil {
-		return x.Id
+		return x.Win
 	}
 	return 0
 }
 
-func (x *V2FootMatchOddList) GetName() string {
+func (x *V2OddsDetails) GetDraw() float32 {
 	if x != nil {
-		return x.Name
+		return x.Draw
+	}
+	return 0
+}
+
+func (x *V2OddsDetails) GetLose() float32 {
+	if x != nil {
+		return x.Lose
+	}
+	return 0
+}
+
+func (x *V2OddsDetails) GetWinProb() float32 {
+	if x != nil {
+		return x.WinProb
+	}
+	return 0
+}
+
+func (x *V2OddsDetails) GetDrawProb() float32 {
+	if x != nil {
+		return x.DrawProb
+	}
+	return 0
+}
+
+func (x *V2OddsDetails) GetLoseProb() float32 {
+	if x != nil {
+		return x.LoseProb
+	}
+	return 0
+}
+
+func (x *V2OddsDetails) GetReturnProb() float32 {
+	if x != nil {
+		return x.ReturnProb
+	}
+	return 0
+}
+
+func (x *V2OddsDetails) GetKellyIndex() []float32 {
+	if x != nil {
+		return x.KellyIndex
+	}
+	return nil
+}
+
+func (x *V2OddsDetails) GetVariety() int64 {
+	if x != nil {
+		return x.Variety
+	}
+	return 0
+}
+
+func (x *V2OddsDetails) GetView() string {
+	if x != nil {
+		return x.View
 	}
 	return ""
 }
 
-func (x *V2FootMatchOddList) GetMark() int64 {
+//v2 即时比赛列表 - 比赛详情 - 指数列表 - 亚赔（HDP）和大小球（O/U）列表
+type V2FootMatchAsiaOddsAndBigBallListRequest struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	OddType  int64  `protobuf:"varint,1,opt,name=oddType,proto3" json:"oddType,omitempty"`   //odd  1压盘 2大小球
+	EventId  int64  `protobuf:"varint,2,opt,name=eventId,proto3" json:"eventId,omitempty"`   //比赛id
+	Language string `protobuf:"bytes,3,opt,name=language,proto3" json:"language,omitempty"`  //请求语言
+	TimeZone int64  `protobuf:"varint,6,opt,name=timeZone,proto3" json:"timeZone,omitempty"` //时区
+}
+
+func (x *V2FootMatchAsiaOddsAndBigBallListRequest) Reset() {
+	*x = V2FootMatchAsiaOddsAndBigBallListRequest{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_v2_foot_odd_proto_msgTypes[4]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *V2FootMatchAsiaOddsAndBigBallListRequest) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*V2FootMatchAsiaOddsAndBigBallListRequest) ProtoMessage() {}
+
+func (x *V2FootMatchAsiaOddsAndBigBallListRequest) ProtoReflect() protoreflect.Message {
+	mi := &file_v2_foot_odd_proto_msgTypes[4]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use V2FootMatchAsiaOddsAndBigBallListRequest.ProtoReflect.Descriptor instead.
+func (*V2FootMatchAsiaOddsAndBigBallListRequest) Descriptor() ([]byte, []int) {
+	return file_v2_foot_odd_proto_rawDescGZIP(), []int{4}
+}
+
+func (x *V2FootMatchAsiaOddsAndBigBallListRequest) GetOddType() int64 {
+	if x != nil {
+		return x.OddType
+	}
+	return 0
+}
+
+func (x *V2FootMatchAsiaOddsAndBigBallListRequest) GetEventId() int64 {
+	if x != nil {
+		return x.EventId
+	}
+	return 0
+}
+
+func (x *V2FootMatchAsiaOddsAndBigBallListRequest) GetLanguage() string {
+	if x != nil {
+		return x.Language
+	}
+	return ""
+}
+
+func (x *V2FootMatchAsiaOddsAndBigBallListRequest) GetTimeZone() int64 {
+	if x != nil {
+		return x.TimeZone
+	}
+	return 0
+}
+
+type V2FootMatchAsiaOddsAndBigBallListResponse struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	Info []*V2FootMatchAsiaOddsAndBigBallInfo `protobuf:"bytes,3,rep,name=info,proto3" json:"info,omitempty"`
+}
+
+func (x *V2FootMatchAsiaOddsAndBigBallListResponse) Reset() {
+	*x = V2FootMatchAsiaOddsAndBigBallListResponse{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_v2_foot_odd_proto_msgTypes[5]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *V2FootMatchAsiaOddsAndBigBallListResponse) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*V2FootMatchAsiaOddsAndBigBallListResponse) ProtoMessage() {}
+
+func (x *V2FootMatchAsiaOddsAndBigBallListResponse) ProtoReflect() protoreflect.Message {
+	mi := &file_v2_foot_odd_proto_msgTypes[5]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use V2FootMatchAsiaOddsAndBigBallListResponse.ProtoReflect.Descriptor instead.
+func (*V2FootMatchAsiaOddsAndBigBallListResponse) Descriptor() ([]byte, []int) {
+	return file_v2_foot_odd_proto_rawDescGZIP(), []int{5}
+}
+
+func (x *V2FootMatchAsiaOddsAndBigBallListResponse) GetInfo() []*V2FootMatchAsiaOddsAndBigBallInfo {
+	if x != nil {
+		return x.Info
+	}
+	return nil
+}
+
+type V2FootMatchAsiaOddsAndBigBallInfo struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	CompanyId   int64      `protobuf:"varint,1,opt,name=companyId,proto3" json:"companyId,omitempty"`    //公司id
+	CompanyName string     `protobuf:"bytes,2,opt,name=companyName,proto3" json:"companyName,omitempty"` //公司名称
+	InitOdds    *V2OddInfo `protobuf:"bytes,3,opt,name=initOdds,proto3" json:"initOdds,omitempty"`
+	CurrOdds    *V2OddInfo `protobuf:"bytes,4,opt,name=currOdds,proto3" json:"currOdds,omitempty"`
+	Times       int64      `protobuf:"varint,5,opt,name=times,proto3" json:"times,omitempty"`
+	Mark        int64      `protobuf:"varint,6,opt,name=mark,proto3" json:"mark,omitempty"` //最早和最晚：1.最早；2.最晚；0.无
+}
+
+func (x *V2FootMatchAsiaOddsAndBigBallInfo) Reset() {
+	*x = V2FootMatchAsiaOddsAndBigBallInfo{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_v2_foot_odd_proto_msgTypes[6]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *V2FootMatchAsiaOddsAndBigBallInfo) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*V2FootMatchAsiaOddsAndBigBallInfo) ProtoMessage() {}
+
+func (x *V2FootMatchAsiaOddsAndBigBallInfo) ProtoReflect() protoreflect.Message {
+	mi := &file_v2_foot_odd_proto_msgTypes[6]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use V2FootMatchAsiaOddsAndBigBallInfo.ProtoReflect.Descriptor instead.
+func (*V2FootMatchAsiaOddsAndBigBallInfo) Descriptor() ([]byte, []int) {
+	return file_v2_foot_odd_proto_rawDescGZIP(), []int{6}
+}
+
+func (x *V2FootMatchAsiaOddsAndBigBallInfo) GetCompanyId() int64 {
+	if x != nil {
+		return x.CompanyId
+	}
+	return 0
+}
+
+func (x *V2FootMatchAsiaOddsAndBigBallInfo) GetCompanyName() string {
+	if x != nil {
+		return x.CompanyName
+	}
+	return ""
+}
+
+func (x *V2FootMatchAsiaOddsAndBigBallInfo) GetInitOdds() *V2OddInfo {
+	if x != nil {
+		return x.InitOdds
+	}
+	return nil
+}
+
+func (x *V2FootMatchAsiaOddsAndBigBallInfo) GetCurrOdds() *V2OddInfo {
+	if x != nil {
+		return x.CurrOdds
+	}
+	return nil
+}
+
+func (x *V2FootMatchAsiaOddsAndBigBallInfo) GetTimes() int64 {
+	if x != nil {
+		return x.Times
+	}
+	return 0
+}
+
+func (x *V2FootMatchAsiaOddsAndBigBallInfo) GetMark() int64 {
 	if x != nil {
 		return x.Mark
 	}
 	return 0
 }
 
-func (x *V2FootMatchOddList) GetNowData() []string {
-	if x != nil {
-		return x.NowData
-	}
-	return nil
+type V2OddInfo struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	Win  float32 `protobuf:"fixed32,1,opt,name=win,proto3" json:"win,omitempty"`   //胜
+	Draw float32 `protobuf:"fixed32,2,opt,name=draw,proto3" json:"draw,omitempty"` //平
+	Lose float32 `protobuf:"fixed32,3,opt,name=lose,proto3" json:"lose,omitempty"` //负
 }
 
-func (x *V2FootMatchOddList) GetInitData() []string {
-	if x != nil {
-		return x.InitData
+func (x *V2OddInfo) Reset() {
+	*x = V2OddInfo{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_v2_foot_odd_proto_msgTypes[7]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
 	}
-	return nil
+}
+
+func (x *V2OddInfo) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*V2OddInfo) ProtoMessage() {}
+
+func (x *V2OddInfo) ProtoReflect() protoreflect.Message {
+	mi := &file_v2_foot_odd_proto_msgTypes[7]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use V2OddInfo.ProtoReflect.Descriptor instead.
+func (*V2OddInfo) Descriptor() ([]byte, []int) {
+	return file_v2_foot_odd_proto_rawDescGZIP(), []int{7}
+}
+
+func (x *V2OddInfo) GetWin() float32 {
+	if x != nil {
+		return x.Win
+	}
+	return 0
+}
+
+func (x *V2OddInfo) GetDraw() float32 {
+	if x != nil {
+		return x.Draw
+	}
+	return 0
+}
+
+func (x *V2OddInfo) GetLose() float32 {
+	if x != nil {
+		return x.Lose
+	}
+	return 0
 }
 
 var File_v2_foot_odd_proto protoreflect.FileDescriptor
 
 var file_v2_foot_odd_proto_rawDesc = []byte{
 	0x0a, 0x11, 0x76, 0x32, 0x5f, 0x66, 0x6f, 0x6f, 0x74, 0x5f, 0x6f, 0x64, 0x64, 0x2e, 0x70, 0x72,
-	0x6f, 0x74, 0x6f, 0x22, 0x6b, 0x0a, 0x19, 0x56, 0x32, 0x46, 0x6f, 0x6f, 0x74, 0x4d, 0x61, 0x74,
-	0x63, 0x68, 0x4f, 0x64, 0x64, 0x4c, 0x69, 0x73, 0x74, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74,
-	0x12, 0x18, 0x0a, 0x07, 0x73, 0x70, 0x6f, 0x72, 0x74, 0x49, 0x64, 0x18, 0x01, 0x20, 0x01, 0x28,
-	0x03, 0x52, 0x07, 0x73, 0x70, 0x6f, 0x72, 0x74, 0x49, 0x64, 0x12, 0x18, 0x0a, 0x07, 0x65, 0x76,
+	0x6f, 0x74, 0x6f, 0x22, 0x76, 0x0a, 0x22, 0x56, 0x32, 0x46, 0x6f, 0x6f, 0x74, 0x4d, 0x61, 0x74,
+	0x63, 0x68, 0x45, 0x75, 0x72, 0x6f, 0x70, 0x65, 0x61, 0x6e, 0x4f, 0x64, 0x64, 0x73, 0x4c, 0x69,
+	0x73, 0x74, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x12, 0x18, 0x0a, 0x07, 0x65, 0x76, 0x65,
+	0x6e, 0x74, 0x49, 0x64, 0x18, 0x01, 0x20, 0x01, 0x28, 0x03, 0x52, 0x07, 0x65, 0x76, 0x65, 0x6e,
+	0x74, 0x49, 0x64, 0x12, 0x1a, 0x0a, 0x08, 0x6c, 0x61, 0x6e, 0x67, 0x75, 0x61, 0x67, 0x65, 0x18,
+	0x02, 0x20, 0x01, 0x28, 0x09, 0x52, 0x08, 0x6c, 0x61, 0x6e, 0x67, 0x75, 0x61, 0x67, 0x65, 0x12,
+	0x1a, 0x0a, 0x08, 0x74, 0x69, 0x6d, 0x65, 0x5a, 0x6f, 0x6e, 0x65, 0x18, 0x03, 0x20, 0x01, 0x28,
+	0x03, 0x52, 0x08, 0x74, 0x69, 0x6d, 0x65, 0x5a, 0x6f, 0x6e, 0x65, 0x22, 0xe9, 0x01, 0x0a, 0x23,
+	0x56, 0x32, 0x46, 0x6f, 0x6f, 0x74, 0x4d, 0x61, 0x74, 0x63, 0x68, 0x45, 0x75, 0x72, 0x6f, 0x70,
+	0x65, 0x61, 0x6e, 0x4f, 0x64, 0x64, 0x73, 0x4c, 0x69, 0x73, 0x74, 0x52, 0x65, 0x73, 0x70, 0x6f,
+	0x6e, 0x73, 0x65, 0x12, 0x28, 0x0a, 0x07, 0x6d, 0x61, 0x78, 0x69, 0x6d, 0x75, 0x6d, 0x18, 0x01,
+	0x20, 0x01, 0x28, 0x0b, 0x32, 0x0e, 0x2e, 0x56, 0x32, 0x4f, 0x64, 0x64, 0x73, 0x44, 0x65, 0x74,
+	0x61, 0x69, 0x6c, 0x73, 0x52, 0x07, 0x6d, 0x61, 0x78, 0x69, 0x6d, 0x75, 0x6d, 0x12, 0x28, 0x0a,
+	0x07, 0x6d, 0x69, 0x6e, 0x69, 0x6d, 0x75, 0x6d, 0x18, 0x02, 0x20, 0x01, 0x28, 0x0b, 0x32, 0x0e,
+	0x2e, 0x56, 0x32, 0x4f, 0x64, 0x64, 0x73, 0x44, 0x65, 0x74, 0x61, 0x69, 0x6c, 0x73, 0x52, 0x07,
+	0x6d, 0x69, 0x6e, 0x69, 0x6d, 0x75, 0x6d, 0x12, 0x28, 0x0a, 0x07, 0x41, 0x76, 0x65, 0x72, 0x61,
+	0x67, 0x65, 0x18, 0x04, 0x20, 0x01, 0x28, 0x0b, 0x32, 0x0e, 0x2e, 0x56, 0x32, 0x4f, 0x64, 0x64,
+	0x73, 0x44, 0x65, 0x74, 0x61, 0x69, 0x6c, 0x73, 0x52, 0x07, 0x41, 0x76, 0x65, 0x72, 0x61, 0x67,
+	0x65, 0x12, 0x1e, 0x0a, 0x0a, 0x64, 0x69, 0x73, 0x70, 0x65, 0x72, 0x73, 0x69, 0x6f, 0x6e, 0x18,
+	0x05, 0x20, 0x03, 0x28, 0x02, 0x52, 0x0a, 0x64, 0x69, 0x73, 0x70, 0x65, 0x72, 0x73, 0x69, 0x6f,
+	0x6e, 0x12, 0x24, 0x0a, 0x04, 0x6c, 0x69, 0x73, 0x74, 0x18, 0x06, 0x20, 0x03, 0x28, 0x0b, 0x32,
+	0x10, 0x2e, 0x56, 0x32, 0x4f, 0x64, 0x64, 0x44, 0x65, 0x74, 0x61, 0x69, 0x6c, 0x4c, 0x69, 0x73,
+	0x74, 0x52, 0x04, 0x6c, 0x69, 0x73, 0x74, 0x22, 0xad, 0x01, 0x0a, 0x0f, 0x56, 0x32, 0x4f, 0x64,
+	0x64, 0x44, 0x65, 0x74, 0x61, 0x69, 0x6c, 0x4c, 0x69, 0x73, 0x74, 0x12, 0x22, 0x0a, 0x04, 0x69,
+	0x6e, 0x69, 0x74, 0x18, 0x01, 0x20, 0x01, 0x28, 0x0b, 0x32, 0x0e, 0x2e, 0x56, 0x32, 0x4f, 0x64,
+	0x64, 0x73, 0x44, 0x65, 0x74, 0x61, 0x69, 0x6c, 0x73, 0x52, 0x04, 0x69, 0x6e, 0x69, 0x74, 0x12,
+	0x22, 0x0a, 0x04, 0x63, 0x75, 0x72, 0x72, 0x18, 0x02, 0x20, 0x01, 0x28, 0x0b, 0x32, 0x0e, 0x2e,
+	0x56, 0x32, 0x4f, 0x64, 0x64, 0x73, 0x44, 0x65, 0x74, 0x61, 0x69, 0x6c, 0x73, 0x52, 0x04, 0x63,
+	0x75, 0x72, 0x72, 0x12, 0x20, 0x0a, 0x0b, 0x63, 0x6f, 0x6d, 0x70, 0x61, 0x6e, 0x79, 0x4e, 0x61,
+	0x6d, 0x65, 0x18, 0x03, 0x20, 0x01, 0x28, 0x09, 0x52, 0x0b, 0x63, 0x6f, 0x6d, 0x70, 0x61, 0x6e,
+	0x79, 0x4e, 0x61, 0x6d, 0x65, 0x12, 0x1c, 0x0a, 0x09, 0x63, 0x6f, 0x6d, 0x70, 0x61, 0x6e, 0x79,
+	0x49, 0x64, 0x18, 0x04, 0x20, 0x01, 0x28, 0x03, 0x52, 0x09, 0x63, 0x6f, 0x6d, 0x70, 0x61, 0x6e,
+	0x79, 0x49, 0x64, 0x12, 0x12, 0x0a, 0x04, 0x6d, 0x61, 0x72, 0x6b, 0x18, 0x05, 0x20, 0x01, 0x28,
+	0x03, 0x52, 0x04, 0x6d, 0x61, 0x72, 0x6b, 0x22, 0x89, 0x02, 0x0a, 0x0d, 0x56, 0x32, 0x4f, 0x64,
+	0x64, 0x73, 0x44, 0x65, 0x74, 0x61, 0x69, 0x6c, 0x73, 0x12, 0x10, 0x0a, 0x03, 0x77, 0x69, 0x6e,
+	0x18, 0x01, 0x20, 0x01, 0x28, 0x02, 0x52, 0x03, 0x77, 0x69, 0x6e, 0x12, 0x12, 0x0a, 0x04, 0x64,
+	0x72, 0x61, 0x77, 0x18, 0x02, 0x20, 0x01, 0x28, 0x02, 0x52, 0x04, 0x64, 0x72, 0x61, 0x77, 0x12,
+	0x12, 0x0a, 0x04, 0x6c, 0x6f, 0x73, 0x65, 0x18, 0x03, 0x20, 0x01, 0x28, 0x02, 0x52, 0x04, 0x6c,
+	0x6f, 0x73, 0x65, 0x12, 0x18, 0x0a, 0x07, 0x77, 0x69, 0x6e, 0x50, 0x72, 0x6f, 0x62, 0x18, 0x04,
+	0x20, 0x01, 0x28, 0x02, 0x52, 0x07, 0x77, 0x69, 0x6e, 0x50, 0x72, 0x6f, 0x62, 0x12, 0x1a, 0x0a,
+	0x08, 0x64, 0x72, 0x61, 0x77, 0x50, 0x72, 0x6f, 0x62, 0x18, 0x05, 0x20, 0x01, 0x28, 0x02, 0x52,
+	0x08, 0x64, 0x72, 0x61, 0x77, 0x50, 0x72, 0x6f, 0x62, 0x12, 0x1a, 0x0a, 0x08, 0x6c, 0x6f, 0x73,
+	0x65, 0x50, 0x72, 0x6f, 0x62, 0x18, 0x06, 0x20, 0x01, 0x28, 0x02, 0x52, 0x08, 0x6c, 0x6f, 0x73,
+	0x65, 0x50, 0x72, 0x6f, 0x62, 0x12, 0x1e, 0x0a, 0x0a, 0x72, 0x65, 0x74, 0x75, 0x72, 0x6e, 0x50,
+	0x72, 0x6f, 0x62, 0x18, 0x07, 0x20, 0x01, 0x28, 0x02, 0x52, 0x0a, 0x72, 0x65, 0x74, 0x75, 0x72,
+	0x6e, 0x50, 0x72, 0x6f, 0x62, 0x12, 0x1e, 0x0a, 0x0a, 0x6b, 0x65, 0x6c, 0x6c, 0x79, 0x49, 0x6e,
+	0x64, 0x65, 0x78, 0x18, 0x08, 0x20, 0x03, 0x28, 0x02, 0x52, 0x0a, 0x6b, 0x65, 0x6c, 0x6c, 0x79,
+	0x49, 0x6e, 0x64, 0x65, 0x78, 0x12, 0x18, 0x0a, 0x07, 0x76, 0x61, 0x72, 0x69, 0x65, 0x74, 0x79,
+	0x18, 0x09, 0x20, 0x01, 0x28, 0x03, 0x52, 0x07, 0x76, 0x61, 0x72, 0x69, 0x65, 0x74, 0x79, 0x12,
+	0x12, 0x0a, 0x04, 0x76, 0x69, 0x65, 0x77, 0x18, 0x0a, 0x20, 0x01, 0x28, 0x09, 0x52, 0x04, 0x76,
+	0x69, 0x65, 0x77, 0x22, 0x96, 0x01, 0x0a, 0x28, 0x56, 0x32, 0x46, 0x6f, 0x6f, 0x74, 0x4d, 0x61,
+	0x74, 0x63, 0x68, 0x41, 0x73, 0x69, 0x61, 0x4f, 0x64, 0x64, 0x73, 0x41, 0x6e, 0x64, 0x42, 0x69,
+	0x67, 0x42, 0x61, 0x6c, 0x6c, 0x4c, 0x69, 0x73, 0x74, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74,
+	0x12, 0x18, 0x0a, 0x07, 0x6f, 0x64, 0x64, 0x54, 0x79, 0x70, 0x65, 0x18, 0x01, 0x20, 0x01, 0x28,
+	0x03, 0x52, 0x07, 0x6f, 0x64, 0x64, 0x54, 0x79, 0x70, 0x65, 0x12, 0x18, 0x0a, 0x07, 0x65, 0x76,
 	0x65, 0x6e, 0x74, 0x49, 0x64, 0x18, 0x02, 0x20, 0x01, 0x28, 0x03, 0x52, 0x07, 0x65, 0x76, 0x65,
 	0x6e, 0x74, 0x49, 0x64, 0x12, 0x1a, 0x0a, 0x08, 0x6c, 0x61, 0x6e, 0x67, 0x75, 0x61, 0x67, 0x65,
 	0x18, 0x03, 0x20, 0x01, 0x28, 0x09, 0x52, 0x08, 0x6c, 0x61, 0x6e, 0x67, 0x75, 0x61, 0x67, 0x65,
-	0x22, 0x45, 0x0a, 0x1a, 0x56, 0x32, 0x46, 0x6f, 0x6f, 0x74, 0x4d, 0x61, 0x74, 0x63, 0x68, 0x4f,
-	0x64, 0x64, 0x4c, 0x69, 0x73, 0x74, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x12, 0x27,
-	0x0a, 0x04, 0x64, 0x61, 0x74, 0x61, 0x18, 0x03, 0x20, 0x03, 0x28, 0x0b, 0x32, 0x13, 0x2e, 0x56,
-	0x32, 0x46, 0x6f, 0x6f, 0x74, 0x4d, 0x61, 0x74, 0x63, 0x68, 0x4f, 0x64, 0x64, 0x44, 0x61, 0x74,
-	0x61, 0x52, 0x04, 0x64, 0x61, 0x74, 0x61, 0x22, 0x79, 0x0a, 0x12, 0x56, 0x32, 0x46, 0x6f, 0x6f,
-	0x74, 0x4d, 0x61, 0x74, 0x63, 0x68, 0x4f, 0x64, 0x64, 0x44, 0x61, 0x74, 0x61, 0x12, 0x12, 0x0a,
-	0x04, 0x6e, 0x61, 0x6d, 0x65, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x04, 0x6e, 0x61, 0x6d,
-	0x65, 0x12, 0x0e, 0x0a, 0x02, 0x69, 0x64, 0x18, 0x02, 0x20, 0x01, 0x28, 0x03, 0x52, 0x02, 0x69,
-	0x64, 0x12, 0x16, 0x0a, 0x06, 0x74, 0x69, 0x74, 0x6c, 0x65, 0x73, 0x18, 0x03, 0x20, 0x03, 0x28,
-	0x09, 0x52, 0x06, 0x74, 0x69, 0x74, 0x6c, 0x65, 0x73, 0x12, 0x27, 0x0a, 0x04, 0x6c, 0x69, 0x73,
-	0x74, 0x18, 0x04, 0x20, 0x03, 0x28, 0x0b, 0x32, 0x13, 0x2e, 0x56, 0x32, 0x46, 0x6f, 0x6f, 0x74,
-	0x4d, 0x61, 0x74, 0x63, 0x68, 0x4f, 0x64, 0x64, 0x4c, 0x69, 0x73, 0x74, 0x52, 0x04, 0x6c, 0x69,
-	0x73, 0x74, 0x22, 0x82, 0x01, 0x0a, 0x12, 0x56, 0x32, 0x46, 0x6f, 0x6f, 0x74, 0x4d, 0x61, 0x74,
-	0x63, 0x68, 0x4f, 0x64, 0x64, 0x4c, 0x69, 0x73, 0x74, 0x12, 0x0e, 0x0a, 0x02, 0x69, 0x64, 0x18,
-	0x01, 0x20, 0x01, 0x28, 0x03, 0x52, 0x02, 0x69, 0x64, 0x12, 0x12, 0x0a, 0x04, 0x6e, 0x61, 0x6d,
-	0x65, 0x18, 0x02, 0x20, 0x01, 0x28, 0x09, 0x52, 0x04, 0x6e, 0x61, 0x6d, 0x65, 0x12, 0x12, 0x0a,
-	0x04, 0x6d, 0x61, 0x72, 0x6b, 0x18, 0x05, 0x20, 0x01, 0x28, 0x03, 0x52, 0x04, 0x6d, 0x61, 0x72,
-	0x6b, 0x12, 0x18, 0x0a, 0x07, 0x6e, 0x6f, 0x77, 0x44, 0x61, 0x74, 0x61, 0x18, 0x03, 0x20, 0x03,
-	0x28, 0x09, 0x52, 0x07, 0x6e, 0x6f, 0x77, 0x44, 0x61, 0x74, 0x61, 0x12, 0x1a, 0x0a, 0x08, 0x69,
-	0x6e, 0x69, 0x74, 0x44, 0x61, 0x74, 0x61, 0x18, 0x04, 0x20, 0x03, 0x28, 0x09, 0x52, 0x08, 0x69,
-	0x6e, 0x69, 0x74, 0x44, 0x61, 0x74, 0x61, 0x42, 0x07, 0x5a, 0x05, 0x2e, 0x2f, 0x3b, 0x76, 0x31,
-	0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
+	0x12, 0x1a, 0x0a, 0x08, 0x74, 0x69, 0x6d, 0x65, 0x5a, 0x6f, 0x6e, 0x65, 0x18, 0x06, 0x20, 0x01,
+	0x28, 0x03, 0x52, 0x08, 0x74, 0x69, 0x6d, 0x65, 0x5a, 0x6f, 0x6e, 0x65, 0x22, 0x63, 0x0a, 0x29,
+	0x56, 0x32, 0x46, 0x6f, 0x6f, 0x74, 0x4d, 0x61, 0x74, 0x63, 0x68, 0x41, 0x73, 0x69, 0x61, 0x4f,
+	0x64, 0x64, 0x73, 0x41, 0x6e, 0x64, 0x42, 0x69, 0x67, 0x42, 0x61, 0x6c, 0x6c, 0x4c, 0x69, 0x73,
+	0x74, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x12, 0x36, 0x0a, 0x04, 0x69, 0x6e, 0x66,
+	0x6f, 0x18, 0x03, 0x20, 0x03, 0x28, 0x0b, 0x32, 0x22, 0x2e, 0x56, 0x32, 0x46, 0x6f, 0x6f, 0x74,
+	0x4d, 0x61, 0x74, 0x63, 0x68, 0x41, 0x73, 0x69, 0x61, 0x4f, 0x64, 0x64, 0x73, 0x41, 0x6e, 0x64,
+	0x42, 0x69, 0x67, 0x42, 0x61, 0x6c, 0x6c, 0x49, 0x6e, 0x66, 0x6f, 0x52, 0x04, 0x69, 0x6e, 0x66,
+	0x6f, 0x22, 0xdd, 0x01, 0x0a, 0x21, 0x56, 0x32, 0x46, 0x6f, 0x6f, 0x74, 0x4d, 0x61, 0x74, 0x63,
+	0x68, 0x41, 0x73, 0x69, 0x61, 0x4f, 0x64, 0x64, 0x73, 0x41, 0x6e, 0x64, 0x42, 0x69, 0x67, 0x42,
+	0x61, 0x6c, 0x6c, 0x49, 0x6e, 0x66, 0x6f, 0x12, 0x1c, 0x0a, 0x09, 0x63, 0x6f, 0x6d, 0x70, 0x61,
+	0x6e, 0x79, 0x49, 0x64, 0x18, 0x01, 0x20, 0x01, 0x28, 0x03, 0x52, 0x09, 0x63, 0x6f, 0x6d, 0x70,
+	0x61, 0x6e, 0x79, 0x49, 0x64, 0x12, 0x20, 0x0a, 0x0b, 0x63, 0x6f, 0x6d, 0x70, 0x61, 0x6e, 0x79,
+	0x4e, 0x61, 0x6d, 0x65, 0x18, 0x02, 0x20, 0x01, 0x28, 0x09, 0x52, 0x0b, 0x63, 0x6f, 0x6d, 0x70,
+	0x61, 0x6e, 0x79, 0x4e, 0x61, 0x6d, 0x65, 0x12, 0x26, 0x0a, 0x08, 0x69, 0x6e, 0x69, 0x74, 0x4f,
+	0x64, 0x64, 0x73, 0x18, 0x03, 0x20, 0x01, 0x28, 0x0b, 0x32, 0x0a, 0x2e, 0x56, 0x32, 0x4f, 0x64,
+	0x64, 0x49, 0x6e, 0x66, 0x6f, 0x52, 0x08, 0x69, 0x6e, 0x69, 0x74, 0x4f, 0x64, 0x64, 0x73, 0x12,
+	0x26, 0x0a, 0x08, 0x63, 0x75, 0x72, 0x72, 0x4f, 0x64, 0x64, 0x73, 0x18, 0x04, 0x20, 0x01, 0x28,
+	0x0b, 0x32, 0x0a, 0x2e, 0x56, 0x32, 0x4f, 0x64, 0x64, 0x49, 0x6e, 0x66, 0x6f, 0x52, 0x08, 0x63,
+	0x75, 0x72, 0x72, 0x4f, 0x64, 0x64, 0x73, 0x12, 0x14, 0x0a, 0x05, 0x74, 0x69, 0x6d, 0x65, 0x73,
+	0x18, 0x05, 0x20, 0x01, 0x28, 0x03, 0x52, 0x05, 0x74, 0x69, 0x6d, 0x65, 0x73, 0x12, 0x12, 0x0a,
+	0x04, 0x6d, 0x61, 0x72, 0x6b, 0x18, 0x06, 0x20, 0x01, 0x28, 0x03, 0x52, 0x04, 0x6d, 0x61, 0x72,
+	0x6b, 0x22, 0x45, 0x0a, 0x09, 0x56, 0x32, 0x4f, 0x64, 0x64, 0x49, 0x6e, 0x66, 0x6f, 0x12, 0x10,
+	0x0a, 0x03, 0x77, 0x69, 0x6e, 0x18, 0x01, 0x20, 0x01, 0x28, 0x02, 0x52, 0x03, 0x77, 0x69, 0x6e,
+	0x12, 0x12, 0x0a, 0x04, 0x64, 0x72, 0x61, 0x77, 0x18, 0x02, 0x20, 0x01, 0x28, 0x02, 0x52, 0x04,
+	0x64, 0x72, 0x61, 0x77, 0x12, 0x12, 0x0a, 0x04, 0x6c, 0x6f, 0x73, 0x65, 0x18, 0x03, 0x20, 0x01,
+	0x28, 0x02, 0x52, 0x04, 0x6c, 0x6f, 0x73, 0x65, 0x42, 0x07, 0x5a, 0x05, 0x2e, 0x2f, 0x3b, 0x76,
+	0x31, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
 }
 
 var (
@@ -327,21 +734,32 @@ func file_v2_foot_odd_proto_rawDescGZIP() []byte {
 	return file_v2_foot_odd_proto_rawDescData
 }
 
-var file_v2_foot_odd_proto_msgTypes = make([]protoimpl.MessageInfo, 4)
+var file_v2_foot_odd_proto_msgTypes = make([]protoimpl.MessageInfo, 8)
 var file_v2_foot_odd_proto_goTypes = []interface{}{
-	(*V2FootMatchOddListRequest)(nil),  // 0: V2FootMatchOddListRequest
-	(*V2FootMatchOddListResponse)(nil), // 1: V2FootMatchOddListResponse
-	(*V2FootMatchOddData)(nil),         // 2: V2FootMatchOddData
-	(*V2FootMatchOddList)(nil),         // 3: V2FootMatchOddList
+	(*V2FootMatchEuropeanOddsListRequest)(nil),        // 0: V2FootMatchEuropeanOddsListRequest
+	(*V2FootMatchEuropeanOddsListResponse)(nil),       // 1: V2FootMatchEuropeanOddsListResponse
+	(*V2OddDetailList)(nil),                           // 2: V2OddDetailList
+	(*V2OddsDetails)(nil),                             // 3: V2OddsDetails
+	(*V2FootMatchAsiaOddsAndBigBallListRequest)(nil),  // 4: V2FootMatchAsiaOddsAndBigBallListRequest
+	(*V2FootMatchAsiaOddsAndBigBallListResponse)(nil), // 5: V2FootMatchAsiaOddsAndBigBallListResponse
+	(*V2FootMatchAsiaOddsAndBigBallInfo)(nil),         // 6: V2FootMatchAsiaOddsAndBigBallInfo
+	(*V2OddInfo)(nil),                                 // 7: V2OddInfo
 }
 var file_v2_foot_odd_proto_depIdxs = []int32{
-	2, // 0: V2FootMatchOddListResponse.data:type_name -> V2FootMatchOddData
-	3, // 1: V2FootMatchOddData.list:type_name -> V2FootMatchOddList
-	2, // [2:2] is the sub-list for method output_type
-	2, // [2:2] is the sub-list for method input_type
-	2, // [2:2] is the sub-list for extension type_name
-	2, // [2:2] is the sub-list for extension extendee
-	0, // [0:2] is the sub-list for field type_name
+	3, // 0: V2FootMatchEuropeanOddsListResponse.maximum:type_name -> V2OddsDetails
+	3, // 1: V2FootMatchEuropeanOddsListResponse.minimum:type_name -> V2OddsDetails
+	3, // 2: V2FootMatchEuropeanOddsListResponse.Average:type_name -> V2OddsDetails
+	2, // 3: V2FootMatchEuropeanOddsListResponse.list:type_name -> V2OddDetailList
+	3, // 4: V2OddDetailList.init:type_name -> V2OddsDetails
+	3, // 5: V2OddDetailList.curr:type_name -> V2OddsDetails
+	6, // 6: V2FootMatchAsiaOddsAndBigBallListResponse.info:type_name -> V2FootMatchAsiaOddsAndBigBallInfo
+	7, // 7: V2FootMatchAsiaOddsAndBigBallInfo.initOdds:type_name -> V2OddInfo
+	7, // 8: V2FootMatchAsiaOddsAndBigBallInfo.currOdds:type_name -> V2OddInfo
+	9, // [9:9] is the sub-list for method output_type
+	9, // [9:9] is the sub-list for method input_type
+	9, // [9:9] is the sub-list for extension type_name
+	9, // [9:9] is the sub-list for extension extendee
+	0, // [0:9] is the sub-list for field type_name
 }
 
 func init() { file_v2_foot_odd_proto_init() }
@@ -351,7 +769,7 @@ func file_v2_foot_odd_proto_init() {
 	}
 	if !protoimpl.UnsafeEnabled {
 		file_v2_foot_odd_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*V2FootMatchOddListRequest); i {
+			switch v := v.(*V2FootMatchEuropeanOddsListRequest); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -363,7 +781,7 @@ func file_v2_foot_odd_proto_init() {
 			}
 		}
 		file_v2_foot_odd_proto_msgTypes[1].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*V2FootMatchOddListResponse); i {
+			switch v := v.(*V2FootMatchEuropeanOddsListResponse); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -375,7 +793,7 @@ func file_v2_foot_odd_proto_init() {
 			}
 		}
 		file_v2_foot_odd_proto_msgTypes[2].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*V2FootMatchOddData); i {
+			switch v := v.(*V2OddDetailList); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -387,7 +805,55 @@ func file_v2_foot_odd_proto_init() {
 			}
 		}
 		file_v2_foot_odd_proto_msgTypes[3].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*V2FootMatchOddList); i {
+			switch v := v.(*V2OddsDetails); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_v2_foot_odd_proto_msgTypes[4].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*V2FootMatchAsiaOddsAndBigBallListRequest); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_v2_foot_odd_proto_msgTypes[5].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*V2FootMatchAsiaOddsAndBigBallListResponse); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_v2_foot_odd_proto_msgTypes[6].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*V2FootMatchAsiaOddsAndBigBallInfo); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_v2_foot_odd_proto_msgTypes[7].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*V2OddInfo); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -405,7 +871,7 @@ func file_v2_foot_odd_proto_init() {
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: file_v2_foot_odd_proto_rawDesc,
 			NumEnums:      0,
-			NumMessages:   4,
+			NumMessages:   8,
 			NumExtensions: 0,
 			NumServices:   0,
 		},
