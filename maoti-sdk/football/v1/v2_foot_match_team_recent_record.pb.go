@@ -151,7 +151,7 @@ type V2FootMatchTeamRecentRecordInfo struct {
 	Away          string `protobuf:"bytes,13,opt,name=away,proto3" json:"away,omitempty"`                    //客队名称
 	AwayScore     int64  `protobuf:"varint,14,opt,name=awayScore,proto3" json:"awayScore,omitempty"`         //客队得分
 	AwayHalfScore int64  `protobuf:"varint,15,opt,name=awayHalfScore,proto3" json:"awayHalfScore,omitempty"` //客队半场得分
-	Result        int64  `protobuf:"varint,16,opt,name=result,proto3" json:"result,omitempty"`               //胜平负
+	Result        int64  `protobuf:"varint,16,opt,name=result,proto3" json:"result,omitempty"`               //胜平负：1.主胜；2.客胜；3.平局；0.未知
 	SameHome      bool   `protobuf:"varint,17,opt,name=sameHome,proto3" json:"sameHome,omitempty"`           //相同主队，过滤列表中的球队不等于主队的，true表示是相同主队
 	SameAway      bool   `protobuf:"varint,18,opt,name=sameAway,proto3" json:"sameAway,omitempty"`           //相同客队，过滤列表中的球队不等于客队的，true表示是相同客队
 	SameLetBall   bool   `protobuf:"varint,19,opt,name=sameLetBall,proto3" json:"sameLetBall,omitempty"`     //相同让球，过滤列表中的不相同让球的数据，true表示是相同让球
