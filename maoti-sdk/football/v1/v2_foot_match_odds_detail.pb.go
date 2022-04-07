@@ -20,6 +20,7 @@ const (
 	_ = protoimpl.EnforceVersion(protoimpl.MaxVersion - 20)
 )
 
+//v2 即时比赛列表 - 比赛详情 - 指数列表 - 指数详情
 type V2FootMatchOddsDetailRequest struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
