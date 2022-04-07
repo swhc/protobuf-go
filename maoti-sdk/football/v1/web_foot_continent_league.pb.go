@@ -128,8 +128,8 @@ type WebFootContinentTournament struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Id            int64                 `protobuf:"varint,3,opt,name=Id,proto3" json:"Id,omitempty"`                      //联赛ID
-	ContinentName string                `protobuf:"bytes,4,opt,name=ContinentName,proto3" json:"ContinentName,omitempty"` //联赛名称
+	Id            int64                 `protobuf:"varint,3,opt,name=Id,proto3" json:"Id,omitempty"`                      //大洲ID
+	ContinentName string                `protobuf:"bytes,4,opt,name=ContinentName,proto3" json:"ContinentName,omitempty"` //大洲名称
 	Sort          int64                 `protobuf:"varint,6,opt,name=Sort,proto3" json:"Sort,omitempty"`                  //排序(忽略掉，返回数据就是已经排好了的)
 	CountryList   []*WebFootCountryList `protobuf:"bytes,7,rep,name=CountryList,proto3" json:"CountryList,omitempty"`     //国家列表
 }
