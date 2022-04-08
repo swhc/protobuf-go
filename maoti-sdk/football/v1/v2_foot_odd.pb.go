@@ -180,7 +180,7 @@ type V2OddDetailList struct {
 	Curr        *V2OddsDetails `protobuf:"bytes,2,opt,name=curr,proto3" json:"curr,omitempty"`
 	CompanyName string         `protobuf:"bytes,3,opt,name=companyName,proto3" json:"companyName,omitempty"` //公司名称
 	CompanyId   int64          `protobuf:"varint,4,opt,name=companyId,proto3" json:"companyId,omitempty"`    //公司id
-	Mark        int64          `protobuf:"varint,5,opt,name=mark,proto3" json:"mark,omitempty"`              //最早和最晚：1.最早；2.最晚；0.无
+	Mark        int64          `protobuf:"varint,5,opt,name=mark,proto3" json:"mark,omitempty"`              //最早和最晚：1.最早；2.最晚；0.无。指数列表使用
 }
 
 func (x *V2OddDetailList) Reset() {
@@ -506,7 +506,7 @@ type V2FootMatchAsiaOddsAndBigBallInfo struct {
 	InitOdds    *V2OddInfo `protobuf:"bytes,3,opt,name=initOdds,proto3" json:"initOdds,omitempty"`
 	CurrOdds    *V2OddInfo `protobuf:"bytes,4,opt,name=currOdds,proto3" json:"currOdds,omitempty"`
 	Times       int64      `protobuf:"varint,5,opt,name=times,proto3" json:"times,omitempty"`
-	Mark        int64      `protobuf:"varint,6,opt,name=mark,proto3" json:"mark,omitempty"` //最早和最晚：1.最早；2.最晚；0.无
+	Mark        int64      `protobuf:"varint,6,opt,name=mark,proto3" json:"mark,omitempty"` //最早和最晚：1.最早；2.最晚；0.无。指数列表使用
 }
 
 func (x *V2FootMatchAsiaOddsAndBigBallInfo) Reset() {
