@@ -20,16 +20,17 @@ const (
 	_ = protoimpl.EnforceVersion(protoimpl.MaxVersion - 20)
 )
 
-type V2FootMatchBeforeOddsRequest struct {
+type V2FootMatchBeforeImmediateOddsRequest struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
 	MatchId int64 `protobuf:"varint,1,opt,name=matchId,proto3" json:"matchId,omitempty"` //比赛ID
+	OddType int64 `protobuf:"varint,2,opt,name=oddType,proto3" json:"oddType,omitempty"` //查询指数类型：1.赛前指数；2.即时指数；
 }
 
-func (x *V2FootMatchBeforeOddsRequest) Reset() {
-	*x = V2FootMatchBeforeOddsRequest{}
+func (x *V2FootMatchBeforeImmediateOddsRequest) Reset() {
+	*x = V2FootMatchBeforeImmediateOddsRequest{}
 	if protoimpl.UnsafeEnabled {
 		mi := &file_v2_foot_match_before_odds_proto_msgTypes[0]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
@@ -37,13 +38,13 @@ func (x *V2FootMatchBeforeOddsRequest) Reset() {
 	}
 }
 
-func (x *V2FootMatchBeforeOddsRequest) String() string {
+func (x *V2FootMatchBeforeImmediateOddsRequest) String() string {
 	return protoimpl.X.MessageStringOf(x)
 }
 
-func (*V2FootMatchBeforeOddsRequest) ProtoMessage() {}
+func (*V2FootMatchBeforeImmediateOddsRequest) ProtoMessage() {}
 
-func (x *V2FootMatchBeforeOddsRequest) ProtoReflect() protoreflect.Message {
+func (x *V2FootMatchBeforeImmediateOddsRequest) ProtoReflect() protoreflect.Message {
 	mi := &file_v2_foot_match_before_odds_proto_msgTypes[0]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
@@ -55,30 +56,37 @@ func (x *V2FootMatchBeforeOddsRequest) ProtoReflect() protoreflect.Message {
 	return mi.MessageOf(x)
 }
 
-// Deprecated: Use V2FootMatchBeforeOddsRequest.ProtoReflect.Descriptor instead.
-func (*V2FootMatchBeforeOddsRequest) Descriptor() ([]byte, []int) {
+// Deprecated: Use V2FootMatchBeforeImmediateOddsRequest.ProtoReflect.Descriptor instead.
+func (*V2FootMatchBeforeImmediateOddsRequest) Descriptor() ([]byte, []int) {
 	return file_v2_foot_match_before_odds_proto_rawDescGZIP(), []int{0}
 }
 
-func (x *V2FootMatchBeforeOddsRequest) GetMatchId() int64 {
+func (x *V2FootMatchBeforeImmediateOddsRequest) GetMatchId() int64 {
 	if x != nil {
 		return x.MatchId
 	}
 	return 0
 }
 
-type V2FootMatchBeforeOddsResponse struct {
+func (x *V2FootMatchBeforeImmediateOddsRequest) GetOddType() int64 {
+	if x != nil {
+		return x.OddType
+	}
+	return 0
+}
+
+type V2FootMatchBeforeImmediateOddsResponse struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	AsianLoss    *V2BeforeOdds `protobuf:"bytes,1,opt,name=asianLoss,proto3" json:"asianLoss,omitempty"`       //亚赔
-	EuropeanLoss *V2BeforeOdds `protobuf:"bytes,2,opt,name=europeanLoss,proto3" json:"europeanLoss,omitempty"` //欧赔
-	BigSmall     *V2BeforeOdds `protobuf:"bytes,3,opt,name=bigSmall,proto3" json:"bigSmall,omitempty"`         //大小球
+	AsianLoss    *V2BeforeImmediateOdds `protobuf:"bytes,1,opt,name=asianLoss,proto3" json:"asianLoss,omitempty"`       //亚赔
+	EuropeanLoss *V2BeforeImmediateOdds `protobuf:"bytes,2,opt,name=europeanLoss,proto3" json:"europeanLoss,omitempty"` //欧赔
+	BigSmall     *V2BeforeImmediateOdds `protobuf:"bytes,3,opt,name=bigSmall,proto3" json:"bigSmall,omitempty"`         //大小球
 }
 
-func (x *V2FootMatchBeforeOddsResponse) Reset() {
-	*x = V2FootMatchBeforeOddsResponse{}
+func (x *V2FootMatchBeforeImmediateOddsResponse) Reset() {
+	*x = V2FootMatchBeforeImmediateOddsResponse{}
 	if protoimpl.UnsafeEnabled {
 		mi := &file_v2_foot_match_before_odds_proto_msgTypes[1]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
@@ -86,13 +94,13 @@ func (x *V2FootMatchBeforeOddsResponse) Reset() {
 	}
 }
 
-func (x *V2FootMatchBeforeOddsResponse) String() string {
+func (x *V2FootMatchBeforeImmediateOddsResponse) String() string {
 	return protoimpl.X.MessageStringOf(x)
 }
 
-func (*V2FootMatchBeforeOddsResponse) ProtoMessage() {}
+func (*V2FootMatchBeforeImmediateOddsResponse) ProtoMessage() {}
 
-func (x *V2FootMatchBeforeOddsResponse) ProtoReflect() protoreflect.Message {
+func (x *V2FootMatchBeforeImmediateOddsResponse) ProtoReflect() protoreflect.Message {
 	mi := &file_v2_foot_match_before_odds_proto_msgTypes[1]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
@@ -104,33 +112,33 @@ func (x *V2FootMatchBeforeOddsResponse) ProtoReflect() protoreflect.Message {
 	return mi.MessageOf(x)
 }
 
-// Deprecated: Use V2FootMatchBeforeOddsResponse.ProtoReflect.Descriptor instead.
-func (*V2FootMatchBeforeOddsResponse) Descriptor() ([]byte, []int) {
+// Deprecated: Use V2FootMatchBeforeImmediateOddsResponse.ProtoReflect.Descriptor instead.
+func (*V2FootMatchBeforeImmediateOddsResponse) Descriptor() ([]byte, []int) {
 	return file_v2_foot_match_before_odds_proto_rawDescGZIP(), []int{1}
 }
 
-func (x *V2FootMatchBeforeOddsResponse) GetAsianLoss() *V2BeforeOdds {
+func (x *V2FootMatchBeforeImmediateOddsResponse) GetAsianLoss() *V2BeforeImmediateOdds {
 	if x != nil {
 		return x.AsianLoss
 	}
 	return nil
 }
 
-func (x *V2FootMatchBeforeOddsResponse) GetEuropeanLoss() *V2BeforeOdds {
+func (x *V2FootMatchBeforeImmediateOddsResponse) GetEuropeanLoss() *V2BeforeImmediateOdds {
 	if x != nil {
 		return x.EuropeanLoss
 	}
 	return nil
 }
 
-func (x *V2FootMatchBeforeOddsResponse) GetBigSmall() *V2BeforeOdds {
+func (x *V2FootMatchBeforeImmediateOddsResponse) GetBigSmall() *V2BeforeImmediateOdds {
 	if x != nil {
 		return x.BigSmall
 	}
 	return nil
 }
 
-type V2BeforeOdds struct {
+type V2BeforeImmediateOdds struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
@@ -139,8 +147,8 @@ type V2BeforeOdds struct {
 	Curr []string `protobuf:"bytes,2,rep,name=curr,proto3" json:"curr,omitempty"`
 }
 
-func (x *V2BeforeOdds) Reset() {
-	*x = V2BeforeOdds{}
+func (x *V2BeforeImmediateOdds) Reset() {
+	*x = V2BeforeImmediateOdds{}
 	if protoimpl.UnsafeEnabled {
 		mi := &file_v2_foot_match_before_odds_proto_msgTypes[2]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
@@ -148,13 +156,13 @@ func (x *V2BeforeOdds) Reset() {
 	}
 }
 
-func (x *V2BeforeOdds) String() string {
+func (x *V2BeforeImmediateOdds) String() string {
 	return protoimpl.X.MessageStringOf(x)
 }
 
-func (*V2BeforeOdds) ProtoMessage() {}
+func (*V2BeforeImmediateOdds) ProtoMessage() {}
 
-func (x *V2BeforeOdds) ProtoReflect() protoreflect.Message {
+func (x *V2BeforeImmediateOdds) ProtoReflect() protoreflect.Message {
 	mi := &file_v2_foot_match_before_odds_proto_msgTypes[2]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
@@ -166,19 +174,19 @@ func (x *V2BeforeOdds) ProtoReflect() protoreflect.Message {
 	return mi.MessageOf(x)
 }
 
-// Deprecated: Use V2BeforeOdds.ProtoReflect.Descriptor instead.
-func (*V2BeforeOdds) Descriptor() ([]byte, []int) {
+// Deprecated: Use V2BeforeImmediateOdds.ProtoReflect.Descriptor instead.
+func (*V2BeforeImmediateOdds) Descriptor() ([]byte, []int) {
 	return file_v2_foot_match_before_odds_proto_rawDescGZIP(), []int{2}
 }
 
-func (x *V2BeforeOdds) GetInit() []string {
+func (x *V2BeforeImmediateOdds) GetInit() []string {
 	if x != nil {
 		return x.Init
 	}
 	return nil
 }
 
-func (x *V2BeforeOdds) GetCurr() []string {
+func (x *V2BeforeImmediateOdds) GetCurr() []string {
 	if x != nil {
 		return x.Curr
 	}
@@ -190,22 +198,27 @@ var File_v2_foot_match_before_odds_proto protoreflect.FileDescriptor
 var file_v2_foot_match_before_odds_proto_rawDesc = []byte{
 	0x0a, 0x1f, 0x76, 0x32, 0x5f, 0x66, 0x6f, 0x6f, 0x74, 0x5f, 0x6d, 0x61, 0x74, 0x63, 0x68, 0x5f,
 	0x62, 0x65, 0x66, 0x6f, 0x72, 0x65, 0x5f, 0x6f, 0x64, 0x64, 0x73, 0x2e, 0x70, 0x72, 0x6f, 0x74,
-	0x6f, 0x22, 0x38, 0x0a, 0x1c, 0x56, 0x32, 0x46, 0x6f, 0x6f, 0x74, 0x4d, 0x61, 0x74, 0x63, 0x68,
-	0x42, 0x65, 0x66, 0x6f, 0x72, 0x65, 0x4f, 0x64, 0x64, 0x73, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73,
-	0x74, 0x12, 0x18, 0x0a, 0x07, 0x6d, 0x61, 0x74, 0x63, 0x68, 0x49, 0x64, 0x18, 0x01, 0x20, 0x01,
-	0x28, 0x03, 0x52, 0x07, 0x6d, 0x61, 0x74, 0x63, 0x68, 0x49, 0x64, 0x22, 0xaa, 0x01, 0x0a, 0x1d,
-	0x56, 0x32, 0x46, 0x6f, 0x6f, 0x74, 0x4d, 0x61, 0x74, 0x63, 0x68, 0x42, 0x65, 0x66, 0x6f, 0x72,
-	0x65, 0x4f, 0x64, 0x64, 0x73, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x12, 0x2b, 0x0a,
-	0x09, 0x61, 0x73, 0x69, 0x61, 0x6e, 0x4c, 0x6f, 0x73, 0x73, 0x18, 0x01, 0x20, 0x01, 0x28, 0x0b,
-	0x32, 0x0d, 0x2e, 0x56, 0x32, 0x42, 0x65, 0x66, 0x6f, 0x72, 0x65, 0x4f, 0x64, 0x64, 0x73, 0x52,
-	0x09, 0x61, 0x73, 0x69, 0x61, 0x6e, 0x4c, 0x6f, 0x73, 0x73, 0x12, 0x31, 0x0a, 0x0c, 0x65, 0x75,
-	0x72, 0x6f, 0x70, 0x65, 0x61, 0x6e, 0x4c, 0x6f, 0x73, 0x73, 0x18, 0x02, 0x20, 0x01, 0x28, 0x0b,
-	0x32, 0x0d, 0x2e, 0x56, 0x32, 0x42, 0x65, 0x66, 0x6f, 0x72, 0x65, 0x4f, 0x64, 0x64, 0x73, 0x52,
-	0x0c, 0x65, 0x75, 0x72, 0x6f, 0x70, 0x65, 0x61, 0x6e, 0x4c, 0x6f, 0x73, 0x73, 0x12, 0x29, 0x0a,
-	0x08, 0x62, 0x69, 0x67, 0x53, 0x6d, 0x61, 0x6c, 0x6c, 0x18, 0x03, 0x20, 0x01, 0x28, 0x0b, 0x32,
-	0x0d, 0x2e, 0x56, 0x32, 0x42, 0x65, 0x66, 0x6f, 0x72, 0x65, 0x4f, 0x64, 0x64, 0x73, 0x52, 0x08,
-	0x62, 0x69, 0x67, 0x53, 0x6d, 0x61, 0x6c, 0x6c, 0x22, 0x36, 0x0a, 0x0c, 0x56, 0x32, 0x42, 0x65,
-	0x66, 0x6f, 0x72, 0x65, 0x4f, 0x64, 0x64, 0x73, 0x12, 0x12, 0x0a, 0x04, 0x69, 0x6e, 0x69, 0x74,
+	0x6f, 0x22, 0x5b, 0x0a, 0x25, 0x56, 0x32, 0x46, 0x6f, 0x6f, 0x74, 0x4d, 0x61, 0x74, 0x63, 0x68,
+	0x42, 0x65, 0x66, 0x6f, 0x72, 0x65, 0x49, 0x6d, 0x6d, 0x65, 0x64, 0x69, 0x61, 0x74, 0x65, 0x4f,
+	0x64, 0x64, 0x73, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x12, 0x18, 0x0a, 0x07, 0x6d, 0x61,
+	0x74, 0x63, 0x68, 0x49, 0x64, 0x18, 0x01, 0x20, 0x01, 0x28, 0x03, 0x52, 0x07, 0x6d, 0x61, 0x74,
+	0x63, 0x68, 0x49, 0x64, 0x12, 0x18, 0x0a, 0x07, 0x6f, 0x64, 0x64, 0x54, 0x79, 0x70, 0x65, 0x18,
+	0x02, 0x20, 0x01, 0x28, 0x03, 0x52, 0x07, 0x6f, 0x64, 0x64, 0x54, 0x79, 0x70, 0x65, 0x22, 0xce,
+	0x01, 0x0a, 0x26, 0x56, 0x32, 0x46, 0x6f, 0x6f, 0x74, 0x4d, 0x61, 0x74, 0x63, 0x68, 0x42, 0x65,
+	0x66, 0x6f, 0x72, 0x65, 0x49, 0x6d, 0x6d, 0x65, 0x64, 0x69, 0x61, 0x74, 0x65, 0x4f, 0x64, 0x64,
+	0x73, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x12, 0x34, 0x0a, 0x09, 0x61, 0x73, 0x69,
+	0x61, 0x6e, 0x4c, 0x6f, 0x73, 0x73, 0x18, 0x01, 0x20, 0x01, 0x28, 0x0b, 0x32, 0x16, 0x2e, 0x56,
+	0x32, 0x42, 0x65, 0x66, 0x6f, 0x72, 0x65, 0x49, 0x6d, 0x6d, 0x65, 0x64, 0x69, 0x61, 0x74, 0x65,
+	0x4f, 0x64, 0x64, 0x73, 0x52, 0x09, 0x61, 0x73, 0x69, 0x61, 0x6e, 0x4c, 0x6f, 0x73, 0x73, 0x12,
+	0x3a, 0x0a, 0x0c, 0x65, 0x75, 0x72, 0x6f, 0x70, 0x65, 0x61, 0x6e, 0x4c, 0x6f, 0x73, 0x73, 0x18,
+	0x02, 0x20, 0x01, 0x28, 0x0b, 0x32, 0x16, 0x2e, 0x56, 0x32, 0x42, 0x65, 0x66, 0x6f, 0x72, 0x65,
+	0x49, 0x6d, 0x6d, 0x65, 0x64, 0x69, 0x61, 0x74, 0x65, 0x4f, 0x64, 0x64, 0x73, 0x52, 0x0c, 0x65,
+	0x75, 0x72, 0x6f, 0x70, 0x65, 0x61, 0x6e, 0x4c, 0x6f, 0x73, 0x73, 0x12, 0x32, 0x0a, 0x08, 0x62,
+	0x69, 0x67, 0x53, 0x6d, 0x61, 0x6c, 0x6c, 0x18, 0x03, 0x20, 0x01, 0x28, 0x0b, 0x32, 0x16, 0x2e,
+	0x56, 0x32, 0x42, 0x65, 0x66, 0x6f, 0x72, 0x65, 0x49, 0x6d, 0x6d, 0x65, 0x64, 0x69, 0x61, 0x74,
+	0x65, 0x4f, 0x64, 0x64, 0x73, 0x52, 0x08, 0x62, 0x69, 0x67, 0x53, 0x6d, 0x61, 0x6c, 0x6c, 0x22,
+	0x3f, 0x0a, 0x15, 0x56, 0x32, 0x42, 0x65, 0x66, 0x6f, 0x72, 0x65, 0x49, 0x6d, 0x6d, 0x65, 0x64,
+	0x69, 0x61, 0x74, 0x65, 0x4f, 0x64, 0x64, 0x73, 0x12, 0x12, 0x0a, 0x04, 0x69, 0x6e, 0x69, 0x74,
 	0x18, 0x01, 0x20, 0x03, 0x28, 0x09, 0x52, 0x04, 0x69, 0x6e, 0x69, 0x74, 0x12, 0x12, 0x0a, 0x04,
 	0x63, 0x75, 0x72, 0x72, 0x18, 0x02, 0x20, 0x03, 0x28, 0x09, 0x52, 0x04, 0x63, 0x75, 0x72, 0x72,
 	0x42, 0x07, 0x5a, 0x05, 0x2e, 0x2f, 0x3b, 0x76, 0x31, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f,
@@ -226,14 +239,14 @@ func file_v2_foot_match_before_odds_proto_rawDescGZIP() []byte {
 
 var file_v2_foot_match_before_odds_proto_msgTypes = make([]protoimpl.MessageInfo, 3)
 var file_v2_foot_match_before_odds_proto_goTypes = []interface{}{
-	(*V2FootMatchBeforeOddsRequest)(nil),  // 0: V2FootMatchBeforeOddsRequest
-	(*V2FootMatchBeforeOddsResponse)(nil), // 1: V2FootMatchBeforeOddsResponse
-	(*V2BeforeOdds)(nil),                  // 2: V2BeforeOdds
+	(*V2FootMatchBeforeImmediateOddsRequest)(nil),  // 0: V2FootMatchBeforeImmediateOddsRequest
+	(*V2FootMatchBeforeImmediateOddsResponse)(nil), // 1: V2FootMatchBeforeImmediateOddsResponse
+	(*V2BeforeImmediateOdds)(nil),                  // 2: V2BeforeImmediateOdds
 }
 var file_v2_foot_match_before_odds_proto_depIdxs = []int32{
-	2, // 0: V2FootMatchBeforeOddsResponse.asianLoss:type_name -> V2BeforeOdds
-	2, // 1: V2FootMatchBeforeOddsResponse.europeanLoss:type_name -> V2BeforeOdds
-	2, // 2: V2FootMatchBeforeOddsResponse.bigSmall:type_name -> V2BeforeOdds
+	2, // 0: V2FootMatchBeforeImmediateOddsResponse.asianLoss:type_name -> V2BeforeImmediateOdds
+	2, // 1: V2FootMatchBeforeImmediateOddsResponse.europeanLoss:type_name -> V2BeforeImmediateOdds
+	2, // 2: V2FootMatchBeforeImmediateOddsResponse.bigSmall:type_name -> V2BeforeImmediateOdds
 	3, // [3:3] is the sub-list for method output_type
 	3, // [3:3] is the sub-list for method input_type
 	3, // [3:3] is the sub-list for extension type_name
@@ -248,7 +261,7 @@ func file_v2_foot_match_before_odds_proto_init() {
 	}
 	if !protoimpl.UnsafeEnabled {
 		file_v2_foot_match_before_odds_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*V2FootMatchBeforeOddsRequest); i {
+			switch v := v.(*V2FootMatchBeforeImmediateOddsRequest); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -260,7 +273,7 @@ func file_v2_foot_match_before_odds_proto_init() {
 			}
 		}
 		file_v2_foot_match_before_odds_proto_msgTypes[1].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*V2FootMatchBeforeOddsResponse); i {
+			switch v := v.(*V2FootMatchBeforeImmediateOddsResponse); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -272,7 +285,7 @@ func file_v2_foot_match_before_odds_proto_init() {
 			}
 		}
 		file_v2_foot_match_before_odds_proto_msgTypes[2].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*V2BeforeOdds); i {
+			switch v := v.(*V2BeforeImmediateOdds); i {
 			case 0:
 				return &v.state
 			case 1:
