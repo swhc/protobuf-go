@@ -585,6 +585,109 @@ func (x *V2FootAnimation) GetHeight() int64 {
 	return 0
 }
 
+//v2 即时比赛列表 - 比赛详情 - 预测投票
+type V2FootMatchPredictiveVotingRequest struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	EventId int64 `protobuf:"varint,1,opt,name=eventId,proto3" json:"eventId,omitempty"` //比赛ID
+}
+
+func (x *V2FootMatchPredictiveVotingRequest) Reset() {
+	*x = V2FootMatchPredictiveVotingRequest{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_v2_foot_match_against_detail_proto_msgTypes[4]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *V2FootMatchPredictiveVotingRequest) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*V2FootMatchPredictiveVotingRequest) ProtoMessage() {}
+
+func (x *V2FootMatchPredictiveVotingRequest) ProtoReflect() protoreflect.Message {
+	mi := &file_v2_foot_match_against_detail_proto_msgTypes[4]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use V2FootMatchPredictiveVotingRequest.ProtoReflect.Descriptor instead.
+func (*V2FootMatchPredictiveVotingRequest) Descriptor() ([]byte, []int) {
+	return file_v2_foot_match_against_detail_proto_rawDescGZIP(), []int{4}
+}
+
+func (x *V2FootMatchPredictiveVotingRequest) GetEventId() int64 {
+	if x != nil {
+		return x.EventId
+	}
+	return 0
+}
+
+type V2FootMatchPredictiveVotingResponse struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	Handicap string `protobuf:"bytes,1,opt,name=handicap,proto3" json:"handicap,omitempty"` //让球
+	BigBall  string `protobuf:"bytes,2,opt,name=bigBall,proto3" json:"bigBall,omitempty"`   //大小球
+}
+
+func (x *V2FootMatchPredictiveVotingResponse) Reset() {
+	*x = V2FootMatchPredictiveVotingResponse{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_v2_foot_match_against_detail_proto_msgTypes[5]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *V2FootMatchPredictiveVotingResponse) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*V2FootMatchPredictiveVotingResponse) ProtoMessage() {}
+
+func (x *V2FootMatchPredictiveVotingResponse) ProtoReflect() protoreflect.Message {
+	mi := &file_v2_foot_match_against_detail_proto_msgTypes[5]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use V2FootMatchPredictiveVotingResponse.ProtoReflect.Descriptor instead.
+func (*V2FootMatchPredictiveVotingResponse) Descriptor() ([]byte, []int) {
+	return file_v2_foot_match_against_detail_proto_rawDescGZIP(), []int{5}
+}
+
+func (x *V2FootMatchPredictiveVotingResponse) GetHandicap() string {
+	if x != nil {
+		return x.Handicap
+	}
+	return ""
+}
+
+func (x *V2FootMatchPredictiveVotingResponse) GetBigBall() string {
+	if x != nil {
+		return x.BigBall
+	}
+	return ""
+}
+
 var File_v2_foot_match_against_detail_proto protoreflect.FileDescriptor
 
 var file_v2_foot_match_against_detail_proto_rawDesc = []byte{
@@ -703,8 +806,18 @@ var file_v2_foot_match_against_detail_proto_rawDesc = []byte{
 	0x01, 0x28, 0x09, 0x52, 0x03, 0x75, 0x72, 0x6c, 0x12, 0x14, 0x0a, 0x05, 0x77, 0x69, 0x64, 0x74,
 	0x68, 0x18, 0x02, 0x20, 0x01, 0x28, 0x03, 0x52, 0x05, 0x77, 0x69, 0x64, 0x74, 0x68, 0x12, 0x16,
 	0x0a, 0x06, 0x68, 0x65, 0x69, 0x67, 0x68, 0x74, 0x18, 0x03, 0x20, 0x01, 0x28, 0x03, 0x52, 0x06,
-	0x68, 0x65, 0x69, 0x67, 0x68, 0x74, 0x42, 0x07, 0x5a, 0x05, 0x2e, 0x2f, 0x3b, 0x76, 0x31, 0x62,
-	0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
+	0x68, 0x65, 0x69, 0x67, 0x68, 0x74, 0x22, 0x3e, 0x0a, 0x22, 0x56, 0x32, 0x46, 0x6f, 0x6f, 0x74,
+	0x4d, 0x61, 0x74, 0x63, 0x68, 0x50, 0x72, 0x65, 0x64, 0x69, 0x63, 0x74, 0x69, 0x76, 0x65, 0x56,
+	0x6f, 0x74, 0x69, 0x6e, 0x67, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x12, 0x18, 0x0a, 0x07,
+	0x65, 0x76, 0x65, 0x6e, 0x74, 0x49, 0x64, 0x18, 0x01, 0x20, 0x01, 0x28, 0x03, 0x52, 0x07, 0x65,
+	0x76, 0x65, 0x6e, 0x74, 0x49, 0x64, 0x22, 0x5b, 0x0a, 0x23, 0x56, 0x32, 0x46, 0x6f, 0x6f, 0x74,
+	0x4d, 0x61, 0x74, 0x63, 0x68, 0x50, 0x72, 0x65, 0x64, 0x69, 0x63, 0x74, 0x69, 0x76, 0x65, 0x56,
+	0x6f, 0x74, 0x69, 0x6e, 0x67, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x12, 0x1a, 0x0a,
+	0x08, 0x68, 0x61, 0x6e, 0x64, 0x69, 0x63, 0x61, 0x70, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52,
+	0x08, 0x68, 0x61, 0x6e, 0x64, 0x69, 0x63, 0x61, 0x70, 0x12, 0x18, 0x0a, 0x07, 0x62, 0x69, 0x67,
+	0x42, 0x61, 0x6c, 0x6c, 0x18, 0x02, 0x20, 0x01, 0x28, 0x09, 0x52, 0x07, 0x62, 0x69, 0x67, 0x42,
+	0x61, 0x6c, 0x6c, 0x42, 0x07, 0x5a, 0x05, 0x2e, 0x2f, 0x3b, 0x76, 0x31, 0x62, 0x06, 0x70, 0x72,
+	0x6f, 0x74, 0x6f, 0x33,
 }
 
 var (
@@ -719,12 +832,14 @@ func file_v2_foot_match_against_detail_proto_rawDescGZIP() []byte {
 	return file_v2_foot_match_against_detail_proto_rawDescData
 }
 
-var file_v2_foot_match_against_detail_proto_msgTypes = make([]protoimpl.MessageInfo, 4)
+var file_v2_foot_match_against_detail_proto_msgTypes = make([]protoimpl.MessageInfo, 6)
 var file_v2_foot_match_against_detail_proto_goTypes = []interface{}{
-	(*V2FootMatchAgainstDetailRequest)(nil),  // 0: V2FootMatchAgainstDetailRequest
-	(*V2FootMatchAgainstDetailResponse)(nil), // 1: V2FootMatchAgainstDetailResponse
-	(*V2FootAgainstLive)(nil),                // 2: V2FootAgainstLive
-	(*V2FootAnimation)(nil),                  // 3: V2FootAnimation
+	(*V2FootMatchAgainstDetailRequest)(nil),     // 0: V2FootMatchAgainstDetailRequest
+	(*V2FootMatchAgainstDetailResponse)(nil),    // 1: V2FootMatchAgainstDetailResponse
+	(*V2FootAgainstLive)(nil),                   // 2: V2FootAgainstLive
+	(*V2FootAnimation)(nil),                     // 3: V2FootAnimation
+	(*V2FootMatchPredictiveVotingRequest)(nil),  // 4: V2FootMatchPredictiveVotingRequest
+	(*V2FootMatchPredictiveVotingResponse)(nil), // 5: V2FootMatchPredictiveVotingResponse
 }
 var file_v2_foot_match_against_detail_proto_depIdxs = []int32{
 	2, // 0: V2FootMatchAgainstDetailResponse.againstLive:type_name -> V2FootAgainstLive
@@ -790,6 +905,30 @@ func file_v2_foot_match_against_detail_proto_init() {
 				return nil
 			}
 		}
+		file_v2_foot_match_against_detail_proto_msgTypes[4].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*V2FootMatchPredictiveVotingRequest); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_v2_foot_match_against_detail_proto_msgTypes[5].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*V2FootMatchPredictiveVotingResponse); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
 	}
 	type x struct{}
 	out := protoimpl.TypeBuilder{
@@ -797,7 +936,7 @@ func file_v2_foot_match_against_detail_proto_init() {
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: file_v2_foot_match_against_detail_proto_rawDesc,
 			NumEnums:      0,
-			NumMessages:   4,
+			NumMessages:   6,
 			NumExtensions: 0,
 			NumServices:   0,
 		},
