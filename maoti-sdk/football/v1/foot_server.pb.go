@@ -1703,9 +1703,9 @@ type FootBallClient interface {
 	V2FootMatchIntegralRank(ctx context.Context, in *V2FootMatchIntegralRankRequest, opts ...grpc.CallOption) (*FootResponse, error)
 	//v2 即时比赛列表 - 比赛详情 - 球员伤停数据
 	V2FootMatchTeamInjury(ctx context.Context, in *V2FootMatchTeamInjuryRequest, opts ...grpc.CallOption) (*FootResponse, error)
-	//v2 即时比赛列表 - 比赛详情 - 即时指数OR赛前指数
+	//v2 即时比赛列表 - 比赛详情 - 即时指数OR赛前指数 两者共用接口
 	V2FootMatchBeforeImmediateOdds(ctx context.Context, in *V2FootMatchBeforeImmediateOddsRequest, opts ...grpc.CallOption) (*FootResponse, error)
-	//v2 即时比赛列表 - 比赛详情 - 比赛技术统计
+	//v2 即时比赛列表 - 比赛详情 - 技术统计
 	V2FootMatchTechnicalStatistics(ctx context.Context, in *V2FootMatchTechnicalStatisticsRequest, opts ...grpc.CallOption) (*FootResponse, error)
 	//v2 即时比赛列表 - 比赛详情 - 比赛进程
 	V2FootMatchProgress(ctx context.Context, in *V2FootMatchProgressRequest, opts ...grpc.CallOption) (*FootResponse, error)
@@ -3102,9 +3102,9 @@ type FootBallServer interface {
 	V2FootMatchIntegralRank(context.Context, *V2FootMatchIntegralRankRequest) (*FootResponse, error)
 	//v2 即时比赛列表 - 比赛详情 - 球员伤停数据
 	V2FootMatchTeamInjury(context.Context, *V2FootMatchTeamInjuryRequest) (*FootResponse, error)
-	//v2 即时比赛列表 - 比赛详情 - 即时指数OR赛前指数
+	//v2 即时比赛列表 - 比赛详情 - 即时指数OR赛前指数 两者共用接口
 	V2FootMatchBeforeImmediateOdds(context.Context, *V2FootMatchBeforeImmediateOddsRequest) (*FootResponse, error)
-	//v2 即时比赛列表 - 比赛详情 - 比赛技术统计
+	//v2 即时比赛列表 - 比赛详情 - 技术统计
 	V2FootMatchTechnicalStatistics(context.Context, *V2FootMatchTechnicalStatisticsRequest) (*FootResponse, error)
 	//v2 即时比赛列表 - 比赛详情 - 比赛进程
 	V2FootMatchProgress(context.Context, *V2FootMatchProgressRequest) (*FootResponse, error)
