@@ -143,32 +143,31 @@ type V2FootTeamHistoricalMatchInfo struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	TournamentId    int64  `protobuf:"varint,1,opt,name=TournamentId,proto3" json:"TournamentId,omitempty"`        //联赛ID
-	TournamentName  string `protobuf:"bytes,2,opt,name=tournamentName,proto3" json:"tournamentName,omitempty"`     //联赛名称
-	EventId         int64  `protobuf:"varint,3,opt,name=eventId,proto3" json:"eventId,omitempty"`                  //比赛ID
-	MatchTime       int64  `protobuf:"varint,4,opt,name=matchTime,proto3" json:"matchTime,omitempty"`              //比赛时间
-	HomeId          int64  `protobuf:"varint,5,opt,name=homeId,proto3" json:"homeId,omitempty"`                    //主队ID
-	HomeName        string `protobuf:"bytes,6,opt,name=homeName,proto3" json:"homeName,omitempty"`                 //主队名称
-	HomeScore       int64  `protobuf:"varint,7,opt,name=homeScore,proto3" json:"homeScore,omitempty"`              //主队得分
-	HomeHalfScore   int64  `protobuf:"varint,8,opt,name=homeHalfScore,proto3" json:"homeHalfScore,omitempty"`      //主队半场得分
-	AwayId          int64  `protobuf:"varint,9,opt,name=awayId,proto3" json:"awayId,omitempty"`                    //客队ID
-	AwayName        string `protobuf:"bytes,10,opt,name=awayName,proto3" json:"awayName,omitempty"`                //客队名称
-	AwayScore       int64  `protobuf:"varint,11,opt,name=awayScore,proto3" json:"awayScore,omitempty"`             //客队得分
-	AwayHalfScore   int64  `protobuf:"varint,12,opt,name=awayHalfScore,proto3" json:"awayHalfScore,omitempty"`     //客队半场得分
-	SameTournament  bool   `protobuf:"varint,13,opt,name=sameTournament,proto3" json:"sameTournament,omitempty"`   //相同联赛
-	SameHomeAway    bool   `protobuf:"varint,14,opt,name=sameHomeAway,proto3" json:"sameHomeAway,omitempty"`       //相同主客队
-	Trend           string `protobuf:"bytes,15,opt,name=trend,proto3" json:"trend,omitempty"`                      //走势（通过&进行切割，根据文字区分颜色）
-	TrendStr        string `protobuf:"bytes,16,opt,name=trendStr,proto3" json:"trendStr,omitempty"`                //走势字符串（例如：+2.5）
-	TrendNum        int64  `protobuf:"varint,17,opt,name=trendNum,proto3" json:"trendNum,omitempty"`               //走势结果（1：胜|大|赢，2：平|走，3：负|输|小）
-	Goal            string `protobuf:"bytes,18,opt,name=goal,proto3" json:"goal,omitempty"`                        //进球（通过&进行切割，根据文字区分颜色）
-	GoalStr         string `protobuf:"bytes,19,opt,name=goalStr,proto3" json:"goalStr,omitempty"`                  //进球字符串（例如：+2.5）
-	GoalNum         int64  `protobuf:"varint,20,opt,name=goalNum,proto3" json:"goalNum,omitempty"`                 //进球结果（1：胜|大|赢，2：平|走，0：负|输|小）
-	CornerKick      int64  `protobuf:"varint,21,opt,name=cornerKick,proto3" json:"cornerKick,omitempty"`           //角球
-	MarkType        int64  `protobuf:"varint,22,opt,name=markType,proto3" json:"markType,omitempty"`               //标记类型（1：胜|大，2：(平)走，3：负|小）
-	BigBallTrend    string `protobuf:"bytes,23,opt,name=bigBallTrend,proto3" json:"bigBallTrend,omitempty"`        //大小球走势
-	BigBallTrendStr string `protobuf:"bytes,24,opt,name=bigBallTrendStr,proto3" json:"bigBallTrendStr,omitempty"`  //大小球走势字符串
-	BigBallTrendNum int64  `protobuf:"varint,25,opt,name=bigBallTrendNum,proto3" json:"bigBallTrendNum,omitempty"` //大小球走势结果
-	Result          int64  `protobuf:"varint,26,opt,name=result,proto3" json:"result,omitempty"`                   //胜平负：1.胜；2.平；3.负
+	TournamentId       int64  `protobuf:"varint,1,opt,name=TournamentId,proto3" json:"TournamentId,omitempty"`              //联赛ID
+	TournamentName     string `protobuf:"bytes,2,opt,name=tournamentName,proto3" json:"tournamentName,omitempty"`           //联赛名称
+	EventId            int64  `protobuf:"varint,3,opt,name=eventId,proto3" json:"eventId,omitempty"`                        //比赛ID
+	MatchTime          int64  `protobuf:"varint,4,opt,name=matchTime,proto3" json:"matchTime,omitempty"`                    //比赛时间
+	HomeId             int64  `protobuf:"varint,5,opt,name=homeId,proto3" json:"homeId,omitempty"`                          //主队ID
+	HomeName           string `protobuf:"bytes,6,opt,name=homeName,proto3" json:"homeName,omitempty"`                       //主队名称
+	HomeScore          int64  `protobuf:"varint,7,opt,name=homeScore,proto3" json:"homeScore,omitempty"`                    //主队得分
+	HomeHalfScore      int64  `protobuf:"varint,8,opt,name=homeHalfScore,proto3" json:"homeHalfScore,omitempty"`            //主队半场得分
+	AwayId             int64  `protobuf:"varint,9,opt,name=awayId,proto3" json:"awayId,omitempty"`                          //客队ID
+	AwayName           string `protobuf:"bytes,10,opt,name=awayName,proto3" json:"awayName,omitempty"`                      //客队名称
+	AwayScore          int64  `protobuf:"varint,11,opt,name=awayScore,proto3" json:"awayScore,omitempty"`                   //客队得分
+	AwayHalfScore      int64  `protobuf:"varint,12,opt,name=awayHalfScore,proto3" json:"awayHalfScore,omitempty"`           //客队半场得分
+	SameTournament     bool   `protobuf:"varint,13,opt,name=sameTournament,proto3" json:"sameTournament,omitempty"`         //相同联赛
+	SameHomeAway       bool   `protobuf:"varint,14,opt,name=sameHomeAway,proto3" json:"sameHomeAway,omitempty"`             //相同主客队
+	Trend              string `protobuf:"bytes,15,opt,name=trend,proto3" json:"trend,omitempty"`                            //走势（通过&进行切割，根据文字区分颜色）
+	TrendStr           string `protobuf:"bytes,16,opt,name=trendStr,proto3" json:"trendStr,omitempty"`                      //走势字符串（例如：+2.5）
+	TrendNum           int64  `protobuf:"varint,17,opt,name=trendNum,proto3" json:"trendNum,omitempty"`                     //走势结果（1：胜|大|赢，2：平|走，3：负|输|小）
+	Goal               string `protobuf:"bytes,18,opt,name=goal,proto3" json:"goal,omitempty"`                              //进球（通过&进行切割，根据文字区分颜色）
+	GoalStr            string `protobuf:"bytes,19,opt,name=goalStr,proto3" json:"goalStr,omitempty"`                        //进球字符串（例如：+2.5）
+	GoalNum            int64  `protobuf:"varint,20,opt,name=goalNum,proto3" json:"goalNum,omitempty"`                       //进球结果（1：胜|大|赢，2：平|走，0：负|输|小）
+	CornerKick         int64  `protobuf:"varint,21,opt,name=cornerKick,proto3" json:"cornerKick,omitempty"`                 //角球
+	MarkType           int64  `protobuf:"varint,22,opt,name=markType,proto3" json:"markType,omitempty"`                     //标记类型（1：胜|大，2：(平)走，3：负|小）
+	BigBallTrend       string `protobuf:"bytes,23,opt,name=bigBallTrend,proto3" json:"bigBallTrend,omitempty"`              //大小球走势
+	BigBallTrendResult int64  `protobuf:"varint,24,opt,name=bigBallTrendResult,proto3" json:"bigBallTrendResult,omitempty"` //大小球走势结果，1.大；2.走；3.小；
+	Result             int64  `protobuf:"varint,25,opt,name=result,proto3" json:"result,omitempty"`                         //常规赛胜平负：1.胜；2.平；3.负
 }
 
 func (x *V2FootTeamHistoricalMatchInfo) Reset() {
@@ -364,16 +363,9 @@ func (x *V2FootTeamHistoricalMatchInfo) GetBigBallTrend() string {
 	return ""
 }
 
-func (x *V2FootTeamHistoricalMatchInfo) GetBigBallTrendStr() string {
+func (x *V2FootTeamHistoricalMatchInfo) GetBigBallTrendResult() int64 {
 	if x != nil {
-		return x.BigBallTrendStr
-	}
-	return ""
-}
-
-func (x *V2FootTeamHistoricalMatchInfo) GetBigBallTrendNum() int64 {
-	if x != nil {
-		return x.BigBallTrendNum
+		return x.BigBallTrendResult
 	}
 	return 0
 }
@@ -404,7 +396,7 @@ var file_v2_foot_team_historical_match_proto_rawDesc = []byte{
 	0x52, 0x06, 0x54, 0x65, 0x61, 0x6d, 0x49, 0x64, 0x12, 0x32, 0x0a, 0x04, 0x6c, 0x69, 0x73, 0x74,
 	0x18, 0x02, 0x20, 0x03, 0x28, 0x0b, 0x32, 0x1e, 0x2e, 0x56, 0x32, 0x46, 0x6f, 0x6f, 0x74, 0x54,
 	0x65, 0x61, 0x6d, 0x48, 0x69, 0x73, 0x74, 0x6f, 0x72, 0x69, 0x63, 0x61, 0x6c, 0x4d, 0x61, 0x74,
-	0x63, 0x68, 0x49, 0x6e, 0x66, 0x6f, 0x52, 0x04, 0x6c, 0x69, 0x73, 0x74, 0x22, 0xc1, 0x06, 0x0a,
+	0x63, 0x68, 0x49, 0x6e, 0x66, 0x6f, 0x52, 0x04, 0x6c, 0x69, 0x73, 0x74, 0x22, 0x9d, 0x06, 0x0a,
 	0x1d, 0x56, 0x32, 0x46, 0x6f, 0x6f, 0x74, 0x54, 0x65, 0x61, 0x6d, 0x48, 0x69, 0x73, 0x74, 0x6f,
 	0x72, 0x69, 0x63, 0x61, 0x6c, 0x4d, 0x61, 0x74, 0x63, 0x68, 0x49, 0x6e, 0x66, 0x6f, 0x12, 0x22,
 	0x0a, 0x0c, 0x54, 0x6f, 0x75, 0x72, 0x6e, 0x61, 0x6d, 0x65, 0x6e, 0x74, 0x49, 0x64, 0x18, 0x01,
@@ -450,15 +442,12 @@ var file_v2_foot_team_historical_match_proto_rawDesc = []byte{
 	0x18, 0x16, 0x20, 0x01, 0x28, 0x03, 0x52, 0x08, 0x6d, 0x61, 0x72, 0x6b, 0x54, 0x79, 0x70, 0x65,
 	0x12, 0x22, 0x0a, 0x0c, 0x62, 0x69, 0x67, 0x42, 0x61, 0x6c, 0x6c, 0x54, 0x72, 0x65, 0x6e, 0x64,
 	0x18, 0x17, 0x20, 0x01, 0x28, 0x09, 0x52, 0x0c, 0x62, 0x69, 0x67, 0x42, 0x61, 0x6c, 0x6c, 0x54,
-	0x72, 0x65, 0x6e, 0x64, 0x12, 0x28, 0x0a, 0x0f, 0x62, 0x69, 0x67, 0x42, 0x61, 0x6c, 0x6c, 0x54,
-	0x72, 0x65, 0x6e, 0x64, 0x53, 0x74, 0x72, 0x18, 0x18, 0x20, 0x01, 0x28, 0x09, 0x52, 0x0f, 0x62,
-	0x69, 0x67, 0x42, 0x61, 0x6c, 0x6c, 0x54, 0x72, 0x65, 0x6e, 0x64, 0x53, 0x74, 0x72, 0x12, 0x28,
-	0x0a, 0x0f, 0x62, 0x69, 0x67, 0x42, 0x61, 0x6c, 0x6c, 0x54, 0x72, 0x65, 0x6e, 0x64, 0x4e, 0x75,
-	0x6d, 0x18, 0x19, 0x20, 0x01, 0x28, 0x03, 0x52, 0x0f, 0x62, 0x69, 0x67, 0x42, 0x61, 0x6c, 0x6c,
-	0x54, 0x72, 0x65, 0x6e, 0x64, 0x4e, 0x75, 0x6d, 0x12, 0x16, 0x0a, 0x06, 0x72, 0x65, 0x73, 0x75,
-	0x6c, 0x74, 0x18, 0x1a, 0x20, 0x01, 0x28, 0x03, 0x52, 0x06, 0x72, 0x65, 0x73, 0x75, 0x6c, 0x74,
-	0x42, 0x07, 0x5a, 0x05, 0x2e, 0x2f, 0x3b, 0x76, 0x31, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f,
-	0x33,
+	0x72, 0x65, 0x6e, 0x64, 0x12, 0x2e, 0x0a, 0x12, 0x62, 0x69, 0x67, 0x42, 0x61, 0x6c, 0x6c, 0x54,
+	0x72, 0x65, 0x6e, 0x64, 0x52, 0x65, 0x73, 0x75, 0x6c, 0x74, 0x18, 0x18, 0x20, 0x01, 0x28, 0x03,
+	0x52, 0x12, 0x62, 0x69, 0x67, 0x42, 0x61, 0x6c, 0x6c, 0x54, 0x72, 0x65, 0x6e, 0x64, 0x52, 0x65,
+	0x73, 0x75, 0x6c, 0x74, 0x12, 0x16, 0x0a, 0x06, 0x72, 0x65, 0x73, 0x75, 0x6c, 0x74, 0x18, 0x19,
+	0x20, 0x01, 0x28, 0x03, 0x52, 0x06, 0x72, 0x65, 0x73, 0x75, 0x6c, 0x74, 0x42, 0x07, 0x5a, 0x05,
+	0x2e, 0x2f, 0x3b, 0x76, 0x31, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
 }
 
 var (
