@@ -885,39 +885,39 @@ var file_foot_server_proto_rawDesc = []byte{
 	0x69, 0x6c, 0x12, 0x1d, 0x2e, 0x56, 0x32, 0x46, 0x6f, 0x6f, 0x74, 0x4d, 0x61, 0x74, 0x63, 0x68,
 	0x4f, 0x64, 0x64, 0x73, 0x44, 0x65, 0x74, 0x61, 0x69, 0x6c, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73,
 	0x74, 0x1a, 0x0d, 0x2e, 0x46, 0x6f, 0x6f, 0x74, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65,
-	0x22, 0x00, 0x12, 0x45, 0x0a, 0x13, 0x56, 0x32, 0x46, 0x6f, 0x6f, 0x74, 0x4c, 0x69, 0x6e, 0x65,
-	0x75, 0x70, 0x41, 0x76, 0x65, 0x72, 0x61, 0x67, 0x65, 0x12, 0x1d, 0x2e, 0x46, 0x6f, 0x6f, 0x74,
-	0x4c, 0x69, 0x6e, 0x65, 0x75, 0x70, 0x41, 0x76, 0x65, 0x72, 0x61, 0x67, 0x65, 0x44, 0x61, 0x74,
-	0x61, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x0d, 0x2e, 0x46, 0x6f, 0x6f, 0x74, 0x52,
-	0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x00, 0x12, 0x50, 0x0a, 0x18, 0x56, 0x32, 0x46,
-	0x6f, 0x6f, 0x74, 0x4d, 0x61, 0x74, 0x63, 0x68, 0x53, 0x61, 0x6d, 0x65, 0x46, 0x6f, 0x72, 0x6d,
-	0x61, 0x74, 0x69, 0x6f, 0x6e, 0x12, 0x23, 0x2e, 0x56, 0x32, 0x46, 0x6f, 0x6f, 0x74, 0x4d, 0x61,
-	0x74, 0x63, 0x68, 0x54, 0x65, 0x61, 0x6d, 0x52, 0x65, 0x63, 0x65, 0x6e, 0x74, 0x52, 0x65, 0x63,
-	0x6f, 0x72, 0x64, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x0d, 0x2e, 0x46, 0x6f, 0x6f,
-	0x74, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x00, 0x12, 0x53, 0x0a, 0x1b, 0x56,
-	0x32, 0x46, 0x6f, 0x6f, 0x74, 0x4d, 0x61, 0x74, 0x63, 0x68, 0x44, 0x61, 0x74, 0x61, 0x49, 0x6e,
-	0x74, 0x65, 0x67, 0x72, 0x61, 0x6c, 0x52, 0x61, 0x6e, 0x6b, 0x12, 0x23, 0x2e, 0x56, 0x32, 0x46,
-	0x6f, 0x6f, 0x74, 0x4d, 0x61, 0x74, 0x63, 0x68, 0x44, 0x61, 0x74, 0x61, 0x49, 0x6e, 0x74, 0x65,
-	0x67, 0x72, 0x61, 0x6c, 0x52, 0x61, 0x6e, 0x6b, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a,
-	0x0d, 0x2e, 0x46, 0x6f, 0x6f, 0x74, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x00,
-	0x12, 0x4f, 0x0a, 0x19, 0x56, 0x32, 0x46, 0x6f, 0x6f, 0x74, 0x54, 0x65, 0x61, 0x6d, 0x48, 0x69,
-	0x73, 0x74, 0x6f, 0x72, 0x69, 0x63, 0x61, 0x6c, 0x4d, 0x61, 0x74, 0x63, 0x68, 0x12, 0x21, 0x2e,
-	0x56, 0x32, 0x46, 0x6f, 0x6f, 0x74, 0x54, 0x65, 0x61, 0x6d, 0x48, 0x69, 0x73, 0x74, 0x6f, 0x72,
-	0x69, 0x63, 0x61, 0x6c, 0x4d, 0x61, 0x74, 0x63, 0x68, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74,
-	0x1a, 0x0d, 0x2e, 0x46, 0x6f, 0x6f, 0x74, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22,
-	0x00, 0x12, 0x49, 0x0a, 0x16, 0x56, 0x32, 0x46, 0x6f, 0x6f, 0x74, 0x54, 0x65, 0x61, 0x6d, 0x52,
-	0x65, 0x63, 0x65, 0x6e, 0x74, 0x52, 0x65, 0x63, 0x6f, 0x72, 0x64, 0x12, 0x1e, 0x2e, 0x56, 0x32,
-	0x46, 0x6f, 0x6f, 0x74, 0x54, 0x65, 0x61, 0x6d, 0x52, 0x65, 0x63, 0x65, 0x6e, 0x74, 0x52, 0x65,
+	0x22, 0x00, 0x12, 0x53, 0x0a, 0x1b, 0x56, 0x32, 0x46, 0x6f, 0x6f, 0x74, 0x4d, 0x61, 0x74, 0x63,
+	0x68, 0x44, 0x61, 0x74, 0x61, 0x49, 0x6e, 0x74, 0x65, 0x67, 0x72, 0x61, 0x6c, 0x52, 0x61, 0x6e,
+	0x6b, 0x12, 0x23, 0x2e, 0x56, 0x32, 0x46, 0x6f, 0x6f, 0x74, 0x4d, 0x61, 0x74, 0x63, 0x68, 0x44,
+	0x61, 0x74, 0x61, 0x49, 0x6e, 0x74, 0x65, 0x67, 0x72, 0x61, 0x6c, 0x52, 0x61, 0x6e, 0x6b, 0x52,
+	0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x0d, 0x2e, 0x46, 0x6f, 0x6f, 0x74, 0x52, 0x65, 0x73,
+	0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x00, 0x12, 0x4f, 0x0a, 0x19, 0x56, 0x32, 0x46, 0x6f, 0x6f,
+	0x74, 0x54, 0x65, 0x61, 0x6d, 0x48, 0x69, 0x73, 0x74, 0x6f, 0x72, 0x69, 0x63, 0x61, 0x6c, 0x4d,
+	0x61, 0x74, 0x63, 0x68, 0x12, 0x21, 0x2e, 0x56, 0x32, 0x46, 0x6f, 0x6f, 0x74, 0x54, 0x65, 0x61,
+	0x6d, 0x48, 0x69, 0x73, 0x74, 0x6f, 0x72, 0x69, 0x63, 0x61, 0x6c, 0x4d, 0x61, 0x74, 0x63, 0x68,
+	0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x0d, 0x2e, 0x46, 0x6f, 0x6f, 0x74, 0x52, 0x65,
+	0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x00, 0x12, 0x49, 0x0a, 0x16, 0x56, 0x32, 0x46, 0x6f,
+	0x6f, 0x74, 0x54, 0x65, 0x61, 0x6d, 0x52, 0x65, 0x63, 0x65, 0x6e, 0x74, 0x52, 0x65, 0x63, 0x6f,
+	0x72, 0x64, 0x12, 0x1e, 0x2e, 0x56, 0x32, 0x46, 0x6f, 0x6f, 0x74, 0x54, 0x65, 0x61, 0x6d, 0x52,
+	0x65, 0x63, 0x65, 0x6e, 0x74, 0x52, 0x65, 0x63, 0x6f, 0x72, 0x64, 0x52, 0x65, 0x71, 0x75, 0x65,
+	0x73, 0x74, 0x1a, 0x0d, 0x2e, 0x46, 0x6f, 0x6f, 0x74, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73,
+	0x65, 0x22, 0x00, 0x12, 0x4d, 0x0a, 0x18, 0x56, 0x32, 0x46, 0x6f, 0x6f, 0x74, 0x54, 0x65, 0x61,
+	0x6d, 0x46, 0x75, 0x74, 0x75, 0x72, 0x65, 0x53, 0x63, 0x68, 0x65, 0x64, 0x75, 0x6c, 0x65, 0x12,
+	0x20, 0x2e, 0x56, 0x32, 0x46, 0x6f, 0x6f, 0x74, 0x54, 0x65, 0x61, 0x6d, 0x46, 0x75, 0x74, 0x75,
+	0x72, 0x65, 0x53, 0x63, 0x68, 0x65, 0x64, 0x75, 0x6c, 0x65, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73,
+	0x74, 0x1a, 0x0d, 0x2e, 0x46, 0x6f, 0x6f, 0x74, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65,
+	0x22, 0x00, 0x12, 0x3f, 0x0a, 0x11, 0x56, 0x32, 0x46, 0x6f, 0x6f, 0x74, 0x4d, 0x61, 0x74, 0x63,
+	0x68, 0x4c, 0x69, 0x6e, 0x65, 0x75, 0x70, 0x12, 0x19, 0x2e, 0x56, 0x32, 0x46, 0x6f, 0x6f, 0x74,
+	0x4d, 0x61, 0x74, 0x63, 0x68, 0x4c, 0x69, 0x6e, 0x65, 0x75, 0x70, 0x52, 0x65, 0x71, 0x75, 0x65,
+	0x73, 0x74, 0x1a, 0x0d, 0x2e, 0x46, 0x6f, 0x6f, 0x74, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73,
+	0x65, 0x22, 0x00, 0x12, 0x45, 0x0a, 0x13, 0x56, 0x32, 0x46, 0x6f, 0x6f, 0x74, 0x4c, 0x69, 0x6e,
+	0x65, 0x75, 0x70, 0x41, 0x76, 0x65, 0x72, 0x61, 0x67, 0x65, 0x12, 0x1d, 0x2e, 0x46, 0x6f, 0x6f,
+	0x74, 0x4c, 0x69, 0x6e, 0x65, 0x75, 0x70, 0x41, 0x76, 0x65, 0x72, 0x61, 0x67, 0x65, 0x44, 0x61,
+	0x74, 0x61, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x0d, 0x2e, 0x46, 0x6f, 0x6f, 0x74,
+	0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x00, 0x12, 0x50, 0x0a, 0x18, 0x56, 0x32,
+	0x46, 0x6f, 0x6f, 0x74, 0x4d, 0x61, 0x74, 0x63, 0x68, 0x53, 0x61, 0x6d, 0x65, 0x46, 0x6f, 0x72,
+	0x6d, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x12, 0x23, 0x2e, 0x56, 0x32, 0x46, 0x6f, 0x6f, 0x74, 0x4d,
+	0x61, 0x74, 0x63, 0x68, 0x54, 0x65, 0x61, 0x6d, 0x52, 0x65, 0x63, 0x65, 0x6e, 0x74, 0x52, 0x65,
 	0x63, 0x6f, 0x72, 0x64, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x0d, 0x2e, 0x46, 0x6f,
-	0x6f, 0x74, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x00, 0x12, 0x4d, 0x0a, 0x18,
-	0x56, 0x32, 0x46, 0x6f, 0x6f, 0x74, 0x54, 0x65, 0x61, 0x6d, 0x46, 0x75, 0x74, 0x75, 0x72, 0x65,
-	0x53, 0x63, 0x68, 0x65, 0x64, 0x75, 0x6c, 0x65, 0x12, 0x20, 0x2e, 0x56, 0x32, 0x46, 0x6f, 0x6f,
-	0x74, 0x54, 0x65, 0x61, 0x6d, 0x46, 0x75, 0x74, 0x75, 0x72, 0x65, 0x53, 0x63, 0x68, 0x65, 0x64,
-	0x75, 0x6c, 0x65, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x0d, 0x2e, 0x46, 0x6f, 0x6f,
-	0x74, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x00, 0x12, 0x3f, 0x0a, 0x11, 0x56,
-	0x32, 0x46, 0x6f, 0x6f, 0x74, 0x4d, 0x61, 0x74, 0x63, 0x68, 0x4c, 0x69, 0x6e, 0x65, 0x75, 0x70,
-	0x12, 0x19, 0x2e, 0x56, 0x32, 0x46, 0x6f, 0x6f, 0x74, 0x4d, 0x61, 0x74, 0x63, 0x68, 0x4c, 0x69,
-	0x6e, 0x65, 0x75, 0x70, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x0d, 0x2e, 0x46, 0x6f,
 	0x6f, 0x74, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x00, 0x12, 0x37, 0x0a, 0x0d,
 	0x56, 0x32, 0x53, 0x74, 0x61, 0x74, 0x73, 0x50, 0x6c, 0x61, 0x79, 0x65, 0x72, 0x12, 0x15, 0x2e,
 	0x56, 0x32, 0x53, 0x74, 0x61, 0x74, 0x73, 0x50, 0x6c, 0x61, 0x79, 0x65, 0x72, 0x52, 0x65, 0x71,
@@ -1074,12 +1074,12 @@ var file_foot_server_proto_goTypes = []interface{}{
 	(*V2FootMatchEuropeanOddsListRequest)(nil),        // 110: V2FootMatchEuropeanOddsListRequest
 	(*V2FootMatchAsiaOddsAndBigBallListRequest)(nil),  // 111: V2FootMatchAsiaOddsAndBigBallListRequest
 	(*V2FootMatchOddsDetailRequest)(nil),              // 112: V2FootMatchOddsDetailRequest
-	(*V2FootMatchTeamRecentRecordRequest)(nil),        // 113: V2FootMatchTeamRecentRecordRequest
-	(*V2FootMatchDataIntegralRankRequest)(nil),        // 114: V2FootMatchDataIntegralRankRequest
-	(*V2FootTeamHistoricalMatchRequest)(nil),          // 115: V2FootTeamHistoricalMatchRequest
-	(*V2FootTeamRecentRecordRequest)(nil),             // 116: V2FootTeamRecentRecordRequest
-	(*V2FootTeamFutureScheduleRequest)(nil),           // 117: V2FootTeamFutureScheduleRequest
-	(*V2FootMatchLineupRequest)(nil),                  // 118: V2FootMatchLineupRequest
+	(*V2FootMatchDataIntegralRankRequest)(nil),        // 113: V2FootMatchDataIntegralRankRequest
+	(*V2FootTeamHistoricalMatchRequest)(nil),          // 114: V2FootTeamHistoricalMatchRequest
+	(*V2FootTeamRecentRecordRequest)(nil),             // 115: V2FootTeamRecentRecordRequest
+	(*V2FootTeamFutureScheduleRequest)(nil),           // 116: V2FootTeamFutureScheduleRequest
+	(*V2FootMatchLineupRequest)(nil),                  // 117: V2FootMatchLineupRequest
+	(*V2FootMatchTeamRecentRecordRequest)(nil),        // 118: V2FootMatchTeamRecentRecordRequest
 	(*V2StatsPlayerRequest)(nil),                      // 119: V2StatsPlayerRequest
 	(*V2FootPlayerCollectsRequest)(nil),               // 120: V2FootPlayerCollectsRequest
 	(*FootTournamentOverviewRequest)(nil),             // 121: FootTournamentOverviewRequest
@@ -1207,13 +1207,13 @@ var file_foot_server_proto_depIdxs = []int32{
 	110, // 115: FootBall.V2FootMatchEuropeanOddsList:input_type -> V2FootMatchEuropeanOddsListRequest
 	111, // 116: FootBall.V2FootMatchAsiaOddsAndBigBallList:input_type -> V2FootMatchAsiaOddsAndBigBallListRequest
 	112, // 117: FootBall.V2FootMatchOddsDetail:input_type -> V2FootMatchOddsDetailRequest
-	36,  // 118: FootBall.V2FootLineupAverage:input_type -> FootLineupAverageDataRequest
-	113, // 119: FootBall.V2FootMatchSameFormation:input_type -> V2FootMatchTeamRecentRecordRequest
-	114, // 120: FootBall.V2FootMatchDataIntegralRank:input_type -> V2FootMatchDataIntegralRankRequest
-	115, // 121: FootBall.V2FootTeamHistoricalMatch:input_type -> V2FootTeamHistoricalMatchRequest
-	116, // 122: FootBall.V2FootTeamRecentRecord:input_type -> V2FootTeamRecentRecordRequest
-	117, // 123: FootBall.V2FootTeamFutureSchedule:input_type -> V2FootTeamFutureScheduleRequest
-	118, // 124: FootBall.V2FootMatchLineup:input_type -> V2FootMatchLineupRequest
+	113, // 118: FootBall.V2FootMatchDataIntegralRank:input_type -> V2FootMatchDataIntegralRankRequest
+	114, // 119: FootBall.V2FootTeamHistoricalMatch:input_type -> V2FootTeamHistoricalMatchRequest
+	115, // 120: FootBall.V2FootTeamRecentRecord:input_type -> V2FootTeamRecentRecordRequest
+	116, // 121: FootBall.V2FootTeamFutureSchedule:input_type -> V2FootTeamFutureScheduleRequest
+	117, // 122: FootBall.V2FootMatchLineup:input_type -> V2FootMatchLineupRequest
+	36,  // 123: FootBall.V2FootLineupAverage:input_type -> FootLineupAverageDataRequest
+	118, // 124: FootBall.V2FootMatchSameFormation:input_type -> V2FootMatchTeamRecentRecordRequest
 	119, // 125: FootBall.V2StatsPlayer:input_type -> V2StatsPlayerRequest
 	120, // 126: FootBall.V2FootPlayerCollects:input_type -> V2FootPlayerCollectsRequest
 	121, // 127: FootBall.V2FootTournamentOverview:input_type -> FootTournamentOverviewRequest
@@ -1338,13 +1338,13 @@ var file_foot_server_proto_depIdxs = []int32{
 	1,   // 246: FootBall.V2FootMatchEuropeanOddsList:output_type -> FootResponse
 	1,   // 247: FootBall.V2FootMatchAsiaOddsAndBigBallList:output_type -> FootResponse
 	1,   // 248: FootBall.V2FootMatchOddsDetail:output_type -> FootResponse
-	1,   // 249: FootBall.V2FootLineupAverage:output_type -> FootResponse
-	1,   // 250: FootBall.V2FootMatchSameFormation:output_type -> FootResponse
-	1,   // 251: FootBall.V2FootMatchDataIntegralRank:output_type -> FootResponse
-	1,   // 252: FootBall.V2FootTeamHistoricalMatch:output_type -> FootResponse
-	1,   // 253: FootBall.V2FootTeamRecentRecord:output_type -> FootResponse
-	1,   // 254: FootBall.V2FootTeamFutureSchedule:output_type -> FootResponse
-	1,   // 255: FootBall.V2FootMatchLineup:output_type -> FootResponse
+	1,   // 249: FootBall.V2FootMatchDataIntegralRank:output_type -> FootResponse
+	1,   // 250: FootBall.V2FootTeamHistoricalMatch:output_type -> FootResponse
+	1,   // 251: FootBall.V2FootTeamRecentRecord:output_type -> FootResponse
+	1,   // 252: FootBall.V2FootTeamFutureSchedule:output_type -> FootResponse
+	1,   // 253: FootBall.V2FootMatchLineup:output_type -> FootResponse
+	1,   // 254: FootBall.V2FootLineupAverage:output_type -> FootResponse
+	1,   // 255: FootBall.V2FootMatchSameFormation:output_type -> FootResponse
 	1,   // 256: FootBall.V2StatsPlayer:output_type -> FootResponse
 	1,   // 257: FootBall.V2FootPlayerCollects:output_type -> FootResponse
 	1,   // 258: FootBall.V2FootTournamentOverview:output_type -> FootResponse
@@ -1740,38 +1740,38 @@ type FootBallClient interface {
 	V2FootTeamFeatures(ctx context.Context, in *V2FootTeamFeaturesRequest, opts ...grpc.CallOption) (*FootResponse, error)
 	//v2 即时比赛列表 - 比赛详情 - 比赛对阵详情
 	V2FootMatchAgainstDetail(ctx context.Context, in *V2FootMatchAgainstDetailRequest, opts ...grpc.CallOption) (*FootResponse, error)
-	//v2 即时比赛列表 - 比赛详情 - 预测投票
+	//v2 即时比赛列表 - 比赛详情 - 概述 - 预测投票（与 专家 - 预测、聊球 - 预测 共用）
 	V2FootMatchPredictiveVoting(ctx context.Context, in *V2FootMatchPredictiveVotingRequest, opts ...grpc.CallOption) (*FootResponse, error)
 	//v2 即时比赛列表 - 比赛详情 - 概述 - 积分排名
 	V2FootMatchOverviewIntegralRank(ctx context.Context, in *V2FootMatchOverviewIntegralRankRequest, opts ...grpc.CallOption) (*FootResponse, error)
-	//v2 即时比赛列表 - 比赛详情 - 球员伤停数据
+	//v2 即时比赛列表 - 比赛详情 - 概述 - 球员伤停数据
 	V2FootMatchTeamInjury(ctx context.Context, in *V2FootMatchTeamInjuryRequest, opts ...grpc.CallOption) (*FootResponse, error)
-	//v2 即时比赛列表 - 比赛详情 - 即时指数OR赛前指数 两者共用接口
+	//v2 即时比赛列表 - 比赛详情 - 概述 - 即时指数(bet365)（与 数据 - 基础数据 - 赛前指数(bet365) 共用）
 	V2FootMatchBeforeImmediateOdds(ctx context.Context, in *V2FootMatchBeforeImmediateOddsRequest, opts ...grpc.CallOption) (*FootResponse, error)
-	//v2 即时比赛列表 - 比赛详情 - 技术统计
+	//v2 即时比赛列表 - 比赛详情 - 概述 - 技术统计
 	V2FootMatchTechnicalStatistics(ctx context.Context, in *V2FootMatchTechnicalStatisticsRequest, opts ...grpc.CallOption) (*FootResponse, error)
-	//v2 即时比赛列表 - 比赛详情 - 比赛进程
+	//v2 即时比赛列表 - 比赛详情 - 概述 - 比赛进程
 	V2FootMatchProgress(ctx context.Context, in *V2FootMatchProgressRequest, opts ...grpc.CallOption) (*FootResponse, error)
-	//v2 即时比赛列表 - 比赛详情 - 指数列表 - 欧赔（1x2）列表 赔率共用
+	//v2 即时比赛列表 - 比赛详情 - 指数 - 指数列表 - 欧赔(1x2)列表（与 概述 - 赔率 共用）
 	V2FootMatchEuropeanOddsList(ctx context.Context, in *V2FootMatchEuropeanOddsListRequest, opts ...grpc.CallOption) (*FootResponse, error)
-	//v2 即时比赛列表 - 比赛详情 - 指数列表 - 亚赔（HDP）和大小球（O/U）列表 赔率共用
+	//v2 即时比赛列表 - 比赛详情 - 指数 - 指数列表 - 亚赔(HDP)和大小球(O/U)列表（与 概述 - 赔率 共用）
 	V2FootMatchAsiaOddsAndBigBallList(ctx context.Context, in *V2FootMatchAsiaOddsAndBigBallListRequest, opts ...grpc.CallOption) (*FootResponse, error)
-	//v2 即时比赛列表 - 比赛详情 - 指数列表 - 指数详情（亚赔、欧赔、大小球）赔率共用
+	//v2 即时比赛列表 - 比赛详情 - 指数 - 指数列表 - 指数详情(亚赔、欧赔、大小球)（与 概述 - 赔率 共用）
 	V2FootMatchOddsDetail(ctx context.Context, in *V2FootMatchOddsDetailRequest, opts ...grpc.CallOption) (*FootResponse, error)
-	//v2 即时比赛列表 - 比赛详情 - 预测阵容占比
-	V2FootLineupAverage(ctx context.Context, in *FootLineupAverageDataRequest, opts ...grpc.CallOption) (*FootResponse, error)
-	//v2 即时比赛列表 - 比赛详情 - 相同阵型的比赛统计
-	V2FootMatchSameFormation(ctx context.Context, in *V2FootMatchTeamRecentRecordRequest, opts ...grpc.CallOption) (*FootResponse, error)
 	//v2 即时比赛列表 - 比赛详情 - 数据 - 积分排名
 	V2FootMatchDataIntegralRank(ctx context.Context, in *V2FootMatchDataIntegralRankRequest, opts ...grpc.CallOption) (*FootResponse, error)
-	//v2 即时比赛列表 - 比赛详情 - 历史交锋
+	//v2 即时比赛列表 - 比赛详情 - 数据 - 历史交锋
 	V2FootTeamHistoricalMatch(ctx context.Context, in *V2FootTeamHistoricalMatchRequest, opts ...grpc.CallOption) (*FootResponse, error)
-	//v2 即时比赛列表 - 比赛详情 - 近期战绩
+	//v2 即时比赛列表 - 比赛详情 - 数据 - 近期战绩
 	V2FootTeamRecentRecord(ctx context.Context, in *V2FootTeamRecentRecordRequest, opts ...grpc.CallOption) (*FootResponse, error)
-	//v2 即时比赛列表 - 比赛详情 - 未来赛程
+	//v2 即时比赛列表 - 比赛详情 - 数据 - 未来赛程
 	V2FootTeamFutureSchedule(ctx context.Context, in *V2FootTeamFutureScheduleRequest, opts ...grpc.CallOption) (*FootResponse, error)
-	//v2 即时比赛列表 - 比赛详情 - 比赛阵容
+	//v2 即时比赛列表 - 比赛详情 - 阵容 - 比赛阵容
 	V2FootMatchLineup(ctx context.Context, in *V2FootMatchLineupRequest, opts ...grpc.CallOption) (*FootResponse, error)
+	//v2 即时比赛列表 - 比赛详情 - 阵容 - 预测阵容占比
+	V2FootLineupAverage(ctx context.Context, in *FootLineupAverageDataRequest, opts ...grpc.CallOption) (*FootResponse, error)
+	//v2 即时比赛列表 - 比赛详情 - 阵容 - 相同阵型的比赛统计
+	V2FootMatchSameFormation(ctx context.Context, in *V2FootMatchTeamRecentRecordRequest, opts ...grpc.CallOption) (*FootResponse, error)
 	//v2 player stats
 	V2StatsPlayer(ctx context.Context, in *V2StatsPlayerRequest, opts ...grpc.CallOption) (*FootResponse, error)
 	// v2 球员-收藏列表
@@ -2856,24 +2856,6 @@ func (c *footBallClient) V2FootMatchOddsDetail(ctx context.Context, in *V2FootMa
 	return out, nil
 }
 
-func (c *footBallClient) V2FootLineupAverage(ctx context.Context, in *FootLineupAverageDataRequest, opts ...grpc.CallOption) (*FootResponse, error) {
-	out := new(FootResponse)
-	err := c.cc.Invoke(ctx, "/FootBall/V2FootLineupAverage", in, out, opts...)
-	if err != nil {
-		return nil, err
-	}
-	return out, nil
-}
-
-func (c *footBallClient) V2FootMatchSameFormation(ctx context.Context, in *V2FootMatchTeamRecentRecordRequest, opts ...grpc.CallOption) (*FootResponse, error) {
-	out := new(FootResponse)
-	err := c.cc.Invoke(ctx, "/FootBall/V2FootMatchSameFormation", in, out, opts...)
-	if err != nil {
-		return nil, err
-	}
-	return out, nil
-}
-
 func (c *footBallClient) V2FootMatchDataIntegralRank(ctx context.Context, in *V2FootMatchDataIntegralRankRequest, opts ...grpc.CallOption) (*FootResponse, error) {
 	out := new(FootResponse)
 	err := c.cc.Invoke(ctx, "/FootBall/V2FootMatchDataIntegralRank", in, out, opts...)
@@ -2913,6 +2895,24 @@ func (c *footBallClient) V2FootTeamFutureSchedule(ctx context.Context, in *V2Foo
 func (c *footBallClient) V2FootMatchLineup(ctx context.Context, in *V2FootMatchLineupRequest, opts ...grpc.CallOption) (*FootResponse, error) {
 	out := new(FootResponse)
 	err := c.cc.Invoke(ctx, "/FootBall/V2FootMatchLineup", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *footBallClient) V2FootLineupAverage(ctx context.Context, in *FootLineupAverageDataRequest, opts ...grpc.CallOption) (*FootResponse, error) {
+	out := new(FootResponse)
+	err := c.cc.Invoke(ctx, "/FootBall/V2FootLineupAverage", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *footBallClient) V2FootMatchSameFormation(ctx context.Context, in *V2FootMatchTeamRecentRecordRequest, opts ...grpc.CallOption) (*FootResponse, error) {
+	out := new(FootResponse)
+	err := c.cc.Invoke(ctx, "/FootBall/V2FootMatchSameFormation", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -3194,38 +3194,38 @@ type FootBallServer interface {
 	V2FootTeamFeatures(context.Context, *V2FootTeamFeaturesRequest) (*FootResponse, error)
 	//v2 即时比赛列表 - 比赛详情 - 比赛对阵详情
 	V2FootMatchAgainstDetail(context.Context, *V2FootMatchAgainstDetailRequest) (*FootResponse, error)
-	//v2 即时比赛列表 - 比赛详情 - 预测投票
+	//v2 即时比赛列表 - 比赛详情 - 概述 - 预测投票（与 专家 - 预测、聊球 - 预测 共用）
 	V2FootMatchPredictiveVoting(context.Context, *V2FootMatchPredictiveVotingRequest) (*FootResponse, error)
 	//v2 即时比赛列表 - 比赛详情 - 概述 - 积分排名
 	V2FootMatchOverviewIntegralRank(context.Context, *V2FootMatchOverviewIntegralRankRequest) (*FootResponse, error)
-	//v2 即时比赛列表 - 比赛详情 - 球员伤停数据
+	//v2 即时比赛列表 - 比赛详情 - 概述 - 球员伤停数据
 	V2FootMatchTeamInjury(context.Context, *V2FootMatchTeamInjuryRequest) (*FootResponse, error)
-	//v2 即时比赛列表 - 比赛详情 - 即时指数OR赛前指数 两者共用接口
+	//v2 即时比赛列表 - 比赛详情 - 概述 - 即时指数(bet365)（与 数据 - 基础数据 - 赛前指数(bet365) 共用）
 	V2FootMatchBeforeImmediateOdds(context.Context, *V2FootMatchBeforeImmediateOddsRequest) (*FootResponse, error)
-	//v2 即时比赛列表 - 比赛详情 - 技术统计
+	//v2 即时比赛列表 - 比赛详情 - 概述 - 技术统计
 	V2FootMatchTechnicalStatistics(context.Context, *V2FootMatchTechnicalStatisticsRequest) (*FootResponse, error)
-	//v2 即时比赛列表 - 比赛详情 - 比赛进程
+	//v2 即时比赛列表 - 比赛详情 - 概述 - 比赛进程
 	V2FootMatchProgress(context.Context, *V2FootMatchProgressRequest) (*FootResponse, error)
-	//v2 即时比赛列表 - 比赛详情 - 指数列表 - 欧赔（1x2）列表 赔率共用
+	//v2 即时比赛列表 - 比赛详情 - 指数 - 指数列表 - 欧赔(1x2)列表（与 概述 - 赔率 共用）
 	V2FootMatchEuropeanOddsList(context.Context, *V2FootMatchEuropeanOddsListRequest) (*FootResponse, error)
-	//v2 即时比赛列表 - 比赛详情 - 指数列表 - 亚赔（HDP）和大小球（O/U）列表 赔率共用
+	//v2 即时比赛列表 - 比赛详情 - 指数 - 指数列表 - 亚赔(HDP)和大小球(O/U)列表（与 概述 - 赔率 共用）
 	V2FootMatchAsiaOddsAndBigBallList(context.Context, *V2FootMatchAsiaOddsAndBigBallListRequest) (*FootResponse, error)
-	//v2 即时比赛列表 - 比赛详情 - 指数列表 - 指数详情（亚赔、欧赔、大小球）赔率共用
+	//v2 即时比赛列表 - 比赛详情 - 指数 - 指数列表 - 指数详情(亚赔、欧赔、大小球)（与 概述 - 赔率 共用）
 	V2FootMatchOddsDetail(context.Context, *V2FootMatchOddsDetailRequest) (*FootResponse, error)
-	//v2 即时比赛列表 - 比赛详情 - 预测阵容占比
-	V2FootLineupAverage(context.Context, *FootLineupAverageDataRequest) (*FootResponse, error)
-	//v2 即时比赛列表 - 比赛详情 - 相同阵型的比赛统计
-	V2FootMatchSameFormation(context.Context, *V2FootMatchTeamRecentRecordRequest) (*FootResponse, error)
 	//v2 即时比赛列表 - 比赛详情 - 数据 - 积分排名
 	V2FootMatchDataIntegralRank(context.Context, *V2FootMatchDataIntegralRankRequest) (*FootResponse, error)
-	//v2 即时比赛列表 - 比赛详情 - 历史交锋
+	//v2 即时比赛列表 - 比赛详情 - 数据 - 历史交锋
 	V2FootTeamHistoricalMatch(context.Context, *V2FootTeamHistoricalMatchRequest) (*FootResponse, error)
-	//v2 即时比赛列表 - 比赛详情 - 近期战绩
+	//v2 即时比赛列表 - 比赛详情 - 数据 - 近期战绩
 	V2FootTeamRecentRecord(context.Context, *V2FootTeamRecentRecordRequest) (*FootResponse, error)
-	//v2 即时比赛列表 - 比赛详情 - 未来赛程
+	//v2 即时比赛列表 - 比赛详情 - 数据 - 未来赛程
 	V2FootTeamFutureSchedule(context.Context, *V2FootTeamFutureScheduleRequest) (*FootResponse, error)
-	//v2 即时比赛列表 - 比赛详情 - 比赛阵容
+	//v2 即时比赛列表 - 比赛详情 - 阵容 - 比赛阵容
 	V2FootMatchLineup(context.Context, *V2FootMatchLineupRequest) (*FootResponse, error)
+	//v2 即时比赛列表 - 比赛详情 - 阵容 - 预测阵容占比
+	V2FootLineupAverage(context.Context, *FootLineupAverageDataRequest) (*FootResponse, error)
+	//v2 即时比赛列表 - 比赛详情 - 阵容 - 相同阵型的比赛统计
+	V2FootMatchSameFormation(context.Context, *V2FootMatchTeamRecentRecordRequest) (*FootResponse, error)
 	//v2 player stats
 	V2StatsPlayer(context.Context, *V2StatsPlayerRequest) (*FootResponse, error)
 	// v2 球员-收藏列表
@@ -3598,12 +3598,6 @@ func (*UnimplementedFootBallServer) V2FootMatchAsiaOddsAndBigBallList(context.Co
 func (*UnimplementedFootBallServer) V2FootMatchOddsDetail(context.Context, *V2FootMatchOddsDetailRequest) (*FootResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method V2FootMatchOddsDetail not implemented")
 }
-func (*UnimplementedFootBallServer) V2FootLineupAverage(context.Context, *FootLineupAverageDataRequest) (*FootResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method V2FootLineupAverage not implemented")
-}
-func (*UnimplementedFootBallServer) V2FootMatchSameFormation(context.Context, *V2FootMatchTeamRecentRecordRequest) (*FootResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method V2FootMatchSameFormation not implemented")
-}
 func (*UnimplementedFootBallServer) V2FootMatchDataIntegralRank(context.Context, *V2FootMatchDataIntegralRankRequest) (*FootResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method V2FootMatchDataIntegralRank not implemented")
 }
@@ -3618,6 +3612,12 @@ func (*UnimplementedFootBallServer) V2FootTeamFutureSchedule(context.Context, *V
 }
 func (*UnimplementedFootBallServer) V2FootMatchLineup(context.Context, *V2FootMatchLineupRequest) (*FootResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method V2FootMatchLineup not implemented")
+}
+func (*UnimplementedFootBallServer) V2FootLineupAverage(context.Context, *FootLineupAverageDataRequest) (*FootResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method V2FootLineupAverage not implemented")
+}
+func (*UnimplementedFootBallServer) V2FootMatchSameFormation(context.Context, *V2FootMatchTeamRecentRecordRequest) (*FootResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method V2FootMatchSameFormation not implemented")
 }
 func (*UnimplementedFootBallServer) V2StatsPlayer(context.Context, *V2StatsPlayerRequest) (*FootResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method V2StatsPlayer not implemented")
@@ -5766,42 +5766,6 @@ func _FootBall_V2FootMatchOddsDetail_Handler(srv interface{}, ctx context.Contex
 	return interceptor(ctx, in, info, handler)
 }
 
-func _FootBall_V2FootLineupAverage_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(FootLineupAverageDataRequest)
-	if err := dec(in); err != nil {
-		return nil, err
-	}
-	if interceptor == nil {
-		return srv.(FootBallServer).V2FootLineupAverage(ctx, in)
-	}
-	info := &grpc.UnaryServerInfo{
-		Server:     srv,
-		FullMethod: "/FootBall/V2FootLineupAverage",
-	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(FootBallServer).V2FootLineupAverage(ctx, req.(*FootLineupAverageDataRequest))
-	}
-	return interceptor(ctx, in, info, handler)
-}
-
-func _FootBall_V2FootMatchSameFormation_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(V2FootMatchTeamRecentRecordRequest)
-	if err := dec(in); err != nil {
-		return nil, err
-	}
-	if interceptor == nil {
-		return srv.(FootBallServer).V2FootMatchSameFormation(ctx, in)
-	}
-	info := &grpc.UnaryServerInfo{
-		Server:     srv,
-		FullMethod: "/FootBall/V2FootMatchSameFormation",
-	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(FootBallServer).V2FootMatchSameFormation(ctx, req.(*V2FootMatchTeamRecentRecordRequest))
-	}
-	return interceptor(ctx, in, info, handler)
-}
-
 func _FootBall_V2FootMatchDataIntegralRank_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(V2FootMatchDataIntegralRankRequest)
 	if err := dec(in); err != nil {
@@ -5888,6 +5852,42 @@ func _FootBall_V2FootMatchLineup_Handler(srv interface{}, ctx context.Context, d
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(FootBallServer).V2FootMatchLineup(ctx, req.(*V2FootMatchLineupRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _FootBall_V2FootLineupAverage_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(FootLineupAverageDataRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(FootBallServer).V2FootLineupAverage(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/FootBall/V2FootLineupAverage",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(FootBallServer).V2FootLineupAverage(ctx, req.(*FootLineupAverageDataRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _FootBall_V2FootMatchSameFormation_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(V2FootMatchTeamRecentRecordRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(FootBallServer).V2FootMatchSameFormation(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/FootBall/V2FootMatchSameFormation",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(FootBallServer).V2FootMatchSameFormation(ctx, req.(*V2FootMatchTeamRecentRecordRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
@@ -6477,14 +6477,6 @@ var _FootBall_serviceDesc = grpc.ServiceDesc{
 			Handler:    _FootBall_V2FootMatchOddsDetail_Handler,
 		},
 		{
-			MethodName: "V2FootLineupAverage",
-			Handler:    _FootBall_V2FootLineupAverage_Handler,
-		},
-		{
-			MethodName: "V2FootMatchSameFormation",
-			Handler:    _FootBall_V2FootMatchSameFormation_Handler,
-		},
-		{
 			MethodName: "V2FootMatchDataIntegralRank",
 			Handler:    _FootBall_V2FootMatchDataIntegralRank_Handler,
 		},
@@ -6503,6 +6495,14 @@ var _FootBall_serviceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "V2FootMatchLineup",
 			Handler:    _FootBall_V2FootMatchLineup_Handler,
+		},
+		{
+			MethodName: "V2FootLineupAverage",
+			Handler:    _FootBall_V2FootLineupAverage_Handler,
+		},
+		{
+			MethodName: "V2FootMatchSameFormation",
+			Handler:    _FootBall_V2FootMatchSameFormation_Handler,
 		},
 		{
 			MethodName: "V2StatsPlayer",
