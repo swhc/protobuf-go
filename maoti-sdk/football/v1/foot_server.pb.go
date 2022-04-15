@@ -1766,7 +1766,7 @@ type FootBallClient interface {
 	V2FootMatchPredictiveVoting(ctx context.Context, in *V2FootMatchPredictiveVotingRequest, opts ...grpc.CallOption) (*FootResponse, error)
 	//v2 即时比赛列表 - 比赛详情 - 概述 - 积分排名
 	V2FootMatchOverviewIntegralRank(ctx context.Context, in *V2FootMatchOverviewIntegralRankRequest, opts ...grpc.CallOption) (*FootResponse, error)
-	//v2 即时比赛列表 - 比赛详情 - 概述 - 球员伤停数据
+	//v2 即时比赛列表 - 比赛详情 - 概述 - 球员伤停数据（与 阵容 - 球员伤停 共用）
 	V2FootMatchTeamInjury(ctx context.Context, in *V2FootMatchTeamInjuryRequest, opts ...grpc.CallOption) (*FootResponse, error)
 	//v2 即时比赛列表 - 比赛详情 - 概述 - 即时指数(bet365)（与 数据 - 基础数据 - 赛前指数(bet365) 共用）
 	V2FootMatchBeforeImmediateOdds(ctx context.Context, in *V2FootMatchBeforeImmediateOddsRequest, opts ...grpc.CallOption) (*FootResponse, error)
@@ -3242,7 +3242,7 @@ type FootBallServer interface {
 	V2FootMatchPredictiveVoting(context.Context, *V2FootMatchPredictiveVotingRequest) (*FootResponse, error)
 	//v2 即时比赛列表 - 比赛详情 - 概述 - 积分排名
 	V2FootMatchOverviewIntegralRank(context.Context, *V2FootMatchOverviewIntegralRankRequest) (*FootResponse, error)
-	//v2 即时比赛列表 - 比赛详情 - 概述 - 球员伤停数据
+	//v2 即时比赛列表 - 比赛详情 - 概述 - 球员伤停数据（与 阵容 - 球员伤停 共用）
 	V2FootMatchTeamInjury(context.Context, *V2FootMatchTeamInjuryRequest) (*FootResponse, error)
 	//v2 即时比赛列表 - 比赛详情 - 概述 - 即时指数(bet365)（与 数据 - 基础数据 - 赛前指数(bet365) 共用）
 	V2FootMatchBeforeImmediateOdds(context.Context, *V2FootMatchBeforeImmediateOddsRequest) (*FootResponse, error)
