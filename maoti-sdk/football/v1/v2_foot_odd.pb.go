@@ -437,12 +437,12 @@ type V2FootMatchAsiaOddsAndBigBallInfo struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	CompanyId   int64     `protobuf:"varint,1,opt,name=companyId,proto3" json:"companyId,omitempty"`    //公司id
-	CompanyName string    `protobuf:"bytes,2,opt,name=companyName,proto3" json:"companyName,omitempty"` //公司名称
-	InitOdds    []float64 `protobuf:"fixed64,3,rep,packed,name=initOdds,proto3" json:"initOdds,omitempty"`
-	CurrOdds    []string  `protobuf:"bytes,4,rep,name=currOdds,proto3" json:"currOdds,omitempty"`
-	Times       int64     `protobuf:"varint,5,opt,name=times,proto3" json:"times,omitempty"`
-	Mark        int64     `protobuf:"varint,6,opt,name=mark,proto3" json:"mark,omitempty"` //最早和最晚：1.最早；2.最晚；0.无。指数列表使用
+	CompanyId   int64    `protobuf:"varint,1,opt,name=companyId,proto3" json:"companyId,omitempty"`    //公司id
+	CompanyName string   `protobuf:"bytes,2,opt,name=companyName,proto3" json:"companyName,omitempty"` //公司名称
+	InitOdds    []string `protobuf:"bytes,3,rep,name=initOdds,proto3" json:"initOdds,omitempty"`
+	CurrOdds    []string `protobuf:"bytes,4,rep,name=currOdds,proto3" json:"currOdds,omitempty"`
+	Times       int64    `protobuf:"varint,5,opt,name=times,proto3" json:"times,omitempty"`
+	Mark        int64    `protobuf:"varint,6,opt,name=mark,proto3" json:"mark,omitempty"` //最早和最晚：1.最早；2.最晚；0.无。指数列表使用
 }
 
 func (x *V2FootMatchAsiaOddsAndBigBallInfo) Reset() {
@@ -491,7 +491,7 @@ func (x *V2FootMatchAsiaOddsAndBigBallInfo) GetCompanyName() string {
 	return ""
 }
 
-func (x *V2FootMatchAsiaOddsAndBigBallInfo) GetInitOdds() []float64 {
+func (x *V2FootMatchAsiaOddsAndBigBallInfo) GetInitOdds() []string {
 	if x != nil {
 		return x.InitOdds
 	}
@@ -586,7 +586,7 @@ var file_v2_foot_odd_proto_rawDesc = []byte{
 	0x64, 0x12, 0x20, 0x0a, 0x0b, 0x63, 0x6f, 0x6d, 0x70, 0x61, 0x6e, 0x79, 0x4e, 0x61, 0x6d, 0x65,
 	0x18, 0x02, 0x20, 0x01, 0x28, 0x09, 0x52, 0x0b, 0x63, 0x6f, 0x6d, 0x70, 0x61, 0x6e, 0x79, 0x4e,
 	0x61, 0x6d, 0x65, 0x12, 0x1a, 0x0a, 0x08, 0x69, 0x6e, 0x69, 0x74, 0x4f, 0x64, 0x64, 0x73, 0x18,
-	0x03, 0x20, 0x03, 0x28, 0x01, 0x52, 0x08, 0x69, 0x6e, 0x69, 0x74, 0x4f, 0x64, 0x64, 0x73, 0x12,
+	0x03, 0x20, 0x03, 0x28, 0x09, 0x52, 0x08, 0x69, 0x6e, 0x69, 0x74, 0x4f, 0x64, 0x64, 0x73, 0x12,
 	0x1a, 0x0a, 0x08, 0x63, 0x75, 0x72, 0x72, 0x4f, 0x64, 0x64, 0x73, 0x18, 0x04, 0x20, 0x03, 0x28,
 	0x09, 0x52, 0x08, 0x63, 0x75, 0x72, 0x72, 0x4f, 0x64, 0x64, 0x73, 0x12, 0x14, 0x0a, 0x05, 0x74,
 	0x69, 0x6d, 0x65, 0x73, 0x18, 0x05, 0x20, 0x01, 0x28, 0x03, 0x52, 0x05, 0x74, 0x69, 0x6d, 0x65,
