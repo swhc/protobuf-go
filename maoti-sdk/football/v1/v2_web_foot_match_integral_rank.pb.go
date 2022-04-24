@@ -82,7 +82,7 @@ type V2WebFootMatchOverviewIntegralRankResponse struct {
 
 	Home     *V2WebOverviewIntegralInfo `protobuf:"bytes,1,opt,name=home,proto3" json:"home,omitempty"`
 	Away     *V2WebOverviewIntegralInfo `protobuf:"bytes,2,opt,name=away,proto3" json:"away,omitempty"`
-	BaseList string                     `protobuf:"bytes,3,opt,name=baseList,proto3" json:"baseList,omitempty"` //评分，雷达图
+	BaseList string                     `protobuf:"bytes,3,opt,name=baseList,proto3" json:"baseList,omitempty"` //评分和雷达图数据
 }
 
 func (x *V2WebFootMatchOverviewIntegralRankResponse) Reset() {
